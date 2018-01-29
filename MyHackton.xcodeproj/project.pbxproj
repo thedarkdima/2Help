@@ -13,6 +13,7 @@
 		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
+		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
+				90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
 				45A9648D2019D91000D173BC /* Main.storyboard */,
 				45A964932019D91000D173BC /* Assets.xcassets */,
 				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
+				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
