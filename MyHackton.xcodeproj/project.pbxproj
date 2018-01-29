@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
-		45A9648C2019D91000D173BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* ViewController.swift */; };
+		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
 		45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
 		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
+		45A9649F201A281500D173BC /* delivery_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A9649E201A281400D173BC /* delivery_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45A9648B2019D91000D173BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
 		45A9648E2019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45A964912019D91000D173BC /* MyHackton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyHackton.xcdatamodel; sourceTree = "<group>"; };
 		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A9649E201A281400D173BC /* delivery_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delivery_icon.png; path = ../../../../../Downloads/delivery_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				45A964892019D91000D173BC /* AppDelegate.swift */,
-				45A9648B2019D91000D173BC /* ViewController.swift */,
+				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				45A9648D2019D91000D173BC /* Main.storyboard */,
 				45A964932019D91000D173BC /* Assets.xcassets */,
 				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
 				45A964982019D91000D173BC /* Info.plist */,
 				45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
+				45A9649E201A281400D173BC /* delivery_icon.png */,
 			);
 			path = MyHackton;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A9649F201A281500D173BC /* delivery_icon.png in Resources */,
 				45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */,
 				45A964942019D91000D173BC /* Assets.xcassets in Resources */,
 				45A9648F2019D91000D173BC /* Main.storyboard in Resources */,
@@ -140,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
-				45A9648C2019D91000D173BC /* ViewController.swift in Sources */,
+				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

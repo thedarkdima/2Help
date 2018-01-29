@@ -147,6 +147,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="12K-qL-0Nv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0su-Je-0uU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXj-iX-R2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,4 +172,7 @@
             <point key="canvasLocation" x="-313" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delivery_icon.png" width="43" height="43"/>
+    </resources>
 </document>
