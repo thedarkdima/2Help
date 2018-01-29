@@ -13,7 +13,6 @@
 		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
-		45A9649F201A281500D173BC /* delivery_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A9649E201A281400D173BC /* delivery_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45A9649E201A281400D173BC /* delivery_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delivery_icon.png; path = ../../../../../Downloads/delivery_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
 				45A964982019D91000D173BC /* Info.plist */,
 				45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
-				45A9649E201A281400D173BC /* delivery_icon.png */,
 			);
 			path = MyHackton;
 			sourceTree = "<group>";
@@ -129,7 +126,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45A9649F201A281500D173BC /* delivery_icon.png in Resources */,
 				45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */,
 				45A964942019D91000D173BC /* Assets.xcassets in Resources */,
 				45A9648F2019D91000D173BC /* Main.storyboard in Resources */,
