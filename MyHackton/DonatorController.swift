@@ -20,10 +20,9 @@ class DonatorConroller: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! DonatorProductsCell
       
-        cell.textLabel?.text =
-            "\(str[indexPath.row])"
+        
         
         return cell
     }
