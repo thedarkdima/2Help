@@ -26,7 +26,8 @@ class DonatorProductsCell: UITableViewCell {
             count -= 1
             numberOfProducts.text = "\(count)"
             
-            if count == 0{
+            if count == 0 {
+                
                 minusLabel.isEnabled = false
             }
         }
