@@ -2,6 +2,8 @@ import UIKit
 
 class DonatorProductsCell: UITableViewCell {
     
+    
+    @IBOutlet var productName: UILabel!
     @IBOutlet var minusLabel: UIButton!
     @IBOutlet var numberOfProducts: UILabel!
     var count = 0
@@ -12,6 +14,8 @@ class DonatorProductsCell: UITableViewCell {
         if count == 0{
             minusLabel.isEnabled = false
         }
+        
+
     }
 
     @IBAction func plusButton(_ sender: UIButton) {
@@ -25,11 +29,11 @@ class DonatorProductsCell: UITableViewCell {
             minusLabel.isEnabled = true
             count -= 1
             numberOfProducts.text = "\(count)"
-            
             if count == 0 {
-                
                 minusLabel.isEnabled = false
             }
+           
         }
+        
     }
 }

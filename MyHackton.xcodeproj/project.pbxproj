@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
+		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
 		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
 		45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
+		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
@@ -61,11 +65,13 @@
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
+				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
 				45A9648D2019D91000D173BC /* Main.storyboard */,
 				45A964932019D91000D173BC /* Assets.xcassets */,
 				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
 				45A964982019D91000D173BC /* Info.plist */,
 				45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
+				455B1809201F5CB90002E7D0 /* MainController.swift */,
 			);
 			path = MyHackton;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 			files = (
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
+				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
+				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

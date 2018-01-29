@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Donator Conroller-->
+        <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DonatorConroller" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,7 @@
                                         <connections>
                                             <outlet property="minusLabel" destination="w7H-jB-HUe" id="8sm-Qu-KTj"/>
                                             <outlet property="numberOfProducts" destination="8oS-Li-Dz8" id="vPd-d5-IJk"/>
+                                            <outlet property="productName" destination="LnA-S1-Oa7" id="Zvw-r9-CK2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -242,14 +243,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-yR-73o">
-                                <rect key="frame" x="292" y="202" width="51" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-yR-73o">
+                                <rect key="frame" x="280.5" y="202" width="62.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESE-Jr-GMF">
-                                <rect key="frame" x="300" y="257" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESE-Jr-GMF">
+                                <rect key="frame" x="280.5" y="257" width="62.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -305,8 +306,10 @@
                             <constraint firstItem="a38-uf-NnS" firstAttribute="trailing" secondItem="ESE-Jr-GMF" secondAttribute="trailing" id="ILC-b4-rt0"/>
                             <constraint firstItem="bSN-yR-73o" firstAttribute="top" secondItem="wZc-y0-BDn" secondAttribute="bottom" constant="27" id="Nzv-dv-4v1"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="top" secondItem="bSN-yR-73o" secondAttribute="bottom" constant="34" id="W49-zg-6US"/>
+                            <constraint firstItem="bSN-yR-73o" firstAttribute="leading" secondItem="wZc-y0-BDn" secondAttribute="leading" id="WDj-xj-8JA"/>
                             <constraint firstItem="qDi-HY-jwc" firstAttribute="top" secondItem="bSN-yR-73o" secondAttribute="top" id="ZHh-wW-pQ0"/>
                             <constraint firstItem="C95-eF-xhs" firstAttribute="top" secondItem="a38-uf-NnS" secondAttribute="top" id="Zc5-3Q-lFZ"/>
+                            <constraint firstItem="ESE-Jr-GMF" firstAttribute="leading" secondItem="bSN-yR-73o" secondAttribute="leading" id="apq-9f-6cL"/>
                             <constraint firstItem="a38-uf-NnS" firstAttribute="top" secondItem="ESE-Jr-GMF" secondAttribute="bottom" constant="37" id="bJ6-yK-oit"/>
                             <constraint firstItem="Ug4-uf-l3A" firstAttribute="top" secondItem="wZc-y0-BDn" secondAttribute="top" id="d4o-Hi-DSL"/>
                             <constraint firstItem="ksD-Tt-Dql" firstAttribute="top" secondItem="ESE-Jr-GMF" secondAttribute="top" id="jTC-JF-7q6"/>
