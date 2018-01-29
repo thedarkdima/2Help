@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="2581.5999999999999" y="-196.55172413793105"/>
         </scene>
-        <!--Donator Conroller-->
+        <!--Add Details Controller-->
         <scene sceneID="p2x-Fx-mgY">
             <objects>
-                <viewController id="8kI-bp-idF" customClass="DonatorConroller" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8kI-bp-idF" customClass="AddDetailsController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bsr-Nx-di5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +348,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="delivery_icon" width="21" height="21"/>
+        <image name="delivery_icon" width="37" height="37"/>
         <image name="delivery_icon.png" width="43" height="43"/>
     </resources>
 </document>
