@@ -10,6 +10,7 @@
 		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
 		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
+		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
 		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
 		45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
 		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
+		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
+				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
 				455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
 				45A9648D2019D91000D173BC /* Main.storyboard */,
 				45A964932019D91000D173BC /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,

@@ -79,14 +79,14 @@
         <!--תרומה בהגעה עצמית-->
         <scene sceneID="Kmq-FR-xjl">
             <objects>
-                <viewController id="HaQ-Jr-pFs" customClass="ViewController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HaQ-Jr-pFs" customClass="DonatorDirectionsController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N1v-t4-noY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f02-LM-ZYR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" id="DjP-z7-lXx"/>
+                    <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" image="directions" selectedImage="directions" id="DjP-z7-lXx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,26 +108,8 @@
                                     <segue destination="8kI-bp-idF" kind="show" id="8hq-Lu-7Hh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תרומה כספית" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjy-qL-82E">
-                                <rect key="frame" x="160" y="111" width="125" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-ii-f6i">
-                                <rect key="frame" x="62" y="111" width="82" height="24"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר  איזה סוג תרומה ברצונך לבצע ולחץ מלא פרטים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-Ya-aQs">
-                                <rect key="frame" x="36" y="80" width="303.5" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfv-1F-WKg">
-                                <rect key="frame" x="16" y="146" width="343" height="406"/>
+                                <rect key="frame" x="16" y="150.5" width="343" height="401.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="WPK-ec-trJ" customClass="DonatorProductsCell" customModule="MyHackton" customModuleProvider="target">
@@ -144,7 +126,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-jB-HUe">
-                                                    <rect key="frame" x="15" y="4" width="30" height="32"/>
+                                                    <rect key="frame" x="16" y="4" width="30" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <state key="normal" title="-"/>
                                                     <connections>
@@ -152,7 +134,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPF-Lh-700">
-                                                    <rect key="frame" x="114" y="4" width="30" height="32"/>
+                                                    <rect key="frame" x="100" y="4" width="30" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <state key="normal" title="+"/>
                                                     <connections>
@@ -160,7 +142,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oS-Li-Dz8">
-                                                    <rect key="frame" x="58" y="4" width="42" height="32"/>
+                                                    <rect key="frame" x="52" y="4" width="42" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="d8q-0b-MGl"/>
                                                     </constraints>
@@ -175,12 +157,12 @@
                                                 <constraint firstItem="LnA-S1-Oa7" firstAttribute="top" secondItem="0q9-cP-ZjI" secondAttribute="topMargin" id="7kR-io-J0x"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LnA-S1-Oa7" secondAttribute="trailing" constant="16" id="AZF-Un-QRo"/>
                                                 <constraint firstItem="WPF-Lh-700" firstAttribute="bottom" secondItem="8oS-Li-Dz8" secondAttribute="bottom" id="BoI-wN-ovq"/>
-                                                <constraint firstItem="WPF-Lh-700" firstAttribute="leading" secondItem="8oS-Li-Dz8" secondAttribute="trailing" constant="14" id="HEZ-nP-vQi"/>
-                                                <constraint firstItem="w7H-jB-HUe" firstAttribute="leading" secondItem="0q9-cP-ZjI" secondAttribute="leading" constant="15" id="Iex-Rq-ZFX"/>
+                                                <constraint firstItem="WPF-Lh-700" firstAttribute="leading" secondItem="8oS-Li-Dz8" secondAttribute="trailing" constant="6" id="HEZ-nP-vQi"/>
+                                                <constraint firstItem="w7H-jB-HUe" firstAttribute="leading" secondItem="0q9-cP-ZjI" secondAttribute="leading" constant="16" id="Iex-Rq-ZFX"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="LnA-S1-Oa7" secondAttribute="bottom" constant="1" id="XpF-yu-IfJ"/>
                                                 <constraint firstItem="8oS-Li-Dz8" firstAttribute="bottom" secondItem="w7H-jB-HUe" secondAttribute="bottom" id="jS0-4N-oie"/>
                                                 <constraint firstItem="WPF-Lh-700" firstAttribute="top" secondItem="8oS-Li-Dz8" secondAttribute="top" id="jia-e4-jwz"/>
-                                                <constraint firstItem="8oS-Li-Dz8" firstAttribute="leading" secondItem="w7H-jB-HUe" secondAttribute="trailing" constant="13" id="sxm-iL-nbk"/>
+                                                <constraint firstItem="8oS-Li-Dz8" firstAttribute="leading" secondItem="w7H-jB-HUe" secondAttribute="trailing" constant="6" id="sxm-iL-nbk"/>
                                                 <constraint firstAttribute="bottom" secondItem="w7H-jB-HUe" secondAttribute="bottom" constant="7.5" id="tkk-Iq-Eon"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -195,34 +177,37 @@
                                     <outlet property="dataSource" destination="r1q-tO-wfY" id="GCH-p5-xhD"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומה כספית לחץ מלא פרטים או התקשר ל:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-Ya-aQs">
+                                <rect key="frame" x="16" y="80" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-pw-AWk">
+                                <rect key="frame" x="146.5" y="107" width="82" height="30"/>
+                                <state key="normal" title="050555555"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fjy-qL-82E" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="160" id="2eE-WG-8R8"/>
                             <constraint firstItem="gUl-4G-SnL" firstAttribute="top" secondItem="dfv-1F-WKg" secondAttribute="bottom" constant="16" id="4lJ-rS-msb"/>
-                            <constraint firstItem="Acb-ii-f6i" firstAttribute="bottom" secondItem="Fjy-qL-82E" secondAttribute="bottom" id="4rY-tX-t2U"/>
-                            <constraint firstItem="dfv-1F-WKg" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="82" id="5I2-6g-ZbS"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="gUl-4G-SnL" secondAttribute="bottom" constant="16" id="9Hb-wz-l52"/>
-                            <constraint firstItem="Acb-ii-f6i" firstAttribute="top" secondItem="Fjy-qL-82E" secondAttribute="top" id="9MG-il-v7k"/>
                             <constraint firstItem="gUl-4G-SnL" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="128" id="BS0-US-aYo"/>
-                            <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="36" id="DrO-T6-rtT"/>
-                            <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="Fjy-qL-82E" secondAttribute="trailing" constant="90" id="HDT-Am-lld"/>
-                            <constraint firstItem="dfv-1F-WKg" firstAttribute="top" secondItem="Fjy-qL-82E" secondAttribute="bottom" constant="11" id="Low-0Q-E2h"/>
-                            <constraint firstItem="Fjy-qL-82E" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="16" id="Sx2-rZ-PGN"/>
+                            <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="16" id="DrO-T6-rtT"/>
+                            <constraint firstItem="mXF-pw-AWk" firstAttribute="centerX" secondItem="pkf-QM-FMp" secondAttribute="centerX" id="PMT-3n-8tW"/>
+                            <constraint firstItem="dfv-1F-WKg" firstAttribute="top" secondItem="mXF-pw-AWk" secondAttribute="bottom" constant="13.5" id="PPo-Yh-LvX"/>
                             <constraint firstItem="dfv-1F-WKg" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="UoJ-fx-kJj"/>
-                            <constraint firstItem="Fjy-qL-82E" firstAttribute="leading" secondItem="Acb-ii-f6i" secondAttribute="trailing" constant="16" id="Uua-tJ-lQG"/>
-                            <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="36" id="Wbd-QG-5aC"/>
-                            <constraint firstItem="Acb-ii-f6i" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="62" id="YLJ-fv-Msz"/>
+                            <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="Wbd-QG-5aC"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="dfv-1F-WKg" secondAttribute="trailing" constant="16" id="YRj-En-KZg"/>
+                            <constraint firstItem="mXF-pw-AWk" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="8" id="gxu-NR-1QR"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="gUl-4G-SnL" secondAttribute="trailing" constant="128" id="qJq-IS-hyl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pkf-QM-FMp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="תרומה באמצעות שליח" image="delivery_icon" selectedImage="delivery_icon.png" id="08Y-Ih-dAY"/>
+                    <tabBarItem key="tabBarItem" title="תרומה באמצעות שליח" image="delivery_icon" selectedImage="delivery_icon" id="08Y-Ih-dAY"/>
                     <connections>
                         <outlet property="tbl_products" destination="dfv-1F-WKg" id="sQk-kP-R46"/>
-                        <outlet property="tf_money" destination="Acb-ii-f6i" id="6PN-AE-yI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjw-jy-7vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -349,6 +334,6 @@
     </scenes>
     <resources>
         <image name="delivery_icon" width="37" height="37"/>
-        <image name="delivery_icon.png" width="43" height="43"/>
+        <image name="directions" width="37" height="37"/>
     </resources>
 </document>

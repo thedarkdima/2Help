@@ -2,7 +2,7 @@ import UIKit
 
 class DonatorProductsCell: UITableViewCell {
     
-    
+    // maybe we should put text field that the man can also write not only press + / -
     @IBOutlet var productName: UILabel!
     @IBOutlet var minusLabel: UIButton!
     @IBOutlet var numberOfProducts: UILabel!
