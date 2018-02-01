@@ -18,6 +18,7 @@
 		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
+		908CB80F2023C50D00006911 /* DeliveriesAddressesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CB80E2023C50D00006911 /* DeliveriesAddressesCell.swift */; };
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
 		90E17578202361480062453D /* DeliveriesAddressesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17577202361480062453D /* DeliveriesAddressesController.swift */; };
@@ -39,6 +40,7 @@
 		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908CB80E2023C50D00006911 /* DeliveriesAddressesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesAddressesCell.swift; sourceTree = "<group>"; };
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
 		90E17577202361480062453D /* DeliveriesAddressesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesAddressesController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				90E17575202360FF0062453D /* DeliveryRequestController.swift */,
 				90E17577202361480062453D /* DeliveriesAddressesController.swift */,
+				908CB80E2023C50D00006911 /* DeliveriesAddressesCell.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
+				908CB80F2023C50D00006911 /* DeliveriesAddressesCell.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
 				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
