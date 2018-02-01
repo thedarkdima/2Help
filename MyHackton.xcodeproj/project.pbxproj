@@ -11,6 +11,7 @@
 		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
+		45A41195202368BB003536A1 /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41194202368BB003536A1 /* ContactUsController.swift */; };
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
 		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
 		45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
-		90E17578202361480062453D /* DeliveryAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17577202361480062453D /* DeliveryAddressController.swift */; };
+		90E17578202361480062453D /* DeliveriesAddressesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17577202361480062453D /* DeliveriesAddressesController.swift */; };
 		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
+		45A41194202368BB003536A1 /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
@@ -39,7 +41,7 @@
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
-		90E17577202361480062453D /* DeliveryAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressController.swift; sourceTree = "<group>"; };
+		90E17577202361480062453D /* DeliveriesAddressesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesAddressesController.swift; sourceTree = "<group>"; };
 		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				455B1809201F5CB90002E7D0 /* MainController.swift */,
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
+				45A41194202368BB003536A1 /* ContactUsController.swift */,
 				90E1757220230CFB0062453D /* Server */,
 				90E1757020230C430062453D /* Donators */,
 				90E1757120230C610062453D /* Delivery */,
@@ -105,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				90E17575202360FF0062453D /* DeliveryRequestController.swift */,
-				90E17577202361480062453D /* DeliveryAddressController.swift */,
+				90E17577202361480062453D /* DeliveriesAddressesController.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -198,8 +201,9 @@
 				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
+				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
 				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
-				90E17578202361480062453D /* DeliveryAddressController.swift in Sources */,
+				90E17578202361480062453D /* DeliveriesAddressesController.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
 				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 			);

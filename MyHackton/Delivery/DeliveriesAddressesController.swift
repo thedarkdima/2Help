@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeliveryAddressController: UITableViewController {
+class DeliveriesAddressesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
