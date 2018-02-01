@@ -14,7 +14,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
         
         return cell
     }

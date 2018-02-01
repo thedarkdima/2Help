@@ -89,7 +89,7 @@
                                 <rect key="frame" x="16" y="92" width="343" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="vcY-a9-AVE" customClass="DonatorAddressCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="address_cell" rowHeight="84" id="vcY-a9-AVE" customClass="DonatorAddressCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vcY-a9-AVE" id="ivO-4A-x8P">
@@ -105,6 +105,9 @@
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paZ-Uf-7yF">
                                                     <rect key="frame" x="16" y="16" width="51.5" height="51.5"/>
                                                     <state key="normal" backgroundImage="waze_icon"/>
+                                                    <connections>
+                                                        <action selector="toWaze:" destination="vcY-a9-AVE" eventType="touchUpInside" id="YoD-R5-PbU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -117,6 +120,9 @@
                                                 <constraint firstItem="paZ-Uf-7yF" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="lIn-Od-fJG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address_name" destination="fQB-7p-hI2" id="oLG-gq-o4Y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -133,7 +139,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f02-LM-ZYR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" image="directions" selectedImage="directions" id="DjP-z7-lXx"/>
+                    <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" image="directions_icon" id="DjP-z7-lXx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,7 +387,7 @@
     </scenes>
     <resources>
         <image name="delivery_icon" width="37" height="37"/>
-        <image name="directions" width="37" height="37"/>
+        <image name="directions_icon" width="37" height="37"/>
         <image name="waze_icon" width="32" height="32"/>
     </resources>
 </document>
