@@ -18,6 +18,8 @@
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
+		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
+		90E17578202361480062453D /* DeliveryAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17577202361480062453D /* DeliveryAddressController.swift */; };
 		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
+		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
+		90E17577202361480062453D /* DeliveryAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressController.swift; sourceTree = "<group>"; };
 		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,8 @@
 		90E1757120230C610062453D /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				90E17575202360FF0062453D /* DeliveryRequestController.swift */,
+				90E17577202361480062453D /* DeliveryAddressController.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -189,7 +195,9 @@
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
+				90E17578202361480062453D /* DeliveryAddressController.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
+				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

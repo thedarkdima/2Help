@@ -1,11 +1,3 @@
-//
-//  MainController.swift
-//  MyHackton
-//
-//  Created by nati on 29/01/2018.
-//  Copyright © 2018 nati. All rights reserved.
-//
-
 import UIKit
 
 class MainController: UIViewController {
@@ -13,23 +5,53 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
+    @IBAction func login() {
+        
+        let alert =  UIAlertController(title: "התחברות", message: "הכנס שם משתמש וסיסמא", preferredStyle: .alert)
+        
+        alert.addTextField { (tf) in      // textfiled of the username
+            tf.placeholder = "שם משתמש"
+            tf.textAlignment = .right
+        }
+        
+        alert.addTextField { (tf) in    // textfield of the password
+            tf.placeholder = "סיסמא"
+            tf.textAlignment = .right
+            tf.isSecureTextEntry = true
+        }
+        
+       let  usernameTF = alert.textFields![0]
+       let  passwordTF = alert.textFields![1]
+        
+        func checkLogin(alert:UIAlertAction){
+            let username = usernameTF.text!
+            let password = passwordTF.text!
+            
+            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
+                Connect()
+            } else {
+                login()
+            }
+        }
+        
+        alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "התחבר", style:.default , handler: checkLogin))
+        
+        present(alert , animated: true, completion: nil)
+        
+        
+        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func Connect(){
+       // print("connected ")
+        
+        let next = storyboard!.instantiateViewController(withIdentifier: "delivery_main")
+        show(next, sender: self)
+        
     }
-    */
-
-}
+        
+    }
