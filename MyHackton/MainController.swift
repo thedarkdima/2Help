@@ -8,8 +8,10 @@ class MainController: UIViewController {
        
     }
 
- 
+    
     @IBAction func login() {
+        //alert when pressing the login button
+        
         
         let alert =  UIAlertController(title: "התחברות", message: "הכנס שם משתמש וסיסמא", preferredStyle: .alert)
         
@@ -31,6 +33,7 @@ class MainController: UIViewController {
             let username = usernameTF.text!
             let password = passwordTF.text!
             
+            //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
             if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
                 Connect()
             } else {
