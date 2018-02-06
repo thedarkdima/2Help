@@ -1,6 +1,7 @@
 import UIKit
 
 class DeliveriesAddressesController: UIViewController , UITableViewDataSource, UITableViewDelegate {
+    private var myDeliveryList : [Donator] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

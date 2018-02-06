@@ -82,7 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmo-yE-UOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="120"/>
+            <point key="canvasLocation" x="-506" y="119"/>
         </scene>
         <!--תרומה בהגעה עצמית-->
         <scene sceneID="Kmq-FR-xjl">
@@ -233,6 +233,39 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OvC-VB-RCm">
                                 <rect key="frame" x="16" y="16" width="343" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcV-7e-Y8V" id="QWf-I2-FyW">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
+                                                    <rect key="frame" x="270.5" y="12" width="57.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
+                                                    <rect key="frame" x="206.5" y="11" width="48" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="11" id="8Dz-AI-YU7"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="16" id="bjs-T2-AmV"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="12" id="gE4-Pv-h3j"/>
+                                                <constraint firstAttribute="trailing" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="15" id="uXD-Kg-LeT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="adress" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="n7Z-GJ-88u" id="IXY-vP-LpX"/>
                                     <outlet property="delegate" destination="n7Z-GJ-88u" id="6yn-sG-hZX"/>
@@ -252,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940" y="619"/>
+            <point key="canvasLocation" x="2940" y="626"/>
         </scene>
         <!--Donators Status Controller-->
         <scene sceneID="rtl-Ua-Qgr">
@@ -292,6 +325,10 @@
                                     <constraint firstAttribute="height" constant="128" id="k5h-2H-ekh"/>
                                     <constraint firstAttribute="width" constant="211" id="pXB-Bb-raa"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="OYm-3s-5KJ" id="uwl-pQ-neJ"/>
+                                    <outlet property="delegate" destination="OYm-3s-5KJ" id="v5t-7a-9Nq"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרטי התורם" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FA-jV-vSf">
                                 <rect key="frame" x="149" y="36" width="76.5" height="19.5"/>
@@ -379,11 +416,12 @@
                     </view>
                     <connections>
                         <outlet property="donatorsAddressLbl" destination="hpE-o8-XwA" id="rcF-Ce-f2R"/>
+                        <outlet property="statusPickerView" destination="3OD-Ye-cHb" id="hao-QL-ygJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc5-Rk-WZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3781.5" y="1136.5"/>
+            <point key="canvasLocation" x="4018" y="1068"/>
         </scene>
         <!--Contact Us Controller-->
         <scene sceneID="zCn-kb-eKS">
@@ -440,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTY-0M-Sxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="1137"/>
+            <point key="canvasLocation" x="433" y="1069"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iby-yA-YhC">
