@@ -6,7 +6,6 @@ class DonatorController: UIViewController,UITableViewDataSource {
     @IBOutlet var tbl_products: UITableView!
     
     var totalCount: Int = 0
-    //var str : [Int] = [1,2,3,4,5,6,7,8,9,10]
     var products: [String] = []
     
 override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +57,7 @@ override func viewDidLoad(){
     }
     ////
     
-    // dependency injection - update the count on the dontaorProductCell
+    // dependency injection - update the count from each dontaorProductCell
     func updateCount(c : Int){
         totalCount += c
         
