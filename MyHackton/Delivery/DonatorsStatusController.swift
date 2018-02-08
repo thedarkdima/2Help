@@ -34,6 +34,11 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     }
     ////
     
+    @IBAction func changeStatusBtn(_ sender: UIButton) {
+        
+        let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
+        show(deliveryController, sender: self)
+    }
     
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //
