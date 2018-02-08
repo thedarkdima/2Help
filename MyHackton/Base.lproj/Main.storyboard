@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2521" y="-98"/>
+            <point key="canvasLocation" x="2646" y="-99"/>
         </scene>
         <!--בטיפול-->
         <scene sceneID="fYI-bw-OCS">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfF-rA-E4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940" y="1421.7391304347827"/>
+            <point key="canvasLocation" x="2647" y="1523"/>
         </scene>
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940" y="626"/>
+            <point key="canvasLocation" x="2647" y="727"/>
         </scene>
         <!--Donators Status Controller-->
         <scene sceneID="rtl-Ua-Qgr">
@@ -421,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc5-Rk-WZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4018" y="1068"/>
+            <point key="canvasLocation" x="3724" y="1169"/>
         </scene>
         <!--Contact Us Controller-->
         <scene sceneID="zCn-kb-eKS">
@@ -496,7 +496,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcP-MT-9xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="827"/>
+            <point key="canvasLocation" x="1649" y="928"/>
         </scene>
         <!--תרומה באמצעות שליח-->
         <scene sceneID="KbF-Mz-jIS">
@@ -618,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjw-jy-7vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2522" y="-1036"/>
+            <point key="canvasLocation" x="2646" y="-1037"/>
         </scene>
         <!--Add Details Controller-->
         <scene sceneID="p2x-Fx-mgY">
@@ -716,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbJ-zz-wRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3417" y="-1037"/>
+            <point key="canvasLocation" x="3724" y="-1037"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9w2-nI-sMU">
