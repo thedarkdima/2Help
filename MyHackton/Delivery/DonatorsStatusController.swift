@@ -10,11 +10,19 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     //pickerView list
     private let statusList = [" ","בטיפול","בוטל","בוצע"]
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.navigationItem.backBarButtonItem?.title?.append("c")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         donatorsAddressLbl.text = address
+        tabBarController?.navigationItem.backBarButtonItem?.title?.append("b")
+
         
     }
+    
   //method to change address
     public func set(address: String){
         self.address = address
@@ -36,6 +44,8 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     
     @IBAction func changeStatusBtn(_ sender: UIButton) {
         
+        
+        //show the DeliveryRequestController
         let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
         show(deliveryController, sender: self)
     }

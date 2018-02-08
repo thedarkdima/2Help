@@ -27,6 +27,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         next.set(address: cell.adress.text!)
         //RequestsList.remove(at: indexPath.row)
         show(next, sender: self)
+        tabBarController?.navigationItem.backBarButtonItem?.title = "חזור"
     }
     
     func setDonatorObj(donator : Donator){

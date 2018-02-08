@@ -5,8 +5,11 @@ class DeliveriesAddressesController: UIViewController , UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backButton = UIBarButtonItem(title: "Home/Return or nothing", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+        
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "waiting_adress") as! DeliveriesAddressesCell
         return cell
@@ -22,8 +25,8 @@ class DeliveriesAddressesController: UIViewController , UITableViewDataSource, U
         let next = storyboard!.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController // access all status properties
         
         next.set(address: cell.address.text!) // use the DonatorStatusController method - sending the cell address to change the address in status
-        
         show(next, sender: self) //move to DonatorStatusController
+        tabBarController?.navigationItem.backBarButtonItem?.title = "חזור"
     }
     
 
