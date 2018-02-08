@@ -4,8 +4,10 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
    
     @IBOutlet var statusPickerView: UIPickerView!
     @IBOutlet var donatorsAddressLbl: UILabel!
+    
     private var address: String!
     
+    //pickerView list
     private let statusList = [" ","בטיפול","בוטל","בוצע"]
     
     override func viewDidLoad() {
@@ -13,11 +15,12 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
         donatorsAddressLbl.text = address
         
     }
-  
+  //method to change address
     public func set(address: String){
         self.address = address
     }
 
+    //picker view methods//
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -29,6 +32,8 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return statusList[row]
     }
+    ////
+    
     
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //

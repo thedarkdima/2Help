@@ -4,14 +4,10 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
 
-    
     @IBAction func login() {
         //alert when pressing the login button
-        
         
         let alert =  UIAlertController(title: "התחברות", message: "הכנס שם משתמש וסיסמא", preferredStyle: .alert)
         
@@ -35,7 +31,9 @@ class MainController: UIViewController {
             
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
             if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
-                Connect()
+                ConnectAsDeliveryGuy()
+            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
+                ConnectAsStorageKeeper()
             } else {
                 login()
             }
@@ -45,16 +43,17 @@ class MainController: UIViewController {
         alert.addAction(UIAlertAction(title: "התחבר", style:.default , handler: checkLogin))
         
         present(alert , animated: true, completion: nil)
-        
-        
         }
     
-    private func Connect(){
-       // print("connected ")
-        
+    private func ConnectAsDeliveryGuy(){
         let next = storyboard!.instantiateViewController(withIdentifier: "delivery_main")
         show(next, sender: self)
         
     }
+    private func ConnectAsStorageKeeper(){
+        let next = storyboard!.instantiateViewController(withIdentifier: "storageKeeper_main")
+        show(next, sender: self)
         
     }
+        
+}

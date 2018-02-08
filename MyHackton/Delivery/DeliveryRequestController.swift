@@ -16,8 +16,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell // 
         return cell
     }
     
@@ -26,7 +25,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         let next = storyboard?.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
         
         next.set(address: cell.adress.text!)
-        RequestsList.remove(at: indexPath.row)
+        //RequestsList.remove(at: indexPath.row)
         show(next, sender: self)
     }
     

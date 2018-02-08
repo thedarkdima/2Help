@@ -1,20 +1,26 @@
 import UIKit
 
-class DonatorConroller: UIViewController, UITableViewDataSource {
+class DonatorController: UIViewController,UITableViewDataSource {
+
     
-    //Table and textfield outlets
     @IBOutlet var tbl_products: UITableView!
-    @IBOutlet var tf_money: UITextField!
     
-    //example for table
-    var str : [Int] = [1,2,3,4,5,6,7,8,9,10]
-    
-    
- 
+    var totalCount: Int = 0
+    //var str : [Int] = [1,2,3,4,5,6,7,8,9,10]
     var products: [String] = []
     
-    override func viewDidAppear(_ animated: Bool) {
-        // show the products from the srever in a new task
+override func viewWillAppear(_ animated: Bool) {
+    if totalCount > 0 {
+        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+    }
+        tabBarController!.navigationItem.rightBarButtonItem!.title = "מלא פרטים"
+        tabBarController!.title = "תרומות"
+}
+    
+    
+
+override func viewDidAppear(_ animated: Bool){
+        // show the products from the server in a new task
         let url = URL(string: "http://2help-server.eu-gb.mybluemix.net/items")!
         URLSession.shared.dataTask(with: url, completionHandler: {(d,r,e) in
             AsyncTask(backgroundTask: { (d: Data) -> [String]? in
@@ -30,26 +36,36 @@ class DonatorConroller: UIViewController, UITableViewDataSource {
                 }
             }).execute(d!)
         }).resume()
+        //
     }
+
     
+override func viewDidLoad(){
+    super.viewDidLoad()
+}
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    //Products table
+    //Products table//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! DonatorProductsCell
-      
+        cell.set(donatorController: self)
         cell.productName.text = products[indexPath.row]
         
         return cell
     }
+    ////
     
-
+    // dependency injection - update the count on the dontaorProductCell
+    func updateCount(c : Int){
+        totalCount += c
+        
+        //enable the button press if count is bigger than 0
+        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = totalCount > 0
+    }
+    ////
+    
 }
 
