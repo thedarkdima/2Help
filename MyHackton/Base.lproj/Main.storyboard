@@ -149,6 +149,9 @@
                         <viewLayoutGuide key="safeArea" id="f02-LM-ZYR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" image="directions_icon" id="DjP-z7-lXx"/>
+                    <connections>
+                        <outlet property="table" destination="Jeg-bK-08X" id="PBY-Wb-LRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
