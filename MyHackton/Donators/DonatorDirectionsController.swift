@@ -4,9 +4,9 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     
     //addresses example before server
     let DirectionsList = [
-                                "תל אביב מסדר 8"    ,
-                                "רמת גן אביגדור 94" ,
-                                "רעננה השלום 54"    ,
+                                "tel aviv kikar hamedina"    ,
+                                "haifa" ,
+                                "חיפה"    ,
                                 "חולון אלופי צה״ל 10",
                                 "רמת גן שדרות התמרים 9",
                                 "ראשון הרצל 5",
