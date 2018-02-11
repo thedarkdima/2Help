@@ -58,10 +58,11 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     
     @IBAction func changeStatusBtn(_ sender: UIButton) {
         //show the DeliveryRequestController
-      //  let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
+        let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
         if rowNumber != 0 {
+            
+            navigationController?.popViewController(animated: false)
             //show(deliveryController, sender: self)
-            navigationController?.popViewController(animated: true)
         }
     }
     
