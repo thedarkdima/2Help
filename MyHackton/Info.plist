@@ -4,6 +4,7 @@
 <dict>
     <key>LSApplicationQueriesSchemes</key>
     <array>
+        <string>tel</string>
         <string>waze</string>
     </array>
     <key>NSAppTransportSecurity</key>

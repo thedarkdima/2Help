@@ -1,12 +1,14 @@
 import UIKit
 
-class DeliveryRequestCell: UITableViewCell {
+class StorageKeeperCell: UITableViewCell {
+
     
-    @IBOutlet var adress: UILabel!
+    @IBOutlet var product: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
+ 
 
 }

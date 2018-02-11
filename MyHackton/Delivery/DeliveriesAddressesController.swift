@@ -5,8 +5,9 @@ class DeliveriesAddressesController: UIViewController , UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "waiting_adress") as! DeliveriesAddressesCell
         return cell
@@ -18,10 +19,12 @@ class DeliveriesAddressesController: UIViewController , UITableViewDataSource, U
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! DeliveriesAddressesCell
-        let next = storyboard!.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
-        next.set(address: cell.address.text!)
-        show(next, sender: self)
+        let cell = tableView.cellForRow(at: indexPath) as! DeliveriesAddressesCell // access all cell properties
+        let next = storyboard!.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController // access all status properties
+        
+        next.set(address: cell.address.text!) // use the DonatorStatusController method - sending the cell address to change the address in status page
+        show(next, sender: self) //move to DonatorStatusController
+        tabBarController?.navigationItem.backBarButtonItem?.title = "חזור"
     }
     
 
