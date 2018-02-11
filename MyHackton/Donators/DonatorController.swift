@@ -20,7 +20,7 @@ class DonatorController: UIViewController,UITableViewDataSource {
             //let url3 = URL(string : adrressURL)!
             
             //UIApplication.shared.open(url3, options: [:], completionHandler: nil)
-            UIApplication.shared.isIdleTimerDisabled = true
+            //UIApplication.shared.isIdleTimerDisabled = true
         } else {
             //else open a google
             //let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!

@@ -504,6 +504,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="um0-lW-rLg"/>
                     <connections>
+                        <outlet property="StatusBtnOutlet" destination="Cux-7n-1R5" id="DCk-8h-976"/>
                         <outlet property="donatorsAddressLbl" destination="hpE-o8-XwA" id="rcF-Ce-f2R"/>
                         <outlet property="statusPickerView" destination="3OD-Ye-cHb" id="hao-QL-ygJ"/>
                     </connections>
