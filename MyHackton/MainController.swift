@@ -14,12 +14,14 @@ class MainController: UIViewController {
         alert.addTextField { (tf) in      // textfiled of the username
             tf.placeholder = "שם משתמש"
             tf.textAlignment = .right
+            tf.returnKeyType = .next
         }
         
         alert.addTextField { (tf) in    // textfield of the password
             tf.placeholder = "סיסמא"
             tf.textAlignment = .right
             tf.isSecureTextEntry = true
+            tf.returnKeyType = .done
         }
         
        let  usernameTF = alert.textFields![0]
