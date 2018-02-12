@@ -3,16 +3,7 @@ import UIKit
 class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     //addresses example before server
-    let DirectionsList = [
-                                "תל אביב מסדר 8"    ,
-                                "רמת גן אביגדור 94" ,
-                                "רעננה השלום 54"    ,
-                                "חולון אלופי צה״ל 10",
-                                "רמת גן שדרות התמרים 9",
-                                "ראשון הרצל 5",
-                                "פרדס חנה מורן 13",
-"אור עקיבא משה שרת 8"
-    ]
+    var DirectionsList: [String] = []
     
     override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
@@ -20,8 +11,18 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
         tabBarController!.title = "סניפים"
     }
     
+    @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ServerConnections.getDictonaryAsync("/addresses", "", handler: {addresses in
+            if let add = addresses{
+                for array in add{
+                    self.DirectionsList.append(array[0])
+                }
+                self.table.reloadData()
+            }
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

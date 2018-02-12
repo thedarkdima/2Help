@@ -4,6 +4,15 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+       ServerConnections.getDictonaryAsync("/donators", "Stan", handler: {donators in
+        if let dodo = donators{
+            print(dodo)
+        }
+        else {
+            print("fail")
+        }
+       })
     }
 
     @IBAction func login() {
@@ -23,6 +32,7 @@ class MainController: UIViewController {
             tf.placeholder = "סיסמא"
             tf.textAlignment = .right
             tf.isSecureTextEntry = true
+            tf.returnKeyType = .done
         }
         
        let  usernameTF = alert.textFields![0]

@@ -5,30 +5,11 @@ class DonatorController: UIViewController,UITableViewDataSource {
     
     @IBAction func phoneNumber(_ number: UIButton) {
         
-        let tellUrl = "0524297230"
-         //UIApplication.shared.canOpenURL(URL(string: "tel://")!)
-        
-        
-        
-        if(UIApplication.shared.canOpenURL(URL(string:"tel://\(tellUrl)")!)){
-            //check if there is an app that can open tel
-            
-            UIApplication.shared.open(URL(string: tellUrl)!, options: [:], completionHandler: nil)
-
-           // let adrressURL = "http://waze.com/ul?q=\(nameUrl!))"
-            //let url2 = adrressURL.addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
-            //let url3 = URL(string : adrressURL)!
-            
-            //UIApplication.shared.open(url3, options: [:], completionHandler: nil)
-            //UIApplication.shared.isIdleTimerDisabled = true
-        } else {
-            //else open a google
-            //let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!
-              let url = URL(string:"http://www.google.com/")!   //test
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            
+        let numberToCall = (number.titleLabel?.text)!
+        if let phoneURL = URL(string :"tel://" + numberToCall){
+            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
         }
-       // print(number.title)
+    
     }
     @IBOutlet var tbl_products: UITableView!
     

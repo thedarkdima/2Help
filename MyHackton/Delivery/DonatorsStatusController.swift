@@ -60,7 +60,9 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
         //show the DeliveryRequestController
         let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
         if rowNumber != 0 {
-            show(deliveryController, sender: self)
+            
+            navigationController?.popViewController(animated: false)
+            //show(deliveryController, sender: self)
         }
     }
     
