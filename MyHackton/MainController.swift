@@ -11,9 +11,12 @@ class MainController: UIViewController {
         
         let alert =  UIAlertController(title: "התחברות", message: "הכנס שם משתמש וסיסמא", preferredStyle: .alert)
         
+        
         alert.addTextField { (tf) in      // textfiled of the username
             tf.placeholder = "שם משתמש"
             tf.textAlignment = .right
+
+            
         }
         
         alert.addTextField { (tf) in    // textfield of the password
