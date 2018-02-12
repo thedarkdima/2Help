@@ -5,10 +5,21 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     private var RequestsList : [Donator] = []
     private var donator : Donator!
     
+    override func viewWillDisappear(_ animated: Bool) {
+       // let hezi = storyboard!.instantiateViewController(withIdentifier: "main") as! MainController
+        
+        
+//        if self.isBeingDismissed {
+//            print("hezzzzzzzzxzxzxzxzxzxzxzxzxzxzxzxz")
+//        }
+//        if self.isMovingToParentViewController{
+//            print("parennnnnnnnnnnnnnttt")
+//        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -16,7 +27,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell // 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
         return cell
     }
     
