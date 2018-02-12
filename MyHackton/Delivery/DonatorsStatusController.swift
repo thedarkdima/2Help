@@ -6,7 +6,6 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     @IBOutlet var donatorsAddressLbl: UILabel!
     @IBOutlet var StatusBtnOutlet: UIButton!
     
-    
      var rowNumber : Int = 0
     
     private var address: String!
@@ -14,21 +13,13 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     //pickerView list
     private let statusList = [" ","בטיפול","בוטל","בוצע"]
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        tabBarController?.navigationItem.backBarButtonItem?.title?.append("c")
-        
-            StatusBtnOutlet.isEnabled = rowNumber > 0
-        
-        
+        StatusBtnOutlet.isEnabled = rowNumber > 0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         donatorsAddressLbl.text = address
-        tabBarController?.navigationItem.backBarButtonItem?.title?.append("b")
-
-        
     }
     
   //method to change address
@@ -58,18 +49,19 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     
     @IBAction func changeStatusBtn(_ sender: UIButton) {
         //show the DeliveryRequestController
-        let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
+        
         if rowNumber != 0 {
-            
-            navigationController?.popViewController(animated: false)
+            //let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
             //show(deliveryController, sender: self)
+            navigationController?.popViewController(animated: false)
+            //navigationController?.popToViewController(deliveryController, animated: true)
+          
         }
     }
     
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //
 //    }
-    
     
     
 }

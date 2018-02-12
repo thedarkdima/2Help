@@ -25,6 +25,7 @@ class DeliveriesAddressesController: UIViewController , UITableViewDataSource, U
         next.set(address: cell.address.text!) // use the DonatorStatusController method - sending the cell address to change the address in status page
         show(next, sender: self) //move to DonatorStatusController
         tabBarController?.navigationItem.backBarButtonItem?.title = "חזור"
+        
     }
     
 
