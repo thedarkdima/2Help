@@ -40,6 +40,35 @@ class MainController: UIViewController {
             let username = usernameTF.text!
             let password = passwordTF.text!
             
+            //The username and password will be sent to the server, the server will return a token and a job in array.
+            //After that if the server returend data that meants the user was found and takes the user to his page.
+            ServerConnections.getArrayAsync("/login", "{\(username), \(password)}", handler: {array in
+                if let arr = array{
+                    if(arr.count > 0){
+                        //Tokken from the server
+                        let prefs = UserDefaults.standard
+                        prefs.set(arr[0], forKey: "token")
+                        //Job
+                        let job = arr[1]
+                        switch(job){
+                        case "שליח":
+                            self.ConnectAsDeliveryGuy()
+                            break
+                        case "מחסנאי":
+                            self.ConnectAsStorageKeeper()
+                            break
+                        case "מנהל רשת":
+                            
+                            break
+                        default:
+                            self.login()
+                        }
+                    } else {
+                        self.login()
+                    }
+                }
+            })
+            
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
             if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
                 ConnectAsDeliveryGuy()
