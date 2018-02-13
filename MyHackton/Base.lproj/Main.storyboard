@@ -305,7 +305,7 @@
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
             <objects>
-                <viewController id="n7Z-GJ-88u" customClass="DeliveryRequestController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addresses" id="n7Z-GJ-88u" customClass="DeliveryRequestController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJc-p5-j7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -573,10 +573,10 @@
             </objects>
             <point key="canvasLocation" x="433" y="1069"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Delivery Tab Bar Controller-->
         <scene sceneID="iby-yA-YhC">
             <objects>
-                <tabBarController storyboardIdentifier="delivery_main" id="s4Y-Sp-bbH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="delivery_main" id="s4Y-Sp-bbH" customClass="DeliveryTabBarController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vAq-xB-Z05">
                         <barButtonItem key="backBarButtonItem" title="חזזזז" id="Ijw-Lq-P10"/>
                     </navigationItem>
