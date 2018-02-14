@@ -253,16 +253,17 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
                                                     <rect key="frame" x="15" y="11" width="57.5" height="23"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="57.5" id="XTV-XN-NT3"/>
+                                                        <constraint firstAttribute="width" constant="57.5" id="dql-fh-uCV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
-                                                    <rect key="frame" x="294" y="4" width="34" height="34"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_waiting" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
+                                                    <rect key="frame" x="286" y="4" width="47" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="34" id="b87-2C-1jX"/>
+                                                        <constraint firstAttribute="height" constant="34" id="7ec-bB-NXe"/>
+                                                        <constraint firstAttribute="width" constant="47" id="W1Y-vf-oNi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
@@ -273,14 +274,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="16" id="0mj-1X-JKh"/>
-                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="11" id="3GD-lM-NGc"/>
-                                                <constraint firstAttribute="trailing" secondItem="ETv-ZI-e6f" secondAttribute="trailing" constant="15" id="8VT-fc-B1E"/>
-                                                <constraint firstAttribute="bottom" secondItem="ETv-ZI-e6f" secondAttribute="bottom" constant="5.5" id="JFg-Kw-9WR"/>
-                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="16" id="OuT-tV-6Le"/>
-                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="centerY" secondItem="ls4-Se-GKD" secondAttribute="centerY" id="dgf-gf-7Ck"/>
-                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="QWf-I2-FyW" secondAttribute="leading" constant="15" id="kCe-Ti-gr8"/>
-                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="4" id="mON-Xw-7XT"/>
+                                                <constraint firstAttribute="trailing" secondItem="ETv-ZI-e6f" secondAttribute="trailing" constant="10" id="4UB-19-8tq"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="Ig8-7l-0NK"/>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="16" id="Izc-RU-wWU"/>
+                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="4" id="TdJ-MB-Z94"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="QWf-I2-FyW" secondAttribute="leading" constant="15" id="YTm-KE-osq"/>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="cai-lW-9Sk"/>
+                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="8" id="qjC-t5-zgh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -770,6 +770,7 @@
         <image name="delivery_icon" width="37" height="37"/>
         <image name="delivery_request" width="32" height="32"/>
         <image name="directions_icon" width="37" height="37"/>
+        <image name="status_waiting" width="32" height="32"/>
         <image name="waze_icon" width="32" height="32"/>
     </resources>
 </document>
