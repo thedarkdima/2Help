@@ -15,10 +15,12 @@ class DonatorAddressCell: UITableViewCell {
             
             
             let address = "https://waze.com/ul?q=\(nameUrl)"
-            let addressURL = URL(string:address)
+            let addressURL = URL(string: address)
+            
             
           //  let url2 = URL(string : address.removingPercentEncoding!)
-            
+            print("\(addressURL!)")
+           
             UIApplication.shared.open(addressURL!, options: [:], completionHandler: nil)
             UIApplication.shared.isIdleTimerDisabled = true
         } else {
