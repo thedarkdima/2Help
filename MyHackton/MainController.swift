@@ -88,7 +88,7 @@ class MainController: UIViewController {
         }
     
     private func ConnectAsDeliveryGuy(){
-        let next = storyboard!.instantiateViewController(withIdentifier: "delivery_main")
+        let next = storyboard!.instantiateViewController(withIdentifier: "addresses")
         show(next, sender: self)
     }
     

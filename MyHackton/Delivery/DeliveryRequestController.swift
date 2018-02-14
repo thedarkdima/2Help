@@ -9,16 +9,16 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
         
       
-            self.tabBarController?.navigationItem.hidesBackButton = true
-            self.tabBarController?.navigationItem.leftBarButtonItem = b
+            self.navigationItem.hidesBackButton = true
+            self.navigationItem.leftBarButtonItem = b
         
-     
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-      
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
+
     }
     
     
@@ -55,7 +55,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         next.set(address: cell.adress.text!)
         //RequestsList.remove(at: indexPath.row)
         show(next, sender: self)
-        tabBarController?.navigationItem.backBarButtonItem?.title = "חזור"
+        self.navigationItem.backBarButtonItem?.title = "חזור"
     }
     ////
     

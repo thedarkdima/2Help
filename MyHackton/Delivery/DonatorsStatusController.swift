@@ -15,12 +15,14 @@ class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPic
     
     override func viewWillAppear(_ animated: Bool) {
         StatusBtnOutlet.isEnabled = rowNumber > 0
+        self.navigationItem.leftBarButtonItem?.title = "ffff"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         donatorsAddressLbl.text = address
     }
+    
     
   //method to change address
     public func set(address: String){
