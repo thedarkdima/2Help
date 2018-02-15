@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -157,76 +156,6 @@
             </objects>
             <point key="canvasLocation" x="2646" y="-99"/>
         </scene>
-        <!--בטיפול-->
-        <scene sceneID="fYI-bw-OCS">
-            <objects>
-                <viewController storyboardIdentifier="MyDeliveryList" id="YJp-py-TwS" customClass="DeliveriesAddressesController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qh0-9l-0Wb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W5a-ZA-We2">
-                                <rect key="frame" x="16" y="36" width="343" height="566"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="waiting_adress" rowHeight="71" id="TVv-kD-uZm" customClass="DeliveriesAddressesCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="71"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TVv-kD-uZm" id="ZAs-u0-oaM">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="70.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_done" translatesAutoresizingMaskIntoConstraints="NO" id="UJw-xb-oVW">
-                                                    <rect key="frame" x="8" y="8" width="51.5" height="51.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="UJw-xb-oVW" secondAttribute="height" multiplier="1:1" id="SvU-zU-Kn4"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת מהשרת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gd-1o-Gav">
-                                                    <rect key="frame" x="67.5" y="22.5" width="267.5" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="UJw-xb-oVW" firstAttribute="width" secondItem="ZAs-u0-oaM" secondAttribute="width" multiplier="0.15" id="99f-oz-20R"/>
-                                                <constraint firstItem="8gd-1o-Gav" firstAttribute="centerY" secondItem="ZAs-u0-oaM" secondAttribute="centerY" id="E4n-PU-mMx"/>
-                                                <constraint firstItem="UJw-xb-oVW" firstAttribute="centerY" secondItem="ZAs-u0-oaM" secondAttribute="centerY" id="HrW-9M-4gM"/>
-                                                <constraint firstItem="UJw-xb-oVW" firstAttribute="leading" secondItem="ZAs-u0-oaM" secondAttribute="leading" constant="8" id="KOe-PE-YqE"/>
-                                                <constraint firstAttribute="trailing" secondItem="8gd-1o-Gav" secondAttribute="trailing" constant="8" id="SC5-af-Prd"/>
-                                                <constraint firstItem="UJw-xb-oVW" firstAttribute="top" secondItem="ZAs-u0-oaM" secondAttribute="top" constant="8" id="xho-bA-wbb"/>
-                                                <constraint firstAttribute="bottom" secondItem="UJw-xb-oVW" secondAttribute="bottom" constant="8" id="xs7-rG-Wba"/>
-                                                <constraint firstItem="8gd-1o-Gav" firstAttribute="leading" secondItem="UJw-xb-oVW" secondAttribute="trailing" constant="8" id="zHy-C0-vfd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="address" destination="8gd-1o-Gav" id="HkP-gS-icU"/>
-                                            <outlet property="status_icon" destination="UJw-xb-oVW" id="rvC-dt-DsW"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="YJp-py-TwS" id="kO0-dK-ivp"/>
-                                    <outlet property="delegate" destination="YJp-py-TwS" id="tP3-cf-TBU"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="W5a-ZA-We2" firstAttribute="leading" secondItem="IFZ-SD-HnE" secondAttribute="leading" constant="16" id="77k-hy-8p3"/>
-                            <constraint firstItem="W5a-ZA-We2" firstAttribute="top" secondItem="IFZ-SD-HnE" secondAttribute="top" constant="16" id="QyW-Hz-FZv"/>
-                            <constraint firstItem="IFZ-SD-HnE" firstAttribute="trailing" secondItem="W5a-ZA-We2" secondAttribute="trailing" constant="16" id="Y4U-OJ-Hfo"/>
-                            <constraint firstItem="IFZ-SD-HnE" firstAttribute="bottom" secondItem="W5a-ZA-We2" secondAttribute="bottom" constant="16" id="qSm-TR-VvK"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="IFZ-SD-HnE"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="בטיפול" image="delivery_past" id="GbY-gb-jQV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfF-rA-E4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2657" y="1576"/>
-        </scene>
         <!--Storage Keeper Controller-->
         <scene sceneID="qji-om-Dd1">
             <objects>
@@ -305,13 +234,13 @@
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
             <objects>
-                <viewController id="n7Z-GJ-88u" customClass="DeliveryRequestController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addresses" id="n7Z-GJ-88u" customClass="DeliveryRequestController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJc-p5-j7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OvC-VB-RCm">
-                                <rect key="frame" x="16" y="16" width="343" height="586"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
@@ -322,27 +251,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="270.5" y="12" width="57.5" height="23"/>
+                                                    <rect key="frame" x="15" y="11" width="57.5" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57.5" id="dql-fh-uCV"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
-                                                    <rect key="frame" x="206.5" y="11" width="48" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_waiting" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
+                                                    <rect key="frame" x="286" y="4" width="47" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="7ec-bB-NXe"/>
+                                                        <constraint firstAttribute="width" constant="47" id="W1Y-vf-oNi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
+                                                    <rect key="frame" x="88.5" y="12" width="189.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="11" id="8Dz-AI-YU7"/>
-                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="16" id="bjs-T2-AmV"/>
-                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="12" id="gE4-Pv-h3j"/>
-                                                <constraint firstAttribute="trailing" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="15" id="uXD-Kg-LeT"/>
+                                                <constraint firstAttribute="trailing" secondItem="ETv-ZI-e6f" secondAttribute="trailing" constant="10" id="4UB-19-8tq"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="Ig8-7l-0NK"/>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="16" id="Izc-RU-wWU"/>
+                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="4" id="TdJ-MB-Z94"/>
+                                                <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="QWf-I2-FyW" secondAttribute="leading" constant="15" id="YTm-KE-osq"/>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="cai-lW-9Sk"/>
+                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="8" id="qjC-t5-zgh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="adress" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
+                                            <outlet property="icon_adress" destination="ETv-ZI-e6f" id="32a-tT-QsB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -366,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="741"/>
+            <point key="canvasLocation" x="2645.5999999999999" y="924.28785607196414"/>
         </scene>
         <!--Donators Status Controller-->
         <scene sceneID="rtl-Ua-Qgr">
@@ -400,17 +343,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OD-Ye-cHb">
-                                <rect key="frame" x="87" y="485" width="200" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="fy5-qP-yMU"/>
-                                    <constraint firstAttribute="height" constant="100" id="uPu-cz-J1S"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="OYm-3s-5KJ" id="uwl-pQ-neJ"/>
-                                    <outlet property="delegate" destination="OYm-3s-5KJ" id="v5t-7a-9Nq"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פרטי התורם" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FA-jV-vSf">
                                 <rect key="frame" x="143.5" y="36" width="89" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -454,35 +386,38 @@
                                 <rect key="frame" x="56" y="267" width="113.5" height="30"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cux-7n-1R5">
-                                <rect key="frame" x="169" y="599" width="37" height="36"/>
+                                <rect key="frame" x="100" y="599" width="55" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="שלח"/>
+                                <state key="normal" title="נלקח"/>
                                 <connections>
-                                    <action selector="changeStatusBtn:" destination="OYm-3s-5KJ" eventType="touchUpInside" id="B4y-1R-XDe"/>
+                                    <action selector="confirmBtn:" destination="OYm-3s-5KJ" eventType="touchUpInside" id="O0M-ue-bN2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סטטוס:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-UA-MG2">
-                                <rect key="frame" x="307.5" y="525" width="51.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zj-V1-5np">
+                                <rect key="frame" x="265" y="587" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="RIK-p5-y42"/>
+                                    <constraint firstAttribute="height" constant="60" id="qpQ-9I-89c"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="waze_icon"/>
+                                <connections>
+                                    <action selector="toWaze:" destination="OYm-3s-5KJ" eventType="touchUpInside" id="1TM-ZQ-FYp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="6E1-UA-MG2" secondAttribute="trailing" constant="16" id="0c1-ih-awz"/>
+                            <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="1zj-V1-5np" secondAttribute="trailing" constant="50" id="23A-vT-Obp"/>
+                            <constraint firstItem="IB7-8r-r0x" firstAttribute="bottom" secondItem="1zj-V1-5np" secondAttribute="bottom" constant="20" id="4Ay-dJ-mu9"/>
                             <constraint firstItem="fcD-Ep-EDi" firstAttribute="top" secondItem="W6m-Wz-QUF" secondAttribute="bottom" constant="60" id="50b-TC-fjG"/>
                             <constraint firstItem="CVx-J0-7mP" firstAttribute="top" secondItem="fcD-Ep-EDi" secondAttribute="bottom" constant="60" id="5Eh-NI-XTu"/>
-                            <constraint firstItem="6E1-UA-MG2" firstAttribute="top" secondItem="Y3g-by-U2J" secondAttribute="bottom" constant="56" id="68c-Vk-K6z"/>
                             <constraint firstItem="mEX-ao-H3f" firstAttribute="top" secondItem="1FA-jV-vSf" secondAttribute="bottom" constant="46.5" id="69X-ia-Zg1"/>
                             <constraint firstItem="Y3g-by-U2J" firstAttribute="top" secondItem="CVx-J0-7mP" secondAttribute="top" constant="-7" id="90k-Dv-h0p"/>
                             <constraint firstItem="c0J-c0-Owh" firstAttribute="top" secondItem="fcD-Ep-EDi" secondAttribute="top" id="BT1-Qo-MSM"/>
                             <constraint firstItem="Y3g-by-U2J" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="16" id="CeF-qO-Ufj"/>
-                            <constraint firstItem="IB7-8r-r0x" firstAttribute="bottom" secondItem="Cux-7n-1R5" secondAttribute="bottom" constant="32" id="FoA-gW-sYU"/>
-                            <constraint firstItem="3OD-Ye-cHb" firstAttribute="centerX" secondItem="IB7-8r-r0x" secondAttribute="centerX" id="Gnk-SS-gQg"/>
                             <constraint firstItem="IvJ-ZJ-wNh" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="16" id="JM6-jt-s0d"/>
-                            <constraint firstItem="Cux-7n-1R5" firstAttribute="top" secondItem="3OD-Ye-cHb" secondAttribute="bottom" constant="14" id="LI5-aq-fRT"/>
                             <constraint firstItem="hpE-o8-XwA" firstAttribute="top" secondItem="W6m-Wz-QUF" secondAttribute="top" id="LWF-hO-AX3"/>
+                            <constraint firstItem="Cux-7n-1R5" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="100" id="Ovy-v9-K4j"/>
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="W6m-Wz-QUF" secondAttribute="trailing" constant="16" id="Qyr-kh-UzJ"/>
                             <constraint firstItem="IvJ-ZJ-wNh" firstAttribute="top" secondItem="mEX-ao-H3f" secondAttribute="top" id="RSd-YH-jZD"/>
                             <constraint firstItem="CVx-J0-7mP" firstAttribute="leading" secondItem="Y3g-by-U2J" secondAttribute="trailing" constant="16" id="SIm-QB-GvL"/>
@@ -490,15 +425,16 @@
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="mEX-ao-H3f" secondAttribute="trailing" constant="16" id="Tgl-Y5-UEt"/>
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="fcD-Ep-EDi" secondAttribute="trailing" constant="16" id="Tlc-3l-LHG"/>
                             <constraint firstItem="fcD-Ep-EDi" firstAttribute="leading" secondItem="c0J-c0-Owh" secondAttribute="trailing" constant="8" id="UzT-7a-FM0"/>
+                            <constraint firstItem="IB7-8r-r0x" firstAttribute="bottom" secondItem="Cux-7n-1R5" secondAttribute="bottom" constant="32" id="VYl-1s-Wt3"/>
                             <constraint firstItem="W6m-Wz-QUF" firstAttribute="top" secondItem="mEX-ao-H3f" secondAttribute="bottom" constant="60" id="Xkc-zU-dRh"/>
                             <constraint firstItem="mEX-ao-H3f" firstAttribute="leading" secondItem="IvJ-ZJ-wNh" secondAttribute="trailing" constant="8" id="Xo7-LI-0RZ"/>
-                            <constraint firstItem="3OD-Ye-cHb" firstAttribute="centerY" secondItem="6E1-UA-MG2" secondAttribute="centerY" id="a79-yk-RWn"/>
+                            <constraint firstItem="1zj-V1-5np" firstAttribute="leading" secondItem="Cux-7n-1R5" secondAttribute="trailing" constant="110" id="ahQ-7m-wvF"/>
                             <constraint firstItem="hpE-o8-XwA" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="16" id="j8X-tR-Hax"/>
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="CVx-J0-7mP" secondAttribute="trailing" constant="16" id="kkf-a5-Dlm"/>
                             <constraint firstItem="W6m-Wz-QUF" firstAttribute="leading" secondItem="hpE-o8-XwA" secondAttribute="trailing" constant="8" id="lKu-2m-Wh7"/>
                             <constraint firstItem="zba-jF-ebF" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="56" id="lww-tD-Mon"/>
                             <constraint firstItem="1FA-jV-vSf" firstAttribute="centerX" secondItem="IB7-8r-r0x" secondAttribute="centerX" id="nDs-sk-sDT"/>
-                            <constraint firstItem="Cux-7n-1R5" firstAttribute="centerX" secondItem="IB7-8r-r0x" secondAttribute="centerX" id="oyf-gu-FEt"/>
+                            <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="Cux-7n-1R5" secondAttribute="trailing" constant="220" id="oQb-u9-euC"/>
                             <constraint firstItem="zba-jF-ebF" firstAttribute="top" secondItem="c0J-c0-Owh" secondAttribute="top" id="ro4-d9-aAV"/>
                             <constraint firstItem="mEX-ao-H3f" firstAttribute="width" secondItem="K5j-Ef-LbB" secondAttribute="width" multiplier="0.1" id="sJ6-3J-TxQ"/>
                             <constraint firstItem="1FA-jV-vSf" firstAttribute="top" secondItem="IB7-8r-r0x" secondAttribute="top" constant="16" id="uPp-17-wti"/>
@@ -507,9 +443,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="um0-lW-rLg"/>
                     <connections>
-                        <outlet property="StatusBtnOutlet" destination="Cux-7n-1R5" id="DCk-8h-976"/>
                         <outlet property="donatorsAddressLbl" destination="hpE-o8-XwA" id="rcF-Ce-f2R"/>
-                        <outlet property="statusPickerView" destination="3OD-Ye-cHb" id="hao-QL-ygJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc5-Rk-WZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -572,27 +506,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTY-0M-Sxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="433" y="1069"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="iby-yA-YhC">
-            <objects>
-                <tabBarController storyboardIdentifier="delivery_main" id="s4Y-Sp-bbH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vAq-xB-Z05">
-                        <barButtonItem key="backBarButtonItem" title="חזזזז" id="Ijw-Lq-P10"/>
-                    </navigationItem>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sc7-Pg-Qze">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="n7Z-GJ-88u" kind="relationship" relationship="viewControllers" id="wIg-DY-bxY"/>
-                        <segue destination="YJp-py-TwS" kind="relationship" relationship="viewControllers" id="lzh-cz-MML"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RcP-MT-9xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1737" y="732"/>
         </scene>
         <!--תרומה באמצעות שליח-->
         <scene sceneID="KbF-Mz-jIS">
@@ -846,10 +759,9 @@
     </scenes>
     <resources>
         <image name="delivery_icon" width="37" height="37"/>
-        <image name="delivery_past" width="40" height="40"/>
         <image name="delivery_request" width="32" height="32"/>
         <image name="directions_icon" width="37" height="37"/>
-        <image name="status_done" width="32" height="32"/>
+        <image name="status_waiting" width="32" height="32"/>
         <image name="waze_icon" width="32" height="32"/>
     </resources>
 </document>

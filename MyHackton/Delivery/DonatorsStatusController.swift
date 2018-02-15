@@ -1,67 +1,57 @@
 import UIKit
 
-class DonatorsStatusController: UIViewController ,UIPickerViewDataSource , UIPickerViewDelegate {
-   
-    @IBOutlet var statusPickerView: UIPickerView!
-    @IBOutlet var donatorsAddressLbl: UILabel!
-    @IBOutlet var StatusBtnOutlet: UIButton!
+class DonatorsStatusController: UIViewController {
     
-     var rowNumber : Int = 0
+    @IBOutlet var donatorsAddressLbl: UILabel!
     
     private var address: String!
     
-    //pickerView list
-    private let statusList = [" ","בטיפול","בוטל","בוצע"]
-    
     override func viewWillAppear(_ animated: Bool) {
-        StatusBtnOutlet.isEnabled = rowNumber > 0
+        donatorsAddressLbl.text = address
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        donatorsAddressLbl.text = address
     }
+    
     
   //method to change address
     public func set(address: String){
         self.address = address
     }
-
-    //picker view methods//
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return statusList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return statusList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        rowNumber = row
-        StatusBtnOutlet.isEnabled = rowNumber > 0
-        print(row)
-    }
-    ////
-    
-    @IBAction func changeStatusBtn(_ sender: UIButton) {
-        //show the DeliveryRequestController
+    //confirm the messanger took the products from the donator
+    @IBAction func confirmBtn(_ sender: UIButton) {
+        //by clicking the button - and pressing confirm in the alert, the product and address will be removed from the messsanger list, and the deliveries page will open
+        let alert = UIAlertController(title: "אשר איסוף מוצרים", message: "האם אספת כעת את המוצרים מהלקוח?", preferredStyle: .alert)
         
-        if rowNumber != 0 {
-            //let deliveryController = storyboard!.instantiateViewController(withIdentifier: "MyDeliveryList")
-            //show(deliveryController, sender: self)
-            navigationController?.popViewController(animated: false)
-            //navigationController?.popToViewController(deliveryController, animated: true)
-          
-        }
+        alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: { ok in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//
-//    }
-    
+    @IBAction func toWaze(_ sender: UIButton) {
+        //check if waze installed on the iPhone
+        if(UIApplication.shared.canOpenURL(URL(string:"waze://")!)){
+            
+            
+            let address = "https://waze.com/ul?q=\(donatorsAddressLbl.text!)"
+            let addressURL = URL(string: address)
+            
+            print("\(addressURL!)")
+            
+            UIApplication.shared.open(addressURL!, options: [:], completionHandler: nil)
+            UIApplication.shared.isIdleTimerDisabled = true
+        } else {
+            //else open a web url that says waze is not installed and link to appstore to download waze
+            let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!
+            //  let url = URL(string:"http://www.google.com/")!   //test
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            
+        }
+        
+    }
     
 }
