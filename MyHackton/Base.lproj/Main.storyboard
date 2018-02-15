@@ -299,7 +299,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="adress" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
+                                            <outlet property="address" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
                                             <outlet property="icon_adress" destination="ETv-ZI-e6f" id="32a-tT-QsB"/>
                                         </connections>
                                     </tableViewCell>
@@ -321,6 +321,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="משלוחים" image="delivery_request" id="ASC-PL-NdR"/>
                     <navigationItem key="navigationItem" id="phw-Ah-dOx"/>
+                    <connections>
+                        <outlet property="table" destination="OvC-VB-RCm" id="Dr3-me-h3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

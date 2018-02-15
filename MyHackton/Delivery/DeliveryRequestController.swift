@@ -2,8 +2,8 @@ import UIKit
 
 class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITableViewDelegate {
     
-    private var RequestsList : [Donator] = []
-    private var donator : Donator!
+    private var RequestsList : [Request] = []
+    private var donator : Request!
     
     override func viewWillAppear(_ animated: Bool) {
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
@@ -12,9 +12,25 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
             self.navigationItem.leftBarButtonItem = b
     }
     
+    @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
+        
+        let prefs = UserDefaults.standard
+        if let token = prefs.string(forKey: "token"){
+            ServerConnections.getDoubleArrayAsync("/myrequests", token, handler: {requests in
+                if let reqs = requests{
+                    for request in reqs{
+                        self.RequestsList.append(Request(id: request[0], fullName: request[1], address: request[2], phoneNumber: request[3], notice: request[4], status: request[5]))
+                    }
+                    self.table.reloadData()
+                }
+            })
+        } else {
+            //Move back to the main page
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     @objc func backcheck(){
@@ -34,11 +50,12 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     }
     //table view methods//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return RequestsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
+        cell.address.text = RequestsList[indexPath.row].getAddress()
         return cell
     }
     
@@ -46,14 +63,14 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
         let next = storyboard?.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
         
-        next.set(address: cell.adress.text!)
+        next.set(address: cell.address.text!)
         //RequestsList.remove(at: indexPath.row)
         show(next, sender: self)
         self.navigationItem.backBarButtonItem?.title = "חזור"
     }
     ////
     
-    func setDonatorObj(donator : Donator){
+    func setDonatorObj(donator : Request){
         self.donator = donator
     }
 

@@ -54,15 +54,18 @@ class MainController: UIViewController {
                         let job = arr[1]
                         switch(job){
                         case "שליח":
+                            print("שליח")
                             self.ConnectAsDeliveryGuy()
                             break
                         case "מחסנאי":
+                            print("מחסנאי")
                             self.ConnectAsStorageKeeper()
                             break
                         case "מנהל רשת":
                             print("good job")
                             break
                         default:
+                            print("not found")
                             self.login()
                         }
                     } else {
@@ -72,13 +75,13 @@ class MainController: UIViewController {
             })
             
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
-            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
-                ConnectAsDeliveryGuy()
-            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
-                ConnectAsStorageKeeper()
-            } else {
-                login()
-            }
+//            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
+//                ConnectAsDeliveryGuy()
+//            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
+//                ConnectAsStorageKeeper()
+//            } else {
+//                login()
+//            }
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
