@@ -3,6 +3,7 @@ import UIKit
 class DonatorController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource {
     
     @IBOutlet var tbl_products: UITableView!
+    @IBOutlet var productsCollectionView: UICollectionView!
     @IBAction func phoneNumber(_ number: UIButton) {
         
         let numberToCall = (number.titleLabel?.text)!
@@ -27,7 +28,7 @@ override func viewWillAppear(_ animated: Bool) {
     
     
 
-override func viewDidAppear(_ animated: Bool){
+/*override func viewDidAppear(_ animated: Bool){
         // show the products from the server in a new task
         let url = URL(string: "http://2help-server.eu-gb.mybluemix.net/items")!
         URLSession.shared.dataTask(with: url, completionHandler: {(d,r,e) in
@@ -44,16 +45,16 @@ override func viewDidAppear(_ animated: Bool){
                 }
             }).execute(d!)
         }).resume()
-    }
+    } */
 
     
 override func viewDidLoad(){
     super.viewDidLoad()
+    
 }
     
     //Products Collection View//
     
-    @IBOutlet var productsCollectionView: UICollectionView!
     let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
     let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
                                      UIImage(named:"special")!,
@@ -68,9 +69,14 @@ override func viewDidLoad(){
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
+        cell.productLabel.text = productsArray[indexPath.item]
+        cell.ProductImageView.image = productsImage[indexPath.item]
+       
         return  cell
     }
+    
+    
     ////
     
     // dependency injection - update the count from each dontaorProductCell
