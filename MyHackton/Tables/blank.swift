@@ -1,6 +1,16 @@
-import UIKit
+//
+//  blank.swift
+//  MyHackton
+//
+//  Created by מתןפור on 15.2.2018.
+//  Copyright © 2018 nati. All rights reserved.
+//
 
-class DonatorController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource {
+import Foundation
+
+
+/*
+class DonatorController: UIViewController,UITableViewDataSource {
     
     @IBOutlet var tbl_products: UITableView!
     @IBAction func phoneNumber(_ number: UIButton) {
@@ -9,25 +19,25 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
         if let phoneURL = URL(string :"tel://" + numberToCall){
             UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
         }
-    
+        
     }
     
     
     var totalCount: Int = 0
     var products: [String] = []
     
-override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-    if totalCount > 0 {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
-    }
+        if totalCount > 0 {
+            tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+        }
         tabBarController!.navigationItem.rightBarButtonItem!.title = "מלא פרטים"
         tabBarController!.title = "תרומות"
-}
+    }
     
     
-
-override func viewDidAppear(_ animated: Bool){
+    
+    override func viewDidAppear(_ animated: Bool){
         // show the products from the server in a new task
         let url = URL(string: "http://2help-server.eu-gb.mybluemix.net/items")!
         URLSession.shared.dataTask(with: url, completionHandler: {(d,r,e) in
@@ -44,32 +54,25 @@ override func viewDidAppear(_ animated: Bool){
                 }
             }).execute(d!)
         }).resume()
-    }
-
-    
-override func viewDidLoad(){
-    super.viewDidLoad()
-}
-    
-    //Products Collection View//
-    
-    @IBOutlet var productsCollectionView: UICollectionView!
-    let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
-    let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
-                                     UIImage(named:"special")!,
-                                     UIImage(named:"tamal")!,
-                                     UIImage(named:"biscate")!,
-                                     UIImage(named:"pasta")!,
-                                     UIImage(named:"canes")!]
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productsArray.count
+        //
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
-        return  cell
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+    }
+    
+    //Products table//
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! DonatorProductsCell
+        cell.set(donatorController: self)
+        cell.productName.text = products[indexPath.row]
+        
+        return cell
     }
     ////
     
@@ -82,5 +85,4 @@ override func viewDidLoad(){
     }
     ////
     
-}
-
+ }  */

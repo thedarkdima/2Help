@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="-397"/>
+            <point key="canvasLocation" x="3724" y="-292"/>
         </scene>
         <!--Storage Keeper Controller-->
         <scene sceneID="qji-om-Dd1">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OK-Pq-ewu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048.8000000000002" y="242.42878560719643"/>
+            <point key="canvasLocation" x="2159" y="328"/>
         </scene>
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
@@ -274,7 +274,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_waiting" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
                                                     <rect key="frame" x="286" y="4" width="47" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="7ec-bB-NXe"/>
@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645.5999999999999" y="924.28785607196414"/>
+            <point key="canvasLocation" x="2842" y="988"/>
         </scene>
         <!--Donators Status Controller-->
         <scene sceneID="rtl-Ua-Qgr">
@@ -525,16 +525,17 @@
             </objects>
             <point key="canvasLocation" x="433" y="1069"/>
         </scene>
-        <!--תרומה באמצעות שליח-->
-        <scene sceneID="KbF-Mz-jIS">
+        <!--View Controller-->
+        <scene sceneID="4mi-0i-O5h">
             <objects>
-                <viewController id="r1q-tO-wfY" customClass="DonatorController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S55-Lc-Siz">
+                <viewController id="uHd-Bu-UtZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="atI-QR-O0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfv-1F-WKg">
-                                <rect key="frame" x="16" y="199.5" width="343" height="402.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfv-1F-WKg">
+                                <rect key="frame" x="16" y="132" width="343" height="402.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="WPK-ec-trJ" customClass="DonatorProductsCell" customModule="MyHackton" customModuleProvider="target">
@@ -602,6 +603,23 @@
                                     <outlet property="dataSource" destination="r1q-tO-wfY" id="5xk-Qp-m3a"/>
                                 </connections>
                             </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TCe-BM-Fhg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89I-Nw-JmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="-1383"/>
+        </scene>
+        <!--תרומה באמצעות שליח-->
+        <scene sceneID="KbF-Mz-jIS">
+            <objects>
+                <viewController id="r1q-tO-wfY" customClass="DonatorController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S55-Lc-Siz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומה כספית התקשר ל:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-Ya-aQs">
                                 <rect key="frame" x="159.5" y="80" width="199.5" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -616,38 +634,85 @@
                                     <action selector="phoneNumber:" destination="r1q-tO-wfY" eventType="touchUpInside" id="reK-eH-JtR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומת מוצרי מזון הכנס את הכמות שברצונך לתרום" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
-                                <rect key="frame" x="16" y="150" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
+                                <rect key="frame" x="16" y="119" width="343" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-qZ-HKZ">
+                                <rect key="frame" x="137" y="572" width="100" height="30"/>
+                                <state key="normal" title="לרשימת התרומה"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-pM-0Lw">
+                                <rect key="frame" x="14" y="153" width="345" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QmG-cT-7ge">
+                                    <size key="itemSize" width="162" height="191"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="product_cell" id="gJ8-Pk-AJO" customClass="ProductsCollectionViewCell" customModule="MyHackton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="191"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="162" height="191"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H10-wr-kdY">
+                                                    <rect key="frame" x="8" y="8" width="146" height="138"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-87-h17">
+                                                    <rect key="frame" x="60" y="154" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3W9-87-h17" firstAttribute="centerX" secondItem="gJ8-Pk-AJO" secondAttribute="centerX" id="IDB-0l-Yt6"/>
+                                            <constraint firstAttribute="bottom" secondItem="3W9-87-h17" secondAttribute="bottom" constant="16" id="KRY-p2-qR4"/>
+                                            <constraint firstAttribute="trailing" secondItem="H10-wr-kdY" secondAttribute="trailing" constant="8" id="Mgr-z2-DUR"/>
+                                            <constraint firstItem="H10-wr-kdY" firstAttribute="leading" secondItem="gJ8-Pk-AJO" secondAttribute="leading" constant="8" id="bFL-Jw-hZX"/>
+                                            <constraint firstItem="3W9-87-h17" firstAttribute="top" secondItem="H10-wr-kdY" secondAttribute="bottom" constant="8" id="jRB-j8-qsl"/>
+                                            <constraint firstItem="H10-wr-kdY" firstAttribute="top" secondItem="gJ8-Pk-AJO" secondAttribute="top" constant="8" id="mLH-MM-2hL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ProductImageView" destination="H10-wr-kdY" id="5rA-Yn-LL1"/>
+                                            <outlet property="productLabel" destination="3W9-87-h17" id="zqw-hw-gpU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="mXF-pw-AWk" secondAttribute="trailing" constant="4" id="A2X-wG-yfl"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="14" id="Ax3-Jw-YVu"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="16" id="DrO-T6-rtT"/>
+                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="centerX" secondItem="pkf-QM-FMp" secondAttribute="centerX" id="Gm8-2Y-NoJ"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="fws-br-Ga3" secondAttribute="trailing" constant="16" id="JXh-ZI-zqJ"/>
-                            <constraint firstItem="dfv-1F-WKg" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="UoJ-fx-kJj"/>
-                            <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="dfv-1F-WKg" secondAttribute="trailing" constant="16" id="YRj-En-KZg"/>
+                            <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="Hmt-qZ-HKZ" secondAttribute="bottom" constant="16" id="Xni-Ja-A1o"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
-                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="47" id="iDv-8R-hHz"/>
+                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="16" id="iDv-8R-hHz"/>
                             <constraint firstItem="fws-br-Ga3" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="jpj-NB-aeU"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="10" id="rV0-C0-kKV"/>
-                            <constraint firstItem="dfv-1F-WKg" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="29" id="vcD-Ob-oTM"/>
-                            <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="dfv-1F-WKg" secondAttribute="bottom" constant="16" id="zWD-fL-Hjg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pkf-QM-FMp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="תרומה באמצעות שליח" image="delivery_icon" selectedImage="delivery_icon" id="08Y-Ih-dAY"/>
                     <connections>
+                        <outlet property="productsCollectionView" destination="Sdh-pM-0Lw" id="ynR-e0-gve"/>
                         <outlet property="tbl_products" destination="dfv-1F-WKg" id="0aA-5r-R53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjw-jy-7vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413.5999999999999" y="-1222.0389805097452"/>
+            <point key="canvasLocation" x="2421.5999999999999" y="-1383.0584707646178"/>
         </scene>
         <!--Add Details Controller-->
         <scene sceneID="p2x-Fx-mgY">
@@ -781,7 +846,7 @@
         <image name="delivery_past" width="40" height="40"/>
         <image name="delivery_request" width="32" height="32"/>
         <image name="directions_icon" width="37" height="37"/>
-        <image name="status_waiting" width="32" height="32"/>
+        <image name="home_icon" width="40" height="40"/>
         <image name="waze_icon" width="32" height="32"/>
     </resources>
 </document>
