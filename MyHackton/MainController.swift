@@ -72,15 +72,13 @@ class MainController: UIViewController {
             })
             
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
-//            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
-//                ConnectAsDeliveryGuy()
-//               navigationItem.backBarButtonItem?.title = "התנתק"
-//            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
-//                ConnectAsStorageKeeper()
-//                navigationItem.backBarButtonItem?.title = "התנתק"
-//            } else {
-//                login()
-//            }
+            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
+                ConnectAsDeliveryGuy()
+            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
+                ConnectAsStorageKeeper()
+            } else {
+                login()
+            }
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
