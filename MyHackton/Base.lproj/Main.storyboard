@@ -105,27 +105,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-7p-hI2">
-                                                    <rect key="frame" x="83.5" y="32" width="244.5" height="21"/>
+                                                    <rect key="frame" x="284.5" y="32" width="43.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paZ-Uf-7yF">
-                                                    <rect key="frame" x="16" y="16" width="51.5" height="51.5"/>
-                                                    <state key="normal" backgroundImage="waze_icon"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-Dw-wUT">
+                                                    <rect key="frame" x="29" y="25.5" width="51" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <action selector="toWaze:" destination="vcY-a9-AVE" eventType="touchUpInside" id="YoD-R5-PbU"/>
+                                                        <action selector="openAlertBtn:" destination="vcY-a9-AVE" eventType="touchUpInside" id="BzM-Ya-L1m"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="IW2-Dw-wUT" firstAttribute="leading" secondItem="ivO-4A-x8P" secondAttribute="leading" constant="29" id="0TO-qZ-3H4"/>
                                                 <constraint firstAttribute="trailing" secondItem="fQB-7p-hI2" secondAttribute="trailing" constant="15" id="1WZ-H5-13G"/>
-                                                <constraint firstItem="paZ-Uf-7yF" firstAttribute="leading" secondItem="ivO-4A-x8P" secondAttribute="leading" constant="16" id="3mR-Rd-LdV"/>
-                                                <constraint firstItem="fQB-7p-hI2" firstAttribute="leading" secondItem="paZ-Uf-7yF" secondAttribute="trailing" constant="16" id="EbM-sf-TGw"/>
-                                                <constraint firstAttribute="bottom" secondItem="paZ-Uf-7yF" secondAttribute="bottom" constant="16" id="JBz-ou-cLT"/>
                                                 <constraint firstItem="fQB-7p-hI2" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="TBc-Hj-dMQ"/>
-                                                <constraint firstItem="paZ-Uf-7yF" firstAttribute="width" secondItem="ivO-4A-x8P" secondAttribute="width" multiplier="0.15" id="aU4-Ru-NTb"/>
-                                                <constraint firstItem="paZ-Uf-7yF" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="lIn-Od-fJG"/>
+                                                <constraint firstItem="fQB-7p-hI2" firstAttribute="leading" secondItem="IW2-Dw-wUT" secondAttribute="trailing" constant="204.5" id="US2-Xd-A3X"/>
+                                                <constraint firstItem="IW2-Dw-wUT" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="d57-Yg-MCk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -300,7 +299,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="adress" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
+                                            <outlet property="address" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
                                             <outlet property="icon_adress" destination="ETv-ZI-e6f" id="32a-tT-QsB"/>
                                         </connections>
                                     </tableViewCell>
@@ -322,6 +321,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="משלוחים" image="delivery_request" id="ASC-PL-NdR"/>
                     <navigationItem key="navigationItem" id="phw-Ah-dOx"/>
+                    <connections>
+                        <outlet property="table" destination="OvC-VB-RCm" id="Dr3-me-h3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

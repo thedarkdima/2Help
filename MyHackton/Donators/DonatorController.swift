@@ -44,7 +44,6 @@ override func viewDidAppear(_ animated: Bool){
                 }
             }).execute(d!)
         }).resume()
-        //
     }
 
     
