@@ -8,26 +8,20 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     override func viewWillAppear(_ animated: Bool) {
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
         
-      
             self.navigationItem.hidesBackButton = true
             self.navigationItem.leftBarButtonItem = b
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
-
     }
-    
     
     @objc func backcheck(){
         //let main = storyboard!.instantiateViewController(withIdentifier: "main")
         let alert =  UIAlertController(title:"יציאה מהמערכת", message: "האם אתה בטוח שברצונך להתנתק מהמערכת?", preferredStyle: .alert)
         
         func okHandler(alert: UIAlertAction!){
-           // let main = storyboard?.instantiateViewController(withIdentifier: "main") as! MainController
               navigationController?.popToRootViewController(animated: true)
            
         }
