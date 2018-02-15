@@ -26,6 +26,10 @@
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
 		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
+		90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD74D2035D78100A60FCF /* FinalDonationList.swift */; };
+		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
+		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
+		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,10 @@
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
 		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
+		90EBD74D2035D78100A60FCF /* FinalDonationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationList.swift; sourceTree = "<group>"; };
+		90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationListCell.swift; sourceTree = "<group>"; };
+		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
+		90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +109,8 @@
 				90E1757220230CFB0062453D /* Server */,
 				90E1757020230C430062453D /* Donators */,
 				90E1757120230C610062453D /* Delivery */,
+				90EBD74F2035D8B900A60FCF /* Tables */,
+				90EBD7542035E42900A60FCF /* CollectionView */,
 				45A9648D2019D91000D173BC /* Main.storyboard */,
 				45A964932019D91000D173BC /* Assets.xcassets */,
 				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
@@ -139,6 +149,24 @@
 				D2D79AD3202317C800C504E3 /* ServerConnections.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		90EBD74F2035D8B900A60FCF /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */,
+				90EBD74D2035D78100A60FCF /* FinalDonationList.swift */,
+				90EBD7522035E01200A60FCF /* blank.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		90EBD7542035E42900A60FCF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				902707C52029EC00005AF37B /* Donator.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
@@ -227,8 +256,11 @@
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
 				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
+				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
 				4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */,
+				90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
+				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
 				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

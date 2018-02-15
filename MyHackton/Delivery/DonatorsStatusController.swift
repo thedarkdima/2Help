@@ -7,7 +7,8 @@ class DonatorsStatusController: UIViewController {
     private var address: String!
     
     override func viewWillAppear(_ animated: Bool) {
-        donatorsAddressLbl.text = address
+       // donatorsAddressLbl.text = address
+        donatorsAddressLbl.text = "tel aviv hahagana train station "
     }
     
     override func viewDidLoad() {
@@ -36,11 +37,12 @@ class DonatorsStatusController: UIViewController {
         //check if waze installed on the iPhone
         if(UIApplication.shared.canOpenURL(URL(string:"waze://")!)){
             
+            let NameUrl = (donatorsAddressLbl.text?.replacingOccurrences(of: " ", with: "+"))!
             
-            let address = "https://waze.com/ul?q=\(donatorsAddressLbl.text!)"
+            let address = "https://waze.com/ul?q=\(NameUrl)"
             let addressURL = URL(string: address)
             
-            print("\(addressURL!)")
+           // print("\(addressURL!)")
             
             UIApplication.shared.open(addressURL!, options: [:], completionHandler: nil)
             UIApplication.shared.isIdleTimerDisabled = true
