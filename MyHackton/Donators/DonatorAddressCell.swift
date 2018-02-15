@@ -48,6 +48,7 @@ class DonatorAddressCell: UITableViewCell {
         alert.addAction(openHours)
        // alert.addAction(waze)
     
+       
         
     }
 
