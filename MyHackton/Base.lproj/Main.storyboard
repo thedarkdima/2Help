@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646" y="-99"/>
+            <point key="canvasLocation" x="2774" y="-397"/>
         </scene>
         <!--Storage Keeper Controller-->
         <scene sceneID="qji-om-Dd1">
@@ -230,6 +230,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Pc-uX-lPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="2274"/>
+        </scene>
+        <!--מקומות קנייה סביבי-->
+        <scene sceneID="IfD-Cn-gbo">
+            <objects>
+                <viewController id="0Sv-Na-Y6n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKO-as-cub">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bHI-tY-aSQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="מקומות קנייה סביבי" image="delivery_past" id="uwQ-8W-x6k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OK-Pq-ewu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048.8000000000002" y="242.42878560719643"/>
         </scene>
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
@@ -750,6 +766,7 @@
                     <connections>
                         <segue destination="r1q-tO-wfY" kind="relationship" relationship="viewControllers" id="bKh-Zs-11T"/>
                         <segue destination="HaQ-Jr-pFs" kind="relationship" relationship="viewControllers" id="EAe-zp-b6a"/>
+                        <segue destination="0Sv-Na-Y6n" kind="relationship" relationship="viewControllers" id="mfA-bT-xbC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1i-IW-cLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -759,6 +776,7 @@
     </scenes>
     <resources>
         <image name="delivery_icon" width="37" height="37"/>
+        <image name="delivery_past" width="40" height="40"/>
         <image name="delivery_request" width="32" height="32"/>
         <image name="directions_icon" width="37" height="37"/>
         <image name="status_waiting" width="32" height="32"/>
