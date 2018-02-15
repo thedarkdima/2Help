@@ -15,7 +15,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ServerConnections.getDictonaryAsync("/addresses", "", handler: {addresses in
+        ServerConnections.getDoubleArrayAsync("/addresses", "", handler: {addresses in
             if let add = addresses{
                 for array in add{
                     self.DirectionsList.append(array[0])

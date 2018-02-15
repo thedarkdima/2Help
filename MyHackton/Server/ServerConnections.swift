@@ -2,12 +2,13 @@ import Foundation
 
 
 class ServerConnections{
-    
-    static func getArrayAsync(_ urlAddon: String, _ tokken: String, handler: @escaping ([String]?)->()) {
+    //Connection to the server with url addon and if needed with package of string, returning an array or a dobule array of
+    //String from the server.
+    static func getArrayAsync(_ urlAddon: String, _ package: String, handler: @escaping ([String]?)->()) {
         let url = URL(string: "http://2help-server.eu-gb.mybluemix.net" + urlAddon)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.httpBody = tokken.data(using: .utf8)
+        request.httpBody = package.data(using: .utf8)
         URLSession.shared.dataTask(with: request, completionHandler: {(d,r,e) in
             if let data = d {
                 //call handler with result (in main thread)
@@ -21,11 +22,11 @@ class ServerConnections{
         }).resume()
     }
     
-    static func getDictonaryAsync(_ urlAddon: String, _ tokken: String, handler: @escaping ([[String]]?)->()) {
+    static func getDoubleArrayAsync(_ urlAddon: String, _ package: String, handler: @escaping ([[String]]?)->()) {
         let url = URL(string: "http://2help-server.eu-gb.mybluemix.net" + urlAddon)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.httpBody = tokken.data(using: .utf8)
+        request.httpBody = package.data(using: .utf8)
         URLSession.shared.dataTask(with: request, completionHandler: {(d,r,e) in
             if let data = d {
                 //call handler with result (in main thread)

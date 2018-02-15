@@ -5,7 +5,7 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       ServerConnections.getDictonaryAsync("/donators", "Stan", handler: {donators in
+       ServerConnections.getDoubleArrayAsync("/donators", "Stan", handler: {donators in
         if let dodo = donators{
             print(dodo)
         }
@@ -43,7 +43,7 @@ class MainController: UIViewController {
             //Server Auth
             //The username and password will be sent to the server, the server will return a token and a job in array.
             //After that if the server returend data that meants the user was found and takes the user to his page.
-            ServerConnections.getArrayAsync("/login", "{\(username), \(password)}", handler: {array in
+            ServerConnections.getArrayAsync("/login", "\(username)&\(password)", handler: {array in
                 if let arr = array{
                     if(arr.count > 0){
                         //Tokken from the server
@@ -59,7 +59,7 @@ class MainController: UIViewController {
                             self.ConnectAsStorageKeeper()
                             break
                         case "מנהל רשת":
-                            
+                            print("good job")
                             break
                         default:
                             self.login()
@@ -71,15 +71,15 @@ class MainController: UIViewController {
             })
             
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
-            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
-                ConnectAsDeliveryGuy()
-               navigationItem.backBarButtonItem?.title = "התנתק"
-            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
-                ConnectAsStorageKeeper()
-                navigationItem.backBarButtonItem?.title = "התנתק"
-            } else {
-                login()
-            }
+//            if username == "matan" && password == "123" && !username.isEmpty && !password.isEmpty {
+//                ConnectAsDeliveryGuy()
+//               navigationItem.backBarButtonItem?.title = "התנתק"
+//            } else if username == "nati" && password == "123" && !username.isEmpty && !password.isEmpty {
+//                ConnectAsStorageKeeper()
+//                navigationItem.backBarButtonItem?.title = "התנתק"
+//            } else {
+//                login()
+//            }
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
