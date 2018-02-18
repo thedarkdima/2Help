@@ -6,12 +6,7 @@ class AlertController: UIViewController {
     @IBOutlet var alertBox: UIView!
     
     @IBOutlet var address_label: UILabel!
-    
    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationItem.backBarButtonItem?.title = ""
-        navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

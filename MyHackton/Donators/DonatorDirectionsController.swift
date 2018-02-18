@@ -8,27 +8,37 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     var DirectionsList: [String] = []
     
     var selectedIndex: Int!
-    var addon: String!
+    var package: String!
     
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        //disable the "מלא פרטים" button
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
         tabBarController!.navigationItem.rightBarButtonItem!.title = ""
+
+        //disable the next page back button - want to make alert look
+        tabBarController!.navigationItem.backBarButtonItem!.isEnabled = false
+        tabBarController!.navigationItem.backBarButtonItem!.title = ""
+        
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        selectedIndex = self.tabBarController!.selectedIndex
         if selectedIndex == 1{
             tabBarController!.title = "סניפים"
         }else{
             tabBarController!.title = "סופרים סביבי"
         }
-
-        if selectedIndex == 1 {
-            DirectionsList = []
-            addon = "/addresses"
-        }else{
-            addon = "/super"
-        }
         
-        ServerConnections.getDoubleArrayAsync(addon, "", handler: {addresses in
+        if selectedIndex == 1 {
+            
+            package = "warehouse"
+        }else {
+            package = "supermarket"
+        }
+            DirectionsList = []
+        ServerConnections.getDoubleArrayAsync("/locations", package, handler: {addresses in
             if let add = addresses{
                 for array in add{
                     self.DirectionsList.append(array[0])
@@ -36,12 +46,6 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
                 self.table.reloadData()
             }
         })
-
-    }
-
-    
-    override func viewDidAppear(_ animated: Bool) {
-        selectedIndex = self.tabBarController!.selectedIndex
         print(selectedIndex)
     
     }
