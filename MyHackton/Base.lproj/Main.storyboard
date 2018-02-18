@@ -105,25 +105,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-7p-hI2">
-                                                    <rect key="frame" x="284.5" y="32" width="43.5" height="21"/>
+                                                    <rect key="frame" x="75" y="32" width="253" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-Dw-wUT">
-                                                    <rect key="frame" x="29" y="25.5" width="51" height="33"/>
+                                                    <rect key="frame" x="16" y="25.5" width="51" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="vQr-J8-qhz"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <action selector="openAlertBtn:" destination="vcY-a9-AVE" eventType="touchUpInside" id="BzM-Ya-L1m"/>
+                                                        <action selector="openAlert" destination="HaQ-Jr-pFs" eventType="touchUpInside" id="5gU-BG-q6A"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="IW2-Dw-wUT" firstAttribute="leading" secondItem="ivO-4A-x8P" secondAttribute="leading" constant="29" id="0TO-qZ-3H4"/>
+                                                <constraint firstItem="IW2-Dw-wUT" firstAttribute="leading" secondItem="ivO-4A-x8P" secondAttribute="leading" constant="16" id="0TO-qZ-3H4"/>
                                                 <constraint firstAttribute="trailing" secondItem="fQB-7p-hI2" secondAttribute="trailing" constant="15" id="1WZ-H5-13G"/>
+                                                <constraint firstItem="fQB-7p-hI2" firstAttribute="leading" secondItem="IW2-Dw-wUT" secondAttribute="trailing" constant="8" id="S8l-Jc-2B0"/>
                                                 <constraint firstItem="fQB-7p-hI2" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="TBc-Hj-dMQ"/>
-                                                <constraint firstItem="fQB-7p-hI2" firstAttribute="leading" secondItem="IW2-Dw-wUT" secondAttribute="trailing" constant="204.5" id="US2-Xd-A3X"/>
                                                 <constraint firstItem="IW2-Dw-wUT" firstAttribute="centerY" secondItem="ivO-4A-x8P" secondAttribute="centerY" id="d57-Yg-MCk"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -149,6 +152,7 @@
                     <tabBarItem key="tabBarItem" title="תרומה בהגעה עצמית" image="directions_icon" id="DjP-z7-lXx"/>
                     <connections>
                         <outlet property="table" destination="Jeg-bK-08X" id="PBY-Wb-LRR"/>
+                        <outlet property="tbl" destination="Jeg-bK-08X" id="fgX-Xe-10I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdP-yS-MHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,11 +270,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="15" y="11" width="57.5" height="23"/>
+                                                    <rect key="frame" x="15" y="11.5" width="54" height="20.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="57.5" id="dql-fh-uCV"/>
+                                                        <constraint firstAttribute="width" constant="54" id="dql-fh-uCV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -282,7 +286,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
-                                                    <rect key="frame" x="88.5" y="12" width="189.5" height="21"/>
+                                                    <rect key="frame" x="85" y="12" width="193" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

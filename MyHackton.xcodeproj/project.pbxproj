@@ -1,440 +1,466 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        453920D22035D04800AA13B4 /* PlacesAndDatails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453920D12035D04800AA13B4 /* PlacesAndDatails.swift */; };
-        453920D42035D31400AA13B4 /* PlacesAndDatailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453920D32035D31400AA13B4 /* PlacesAndDatailsCell.swift */; };
-        455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
-        455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
-        455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
-        4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */; };
-        4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */; };
-        45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
-        45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
-        45A41195202368BB003536A1 /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41194202368BB003536A1 /* ContactUsController.swift */; };
-        45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
-        45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
-        45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
-        45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
-        45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
-        45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
-        902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
-        902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
-        90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
-        90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
-        90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
-        D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
+		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
+		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
+		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
+		4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */; };
+		4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */; };
+		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
+		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
+		45A41195202368BB003536A1 /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41194202368BB003536A1 /* ContactUsController.swift */; };
+		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
+		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
+		45A9648F2019D91000D173BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A9648D2019D91000D173BC /* Main.storyboard */; };
+		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
+		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
+		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
+		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
+		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
+		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
+		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
+		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
+		90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD74D2035D78100A60FCF /* FinalDonationList.swift */; };
+		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
+		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
+		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
+		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-        453920D12035D04800AA13B4 /* PlacesAndDatails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAndDatails.swift; sourceTree = "<group>"; };
-        453920D32035D31400AA13B4 /* PlacesAndDatailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAndDatailsCell.swift; sourceTree = "<group>"; };
-        455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
-        455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-        455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
-        4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperController.swift; sourceTree = "<group>"; };
-        4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperCell.swift; sourceTree = "<group>"; };
-        45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
-        45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
-        45A41194202368BB003536A1 /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
-        45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
-        45A9648E2019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        45A964912019D91000D173BC /* MyHackton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyHackton.xcdatamodel; sourceTree = "<group>"; };
-        45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
-        902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-        90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
-        90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
-        90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
-        D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
+		455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
+		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
+		4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperController.swift; sourceTree = "<group>"; };
+		4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperCell.swift; sourceTree = "<group>"; };
+		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
+		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
+		45A41194202368BB003536A1 /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
+		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45A9648B2019D91000D173BC /* DonatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorController.swift; sourceTree = "<group>"; };
+		45A9648E2019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45A964912019D91000D173BC /* MyHackton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyHackton.xcdatamodel; sourceTree = "<group>"; };
+		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
+		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
+		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
+		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
+		90EBD74D2035D78100A60FCF /* FinalDonationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationList.swift; sourceTree = "<group>"; };
+		90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationListCell.swift; sourceTree = "<group>"; };
+		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
+		90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        45A964832019D91000D173BC /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		45A964832019D91000D173BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        4560D1BA202A0B30002DF7F4 /* StorageKeeper */ = {
-            isa = PBXGroup;
-            children = (
-                4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */,
-                4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */,
-            );
-            path = StorageKeeper;
-            sourceTree = "<group>";
-        };
-        45A9647D2019D91000D173BC = {
-            isa = PBXGroup;
-            children = (
-                45A964882019D91000D173BC /* MyHackton */,
-                45A964872019D91000D173BC /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        45A964872019D91000D173BC /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                45A964862019D91000D173BC /* MyHackton.app */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        45A964882019D91000D173BC /* MyHackton */ = {
-            isa = PBXGroup;
-            children = (
-                45A964892019D91000D173BC /* AppDelegate.swift */,
-                455B1809201F5CB90002E7D0 /* MainController.swift */,
-                455B1807201F564E0002E7D0 /* AsyncTask.swift */,
-                45A41194202368BB003536A1 /* ContactUsController.swift */,
-                4560D1BA202A0B30002DF7F4 /* StorageKeeper */,
-                90E1757220230CFB0062453D /* Server */,
-                90E1757020230C430062453D /* Donators */,
-                90E1757120230C610062453D /* Delivery */,
-                45A9648D2019D91000D173BC /* Main.storyboard */,
-                45A964932019D91000D173BC /* Assets.xcassets */,
-                45A964952019D91000D173BC /* LaunchScreen.storyboard */,
-                45A964982019D91000D173BC /* Info.plist */,
-                45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
-            );
-            path = MyHackton;
-            sourceTree = "<group>";
-        };
-        90E1757020230C430062453D /* Donators */ = {
-            isa = PBXGroup;
-            children = (
-                45A9648B2019D91000D173BC /* DonatorController.swift */,
-                90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
-                45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
-                90E1757320230EF30062453D /* DonatorAddressCell.swift */,
-                455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
-                902707C42029EC00005AF37B /* Request.swift */,
-            );
-            path = Donators;
-            sourceTree = "<group>";
-        };
-        90E1757120230C610062453D /* Delivery */ = {
-            isa = PBXGroup;
-            children = (
-                902707C22029D851005AF37B /* DeliveryRequestCell.swift */,
-                90E17575202360FF0062453D /* DeliveryRequestController.swift */,
-                45743268202851C000CB39BB /* DonatorsStatusController.swift */,
-            );
-            path = Delivery;
-            sourceTree = "<group>";
-        };
-        90E1757220230CFB0062453D /* Server */ = {
-            isa = PBXGroup;
-            children = (
-                D2D79AD3202317C800C504E3 /* ServerConnections.swift */,
-            );
-            path = Server;
-            sourceTree = "<group>";
-        };
+		4560D1BA202A0B30002DF7F4 /* StorageKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */,
+				4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */,
+			);
+			path = StorageKeeper;
+			sourceTree = "<group>";
+		};
+		45A9647D2019D91000D173BC = {
+			isa = PBXGroup;
+			children = (
+				45A964882019D91000D173BC /* MyHackton */,
+				45A964872019D91000D173BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45A964872019D91000D173BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45A964862019D91000D173BC /* MyHackton.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45A964882019D91000D173BC /* MyHackton */ = {
+			isa = PBXGroup;
+			children = (
+				45A964892019D91000D173BC /* AppDelegate.swift */,
+				455B1809201F5CB90002E7D0 /* MainController.swift */,
+				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
+				45A41194202368BB003536A1 /* ContactUsController.swift */,
+				4560D1BA202A0B30002DF7F4 /* StorageKeeper */,
+				90E1757220230CFB0062453D /* Server */,
+				90E1757020230C430062453D /* Donators */,
+				90E1757120230C610062453D /* Delivery */,
+				90EBD74F2035D8B900A60FCF /* Tables */,
+				90EBD7542035E42900A60FCF /* CollectionView */,
+				45A9648D2019D91000D173BC /* Main.storyboard */,
+				45A964932019D91000D173BC /* Assets.xcassets */,
+				45A964952019D91000D173BC /* LaunchScreen.storyboard */,
+				45A964982019D91000D173BC /* Info.plist */,
+				45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
+			);
+			path = MyHackton;
+			sourceTree = "<group>";
+		};
+		90E1757020230C430062453D /* Donators */ = {
+			isa = PBXGroup;
+			children = (
+				45A9648B2019D91000D173BC /* DonatorController.swift */,
+				90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
+				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
+				90E1757320230EF30062453D /* DonatorAddressCell.swift */,
+				455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
+				902707C42029EC00005AF37B /* Request.swift */,
+			);
+			path = Donators;
+			sourceTree = "<group>";
+		};
+		90E1757120230C610062453D /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				902707C22029D851005AF37B /* DeliveryRequestCell.swift */,
+				90E17575202360FF0062453D /* DeliveryRequestController.swift */,
+				45743268202851C000CB39BB /* DonatorsStatusController.swift */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		90E1757220230CFB0062453D /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				D2D79AD3202317C800C504E3 /* ServerConnections.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		90EBD74F2035D8B900A60FCF /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */,
+				90EBD74D2035D78100A60FCF /* FinalDonationList.swift */,
+				90EBD7522035E01200A60FCF /* blank.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		90EBD7542035E42900A60FCF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        45A964852019D91000D173BC /* MyHackton */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 45A9649B2019D91000D173BC /* Build configuration list for PBXNativeTarget "MyHackton" */;
-            buildPhases = (
-                45A964822019D91000D173BC /* Sources */,
-                45A964832019D91000D173BC /* Frameworks */,
-                45A964842019D91000D173BC /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = MyHackton;
-            productName = MyHackton;
-            productReference = 45A964862019D91000D173BC /* MyHackton.app */;
-            productType = "com.apple.product-type.application";
-        };
+		45A964852019D91000D173BC /* MyHackton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A9649B2019D91000D173BC /* Build configuration list for PBXNativeTarget "MyHackton" */;
+			buildPhases = (
+				45A964822019D91000D173BC /* Sources */,
+				45A964832019D91000D173BC /* Frameworks */,
+				45A964842019D91000D173BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyHackton;
+			productName = MyHackton;
+			productReference = 45A964862019D91000D173BC /* MyHackton.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        45A9647E2019D91000D173BC /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0920;
-                LastUpgradeCheck = 0920;
-                ORGANIZATIONNAME = nati;
-                TargetAttributes = {
-                    45A964852019D91000D173BC = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                    };
-                };
-            };
-            buildConfigurationList = 45A964812019D91000D173BC /* Build configuration list for PBXProject "MyHackton" */;
-            compatibilityVersion = "Xcode 8.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 45A9647D2019D91000D173BC;
-            productRefGroup = 45A964872019D91000D173BC /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                45A964852019D91000D173BC /* MyHackton */,
-            );
-        };
+		45A9647E2019D91000D173BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = nati;
+				TargetAttributes = {
+					45A964852019D91000D173BC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 45A964812019D91000D173BC /* Build configuration list for PBXProject "MyHackton" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45A9647D2019D91000D173BC;
+			productRefGroup = 45A964872019D91000D173BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45A964852019D91000D173BC /* MyHackton */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        45A964842019D91000D173BC /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */,
-                45A964942019D91000D173BC /* Assets.xcassets in Resources */,
-                45A9648F2019D91000D173BC /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		45A964842019D91000D173BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */,
+				45A964942019D91000D173BC /* Assets.xcassets in Resources */,
+				45A9648F2019D91000D173BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        45A964822019D91000D173BC /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                453920D22035D04800AA13B4 /* PlacesAndDatails.swift in Sources */,
-                45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
-                902707C52029EC00005AF37B /* Request.swift in Sources */,
-                902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
-                45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
-                45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
-                455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
-                4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */,
-                455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
-                45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */,
-                D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
-                45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
-                453920D42035D31400AA13B4 /* PlacesAndDatailsCell.swift in Sources */,
-                455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
-                45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
-                90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
-                4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */,
-                90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
-                90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		45A964822019D91000D173BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
+				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
+				902707C52029EC00005AF37B /* Request.swift in Sources */,
+				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
+				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
+				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
+				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
+				4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */,
+				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
+				45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */,
+				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
+				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
+				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
+				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
+				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
+				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
+				4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */,
+				90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */,
+				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
+				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
+				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-        45A9648D2019D91000D173BC /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                45A9648E2019D91000D173BC /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        45A964952019D91000D173BC /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                45A964962019D91000D173BC /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		45A9648D2019D91000D173BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A9648E2019D91000D173BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45A964952019D91000D173BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A964962019D91000D173BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        45A964992019D91000D173BC /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        45A9649A2019D91000D173BC /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        45A9649C2019D91000D173BC /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 28Q8D95B37;
-                INFOPLIST_FILE = MyHackton/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        45A9649D2019D91000D173BC /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 28Q8D95B37;
-                INFOPLIST_FILE = MyHackton/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
+		45A964992019D91000D173BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45A9649A2019D91000D173BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45A9649C2019D91000D173BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28Q8D95B37;
+				INFOPLIST_FILE = MyHackton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45A9649D2019D91000D173BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28Q8D95B37;
+				INFOPLIST_FILE = MyHackton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        45A964812019D91000D173BC /* Build configuration list for PBXProject "MyHackton" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                45A964992019D91000D173BC /* Debug */,
-                45A9649A2019D91000D173BC /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        45A9649B2019D91000D173BC /* Build configuration list for PBXNativeTarget "MyHackton" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                45A9649C2019D91000D173BC /* Debug */,
-                45A9649D2019D91000D173BC /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		45A964812019D91000D173BC /* Build configuration list for PBXProject "MyHackton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A964992019D91000D173BC /* Debug */,
+				45A9649A2019D91000D173BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A9649B2019D91000D173BC /* Build configuration list for PBXNativeTarget "MyHackton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A9649C2019D91000D173BC /* Debug */,
+				45A9649D2019D91000D173BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        45A964902019D91000D173BC /* MyHackton.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                45A964912019D91000D173BC /* MyHackton.xcdatamodel */,
-            );
-            currentVersion = 45A964912019D91000D173BC /* MyHackton.xcdatamodel */;
-            path = MyHackton.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		45A964902019D91000D173BC /* MyHackton.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45A964912019D91000D173BC /* MyHackton.xcdatamodel */,
+			);
+			currentVersion = 45A964912019D91000D173BC /* MyHackton.xcdatamodel */;
+			path = MyHackton.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 45A9647E2019D91000D173BC /* Project object */;
+	};
+	rootObject = 45A9647E2019D91000D173BC /* Project object */;
 }
