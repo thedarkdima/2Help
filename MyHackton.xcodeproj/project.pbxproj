@@ -14,6 +14,7 @@
 		4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
+		458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C203D2039AFFF00AA1CF4 /* AlertController.swift */; };
 		45A41195202368BB003536A1 /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41194202368BB003536A1 /* ContactUsController.swift */; };
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
 		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
@@ -41,6 +42,7 @@
 		4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperCell.swift; sourceTree = "<group>"; };
 		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
+		458C203D2039AFFF00AA1CF4 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		45A41194202368BB003536A1 /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
 				90E1757320230EF30062453D /* DonatorAddressCell.swift */,
 				455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
+				458C203D2039AFFF00AA1CF4 /* AlertController.swift */,
 				902707C42029EC00005AF37B /* Request.swift */,
 			);
 			path = Donators;
@@ -244,6 +247,7 @@
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
+				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
