@@ -55,6 +55,7 @@ override func viewDidLoad(){
     
     //Products Collection View//
     
+    var text : String = ""
     let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
     let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
                                      UIImage(named:"special")!,
@@ -72,8 +73,14 @@ override func viewDidLoad(){
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsArray[indexPath.item]
         cell.ProductImageView.image = productsImage[indexPath.item]
-       
+        
         return  cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
+        let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList")
+        show(productsList, sender: self)
     }
     
     
