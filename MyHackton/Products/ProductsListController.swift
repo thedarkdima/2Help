@@ -10,6 +10,12 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     
     //
     
+    override func viewDidLoad() {
+      //  navigationController?.toolbar = "רשימת מוצרים"
+        navigationItem.backBarButtonItem?.isEnabled = true
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }

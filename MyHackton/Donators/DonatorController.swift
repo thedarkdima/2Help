@@ -50,19 +50,46 @@ override func viewWillAppear(_ animated: Bool) {
     
 override func viewDidLoad(){
     super.viewDidLoad()
+    asd()
     
 }
     
+    /// server
+    
+    func asd(){
+        ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
+            self.productsArray = []
+            if let typs = types{
+                for type in typs{
+                    self.productsArray.append(type[0])
+                    self.imageUrl.append(type[1])
+                    
+                }
+                self.productsCollectionView.reloadData()
+                
+            }
+            print(self.productsArray)
+        })
+    }
+    
+    
+    
+    ///
+    
     //Products Collection View//
     
+    var imageUrl :[String] = []
+    
     var text : String = ""
-    let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
-    let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
-                                     UIImage(named:"special")!,
-                                     UIImage(named:"tamal")!,
+    var productsArray: [String] = []
+    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
                                      UIImage(named:"biscate")!,
+                                     UIImage(named:"canes")!,
+                                     UIImage(named:"special")!,
                                      UIImage(named:"pasta")!,
-                                     UIImage(named:"canes")!]
+                                     UIImage(named:"tamal")!]
+    
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,6 +100,7 @@ override func viewDidLoad(){
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsArray[indexPath.item]
         cell.ProductImageView.image = productsImage[indexPath.item]
+        
         
         return  cell
     }
