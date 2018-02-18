@@ -5,14 +5,23 @@ class AlertController: UIViewController {
 
     @IBOutlet var alertBox: UIView!
     
+    @IBOutlet var name: UILabel!
+    @IBOutlet var phone: UILabel!
     @IBOutlet var address_label: UILabel!
-   
+    @IBOutlet var open_hours: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    func set(name : String, phone : String, address : String, openHours : String){
+        self.name.text = name
+        self.phone.text = phone
+        self.address_label.text = address
+        self.open_hours.text = openHours
+    }
+    
     @IBAction func backBtn() {
         navigationController?.popViewController(animated: true)
     }

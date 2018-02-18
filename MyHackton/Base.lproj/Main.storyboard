@@ -118,7 +118,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <segue destination="kt4-hS-9Oi" kind="show" id="tZb-dR-3W1"/>
+                                                        <action selector="toAlert" destination="vcY-a9-AVE" eventType="touchUpInside" id="uwI-m7-OlA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -162,13 +162,13 @@
         <!--Alert Controller-->
         <scene sceneID="Cdu-d2-Uk4">
             <objects>
-                <viewController id="kt4-hS-9Oi" customClass="AlertController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alert" id="kt4-hS-9Oi" customClass="AlertController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xwk-Tl-UU4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni7-v4-cYd">
-                                <rect key="frame" x="37" y="245.5" width="300" height="240"/>
+                                <rect key="frame" x="37" y="223.5" width="300" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18t-Cj-cvf">
                                         <rect key="frame" x="16" y="194" width="30" height="30"/>
@@ -200,7 +200,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-Xa-67a">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-Xa-67a">
                                         <rect key="frame" x="8" y="95.5" width="277" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -219,7 +219,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fy9-7P-5sy" secondAttribute="trailing" constant="16" id="0Ru-AM-iw8"/>
@@ -242,7 +242,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ni7-v4-cYd" firstAttribute="centerY" secondItem="Acn-ni-XJG" secondAttribute="centerY" id="IQe-UC-2qc"/>
                             <constraint firstItem="ni7-v4-cYd" firstAttribute="centerX" secondItem="Acn-ni-XJG" secondAttribute="centerX" id="NSz-Wu-vZD"/>
@@ -252,6 +252,9 @@
                     <connections>
                         <outlet property="address_label" destination="fps-Xa-67a" id="IYK-tG-rta"/>
                         <outlet property="alertBox" destination="ni7-v4-cYd" id="1p3-ZR-z9I"/>
+                        <outlet property="name" destination="WUX-Ij-hrI" id="7tj-mM-DpM"/>
+                        <outlet property="open_hours" destination="fy9-7P-5sy" id="C16-4H-HDb"/>
+                        <outlet property="phone" destination="z0R-VO-agP" id="h9J-Jg-Q7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h33-u4-NAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -588,7 +591,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <segue destination="kt4-hS-9Oi" kind="show" id="zvv-YL-s97"/>
+                                                        <action selector="toalert:" destination="0Sv-Na-Y6n" eventType="touchUpInside" id="Z89-hn-Uie"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1241,6 +1244,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aeo-RU-BhJ"/>
-        <segue reference="tZb-dR-3W1"/>
     </inferredMetricsTieBreakers>
 </document>

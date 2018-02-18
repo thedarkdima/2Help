@@ -75,9 +75,8 @@ override func viewDidLoad(){
        
         return  cell
     }
-    
-    
     ////
+    
     
     // dependency injection - update the count from each dontaorProductCell
     func updateCount(c : Int){

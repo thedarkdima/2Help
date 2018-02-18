@@ -9,6 +9,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     
     var selectedIndex: Int!
     var package: String!
+    var locations : [[String]]!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +25,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
 
     
     override func viewDidAppear(_ animated: Bool) {
+        
         selectedIndex = self.tabBarController!.selectedIndex
         if selectedIndex == 1{
             tabBarController!.title = "סניפים"
@@ -44,17 +46,24 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
                     self.DirectionsList.append(array[0])
                 }
                 self.table.reloadData()
+                self.locations = add
             }
         })
         print(selectedIndex)
     
     }
    
+    public var i : Int!
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let t = storyboard!.instantiateViewController(withIdentifier: "alert") as! AlertController
+//        t.set(name: locations[i][0], phone: locations[i][1], address: locations[i][2], openHours: locations[i][3])
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DirectionsList.count
@@ -63,8 +72,12 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
         cell.address_name.text = DirectionsList[indexPath.row]
-        
+        cell.index = indexPath.row
+        cell.set(donatordirectController: self)
         return cell
     }
+    
+
+
 
 }
