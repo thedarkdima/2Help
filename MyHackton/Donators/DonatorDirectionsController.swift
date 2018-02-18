@@ -2,21 +2,43 @@ import UIKit
 
 class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
+     @IBOutlet var table: UITableView!
+    
     //addresses example before server
     var DirectionsList: [String] = []
     
+    var selectedIndex: Int!
+    var package: String!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        //disable the "מלא פרטים" button
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
         tabBarController!.navigationItem.rightBarButtonItem!.title = ""
-        tabBarController!.title = "סניפים"
-    }
-    
-    @IBOutlet var table: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+        //disable the next page back button - want to make alert look
+        tabBarController!.navigationItem.backBarButtonItem!.isEnabled = false
+        tabBarController!.navigationItem.backBarButtonItem!.title = ""
         
-        ServerConnections.getDoubleArrayAsync("/addresses", "", handler: {addresses in
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        selectedIndex = self.tabBarController!.selectedIndex
+        if selectedIndex == 1{
+            tabBarController!.title = "סניפים"
+        }else{
+            tabBarController!.title = "סופרים סביבי"
+        }
+        
+        if selectedIndex == 1 {
+            
+            package = "warehouse"
+        }else {
+            package = "supermarket"
+        }
+            DirectionsList = []
+        ServerConnections.getDoubleArrayAsync("/locations", package, handler: {addresses in
             if let add = addresses{
                 for array in add{
                     self.DirectionsList.append(array[0])
@@ -24,7 +46,15 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
                 self.table.reloadData()
             }
         })
+        print(selectedIndex)
+    
     }
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DirectionsList.count
@@ -33,9 +63,8 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
         cell.address_name.text = DirectionsList[indexPath.row]
+        
         return cell
     }
-
-    
 
 }
