@@ -68,10 +68,11 @@ class MainController: UIViewController {
                             print("not found")
                             self.login()
                         }
-                    } else {
+                    }}
+                     else {
                         self.login()
                     }
-                }
+                
             })
             
             //if the details are true, a new window will open with the appropiate data(delivery guy or stockkeeper)
