@@ -31,6 +31,7 @@ class AlertController: UIViewController {
         }
     }
     
+    //get the lables values from the previous viewController
     func set(name : String, phone : String, address : String, openHours : String){
         self.name = name
         self.phoneNumber = phone

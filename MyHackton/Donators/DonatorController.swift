@@ -74,15 +74,18 @@ override func viewDidLoad(){
     ///
     
     //Products Collection View//
-    let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
-    let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
-                                     UIImage(named:"special")!,
-                                     UIImage(named:"tamal")!,
+    
+    var imageUrl :[String] = []
+    
+    var text : String = ""
+    var productsArray: [String] = []
+    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
                                      UIImage(named:"biscate")!,
                                      UIImage(named:"canes")!,
                                      UIImage(named:"special")!,
                                      UIImage(named:"pasta")!,
                                      UIImage(named:"tamal")!]
+    
     
     
     
@@ -98,6 +101,14 @@ override func viewDidLoad(){
         
         return  cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
+        let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList")
+        show(productsList, sender: self)
+    }
+    
+    
     ////
     
     
