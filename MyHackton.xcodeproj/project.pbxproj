@@ -27,6 +27,8 @@
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
 		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
+		90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA35CB2039AC99006718D6 /* ProductsTableViewCell.swift */; };
+		90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA35CD2039ACE8006718D6 /* ProductsListController.swift */; };
 		90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD74D2035D78100A60FCF /* FinalDonationList.swift */; };
 		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
 		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
@@ -57,6 +59,8 @@
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
 		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
+		90EA35CB2039AC99006718D6 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		90EA35CD2039ACE8006718D6 /* ProductsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListController.swift; sourceTree = "<group>"; };
 		90EBD74D2035D78100A60FCF /* FinalDonationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationList.swift; sourceTree = "<group>"; };
 		90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationListCell.swift; sourceTree = "<group>"; };
 		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		45A964882019D91000D173BC /* MyHackton */ = {
 			isa = PBXGroup;
 			children = (
+				90EA35C62039994C006718D6 /* Products */,
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				455B1809201F5CB90002E7D0 /* MainController.swift */,
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
@@ -152,6 +157,15 @@
 				D2D79AD3202317C800C504E3 /* ServerConnections.swift */,
 			);
 			path = Server;
+			sourceTree = "<group>";
+		};
+		90EA35C62039994C006718D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90EA35CB2039AC99006718D6 /* ProductsTableViewCell.swift */,
+				90EA35CD2039ACE8006718D6 /* ProductsListController.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		90EBD74F2035D8B900A60FCF /* Tables */ = {
@@ -245,7 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
+				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
+				90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
 				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,

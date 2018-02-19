@@ -47,8 +47,31 @@ override func viewWillAppear(_ animated: Bool) {
 
 override func viewDidLoad(){
     super.viewDidLoad()
+    asd()
     
 }
+    
+    /// server
+    
+    func asd(){
+        ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
+            self.productsArray = []
+            if let typs = types{
+                for type in typs{
+                    self.productsArray.append(type[0])
+                    self.imageUrl.append(type[1])
+                    
+                }
+                self.productsCollectionView.reloadData()
+                
+            }
+            print(self.productsArray)
+        })
+    }
+    
+    
+    
+    ///
     
     //Products Collection View//
     let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
@@ -56,8 +79,12 @@ override func viewDidLoad(){
                                      UIImage(named:"special")!,
                                      UIImage(named:"tamal")!,
                                      UIImage(named:"biscate")!,
+                                     UIImage(named:"canes")!,
+                                     UIImage(named:"special")!,
                                      UIImage(named:"pasta")!,
-                                     UIImage(named:"canes")!]
+                                     UIImage(named:"tamal")!]
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsArray.count
@@ -67,7 +94,8 @@ override func viewDidLoad(){
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsArray[indexPath.item]
         cell.ProductImageView.image = productsImage[indexPath.item]
-       
+        
+        
         return  cell
     }
     ////
