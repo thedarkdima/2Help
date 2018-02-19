@@ -118,7 +118,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <action selector="toAlert" destination="vcY-a9-AVE" eventType="touchUpInside" id="uwI-m7-OlA"/>
+                                                        <action selector="toAlert" destination="vcY-a9-AVE" eventType="touchUpInside" id="URP-yR-HL6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -207,7 +207,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwv-b9-zcq">
-                                        <rect key="frame" x="224" y="169.5" width="60" height="52"/>
+                                        <rect key="frame" x="224" y="172" width="60" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="hWr-Po-G1o"/>
                                             <constraint firstAttribute="width" constant="60" id="uUD-1z-tPS"/>
@@ -223,8 +223,8 @@
                                 <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fy9-7P-5sy" secondAttribute="trailing" constant="16" id="0Ru-AM-iw8"/>
-                                    <constraint firstItem="dwv-b9-zcq" firstAttribute="top" secondItem="fy9-7P-5sy" secondAttribute="bottom" constant="16" id="603-We-31p"/>
                                     <constraint firstAttribute="trailing" secondItem="WUX-Ij-hrI" secondAttribute="trailing" constant="16" id="9n7-aH-dnP"/>
+                                    <constraint firstAttribute="bottom" secondItem="dwv-b9-zcq" secondAttribute="bottom" constant="16" id="AUz-Nb-1ea"/>
                                     <constraint firstItem="fy9-7P-5sy" firstAttribute="top" secondItem="fps-Xa-67a" secondAttribute="bottom" constant="16.5" id="L0w-9B-88V"/>
                                     <constraint firstItem="WUX-Ij-hrI" firstAttribute="leading" secondItem="ni7-v4-cYd" secondAttribute="leading" constant="8" id="Nxk-RL-6oh"/>
                                     <constraint firstAttribute="trailing" secondItem="fps-Xa-67a" secondAttribute="trailing" constant="15" id="Obv-TF-t8a"/>
@@ -250,9 +250,9 @@
                         <viewLayoutGuide key="safeArea" id="Acn-ni-XJG"/>
                     </view>
                     <connections>
-                        <outlet property="address_label" destination="fps-Xa-67a" id="IYK-tG-rta"/>
+                        <outlet property="addresses" destination="fps-Xa-67a" id="pK8-k5-XUy"/>
                         <outlet property="alertBox" destination="ni7-v4-cYd" id="1p3-ZR-z9I"/>
-                        <outlet property="name" destination="WUX-Ij-hrI" id="7tj-mM-DpM"/>
+                        <outlet property="name1" destination="WUX-Ij-hrI" id="IdN-h4-wEf"/>
                         <outlet property="open_hours" destination="fy9-7P-5sy" id="C16-4H-HDb"/>
                         <outlet property="phone" destination="z0R-VO-agP" id="h9J-Jg-Q7c"/>
                     </connections>
@@ -591,7 +591,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="לפרטים"/>
                                                     <connections>
-                                                        <action selector="toalert:" destination="0Sv-Na-Y6n" eventType="touchUpInside" id="Z89-hn-Uie"/>
+                                                        <action selector="toAlert" destination="DUY-E3-J38" eventType="touchUpInside" id="VVV-zu-PaJ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

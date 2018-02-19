@@ -55,10 +55,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
    
     public var i : Int!
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let t = storyboard!.instantiateViewController(withIdentifier: "alert") as! AlertController
-//        t.set(name: locations[i][0], phone: locations[i][1], address: locations[i][2], openHours: locations[i][3])
-//    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +70,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
         cell.address_name.text = DirectionsList[indexPath.row]
         cell.index = indexPath.row
-        cell.set(donatordirectController: self)
+        cell.setController(donatordirectController: self)
         return cell
     }
     

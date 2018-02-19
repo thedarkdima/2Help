@@ -13,7 +13,6 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
     }
     
-    
     var totalCount: Int = 0
     var products: [String] = []
     
@@ -25,7 +24,6 @@ override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.title = "מלא פרטים"
         tabBarController!.title = "תרומות"
 }
-    
     
 
 /*override func viewDidAppear(_ animated: Bool){
@@ -47,14 +45,12 @@ override func viewWillAppear(_ animated: Bool) {
         }).resume()
     } */
 
-    
 override func viewDidLoad(){
     super.viewDidLoad()
     
 }
     
     //Products Collection View//
-    
     let productsArray = ["תחליפי חלב","מיוחדים של מטרנה","דייסות מטרנה","מחיות מטרנה","פסטה מטרנה","ביסקוויט מטרנה"]
     let productsImage: [UIImage] = [ UIImage(named:"daisa")!,
                                      UIImage(named:"special")!,
@@ -62,7 +58,6 @@ override func viewDidLoad(){
                                      UIImage(named:"biscate")!,
                                      UIImage(named:"pasta")!,
                                      UIImage(named:"canes")!]
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsArray.count

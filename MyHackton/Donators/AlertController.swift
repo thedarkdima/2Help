@@ -4,22 +4,38 @@ import UIKit
 class AlertController: UIViewController {
 
     @IBOutlet var alertBox: UIView!
+    var name: String?
+    var phoneNumber: String?
+    var address: String?
+    var hours: String?
     
-    @IBOutlet var name: UILabel!
+    @IBOutlet var name1: UILabel!
     @IBOutlet var phone: UILabel!
-    @IBOutlet var address_label: UILabel!
+    @IBOutlet var addresses: UILabel!
     @IBOutlet var open_hours: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //initialize the strings to set the lables with them
+        if let n = name {
+            name1.text? = n
+        }
+        if let p = phoneNumber{
+            phone.text? = p
+        }
+        if let add = address{
+            addresses.text? = add
+        }
+        if let h = hours{
+            open_hours.text? = h
+        }
     }
-
+    
     func set(name : String, phone : String, address : String, openHours : String){
-        self.name.text = name
-        self.phone.text = phone
-        self.address_label.text = address
-        self.open_hours.text = openHours
+        self.name = name
+        self.phoneNumber = phone
+        self.address = address
+        self.hours = openHours
     }
     
     @IBAction func backBtn() {
@@ -30,8 +46,7 @@ class AlertController: UIViewController {
         //check if waze installed on the iPhone
         if(UIApplication.shared.canOpenURL(URL(string:"waze://")!)){
             
-            let NameUrl = (address_label.text?.replacingOccurrences(of: " ", with: "+"))!
-            
+            let NameUrl = (addresses.text?.replacingOccurrences(of: " ", with: "+"))!
             let address = "https://waze.com/ul?q=\(NameUrl)"
             let addressURL = URL(string: address)
             
@@ -44,7 +59,7 @@ class AlertController: UIViewController {
             let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!
             //  let url = URL(string:"http://www.google.com/")!   //test
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            
-        }    }
+        }
+    }
     
 }
