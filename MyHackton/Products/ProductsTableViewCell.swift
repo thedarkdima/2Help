@@ -12,8 +12,7 @@ class ProductsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        count = 10
+        count = 0
         counter.text = "\(count)"
     }
 

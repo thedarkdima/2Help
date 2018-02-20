@@ -61,11 +61,21 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
-        cell.address_name.text = DirectionsList[indexPath.row]
-        cell.index = indexPath.row
-        cell.setController(donatordirectController: self)
-        return cell
+     
+        
+        if selectedIndex  == 2 {
+           let productsCell = tableView.dequeueReusableCell(withIdentifier: "products_cell") as! ProductsTableViewCell
+            
+            return productsCell
+        }
+        else {
+            let adressesCell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
+            
+            adressesCell.address_name.text = DirectionsList[indexPath.row]
+            adressesCell.index = indexPath.row
+            adressesCell.setController(donatordirectController: self)
+            return adressesCell
+        }
     }
     
 
