@@ -717,7 +717,74 @@
             </objects>
             <point key="canvasLocation" x="3360.8000000000002" y="68.815592203898049"/>
         </scene>
-        <!--משלוחים-->
+        <!--כתובות המשלוחים-->
+        <scene sceneID="eco-Gl-1ca">
+            <objects>
+                <viewController id="JH3-3N-jsO" customClass="MapAddressController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Oi-ji-Tnk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ESw-ol-moe">
+                                <rect key="frame" x="0.0" y="85.5" width="375" height="467"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JH3-3N-jsO" id="u0i-7y-Kda"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-cP-8IP">
+                                <rect key="frame" x="8" y="560" width="359" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="הוסף"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="בחר את נק׳ המשלוחים שברצונך לקחת!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-Uk-8gn">
+                                <rect key="frame" x="8" y="35" width="359" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pKL-cP-8IP" firstAttribute="top" secondItem="ESw-ol-moe" secondAttribute="bottom" constant="8" id="8tI-Fe-RZg"/>
+                            <constraint firstItem="ESw-ol-moe" firstAttribute="centerY" secondItem="2cg-Wc-PoF" secondAttribute="centerY" id="9Ii-HT-1OF"/>
+                            <constraint firstItem="pKL-cP-8IP" firstAttribute="leading" secondItem="2cg-Wc-PoF" secondAttribute="leading" constant="8" id="Ftg-4h-gsU"/>
+                            <constraint firstItem="2cg-Wc-PoF" firstAttribute="bottom" secondItem="pKL-cP-8IP" secondAttribute="bottom" constant="16" id="Sa5-dw-RTH"/>
+                            <constraint firstItem="2cg-Wc-PoF" firstAttribute="trailing" secondItem="pKL-cP-8IP" secondAttribute="trailing" constant="8" id="X2X-Pe-hhD"/>
+                            <constraint firstItem="ESw-ol-moe" firstAttribute="width" secondItem="4Oi-ji-Tnk" secondAttribute="width" id="c0w-Wp-a5P"/>
+                            <constraint firstItem="ESw-ol-moe" firstAttribute="height" secondItem="4Oi-ji-Tnk" secondAttribute="height" multiplier="0.7" id="d3c-8e-Kz4"/>
+                            <constraint firstItem="ESw-ol-moe" firstAttribute="centerX" secondItem="2cg-Wc-PoF" secondAttribute="centerX" id="hNN-jg-hb8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2cg-Wc-PoF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="כתובות המשלוחים" id="7q4-gA-TRg"/>
+                    <connections>
+                        <outlet property="MyMap" destination="ESw-ol-moe" id="DNL-N1-gI1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="loz-3i-Lwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3335.1999999999998" y="875.71214392803608"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="u9m-oD-dW1">
+            <objects>
+                <tabBarController storyboardIdentifier="mapAddress" id="mBv-Gp-rD7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgN-QR-fue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JH3-3N-jsO" kind="relationship" relationship="viewControllers" id="Ewk-0f-EHu"/>
+                        <segue destination="n7Z-GJ-88u" kind="relationship" relationship="viewControllers" id="NQh-4r-Cr6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igD-fp-I2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="1209"/>
+        </scene>
+        <!--משלוחים שלי-->
         <scene sceneID="6KZ-U5-tKQ">
             <objects>
                 <viewController storyboardIdentifier="addresses" id="n7Z-GJ-88u" customClass="DeliveryRequestController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
@@ -726,7 +793,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OvC-VB-RCm">
-                                <rect key="frame" x="16" y="16" width="343" height="635"/>
+                                <rect key="frame" x="16" y="16" width="343" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
@@ -790,15 +857,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vl9-jY-5vb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="משלוחים" image="delivery_request" id="ASC-PL-NdR"/>
+                    <tabBarItem key="tabBarItem" title="משלוחים שלי" id="jSh-lY-con"/>
                     <navigationItem key="navigationItem" id="phw-Ah-dOx"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="table" destination="OvC-VB-RCm" id="Dr3-me-h3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkN-CY-kA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932" y="967"/>
+            <point key="canvasLocation" x="3335" y="1638"/>
         </scene>
         <!--Donators Status Controller-->
         <scene sceneID="rtl-Ua-Qgr">
@@ -937,7 +1005,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc5-Rk-WZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3833" y="968"/>
+            <point key="canvasLocation" x="5186" y="876"/>
         </scene>
         <!--Contact Us Controller-->
         <scene sceneID="zCn-kb-eKS">
@@ -1428,7 +1496,6 @@
     <resources>
         <image name="delivery_icon" width="37" height="37"/>
         <image name="delivery_past" width="40" height="40"/>
-        <image name="delivery_request" width="32" height="32"/>
         <image name="directions_icon" width="37" height="37"/>
         <image name="home_icon" width="40" height="40"/>
         <image name="waze_icon" width="32" height="32"/>
