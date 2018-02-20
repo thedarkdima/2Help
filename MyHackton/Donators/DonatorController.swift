@@ -17,10 +17,10 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     var products: [String] = []
     
 override func viewWillAppear(_ animated: Bool) {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-    if totalCount > 0 {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
-    }
+//        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+//    if totalCount > 0 {
+//        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+//    }
         tabBarController!.navigationItem.rightBarButtonItem!.title = "מלא פרטים"
         tabBarController!.title = "תרומות"
 }
@@ -48,6 +48,7 @@ override func viewWillAppear(_ animated: Bool) {
 override func viewDidLoad(){
     super.viewDidLoad()
     asd()
+   
     
 }
     

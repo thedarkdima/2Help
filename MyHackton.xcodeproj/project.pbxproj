@@ -24,6 +24,7 @@
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
 		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
+		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
 		90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */; };
@@ -56,6 +57,7 @@
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
 		90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorProductsCell.swift; sourceTree = "<group>"; };
@@ -127,9 +129,18 @@
 			path = MyHackton;
 			sourceTree = "<group>";
 		};
+		907BF121203C74AE0095F60D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				907BF122203C75330095F60D /* MapAddressController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		90E1757020230C430062453D /* Donators */ = {
 			isa = PBXGroup;
 			children = (
+				907BF121203C74AE0095F60D /* Map */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				90E32E44201F3CDB00271DC8 /* DonatorProductsCell.swift */,
 				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
@@ -266,6 +277,7 @@
 				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
+				907BF123203C75330095F60D /* MapAddressController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
 				4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */,

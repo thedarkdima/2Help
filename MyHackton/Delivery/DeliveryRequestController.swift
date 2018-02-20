@@ -6,10 +6,13 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     private var donator : Request!
     
     override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.navigationItem.title = tabBarItem.title
+        
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
         
             self.navigationItem.hidesBackButton = true
-            self.navigationItem.leftBarButtonItem = b
+            tabBarController?.navigationItem.leftBarButtonItem = b
+        
     }
     
     @IBOutlet weak var table: UITableView!

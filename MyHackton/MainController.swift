@@ -92,7 +92,7 @@ class MainController: UIViewController {
         }
     
     private func ConnectAsDeliveryGuy(){
-        let next = storyboard!.instantiateViewController(withIdentifier: "addresses")
+        let next = storyboard!.instantiateViewController(withIdentifier: "mapAddress")
         show(next, sender: self)
     }
     
