@@ -618,10 +618,10 @@
             </objects>
             <point key="canvasLocation" x="1854" y="3280"/>
         </scene>
-        <!--מקומות קנייה סביבי-->
+        <!--סל תרומות-->
         <scene sceneID="IfD-Cn-gbo">
             <objects>
-                <viewController id="0Sv-Na-Y6n" customClass="DonatorDirectionsController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Sv-Na-Y6n" customClass="DonatorsTotalProductsController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKO-as-cub">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,41 +630,66 @@
                                 <rect key="frame" x="16" y="80" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="address_cell" rowHeight="85" id="DUY-E3-J38" customClass="DonatorAddressCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="DUY-E3-J38" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DUY-E3-J38" id="SzO-kO-Ep1">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztq-eA-Mhl">
-                                                    <rect key="frame" x="86" y="32" width="241" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-fX-di1">
+                                                    <rect key="frame" x="244.5" y="6" width="90.5" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="o7h-fX-di1" secondAttribute="height" multiplier="4:3" id="X5Z-cd-yhl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-CR-uEE">
+                                                    <rect key="frame" x="136.5" y="32" width="100" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="q5C-Mb-WgX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa0-7k-faX">
-                                                    <rect key="frame" x="15" y="25.5" width="55" height="34"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="55" id="3Me-Yz-HUX"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <state key="normal" title="לפרטים"/>
-                                                    <connections>
-                                                        <action selector="toAlert" destination="DUY-E3-J38" eventType="touchUpInside" id="VVV-zu-PaJ"/>
-                                                    </connections>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-LM-K8W">
+                                                    <rect key="frame" x="37" y="27" width="45" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-XA-KPx">
+                                                    <rect key="frame" x="0.0" y="24.5" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sW-HK-Zw4">
+                                                    <rect key="frame" x="90" y="24.5" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="+"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ztq-eA-Mhl" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="4Rp-Lj-Ty4"/>
-                                                <constraint firstItem="ztq-eA-Mhl" firstAttribute="leading" secondItem="Sa0-7k-faX" secondAttribute="trailing" constant="16" id="KaU-ty-lJL"/>
-                                                <constraint firstAttribute="trailing" secondItem="ztq-eA-Mhl" secondAttribute="trailing" constant="16" id="emU-YQ-jdl"/>
-                                                <constraint firstItem="Sa0-7k-faX" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="pGs-28-56z"/>
-                                                <constraint firstItem="Sa0-7k-faX" firstAttribute="leading" secondItem="SzO-kO-Ep1" secondAttribute="leading" constant="15" id="utB-3A-6qi"/>
+                                                <constraint firstItem="0sW-HK-Zw4" firstAttribute="leading" secondItem="Ddk-LM-K8W" secondAttribute="trailing" constant="8" id="3gu-g7-dEj"/>
+                                                <constraint firstItem="THJ-CR-uEE" firstAttribute="leading" secondItem="0sW-HK-Zw4" secondAttribute="trailing" constant="16.5" id="9gq-WI-aT2"/>
+                                                <constraint firstItem="Ddk-LM-K8W" firstAttribute="leading" secondItem="Dh0-XA-KPx" secondAttribute="trailing" constant="7" id="Abc-FK-wA7"/>
+                                                <constraint firstItem="Dh0-XA-KPx" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="I0N-OR-ius"/>
+                                                <constraint firstItem="Ddk-LM-K8W" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Nc0-JW-YdK"/>
+                                                <constraint firstItem="THJ-CR-uEE" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Oug-e3-QXs"/>
+                                                <constraint firstAttribute="trailing" secondItem="o7h-fX-di1" secondAttribute="trailing" constant="8" id="QnU-Nz-pXm"/>
+                                                <constraint firstItem="Dh0-XA-KPx" firstAttribute="leading" secondItem="SzO-kO-Ep1" secondAttribute="leading" id="Vlz-ya-HcP"/>
+                                                <constraint firstItem="0sW-HK-Zw4" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Xlu-SG-Vhd"/>
+                                                <constraint firstItem="o7h-fX-di1" firstAttribute="top" secondItem="SzO-kO-Ep1" secondAttribute="top" constant="6" id="tLJ-nz-Fme"/>
+                                                <constraint firstItem="o7h-fX-di1" firstAttribute="leading" secondItem="THJ-CR-uEE" secondAttribute="trailing" constant="8" id="uaX-HS-OVP"/>
+                                                <constraint firstAttribute="bottom" secondItem="o7h-fX-di1" secondAttribute="bottom" constant="10.5" id="vwu-U1-bYM"/>
+                                                <constraint firstItem="THJ-CR-uEE" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="zwc-ri-imR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="address_name" destination="ztq-eA-Mhl" id="Gyg-Xt-kRG"/>
+                                            <outlet property="counter" destination="Ddk-LM-K8W" id="2OB-yN-VPQ"/>
+                                            <outlet property="minus_Label" destination="Dh0-XA-KPx" id="62W-db-2y8"/>
+                                            <outlet property="name" destination="THJ-CR-uEE" id="4Xw-l6-ghZ"/>
+                                            <outlet property="product_image" destination="o7h-fX-di1" id="gDD-xC-Xbg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -683,14 +708,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHI-tY-aSQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="מקומות קנייה סביבי" image="delivery_past" id="uwQ-8W-x6k"/>
+                    <tabBarItem key="tabBarItem" title="סל תרומות" image="delivery_past" id="uwQ-8W-x6k"/>
                     <connections>
                         <outlet property="table" destination="t6s-qM-LOp" id="oRZ-mL-WJM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OK-Pq-ewu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="69"/>
+            <point key="canvasLocation" x="3360.8000000000002" y="68.815592203898049"/>
         </scene>
         <!--משלוחים-->
         <scene sceneID="6KZ-U5-tKQ">
@@ -1182,7 +1207,7 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productsCell" rowHeight="79" id="dqp-0H-6Mr" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ç" rowHeight="79" id="dqp-0H-6Mr" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dqp-0H-6Mr" id="jFL-42-hDl">

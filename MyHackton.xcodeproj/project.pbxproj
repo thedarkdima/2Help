@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453FC473203C879600EC2637 /* DonatorsTotalProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453FC472203C879600EC2637 /* DonatorsTotalProductsController.swift */; };
 		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
 		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453FC472203C879600EC2637 /* DonatorsTotalProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsTotalProductsController.swift; sourceTree = "<group>"; };
 		455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
 		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
 				458C203D2039AFFF00AA1CF4 /* AlertController.swift */,
 				902707C42029EC00005AF37B /* Request.swift */,
+				453FC472203C879600EC2637 /* DonatorsTotalProductsController.swift */,
 			);
 			path = Donators;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
+				453FC473203C879600EC2637 /* DonatorsTotalProductsController.swift in Sources */,
 				90E32E45201F3CDB00271DC8 /* DonatorProductsCell.swift in Sources */,
 				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
 				4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */,

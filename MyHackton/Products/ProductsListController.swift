@@ -10,9 +10,12 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     
     //
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationItem.title = "המוצרים שלי"
+    }
+    
     override func viewDidLoad() {
-      //  navigationController?.toolbar = "רשימת מוצרים"
-        navigationItem.backBarButtonItem?.isEnabled = true
+      
         
     }
     

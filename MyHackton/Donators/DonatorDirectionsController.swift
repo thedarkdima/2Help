@@ -13,14 +13,8 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     
     
     override func viewWillAppear(_ animated: Bool) {
-        //disable the "מלא פרטים" button
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-        tabBarController!.navigationItem.rightBarButtonItem!.title = ""
-
-        //disable the next page back button - want to make alert look
-        tabBarController!.navigationItem.backBarButtonItem!.isEnabled = false
         tabBarController!.navigationItem.backBarButtonItem!.title = ""
-        
+
     }
 
     

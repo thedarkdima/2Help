@@ -18,10 +18,9 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
 override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-    if totalCount > 0 {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
-    }
-        tabBarController!.navigationItem.rightBarButtonItem!.title = "מלא פרטים"
+        tabBarController?.navigationItem.title = "sad"
+        tabBarController!.navigationItem.rightBarButtonItem!.title = ""
+    
         tabBarController!.title = "תרומות"
 }
     
