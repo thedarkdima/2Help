@@ -20,6 +20,7 @@ override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
         tabBarController!.navigationItem.rightBarButtonItem!.title = ""
     
+        tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
         tabBarController!.title = "תרומות"
 }
     

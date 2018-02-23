@@ -1266,10 +1266,10 @@
             </objects>
             <point key="canvasLocation" x="2666" y="-1961"/>
         </scene>
-        <!--Title-->
+        <!--מוצרים-->
         <scene sceneID="u2r-Ml-ZPL">
             <objects>
-                <viewController storyboardIdentifier="productsList" id="fNf-gT-4go" customClass="ProductsListController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productsList" title="מוצרים" id="fNf-gT-4go" customClass="ProductsListController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LwL-M9-hjg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -11,7 +11,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     //
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationItem.title = "המוצרים שלי"
+        navigationItem.title = "המוצרים שלי"
     }
     
     override func viewDidLoad() {
