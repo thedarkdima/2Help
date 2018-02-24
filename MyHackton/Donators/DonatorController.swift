@@ -15,6 +15,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
     var totalCount: Int = 0
     var products: [String] = []
+    var productName : String?
     
 override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
@@ -47,8 +48,7 @@ override func viewWillAppear(_ animated: Bool) {
 override func viewDidLoad(){
     super.viewDidLoad()
     asd()
-   
-    
+       
 }
     
     /// server
@@ -86,40 +86,29 @@ override func viewDidLoad(){
                                      UIImage(named:"pasta")!,
                                      UIImage(named:"tamal")!]
     
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsArray[indexPath.item]
         cell.ProductImageView.image = productsImage[indexPath.item]
-        
         
         return  cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
-        let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList")
+        let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList") as! ProductsListController
+        
+        productName = productsArray[indexPath.row]
+        productsList.setTitle(title: productName!)
+    
         show(productsList, sender: self)
     }
     
-    
     ////
-    
-    
-    // dependency injection - update the count from each dontaorProductCell
-    func updateCount(c : Int){
-        totalCount += c
-        
-        //enable the button press if count is bigger than 0
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = totalCount > 0
-    }
-    ////
-    
+
 }
 
