@@ -2,7 +2,6 @@ import UIKit
 
 class DonatorController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource {
     
-    @IBOutlet var tbl_products: UITableView!
     @IBOutlet var productsCollectionView: UICollectionView!
     @IBAction func phoneNumber(_ number: UIButton) {
         
@@ -16,6 +15,19 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     var totalCount: Int = 0
     var products: [String] = []
     var productName : String?
+    
+    //collection view variables//
+    var imageUrl :[String] = []
+    
+    var text : String = ""
+    var productsArray: [String] = []
+    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
+                                     UIImage(named:"biscate")!,
+                                     UIImage(named:"canes")!,
+                                     UIImage(named:"special")!,
+                                     UIImage(named:"pasta")!,
+                                     UIImage(named:"tamal")!]
+    ////
     
 override func viewWillAppear(_ animated: Bool) {
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
@@ -48,11 +60,10 @@ override func viewWillAppear(_ animated: Bool) {
 override func viewDidLoad(){
     super.viewDidLoad()
     asd()
-       
+        
 }
     
-    /// server
-    
+    //server//
     func asd(){
         ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
             self.productsArray = []
@@ -63,29 +74,13 @@ override func viewDidLoad(){
                     
                 }
                 self.productsCollectionView.reloadData()
-                
             }
             print(self.productsArray)
         })
     }
-    
-    
-    
     ///
     
     //Products Collection View//
-    
-    var imageUrl :[String] = []
-    
-    var text : String = ""
-    var productsArray: [String] = []
-    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
-                                     UIImage(named:"biscate")!,
-                                     UIImage(named:"canes")!,
-                                     UIImage(named:"special")!,
-                                     UIImage(named:"pasta")!,
-                                     UIImage(named:"tamal")!]
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsArray.count
     }
