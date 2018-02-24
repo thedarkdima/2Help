@@ -15,8 +15,8 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    
         //check which tab bar page is active
-        
         selectedIndex = self.tabBarController!.selectedIndex
         if selectedIndex == 1{
             tabBarController!.title = tabBarItem!.title

@@ -7,8 +7,7 @@ class DonatorsStatusController: UIViewController {
     private var address: String!
     
     override func viewWillAppear(_ animated: Bool) {
-       // donatorsAddressLbl.text = address
-        donatorsAddressLbl.text = "tel aviv hahagana train station "
+        donatorsAddressLbl.text = address
     }
     
     override func viewDidLoad() {
@@ -36,7 +35,6 @@ class DonatorsStatusController: UIViewController {
     @IBAction func toWaze(_ sender: UIButton) {
         //check if waze installed on the iPhone
         if(UIApplication.shared.canOpenURL(URL(string:"waze://")!)){
-            
             let NameUrl = (donatorsAddressLbl.text?.replacingOccurrences(of: " ", with: "+"))!
             
             let address = "https://waze.com/ul?q=\(NameUrl)"
@@ -51,9 +49,6 @@ class DonatorsStatusController: UIViewController {
             let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!
             //  let url = URL(string:"http://www.google.com/")!   //test
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            
         }
-        
     }
-    
 }
