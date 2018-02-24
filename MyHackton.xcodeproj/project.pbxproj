@@ -111,6 +111,7 @@
 				455B1809201F5CB90002E7D0 /* MainController.swift */,
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
 				45A41194202368BB003536A1 /* ContactUsController.swift */,
+				90E1757220230CFB0062453D /* Server */,
 				4560D1BA202A0B30002DF7F4 /* StorageKeeper */,
 				90E1757020230C430062453D /* Donators */,
 				90E1757120230C610062453D /* Delivery */,
@@ -138,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				907BF121203C74AE0095F60D /* Map */,
-				90E1757220230CFB0062453D /* Server */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
 				90E1757320230EF30062453D /* DonatorAddressCell.swift */,
