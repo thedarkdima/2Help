@@ -37,26 +37,6 @@ override func viewWillAppear(_ animated: Bool) {
         tabBarController!.title = "תרומות"
 }
     
-
-/*override func viewDidAppear(_ animated: Bool){
-        // show the products from the server in a new task
-        let url = URL(string: "http://2help-server.eu-gb.mybluemix.net/items")!
-        URLSession.shared.dataTask(with: url, completionHandler: {(d,r,e) in
-            AsyncTask(backgroundTask: { (d: Data) -> [String]? in
-                return (try? JSONSerialization.jsonObject(with: d, options: .mutableContainers)) as? [String]
-            }, afterTask: { products in
-                self.products = products ?? []
-                if products == nil {
-                    print("nil was found HERE")
-                }
-                else {
-                    print(products!)
-                    self.tbl_products.reloadData()
-                }
-            }).execute(d!)
-        }).resume()
-    } */
-
 override func viewDidLoad(){
     super.viewDidLoad()
     asd()
@@ -106,4 +86,3 @@ override func viewDidLoad(){
     ////
 
 }
-

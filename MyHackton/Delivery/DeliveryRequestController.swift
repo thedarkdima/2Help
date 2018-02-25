@@ -16,6 +16,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     }
     
     @IBOutlet weak var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
@@ -65,9 +66,8 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
         let next = storyboard?.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
-        
-        next.set(address: cell.address.text!)
-        //RequestsList.remove(at: indexPath.row)
+            donator = RequestsList[indexPath.row]
+        next.set(name: donator.getFullName(), address: cell.address.text!, phoneNumber: donator.getPhoneNumber(), notices: donator.getNotices())
         show(next, sender: self)
         self.navigationItem.backBarButtonItem?.title = "חזור"
     }

@@ -1005,6 +1005,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="um0-lW-rLg"/>
                     <connections>
+                        <outlet property="donatorNameLbl" destination="IvJ-ZJ-wNh" id="yha-yO-7EE"/>
+                        <outlet property="donatorNoticesLbl" destination="Y3g-by-U2J" id="OVV-0E-QnW"/>
+                        <outlet property="donatorNumberLbl" destination="c0J-c0-Owh" id="813-DO-5Mu"/>
                         <outlet property="donatorsAddressLbl" destination="hpE-o8-XwA" id="rcF-Ce-f2R"/>
                     </connections>
                 </viewController>
