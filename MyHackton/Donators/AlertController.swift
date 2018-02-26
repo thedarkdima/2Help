@@ -1,4 +1,3 @@
-
 import UIKit
 import CoreLocation
 
@@ -58,9 +57,9 @@ class AlertController: UIViewController {
             UIApplication.shared.isIdleTimerDisabled = true
         } else {
             //else open a web url that says waze is not installed and link to appstore to download waze
-            let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")!
-            //  let url = URL(string:"http://www.google.com/")!   //test
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")
+             // let url = URL(string:"http://www.google.com/")!   //test
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         }
        
     }
