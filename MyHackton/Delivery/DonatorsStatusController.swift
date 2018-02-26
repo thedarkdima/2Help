@@ -7,10 +7,10 @@ class DonatorsStatusController: UIViewController {
     @IBOutlet var donatorNumberLbl: UILabel!
     @IBOutlet var donatorNoticesLbl: UITextView!
     
-    private var name: String!
-    private var address: String!
-    private var phoneNumber: String!
-    private var notices: String!
+    private var donator : Request!
+    private var RequestsList : [Request] = []
+
+    private var index : Int!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -21,19 +21,18 @@ class DonatorsStatusController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        donatorNameLbl.text = name
-        donatorsAddressLbl.text = address
-        donatorNumberLbl.text = phoneNumber
-        donatorNoticesLbl.text = notices
+        donatorNameLbl.text = donator.getFullName()
+        donatorsAddressLbl.text = donator.getAddress()
+        donatorNumberLbl.text = donator.getPhoneNumber()
+        donatorNoticesLbl.text = donator.getNotices()
     }
     
     
   //method to change address
-    public func set(name : String, address : String, phoneNumber : String, notices : String){
-        self.name = name
-        self.address = address
-        self.phoneNumber = phoneNumber
-        self.notices = notices
+    public func set(donator : Request, index : Int){
+        self.donator = donator
+        self.index = index
+
     }
     
     //confirm the messanger took the products from the donator
@@ -44,8 +43,25 @@ class DonatorsStatusController: UIViewController {
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: { ok in
             self.navigationController?.popViewController(animated: true)
+            self.removeRequest()
         }))
+        
         present(alert, animated: true, completion: nil)
+    }
+    
+    //need to add to server
+    private func removeRequest(){
+        let prefs = UserDefaults.standard
+        if let token = prefs.string(forKey: "token"){
+            ServerConnections.getDoubleArrayAsync("/request_status_change", token + "&\(donator.getId())", handler: {requests in
+                    //self.RequestsList.remove(at:Int(self.donator.getId())!)
+                let lastPage = self.storyboard!.instantiateViewController(withIdentifier: "addresses") as! DeliveryRequestController
+                lastPage.RequestsList.remove(at: self.index)
+            })
+        } else {
+            //Move back to the main page
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func toWaze(_ sender: UIButton) {

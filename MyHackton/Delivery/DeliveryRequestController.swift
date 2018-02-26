@@ -2,8 +2,8 @@ import UIKit
 
 class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITableViewDelegate {
     
-    private var RequestsList : [Request] = []
-    private var donator : Request!
+    var RequestsList : [Request] = []
+    var donator : Request!
     
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = tabBarItem.title
@@ -64,10 +64,10 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
+//        let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
         let next = storyboard?.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
             donator = RequestsList[indexPath.row]
-        next.set(name: donator.getFullName(), address: cell.address.text!, phoneNumber: donator.getPhoneNumber(), notices: donator.getNotices())
+        next.set(donator: donator,index: indexPath.row)
         show(next, sender: self)
         self.navigationItem.backBarButtonItem?.title = "חזור"
     }

@@ -1,5 +1,6 @@
 
 import UIKit
+import CoreLocation
 
 class AlertController: UIViewController {
 
@@ -46,13 +47,13 @@ class AlertController: UIViewController {
     @IBAction func toWaze() {
         //check if waze installed on the iPhone
         if(UIApplication.shared.canOpenURL(URL(string:"waze://")!)){
-            
+
             let NameUrl = (addresses.text?.replacingOccurrences(of: " ", with: "+"))!
             let address = "https://waze.com/ul?q=\(NameUrl)"
             let addressURL = URL(string: address)
-            
+
             // print("\(addressURL!)")
-            
+
             UIApplication.shared.open(addressURL!, options: [:], completionHandler: nil)
             UIApplication.shared.isIdleTimerDisabled = true
         } else {
@@ -61,6 +62,7 @@ class AlertController: UIViewController {
             //  let url = URL(string:"http://www.google.com/")!   //test
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+       
     }
     
 }
