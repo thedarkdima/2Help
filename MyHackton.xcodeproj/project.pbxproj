@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452550652044082F0058D80B /* StorageKeeperProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452550642044082F0058D80B /* StorageKeeperProductsCell.swift */; };
 		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
 		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
-		4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */; };
-		4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */; };
+		4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
 		458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C203D2039AFFF00AA1CF4 /* AlertController.swift */; };
+		4598EF7520430B890069B351 /* MessengersListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7420430B890069B351 /* MessengersListController.swift */; };
+		4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7620430C640069B351 /* MessengerListCell.swift */; };
+		4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7820430D680069B351 /* StorageKeeperProductsController.swift */; };
+		4598EF7B20430EBA0069B351 /* DailyReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7A20430EBA0069B351 /* DailyReportCell.swift */; };
 		45A41195202368BB003536A1 /* ContactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41194202368BB003536A1 /* ContactUsController.swift */; };
 		45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A964892019D91000D173BC /* AppDelegate.swift */; };
 		45A9648C2019D91000D173BC /* DonatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9648B2019D91000D173BC /* DonatorController.swift */; };
@@ -38,14 +42,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452550642044082F0058D80B /* StorageKeeperProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperProductsCell.swift; sourceTree = "<group>"; };
 		455B1807201F564E0002E7D0 /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
 		455B1809201F5CB90002E7D0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		455B180D201F69AA0002E7D0 /* AddDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsController.swift; sourceTree = "<group>"; };
-		4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperController.swift; sourceTree = "<group>"; };
-		4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperCell.swift; sourceTree = "<group>"; };
+		4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportController.swift; sourceTree = "<group>"; };
 		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
 		458C203D2039AFFF00AA1CF4 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		4598EF7420430B890069B351 /* MessengersListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengersListController.swift; sourceTree = "<group>"; };
+		4598EF7620430C640069B351 /* MessengerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerListCell.swift; sourceTree = "<group>"; };
+		4598EF7820430D680069B351 /* StorageKeeperProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeeperProductsController.swift; sourceTree = "<group>"; };
+		4598EF7A20430EBA0069B351 /* DailyReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportCell.swift; sourceTree = "<group>"; };
 		45A41194202368BB003536A1 /* ContactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsController.swift; sourceTree = "<group>"; };
 		45A964862019D91000D173BC /* MyHackton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHackton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A964892019D91000D173BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +93,12 @@
 		4560D1BA202A0B30002DF7F4 /* StorageKeeper */ = {
 			isa = PBXGroup;
 			children = (
-				4560D1BB202A0BAB002DF7F4 /* StorageKeeperController.swift */,
-				4560D1BD202A0D7F002DF7F4 /* StorageKeeperCell.swift */,
+				4598EF7420430B890069B351 /* MessengersListController.swift */,
+				4598EF7620430C640069B351 /* MessengerListCell.swift */,
+				4598EF7820430D680069B351 /* StorageKeeperProductsController.swift */,
+				452550642044082F0058D80B /* StorageKeeperProductsCell.swift */,
+				4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */,
+				4598EF7A20430EBA0069B351 /* DailyReportCell.swift */,
 			);
 			path = StorageKeeper;
 			sourceTree = "<group>";
@@ -279,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
+				4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */,
 				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
+				4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
@@ -287,9 +301,10 @@
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				907BF123203C75330095F60D /* MapAddressController.swift in Sources */,
+				4598EF7520430B890069B351 /* MessengersListController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
-				4560D1BC202A0BAB002DF7F4 /* StorageKeeperController.swift in Sources */,
+				4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
 				45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */,
 				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
@@ -297,10 +312,11 @@
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
 				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
-				4560D1BE202A0D7F002DF7F4 /* StorageKeeperCell.swift in Sources */,
 				90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */,
+				452550652044082F0058D80B /* StorageKeeperProductsCell.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
 				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
+				4598EF7B20430EBA0069B351 /* DailyReportCell.swift in Sources */,
 				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,10 @@ public class Request {
         self.status = status
     }
     
+    func getId() -> String {
+        return id
+    }
+    
     func getFullName() -> String {
             return fullName
         }
