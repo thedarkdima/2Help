@@ -4,16 +4,7 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       ServerConnections.getDoubleArrayAsync("/donators", "Stan", handler: {donators in
-        if let dodo = donators{
-            print(dodo)
-        }
-        else {
-            print("fail")
-        }
-       })
-        
+        CloudantController.addDonator(name: "Roi", address: "America", phone: "03-1236547", notice: "")
     }
 
     @IBAction func login() {
