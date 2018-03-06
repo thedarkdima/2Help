@@ -10,7 +10,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = tabBarItem.title
         
-        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
+        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
         
         tabBarController?.navigationItem.leftBarButtonItem = b
         self.navigationItem.hidesBackButton = true
