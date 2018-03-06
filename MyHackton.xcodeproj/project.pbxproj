@@ -39,33 +39,6 @@
 		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
 		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
-		D2D88BDA204D54FF003B8309 /* GetChangesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BBB204D54FE003B8309 /* GetChangesOperation.swift */; };
-		D2D88BDB204D54FF003B8309 /* CouchDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BBD204D54FE003B8309 /* CouchDatabaseOperation.swift */; };
-		D2D88BDC204D54FF003B8309 /* GetAllDatabasesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BBE204D54FE003B8309 /* GetAllDatabasesOperation.swift */; };
-		D2D88BDD204D54FF003B8309 /* CreateDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BBF204D54FF003B8309 /* CreateDatabaseOperation.swift */; };
-		D2D88BDE204D54FF003B8309 /* DeleteDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC0204D54FF003B8309 /* DeleteDatabaseOperation.swift */; };
-		D2D88BDF204D54FF003B8309 /* OperationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC1204D54FF003B8309 /* OperationProtocols.swift */; };
-		D2D88BE0204D54FF003B8309 /* DeleteAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC3204D54FF003B8309 /* DeleteAttachmentOperation.swift */; };
-		D2D88BE1204D54FF003B8309 /* PutDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC4204D54FF003B8309 /* PutDocumentOperation.swift */; };
-		D2D88BE2204D54FF003B8309 /* PutAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC5204D54FF003B8309 /* PutAttachmentOperation.swift */; };
-		D2D88BE3204D54FF003B8309 /* GetDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC6204D54FF003B8309 /* GetDocumentOperation.swift */; };
-		D2D88BE4204D54FF003B8309 /* ReadAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC7204D54FF003B8309 /* ReadAttachmentOperation.swift */; };
-		D2D88BE5204D54FF003B8309 /* DeleteDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC8204D54FF003B8309 /* DeleteDocumentOperation.swift */; };
-		D2D88BE6204D54FF003B8309 /* BulkDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BC9204D54FF003B8309 /* BulkDocs.swift */; };
-		D2D88BE7204D54FF003B8309 /* DeleteQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BCB204D54FF003B8309 /* DeleteQueryIndexOperation.swift */; };
-		D2D88BE8204D54FF003B8309 /* CreateQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BCC204D54FF003B8309 /* CreateQueryIndexOperation.swift */; };
-		D2D88BE9204D54FF003B8309 /* FindDocumentsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BCD204D54FF003B8309 /* FindDocumentsOperation.swift */; };
-		D2D88BEA204D54FF003B8309 /* ViewLikeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BCF204D54FF003B8309 /* ViewLikeOperation.swift */; };
-		D2D88BEB204D54FF003B8309 /* ViewPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD0204D54FF003B8309 /* ViewPaging.swift */; };
-		D2D88BEC204D54FF003B8309 /* GetAllDocsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD1204D54FF003B8309 /* GetAllDocsOperation.swift */; };
-		D2D88BED204D54FF003B8309 /* QueryViewOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD2204D54FF003B8309 /* QueryViewOperation.swift */; };
-		D2D88BEE204D54FF003B8309 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD3204D54FF003B8309 /* Operation.swift */; };
-		D2D88BEF204D54FF003B8309 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD5204D54FF003B8309 /* RequestBuilder.swift */; };
-		D2D88BF0204D54FF003B8309 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD6204D54FF003B8309 /* RequestExecutor.swift */; };
-		D2D88BF1204D54FF003B8309 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD7204D54FF003B8309 /* URLSession.swift */; };
-		D2D88BF2204D54FF003B8309 /* CouchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BD8204D54FF003B8309 /* CouchClient.swift */; };
-		D2D88BF3204D54FF003B8309 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2D88BD9204D54FF003B8309 /* Info.plist */; };
-		D2D88BF5204D5522003B8309 /* CloudantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D88BF4204D5522003B8309 /* CloudantController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,34 +76,6 @@
 		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
 		90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
-		D2D88BB8204D54FE003B8309 /* SwiftCloudant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftCloudant.h; sourceTree = "<group>"; };
-		D2D88BBB204D54FE003B8309 /* GetChangesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetChangesOperation.swift; sourceTree = "<group>"; };
-		D2D88BBD204D54FE003B8309 /* CouchDatabaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouchDatabaseOperation.swift; sourceTree = "<group>"; };
-		D2D88BBE204D54FE003B8309 /* GetAllDatabasesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllDatabasesOperation.swift; sourceTree = "<group>"; };
-		D2D88BBF204D54FF003B8309 /* CreateDatabaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDatabaseOperation.swift; sourceTree = "<group>"; };
-		D2D88BC0204D54FF003B8309 /* DeleteDatabaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteDatabaseOperation.swift; sourceTree = "<group>"; };
-		D2D88BC1204D54FF003B8309 /* OperationProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationProtocols.swift; sourceTree = "<group>"; };
-		D2D88BC3204D54FF003B8309 /* DeleteAttachmentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAttachmentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC4204D54FF003B8309 /* PutDocumentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PutDocumentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC5204D54FF003B8309 /* PutAttachmentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PutAttachmentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC6204D54FF003B8309 /* GetDocumentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDocumentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC7204D54FF003B8309 /* ReadAttachmentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAttachmentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC8204D54FF003B8309 /* DeleteDocumentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteDocumentOperation.swift; sourceTree = "<group>"; };
-		D2D88BC9204D54FF003B8309 /* BulkDocs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulkDocs.swift; sourceTree = "<group>"; };
-		D2D88BCB204D54FF003B8309 /* DeleteQueryIndexOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteQueryIndexOperation.swift; sourceTree = "<group>"; };
-		D2D88BCC204D54FF003B8309 /* CreateQueryIndexOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQueryIndexOperation.swift; sourceTree = "<group>"; };
-		D2D88BCD204D54FF003B8309 /* FindDocumentsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindDocumentsOperation.swift; sourceTree = "<group>"; };
-		D2D88BCF204D54FF003B8309 /* ViewLikeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLikeOperation.swift; sourceTree = "<group>"; };
-		D2D88BD0204D54FF003B8309 /* ViewPaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPaging.swift; sourceTree = "<group>"; };
-		D2D88BD1204D54FF003B8309 /* GetAllDocsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllDocsOperation.swift; sourceTree = "<group>"; };
-		D2D88BD2204D54FF003B8309 /* QueryViewOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewOperation.swift; sourceTree = "<group>"; };
-		D2D88BD3204D54FF003B8309 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
-		D2D88BD5204D54FF003B8309 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
-		D2D88BD6204D54FF003B8309 /* RequestExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
-		D2D88BD7204D54FF003B8309 /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		D2D88BD8204D54FF003B8309 /* CouchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouchClient.swift; sourceTree = "<group>"; };
-		D2D88BD9204D54FF003B8309 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2D88BF4204D5522003B8309 /* CloudantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudantController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +123,6 @@
 		45A964882019D91000D173BC /* MyHackton */ = {
 			isa = PBXGroup;
 			children = (
-				D2D88BB6204D54D0003B8309 /* Cloudant */,
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				455B1809201F5CB90002E7D0 /* MainController.swift */,
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
@@ -274,105 +218,6 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		D2D88BB6204D54D0003B8309 /* Cloudant */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BB7204D54FE003B8309 /* SwiftCloudant */,
-				D2D88BF4204D5522003B8309 /* CloudantController.swift */,
-			);
-			path = Cloudant;
-			sourceTree = "<group>";
-		};
-		D2D88BB7204D54FE003B8309 /* SwiftCloudant */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BB8204D54FE003B8309 /* SwiftCloudant.h */,
-				D2D88BB9204D54FE003B8309 /* Operations */,
-				D2D88BD4204D54FF003B8309 /* HTTP */,
-				D2D88BD8204D54FF003B8309 /* CouchClient.swift */,
-				D2D88BD9204D54FF003B8309 /* Info.plist */,
-			);
-			path = SwiftCloudant;
-			sourceTree = "<group>";
-		};
-		D2D88BB9204D54FE003B8309 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BBA204D54FE003B8309 /* Database */,
-				D2D88BBC204D54FE003B8309 /* Server */,
-				D2D88BC1204D54FF003B8309 /* OperationProtocols.swift */,
-				D2D88BC2204D54FF003B8309 /* Documents */,
-				D2D88BCA204D54FF003B8309 /* Query */,
-				D2D88BCE204D54FF003B8309 /* Views */,
-				D2D88BD3204D54FF003B8309 /* Operation.swift */,
-			);
-			path = Operations;
-			sourceTree = "<group>";
-		};
-		D2D88BBA204D54FE003B8309 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BBB204D54FE003B8309 /* GetChangesOperation.swift */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
-		D2D88BBC204D54FE003B8309 /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BBD204D54FE003B8309 /* CouchDatabaseOperation.swift */,
-				D2D88BBE204D54FE003B8309 /* GetAllDatabasesOperation.swift */,
-				D2D88BBF204D54FF003B8309 /* CreateDatabaseOperation.swift */,
-				D2D88BC0204D54FF003B8309 /* DeleteDatabaseOperation.swift */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
-		D2D88BC2204D54FF003B8309 /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BC3204D54FF003B8309 /* DeleteAttachmentOperation.swift */,
-				D2D88BC4204D54FF003B8309 /* PutDocumentOperation.swift */,
-				D2D88BC5204D54FF003B8309 /* PutAttachmentOperation.swift */,
-				D2D88BC6204D54FF003B8309 /* GetDocumentOperation.swift */,
-				D2D88BC7204D54FF003B8309 /* ReadAttachmentOperation.swift */,
-				D2D88BC8204D54FF003B8309 /* DeleteDocumentOperation.swift */,
-				D2D88BC9204D54FF003B8309 /* BulkDocs.swift */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		D2D88BCA204D54FF003B8309 /* Query */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BCB204D54FF003B8309 /* DeleteQueryIndexOperation.swift */,
-				D2D88BCC204D54FF003B8309 /* CreateQueryIndexOperation.swift */,
-				D2D88BCD204D54FF003B8309 /* FindDocumentsOperation.swift */,
-			);
-			path = Query;
-			sourceTree = "<group>";
-		};
-		D2D88BCE204D54FF003B8309 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BCF204D54FF003B8309 /* ViewLikeOperation.swift */,
-				D2D88BD0204D54FF003B8309 /* ViewPaging.swift */,
-				D2D88BD1204D54FF003B8309 /* GetAllDocsOperation.swift */,
-				D2D88BD2204D54FF003B8309 /* QueryViewOperation.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D2D88BD4204D54FF003B8309 /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-				D2D88BD5204D54FF003B8309 /* RequestBuilder.swift */,
-				D2D88BD6204D54FF003B8309 /* RequestExecutor.swift */,
-				D2D88BD7204D54FF003B8309 /* URLSession.swift */,
-			);
-			path = HTTP;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D88BF3204D54FF003B8309 /* Info.plist in Resources */,
 				45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */,
 				45A964942019D91000D173BC /* Assets.xcassets in Resources */,
 				45A9648F2019D91000D173BC /* Main.storyboard in Resources */,
@@ -446,58 +290,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D88BE4204D54FF003B8309 /* ReadAttachmentOperation.swift in Sources */,
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
-				D2D88BE6204D54FF003B8309 /* BulkDocs.swift in Sources */,
-				D2D88BE2204D54FF003B8309 /* PutAttachmentOperation.swift in Sources */,
-				D2D88BDB204D54FF003B8309 /* CouchDatabaseOperation.swift in Sources */,
 				4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */,
-				D2D88BDF204D54FF003B8309 /* OperationProtocols.swift in Sources */,
 				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
-				D2D88BEB204D54FF003B8309 /* ViewPaging.swift in Sources */,
 				4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
-				D2D88BDE204D54FF003B8309 /* DeleteDatabaseOperation.swift in Sources */,
 				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
-				D2D88BEF204D54FF003B8309 /* RequestBuilder.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
-				D2D88BE9204D54FF003B8309 /* FindDocumentsOperation.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				907BF123203C75330095F60D /* MapAddressController.swift in Sources */,
 				4598EF7520430B890069B351 /* MessengersListController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
 				4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */,
-				D2D88BF2204D54FF003B8309 /* CouchClient.swift in Sources */,
-				D2D88BE1204D54FF003B8309 /* PutDocumentOperation.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
-				D2D88BEC204D54FF003B8309 /* GetAllDocsOperation.swift in Sources */,
-				D2D88BE8204D54FF003B8309 /* CreateQueryIndexOperation.swift in Sources */,
-				D2D88BE3204D54FF003B8309 /* GetDocumentOperation.swift in Sources */,
 				45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */,
-				D2D88BDD204D54FF003B8309 /* CreateDatabaseOperation.swift in Sources */,
-				D2D88BE7204D54FF003B8309 /* DeleteQueryIndexOperation.swift in Sources */,
 				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
-				D2D88BF5204D5522003B8309 /* CloudantController.swift in Sources */,
-				D2D88BF1204D54FF003B8309 /* URLSession.swift in Sources */,
-				D2D88BE5204D54FF003B8309 /* DeleteDocumentOperation.swift in Sources */,
 				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
-				D2D88BDC204D54FF003B8309 /* GetAllDatabasesOperation.swift in Sources */,
-				D2D88BED204D54FF003B8309 /* QueryViewOperation.swift in Sources */,
 				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
-				D2D88BDA204D54FF003B8309 /* GetChangesOperation.swift in Sources */,
 				90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */,
 				452550652044082F0058D80B /* StorageKeeperProductsCell.swift in Sources */,
-				D2D88BEA204D54FF003B8309 /* ViewLikeOperation.swift in Sources */,
-				D2D88BEE204D54FF003B8309 /* Operation.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
 				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
-				D2D88BE0204D54FF003B8309 /* DeleteAttachmentOperation.swift in Sources */,
-				D2D88BF0204D54FF003B8309 /* RequestExecutor.swift in Sources */,
 				4598EF7B20430EBA0069B351 /* DailyReportCell.swift in Sources */,
 				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 			);
