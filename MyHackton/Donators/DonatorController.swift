@@ -31,12 +31,15 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     ////
     
 override func viewWillAppear(_ animated: Bool) {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-        tabBarController!.navigationItem.rightBarButtonItem!.title = ""
+    tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+    tabBarController!.navigationItem.rightBarButtonItem!.title = "לסל תרומות"
     
         tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
-        tabBarController!.title = "תרומות"
+//        tabBarController!.title = "תרומות"
 }
+    override func viewDidAppear(_ animated: Bool) {
+        tabBarController!.title = tabBarItem!.title
+    }
     
 override func viewDidLoad(){
     super.viewDidLoad()

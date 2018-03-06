@@ -11,21 +11,15 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     var locations : [[String]]!
     
     override func viewWillAppear(_ animated: Bool) {
-        tabBarController!.navigationItem.backBarButtonItem!.title = ""
+                tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
+                tabBarController!.navigationItem.rightBarButtonItem!.title = ""
+        
+        tabBarController!.navigationItem.backBarButtonItem!.title = "חזור"
     }
     
     override func viewDidAppear(_ animated: Bool) {
-    
-        //check which tab bar page is active
-        selectedIndex = self.tabBarController!.selectedIndex
-        if selectedIndex == 1{
             tabBarController!.title = tabBarItem!.title
             package = "warehouse"
-            
-        }else {
-            tabBarController!.title = tabBarItem!.title
-            package = "supermarket"
-        }
         
         directionsList = []
         
@@ -51,19 +45,14 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-        if selectedIndex  == 2 {
-           let productsCell = tableView.dequeueReusableCell(withIdentifier: "products_cell") as! ProductsTableViewCell
-            
-            return productsCell
-        }else {
+    
             let adressesCell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
             
             adressesCell.address_name.text = directionsList[indexPath.row]
             adressesCell.index = indexPath.row
             adressesCell.setController(donatordirectController: self)
             return adressesCell
-        }
+        
     }
     ////
     
