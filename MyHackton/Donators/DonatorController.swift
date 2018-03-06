@@ -12,6 +12,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
     }
     
+    
     var totalCount: Int = 0
     var products: [String] = []
     var productName : String?
@@ -39,12 +40,12 @@ override func viewWillAppear(_ animated: Bool) {
     
 override func viewDidLoad(){
     super.viewDidLoad()
-    asd()
+    getProductsTypes()
         
 }
     
     //server//
-    func asd(){
+    func getProductsTypes(){
         ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
             self.productsArray = []
             if let typs = types{
@@ -79,6 +80,7 @@ override func viewDidLoad(){
         
         productName = productsArray[indexPath.row]
         productsList.setTitle(title: productName!)
+        
     
         show(productsList, sender: self)
     }

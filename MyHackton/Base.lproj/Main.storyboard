@@ -1481,6 +1481,9 @@
                         <viewLayoutGuide key="safeArea" id="sYt-LF-6hP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="UN8-Gk-CGi"/>
+                    <connections>
+                        <outlet property="productsTable" destination="AgZ-oB-JCH" id="m92-cm-jVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHO-zz-JxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

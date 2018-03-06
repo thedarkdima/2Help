@@ -13,6 +13,10 @@ class ProductsTableViewCell: UITableViewCell {
         count = 0
         counter.text = "\(count)"
     }
+    
+     func setName(name: String){
+        self.name.text = name
+    }
 
     @IBAction func plusBtn(_ sender: UIButton) {
         count += 1
