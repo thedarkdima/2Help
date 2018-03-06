@@ -56,7 +56,7 @@ class AlertController: UIViewController {
             
             // geocoding
             
-            let addressTry = "פתח תקווה רוטשילד 119"
+            let addressTry = address!
             let geoCoder = CLGeocoder()
             
             geoCoder.geocodeAddressString(addressTry, completionHandler: { (placemarks, error) in
