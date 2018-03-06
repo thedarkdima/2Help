@@ -4,7 +4,6 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CloudantController.addDonator(name: "Roi", address: "America", phone: "03-1236547", notice: "")
     }
 
     @IBAction func login() {
