@@ -14,6 +14,7 @@
 		4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */; };
 		456CA7FE204EA66A002D8076 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		456CA800204EA67F002D8076 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FF204EA67F002D8076 /* DetailsViewController.swift */; };
+		456CA823204EAD5F002D8076 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456CA822204EAD5F002D8076 /* MapKit.framework */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
 		458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C203D2039AFFF00AA1CF4 /* AlertController.swift */; };
@@ -78,6 +79,7 @@
 		4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportController.swift; sourceTree = "<group>"; };
 		456CA7FD204EA66A002D8076 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		456CA7FF204EA67F002D8076 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		456CA822204EAD5F002D8076 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
 		458C203D2039AFFF00AA1CF4 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456CA823204EAD5F002D8076 /* MapKit.framework in Frameworks */,
 				909349EB20430CC7003AFE09 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +219,7 @@
 		909349E920430CC7003AFE09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				456CA822204EAD5F002D8076 /* MapKit.framework */,
 				909349EA20430CC7003AFE09 /* CoreLocation.framework */,
 			);
 			name = Frameworks;

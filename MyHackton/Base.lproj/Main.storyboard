@@ -870,6 +870,7 @@
                     <tabBarItem key="tabBarItem" title="כתובות המשלוחים" id="7q4-gA-TRg"/>
                     <connections>
                         <outlet property="MyMap" destination="ESw-ol-moe" id="DNL-N1-gI1"/>
+                        <outlet property="myMap" destination="ESw-ol-moe" id="miH-PO-sSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="loz-3i-Lwq" userLabel="First Responder" sceneMemberID="firstResponder"/>

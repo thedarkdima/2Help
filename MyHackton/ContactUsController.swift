@@ -44,7 +44,7 @@ class ContactUsController: UIViewController {
             geoCoder.geocodeAddressString((address.titleLabel?.text)!, completionHandler: { (placemarks, error) in
                 let longitude = placemarks?.first?.location?.coordinate.longitude
                 let latitude = placemarks?.first?.location?.coordinate.latitude
-                
+
                 
                 let addressURL = URL(string: "http://waze.com/ul?ll=\(latitude!),\(longitude!)&navigate=yes")
                 
