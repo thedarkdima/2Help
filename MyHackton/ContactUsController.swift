@@ -1,9 +1,10 @@
 import UIKit
 import CoreLocation
+
 class ContactUsController: UIViewController {
 
     @IBOutlet var number: UIButton!
-    
+    @IBOutlet var address: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +12,7 @@ class ContactUsController: UIViewController {
         
         
     }
+    
     
     @IBAction func call() {
         //call the organization
@@ -36,16 +38,16 @@ class ContactUsController: UIViewController {
             
             // geocoding
             
-            let addressTry = "פתח תקווה רוטשילד 119"
+            //let addressTry = "פתח תקווה רוטשילד 119"
             let geoCoder = CLGeocoder()
-            
-            geoCoder.geocodeAddressString(addressTry, completionHandler: { (placemarks, error) in
+            //get the address and convert it to coordinates
+            geoCoder.geocodeAddressString((address.titleLabel?.text)!, completionHandler: { (placemarks, error) in
                 let longitude = placemarks?.first?.location?.coordinate.longitude
                 let latitude = placemarks?.first?.location?.coordinate.latitude
                 
                 
                 let addressURL = URL(string: "http://waze.com/ul?ll=\(latitude!),\(longitude!)&navigate=yes")
-                // let addressURL = URL(string: "http://waze.com/ul?q=45.6906304,-120.810983&navigate=yes")
+                
                 
                 UIApplication.shared.open(addressURL!, options: [:], completionHandler: nil)
                 UIApplication.shared.isIdleTimerDisabled = true
@@ -56,10 +58,8 @@ class ContactUsController: UIViewController {
             
         } else {
             //else open a web url that says waze is not installed and link to appstore to download waze
-            let url = URL(string:"http://www.itunes.apple.com/us/app/id323229106")
-            
+            let url = URL(string:"https://itunes.apple.com/app/apple-store/id323229106?mt=8")
            
-            // let url = URL(string:"http://www.google.com/")!   //test
             UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         }
         
