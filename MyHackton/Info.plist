@@ -6,6 +6,7 @@
 	<array>
 		<string>tel</string>
 		<string>waze</string>
+		<string>fb</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
@@ -14,6 +15,10 @@
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Gain access to camera for scanning barcode</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

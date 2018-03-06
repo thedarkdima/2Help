@@ -10,7 +10,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = tabBarItem.title
         
-        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
+        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
         
         tabBarController?.navigationItem.leftBarButtonItem = b
         self.navigationItem.hidesBackButton = true
@@ -22,13 +22,40 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
         super.viewDidLoad()
 
         locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
         MyMap.mapType = .standard // regular map
+        addPlaceToMap(place_name: "התחיה 10 חולון")
         
     }
+    
+    func addPlaceToMap(place_name : String){
+        let addressTry = place_name
+        let geoCoder = CLGeocoder()
+        
+        geoCoder.geocodeAddressString(addressTry, completionHandler: { (placemarks, error) in
+            let longitude = placemarks?.first?.location?.coordinate.longitude
+            let latitude = placemarks?.first?.location?.coordinate.latitude
+      
+            UIApplication.shared.isIdleTimerDisabled = true
+            
+            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!)
+            
+        })
+    }
+    
+    func addMyMarkers(name:String, PinLatitude:Double, PinLongitude:Double ){
+        let pin = MKPointAnnotation()
+        pin.title = "\(name)"
+        pin.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
+        
+        MyMap.addAnnotation(pin) // add to map
+        
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
@@ -39,19 +66,13 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
         MyMap.showsUserLocation = true
     }
     
-//    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-//        let newPlace = userLocation.coordinate
-//        MyMap.setRegion(MKCoordinateRegionMakeWithDistance(newPlace, 8000, 8000), animated: true)
-//    }
     
-    func addMyMarkers(name:String, PinLatitude:Double, PinLongitude:Double ){
-        let pin = MKPointAnnotation()
-        pin.title = "\(name)"
-        pin.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
-        
-      //  MyMap.addAnnotation(pin) // add to map
-        
-    }
+    
+    
+    
+    
+    
+    
     
     //logout from the system
     @objc func backcheck(){

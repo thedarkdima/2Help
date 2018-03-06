@@ -12,6 +12,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
     }
     
+    
     var totalCount: Int = 0
     var products: [String] = []
     var productName : String?
@@ -30,21 +31,24 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     ////
     
 override func viewWillAppear(_ animated: Bool) {
-        tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
-        tabBarController!.navigationItem.rightBarButtonItem!.title = ""
+    tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+    tabBarController!.navigationItem.rightBarButtonItem!.title = "לסל תרומות"
     
         tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
-        tabBarController!.title = "תרומות"
+//        tabBarController!.title = "תרומות"
 }
+    override func viewDidAppear(_ animated: Bool) {
+        tabBarController!.title = tabBarItem!.title
+    }
     
 override func viewDidLoad(){
     super.viewDidLoad()
-    asd()
+    getProductsTypes()
         
 }
     
     //server//
-    func asd(){
+    func getProductsTypes(){
         ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
             self.productsArray = []
             if let typs = types{
@@ -79,6 +83,7 @@ override func viewDidLoad(){
         
         productName = productsArray[indexPath.row]
         productsList.setTitle(title: productName!)
+        
     
         show(productsList, sender: self)
     }
