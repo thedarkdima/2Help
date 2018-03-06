@@ -32,6 +32,7 @@
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
 		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
 		909349EB20430CC7003AFE09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909349EA20430CC7003AFE09 /* CoreLocation.framework */; };
+		90C9473A204EAA8700B21ACD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C94739204EAA8700B21ACD /* MapKit.framework */; };
 		90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1757320230EF30062453D /* DonatorAddressCell.swift */; };
 		90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E17575202360FF0062453D /* DeliveryRequestController.swift */; };
 		90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA35CB2039AC99006718D6 /* ProductsTableViewCell.swift */; };
@@ -98,6 +99,7 @@
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
 		909349EA20430CC7003AFE09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		90C94739204EAA8700B21ACD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		90E1757320230EF30062453D /* DonatorAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorAddressCell.swift; sourceTree = "<group>"; };
 		90E17575202360FF0062453D /* DeliveryRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestController.swift; sourceTree = "<group>"; };
 		90EA35CB2039AC99006718D6 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C9473A204EAA8700B21ACD /* MapKit.framework in Frameworks */,
 				909349EB20430CC7003AFE09 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +219,7 @@
 		909349E920430CC7003AFE09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90C94739204EAA8700B21ACD /* MapKit.framework */,
 				909349EA20430CC7003AFE09 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
