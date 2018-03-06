@@ -15,6 +15,7 @@
 		456CA7FE204EA66A002D8076 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		456CA800204EA67F002D8076 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FF204EA67F002D8076 /* DetailsViewController.swift */; };
 		456CA823204EAD5F002D8076 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456CA822204EAD5F002D8076 /* MapKit.framework */; };
+		456CA825204EF095002D8076 /* DonationsBasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA824204EF095002D8076 /* DonationsBasketController.swift */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
 		458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C203D2039AFFF00AA1CF4 /* AlertController.swift */; };
@@ -80,6 +81,7 @@
 		456CA7FD204EA66A002D8076 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		456CA7FF204EA67F002D8076 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		456CA822204EAD5F002D8076 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		456CA824204EF095002D8076 /* DonationsBasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsBasketController.swift; sourceTree = "<group>"; };
 		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
 		458C203D2039AFFF00AA1CF4 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
 				90E1757320230EF30062453D /* DonatorAddressCell.swift */,
+				456CA824204EF095002D8076 /* DonationsBasketController.swift */,
 				455B180D201F69AA0002E7D0 /* AddDetailsController.swift */,
 				458C203D2039AFFF00AA1CF4 /* AlertController.swift */,
 				902707C42029EC00005AF37B /* Request.swift */,
@@ -469,6 +472,7 @@
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				456CA800204EA67F002D8076 /* DetailsViewController.swift in Sources */,
 				90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */,
+				456CA825204EF095002D8076 /* DonationsBasketController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
 				D2D88BDE204D54FF003B8309 /* DeleteDatabaseOperation.swift in Sources */,
 				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
