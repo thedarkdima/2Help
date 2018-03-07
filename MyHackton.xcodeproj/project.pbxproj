@@ -28,6 +28,7 @@
 		45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A964902019D91000D173BC /* MyHackton.xcdatamodeld */; };
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
+		45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F9D25520501FFC00649C52 /* CheckProductsController.swift */; };
 		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
 		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
@@ -70,6 +71,7 @@
 		45A964932019D91000D173BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45F9D25520501FFC00649C52 /* CheckProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckProductsController.swift; sourceTree = "<group>"; };
 		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				452550642044082F0058D80B /* StorageKeeperProductsCell.swift */,
 				4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */,
 				4598EF7A20430EBA0069B351 /* DailyReportCell.swift */,
+				45F9D25520501FFC00649C52 /* CheckProductsController.swift */,
 			);
 			path = StorageKeeper;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
 				907BF123203C75330095F60D /* MapAddressController.swift in Sources */,
 				4598EF7520430B890069B351 /* MessengersListController.swift in Sources */,
+				45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,

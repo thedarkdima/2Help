@@ -7,13 +7,15 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
         view.backgroundColor = .white
         print(scannedCode!)
         
         
-        // Setup label and button layout
+        // add the barCode label to the view and customize it
         view.addSubview(codeLabel)
+        
+        //
         codeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
         codeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         codeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
@@ -22,6 +24,7 @@ class DetailsViewController: UIViewController {
             codeLabel.text = scannedCode
         }
         
+        // add the scan button to the view and customize it
         view.addSubview(scanButton)
         scanButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
         scanButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -29,7 +32,7 @@ class DetailsViewController: UIViewController {
         scanButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
     }
     
-    
+    //design barcode label
     let codeLabel:UILabel = {
         let codeLabel = UILabel()
         codeLabel.textAlignment = .center
@@ -38,6 +41,7 @@ class DetailsViewController: UIViewController {
         return codeLabel
     }()
     
+    //design scan button
     var scanButton:UIButton = {
         let scanButton = UIButton(type: .system)
         scanButton.setTitle("scan", for: .normal)
@@ -51,9 +55,10 @@ class DetailsViewController: UIViewController {
         return scanButton
     }()
     
+    //by pressing the scan button on the details page, 
     @objc func displayScannerViewController() {
         print("123")
-        let scanViewController = storyboard!.instantiateViewController(withIdentifier: "main")
+        let scanViewController = storyboard!.instantiateViewController(withIdentifier: "scanner")
         //navigationController?.pushViewController(scanViewController, animated: true)
         //navigationController?.present(scanViewController, animated: true, completion: nil)
         present(scanViewController, animated: true, completion: nil)

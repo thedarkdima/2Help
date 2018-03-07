@@ -3,14 +3,7 @@ import UIKit
 class DonatorController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource {
     
     @IBOutlet var productsCollectionView: UICollectionView!
-    @IBAction func phoneNumber(_ number: UIButton) {
-        
-        let numberToCall = (number.titleLabel?.text)!
-        if let phoneURL = URL(string :"tel://" + numberToCall){
-            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
-        }
-    
-    }
+  
     
     
     var totalCount: Int = 0
@@ -49,6 +42,24 @@ override func viewDidLoad(){
     tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
         
 }
+    
+    
+    @IBAction func phoneNumber(_ number: UIButton) {
+        
+        let numberToCall = (number.titleLabel?.text)!
+        if let phoneURL = URL(string :"tel://" + numberToCall){
+            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
+    @IBAction func scanBarcode(_ sender: UIButton) {
+        let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
+        
+        present(scanPage, animated: true, completion: nil)
+        
+    }
+    
     
     //server//
     func getProductsTypes(){

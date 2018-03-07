@@ -8,8 +8,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //create back button
+        navigationItem.backBarButtonItem?.isEnabled = true
+        navigationItem.backBarButtonItem?.title = "חזור"
         
         navigationItem.title = "Scanner"
         
@@ -93,13 +98,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if let customSoundUrl = Bundle.main.url(forResource: "beep-07", withExtension: "mp3") {
             var customSoundId: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(customSoundUrl as CFURL, &customSoundId)
-            //let systemSoundId: SystemSoundID = 1016  // to play apple's built in sound, no need for upper 3 lines
+            let systemSoundId: SystemSoundID = 1016  // to play apple's built in sound, no need for upper 3 lines
             
-            AudioServicesAddSystemSoundCompletion(customSoundId, nil, nil, { (customSoundId, _) -> Void in
-                AudioServicesDisposeSystemSoundID(customSoundId)
+            AudioServicesAddSystemSoundCompletion(systemSoundId, nil, nil, { (systemSoundId, _) -> Void in
+                AudioServicesDisposeSystemSoundID(systemSoundId)
             }, nil)
             
-            AudioServicesPlaySystemSound(customSoundId)
+            AudioServicesPlaySystemSound(systemSoundId)
         }
         
         // Stop capturing and hence stop executing metadataOutput function over and over again
@@ -109,13 +114,16 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         displayDetailsViewController(scannedCode: stringCodeValue)
         
     }
-    
+    // show the next page
     func displayDetailsViewController(scannedCode: String) {
         let detailsViewController = storyboard!.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         detailsViewController.scannedCode = scannedCode
         //navigationController?.pushViewController(detailsViewController, animated: true)
         present(detailsViewController, animated: true, completion: nil)
     }
+    
+    
+    
     
 }
 
