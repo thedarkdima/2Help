@@ -10,7 +10,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         navigationItem.title = "Scanner"
         view.backgroundColor = .white
         
@@ -19,6 +19,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if let captureDevice = captureDevice {
             
             do {
+                //the machine see that the device is video
                 let input = try AVCaptureDeviceInput(device: captureDevice)
                 
                 captureSession = AVCaptureSession()

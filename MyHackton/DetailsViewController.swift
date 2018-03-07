@@ -40,10 +40,10 @@ class DetailsViewController: UIViewController {
     
     var scanButton:UIButton = {
         let scanButton = UIButton(type: .system)
-        scanButton.setTitle("Scan", for: .normal)
+        scanButton.setTitle("סרוק קוד נוסף", for: .normal)
         scanButton.setTitleColor(.white, for: .normal)
-        scanButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        scanButton.backgroundColor = .orange
+        scanButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        scanButton.backgroundColor = .blue
         scanButton.layer.cornerRadius = 25
         scanButton.addTarget(self, action: #selector(displayScannerViewController), for: .touchUpInside)
         scanButton.translatesAutoresizingMaskIntoConstraints = false
