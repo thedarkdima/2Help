@@ -40,7 +40,7 @@ class DetailsViewController: UIViewController {
     
     var scanButton:UIButton = {
         let scanButton = UIButton(type: .system)
-        scanButton.setTitle("סרוק קוד נוסף", for: .normal)
+        scanButton.setTitle("scan", for: .normal)
         scanButton.setTitleColor(.white, for: .normal)
         scanButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         scanButton.backgroundColor = .blue

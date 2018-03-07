@@ -12,9 +12,7 @@
 		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
 		4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */; };
-		456CA7FE204EA66A002D8076 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		456CA800204EA67F002D8076 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FF204EA67F002D8076 /* DetailsViewController.swift */; };
-		456CA823204EAD5F002D8076 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456CA822204EAD5F002D8076 /* MapKit.framework */; };
 		456CA825204EF095002D8076 /* DonationsBasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA824204EF095002D8076 /* DonationsBasketController.swift */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
@@ -43,6 +41,7 @@
 		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
 		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
 		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
+		D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportController.swift; sourceTree = "<group>"; };
 		456CA7FD204EA66A002D8076 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		456CA7FF204EA67F002D8076 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		456CA822204EAD5F002D8076 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		456CA824204EF095002D8076 /* DonationsBasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsBasketController.swift; sourceTree = "<group>"; };
 		45743268202851C000CB39BB /* DonatorsStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorsStatusController.swift; sourceTree = "<group>"; };
 		45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatorDirectionsController.swift; sourceTree = "<group>"; };
@@ -320,6 +318,7 @@
 				907BF123203C75330095F60D /* MapAddressController.swift in Sources */,
 				4598EF7520430B890069B351 /* MessengersListController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
+				D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
 				4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
@@ -472,11 +471,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Q8D95B37;
+				DEVELOPMENT_TEAM = SPFXJ767TQ;
 				INFOPLIST_FILE = MyHackton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
+				PRODUCT_BUNDLE_IDENTIFIER = dima.MyHackton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,11 +487,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Q8D95B37;
+				DEVELOPMENT_TEAM = SPFXJ767TQ;
 				INFOPLIST_FILE = MyHackton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nati.MyHackton;
+				PRODUCT_BUNDLE_IDENTIFIER = dima.MyHackton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

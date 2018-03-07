@@ -51,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="scan"/>
                                 <connections>
-                                    <segue destination="zHj-5g-oHP" kind="show" id="Q0r-mY-0M7"/>
+                                    <segue destination="zHj-5g-oHP" kind="show" id="xLJ-CV-c4n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,7 +82,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="GlG-HV-llJ">
             <objects>
-                <viewController id="zHj-5g-oHP" customClass="ScannerViewController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zHj-5g-oHP" customClass="ScannerViewController" customModule="MyHackton" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PIy-Rm-A7M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

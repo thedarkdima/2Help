@@ -12,6 +12,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
         
         navigationItem.title = "Scanner"
+        
         view.backgroundColor = .white
         
         captureDevice = AVCaptureDevice.default(for: .video)
