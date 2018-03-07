@@ -16,7 +16,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     ///// server
     
     func getProducts(){
-        ServerConnections.getDoubleArrayAsync("/items", pageTitle!, handler: {products in
+        ServerConnections.getDoubleArrayAsync("/items", [pageTitle!], handler: {products in
             //self.productsArray = []
             if let temp = products{
                 self.productsArray = temp

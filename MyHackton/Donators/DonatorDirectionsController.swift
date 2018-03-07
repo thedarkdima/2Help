@@ -23,7 +23,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
         
         directionsList = []
         
-        ServerConnections.getDoubleArrayAsync("/locations", package, handler: {addresses in
+        ServerConnections.getDoubleArrayAsync("/locations", [package], handler: {addresses in
             if let add = addresses{
                 for array in add{
                     self.directionsList.append(array[0])

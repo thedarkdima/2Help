@@ -52,7 +52,7 @@ override func viewDidLoad(){
     
     //server//
     func getProductsTypes(){
-        ServerConnections.getDoubleArrayAsync("/itemstypes", "", handler: {types in
+        ServerConnections.getDoubleArrayAsync("/itemstypes", [""], handler: {types in
             self.productsArray = []
             if let typs = types{
                 for type in typs{

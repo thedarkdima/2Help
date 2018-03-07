@@ -23,7 +23,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
-            ServerConnections.getDoubleArrayAsync("/myrequests", token, handler: {requests in
+            ServerConnections.getDoubleArrayAsync("/myrequests", [token], handler: {requests in
                 if let reqs = requests{
                     for request in reqs{
                         self.RequestsList.append(Request(id: request[0], fullName: request[1], address: request[2], phoneNumber: request[3], notice: request[4], status: request[5]))

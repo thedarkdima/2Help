@@ -34,7 +34,7 @@ class MainController: UIViewController {
             //Server Auth
             //The username and password will be sent to the server, the server will return a token and a job in array.
             //After that if the server returend data that meants the user was found and takes the user to his page.
-            ServerConnections.getArrayAsync("/login", "\(username)&\(password)", handler: {array in
+            ServerConnections.getArrayAsync("/login", [username, password], handler: {array in
                 if let arr = array{
                     if(arr.count > 0){
                         //Tokken from the server
