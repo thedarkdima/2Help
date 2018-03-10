@@ -2,12 +2,15 @@ import UIKit
 
 class DonationsBasketController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
+    var scannedCode = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(scannedCode)
     }
     
+    //move to scannerViewController to scan barcodes
     @IBAction func scanBarcode(_ sender: UIButton) {
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
         

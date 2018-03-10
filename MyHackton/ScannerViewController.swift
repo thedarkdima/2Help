@@ -8,50 +8,54 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //create back button
         navigationItem.backBarButtonItem?.isEnabled = true
         navigationItem.backBarButtonItem?.title = "חזור"
         
-        navigationItem.title = "Scanner"
-        
         view.backgroundColor = .white
         
         captureDevice = AVCaptureDevice.default(for: .video)
-        // Check if captureDevice returns a value and unwrap it
+        
+        // Check if captureDevice returns a value and unwrap it - check if there is a camera
         if let captureDevice = captureDevice {
             
             do {
-                //the machine see that the device is video
+                //unrwap the input - the machine check if there is an input device(now input = video input(camera))
                 let input = try AVCaptureDeviceInput(device: captureDevice)
                 
+                //an object that holds the input(camera) and the output of it (like - start the input(ex: camera) and gets its output(ex: barcode)
                 captureSession = AVCaptureSession()
                 guard let captureSession = captureSession else { return }
+                //captureSession get the input
                 captureSession.addInput(input)
-                
+                //
                 let captureMetadataOutput = AVCaptureMetadataOutput()
                 captureSession.addOutput(captureMetadataOutput)
                 
                 captureMetadataOutput.setMetadataObjectsDelegate(self, queue: .main)
                 captureMetadataOutput.metadataObjectTypes = [.code128, .qr, .ean13,  .ean8, .code39] //AVMetadataObject.ObjectType
                 
+                //start capturing data - the camera start to shoot
                 captureSession.startRunning()
-                
+                //edit the properties of the view - the user can see what the camera is shooting in it.
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                 videoPreviewLayer?.videoGravity = .resizeAspectFill
                 videoPreviewLayer?.frame = view.layer.bounds
+                
                 view.layer.addSublayer(videoPreviewLayer!)
                 
             } catch {
+                codeLabel.text = "אין מצלמה במכשיר זה"//not showing...
                 print("Error Device Input")
             }
             
         }
         
+        //add label that will appear in case there is no outputs - barcodes
         view.addSubview(codeLabel)
+        //set the location of the code label
         codeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         codeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         codeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -59,71 +63,63 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     
-    
-    let codeLabel:UILabel = {
+    //customize code label
+        let codeLabel:UILabel = {
         let codeLbl = UILabel()
         codeLbl.backgroundColor = .white
         codeLbl.translatesAutoresizingMaskIntoConstraints = false
         return codeLbl
     }()
     
-    let codeFrame:UIView = {
-        let codeFrame = UIView()
-        codeFrame.layer.borderColor = UIColor.green.cgColor
-        codeFrame.layer.borderWidth = 2
-        codeFrame.frame = CGRect.zero
-        codeFrame.translatesAutoresizingMaskIntoConstraints = false
-        return codeFrame
-    }()
+//    let codeFrame:UIView = {
+//        let codeFrame = UIView()
+//        codeFrame.layer.borderColor = UIColor.green.cgColor
+//        codeFrame.layer.borderWidth = 2
+//        codeFrame.frame = CGRect.zero
+//        codeFrame.translatesAutoresizingMaskIntoConstraints = false
+//        return codeFrame
+//    }()
     
+    //get new metadata object - new barcodes//
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count == 0 {
             //print("No Input Detected")
-            codeFrame.frame = CGRect.zero
-            codeLabel.text = "No Data"
+            //codeFrame.frame = CGRect.zero
+            //if there was no barcode found - show label that infroms it
+            codeLabel.text = "לא נמצא ברקוד"
             return
         }
-        
+        //gets the barcode as the camera output
         let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
+        //unwrap the metadataObjcet(his stringValue) - the barcode number
         guard let stringCodeValue = metadataObject.stringValue else { return }
         
-        view.addSubview(codeFrame)
+       // view.addSubview(codeFrame)
         
-        guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
-        codeFrame.frame = barcodeObject.bounds
-        codeLabel.text = stringCodeValue
+       // guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
+        //codeFrame.frame = barcodeObject.bounds
+        //codeLabel.text = stringCodeValue
         
-        // Play system sound with custom mp3 file
-        if let customSoundUrl = Bundle.main.url(forResource: "beep-07", withExtension: "mp3") {
-            var customSoundId: SystemSoundID = 0
-            AudioServicesCreateSystemSoundID(customSoundUrl as CFURL, &customSoundId)
-            let systemSoundId: SystemSoundID = 1016  // to play apple's built in sound, no need for upper 3 lines
-            
-            AudioServicesAddSystemSoundCompletion(systemSoundId, nil, nil, { (systemSoundId, _) -> Void in
-                AudioServicesDisposeSystemSoundID(systemSoundId)
-            }, nil)
-            
-            AudioServicesPlaySystemSound(systemSoundId)
-        }
+        // vibrate the phone when barcdoe found
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
         
         // Stop capturing and hence stop executing metadataOutput function over and over again
         captureSession?.stopRunning()
         
-        // Call the function which performs navigation and pass the code string value we just detected
-        displayDetailsViewController(scannedCode: stringCodeValue)
+        // show the donationsBasketController and pass the barcode string value we just detected
+        moveToDonationBasketController(scannedCode: stringCodeValue)
         
     }
-    // show the next page
-    func displayDetailsViewController(scannedCode: String) {
-        let detailsViewController = storyboard!.instantiateViewController(withIdentifier: "details") as! DetailsViewController
-        detailsViewController.scannedCode = scannedCode
-        //navigationController?.pushViewController(detailsViewController, animated: true)
-        present(detailsViewController, animated: true, completion: nil)
+    ////
+    
+    // show basket page with the barcode's related product
+    func moveToDonationBasketController(scannedCode: String) {
+        let basketViewController = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
+        //pass the codeNumber to the basketPage
+        basketViewController.scannedCode = scannedCode
+        
+        present(basketViewController, animated: true, completion: nil)
     }
-    
-    
-    
-    
 }
-

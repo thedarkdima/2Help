@@ -1,7 +1,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    
+     /////////////////////////////////////////////////  בדיקה - עמוד מיותר ///////////////////////////////////
     public var scannedCode:String?
     
     override func viewDidLoad() {
@@ -55,7 +55,6 @@ class DetailsViewController: UIViewController {
         return scanButton
     }()
     
-    //by pressing the scan button on the details page, 
     @objc func displayScannerViewController() {
         print("123")
         let scanViewController = storyboard!.instantiateViewController(withIdentifier: "scanner")
