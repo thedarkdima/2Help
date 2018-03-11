@@ -76,13 +76,31 @@
                     <view key="view" contentMode="scaleToFill" id="PIy-Rm-A7M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb9-tm-4Kw">
+                                <rect key="frame" x="192" y="690" width="30" height="30"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Iy-L7-LGx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="ברקוד " id="kho-ha-quk"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Iy-L7-LGx" firstAttribute="trailing" secondItem="zo7-l6-Zps" secondAttribute="trailing" id="Hvk-5b-4fc"/>
+                            <constraint firstItem="9Iy-L7-LGx" firstAttribute="top" secondItem="PIy-Rm-A7M" secondAttribute="top" id="JPh-ah-clm"/>
+                            <constraint firstItem="nb9-tm-4Kw" firstAttribute="centerX" secondItem="zo7-l6-Zps" secondAttribute="centerX" id="M1U-cg-7U5"/>
+                            <constraint firstItem="zo7-l6-Zps" firstAttribute="bottom" secondItem="nb9-tm-4Kw" secondAttribute="bottom" constant="16" id="Pdo-gY-1au"/>
+                            <constraint firstItem="9Iy-L7-LGx" firstAttribute="leading" secondItem="zo7-l6-Zps" secondAttribute="leading" id="Qkv-Bi-gNm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zo7-l6-Zps"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pc1-xJ-F1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5612" y="-1757"/>
+            <point key="canvasLocation" x="5925" y="-1962"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="gwa-ic-Nxg">
@@ -97,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsr-RN-R75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6407" y="-1757"/>
+            <point key="canvasLocation" x="6717" y="-1963"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nNh-Qy-x10">
@@ -1469,7 +1487,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4X-na-bn5">
-                                                    <rect key="frame" x="45" y="30" width="40.666666666666657" height="18"/>
+                                                    <rect key="frame" x="45" y="29.666666666666664" width="40.666666666666657" height="18.666666666666664"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="r4X-na-bn5" secondAttribute="height" multiplier="4:3" id="MSw-S5-wKl"/>
                                                     </constraints>
@@ -1652,12 +1670,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbJ-zz-wRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4946" y="-1238"/>
+            <point key="canvasLocation" x="5070" y="-1268"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9w2-nI-sMU">
             <objects>
-                <tabBarController id="LLR-Cc-Vqb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="donatorProducts" id="LLR-Cc-Vqb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3fw-4s-D9H">
                         <barButtonItem key="backBarButtonItem" title="חזור" id="ACZ-Vi-TLw"/>
                         <barButtonItem key="rightBarButtonItem" title="לסל תרומות" id="hMf-lV-e3C">
