@@ -133,7 +133,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     func moveToDonationBasketController(scannedCode: String) {
         let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
         print(scannedCode)
-        //pass the codeNumber to the basketPage
+        //pass the codeNumber to the basketPage 
         basketViewController.scannedCode = scannedCode
         
         self.navigationController?.pushViewController(basketViewController, animated: true)
