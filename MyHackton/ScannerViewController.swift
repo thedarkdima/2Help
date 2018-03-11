@@ -41,7 +41,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 captureSession.startRunning()
                 //edit the properties of the view - the user can see what the camera is shooting in it.
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                videoPreviewLayer?.videoGravity = .resizeAspect
+                videoPreviewLayer?.videoGravity = .resizeAspectFill
                 videoPreviewLayer?.frame = view.layer.bounds
                 
                 view.layer.addSublayer(videoPreviewLayer!)

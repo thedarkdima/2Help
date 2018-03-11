@@ -14,8 +14,6 @@ class DonatorsStatusController: UIViewController {
     private var index : Int!
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        // need to take data from server and to delete when press the "נלקח" button
        
     }
     

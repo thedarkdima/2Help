@@ -34,9 +34,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Gain access to camera for scanning barcode</string>
+	<string>על מנת לסרוק את הברקוד נדרשת גישה למצלמה</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>על מנת לבדוק את מיקומך ביחס למיקום התורם נדרש להפעיל את שירותי המיקום</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Hey i want to know where you are ;)</string>
+	<string>על מנת לבדוק את מיקומך ביחס למיקום התורם נדרש להפעיל את שירותי המיקום</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
