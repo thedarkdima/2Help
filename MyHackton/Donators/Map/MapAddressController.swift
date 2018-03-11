@@ -2,13 +2,13 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapAddressController: UIViewController , CLLocationManagerDelegate {
+class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var MyMap: MKMapView!
     var locationManager = CLLocationManager()
     
     override func viewWillAppear(_ animated: Bool) {
-        tabBarController?.navigationItem.title = tabBarItem.title
+        tabBarController?.navigationItem.title = "בחר את המשלוחים שברצונך לקחת"
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
         
@@ -28,6 +28,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         MyMap.mapType = .standard // regular map
+        //MyMap.showsUserLocation = true //maybe unnecessary
         addPlaceToMap(place_name: "התחיה 10 חולון")
         
     }
@@ -48,12 +49,35 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
     }
     
     func addMyMarkers(name:String, PinLatitude:Double, PinLongitude:Double ){
-        let pin = MKPointAnnotation()
-        pin.title = "\(name)"
-        pin.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
+        let pin1 = MKPointAnnotation()
+        pin1.title = "\(name)"
+        pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
-        MyMap.addAnnotation(pin) // add to map
         
+        let pin2 = MKPointAnnotation()
+        pin2.title = "pini"
+        pin2.coordinate = CLLocationCoordinate2D(latitude: 32.4, longitude: 34.9)
+        
+        MyMap.addAnnotation(pin1) // add pin1 to map
+        MyMap.addAnnotation(pin2) // add pin2 to map
+    }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        pin.canShowCallout = true
+        pin.leftCalloutAccessoryView = UIButton(type: .contactAdd)
+        
+        return pin
+    }
+    
+    // button on annotation is pressed
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let currentAnnotation = view.annotation
+        
+        MyMap.removeAnnotation(currentAnnotation!)
+        //navigationController?.pushViewController(displayPage, animated: true)
     }
     
     
@@ -63,16 +87,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         MyMap.setRegion(region, animated: true)
+        MyMap.userLocation.title = "המיקום שלי"
         MyMap.showsUserLocation = true
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     //logout from the system
     @objc func backcheck(){
@@ -88,9 +105,5 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate {
         
         present(alert, animated: true, completion: nil)
         
-        
     }
-
-    
-
 }
