@@ -10,13 +10,6 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         
         navigationItem.title = "סל תרומות"
         print(scannedCode)
-        
-        backButton = UIBarButtonItem(title: "check", style: .plain, target: self, action: Selector(("setBackButton")))
-    }
-    
-    func setBackButton(){
-      navigationItem.leftBarButtonItem = backButton
-        
     }
     
     //move to scannerViewController to scan barcodes
@@ -37,9 +30,13 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     }
     ////
 
-  
-
-   
+    func showAlert(){
+    let alert = UIAlertController(title: "שקר כלשהו", message: "haha", preferredStyle: .alert)
+    let cancel = UIAlertAction(title: "haha", style: .cancel, handler: nil)
+    alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
   
 
 }

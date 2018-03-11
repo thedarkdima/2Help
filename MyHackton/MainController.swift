@@ -79,7 +79,7 @@ class MainController: UIViewController {
     }
     
     private func ConnectAsStorageKeeper(){
-        let next = storyboard!.instantiateViewController(withIdentifier: "storageKeeper_main")
+        let next = storyboard!.instantiateViewController(withIdentifier: "storage_main")
         show(next, sender: self)
     }
         

@@ -53,6 +53,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 
             } catch {
                 codeLabel.text = "אין מצלמה במכשיר זה"//not showing...
+                let alert = UIAlertController(title: "alerttt", message: "aaaa", preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+                alert.addAction(cancel)
+                present(alert, animated: true, completion: nil)
                 print("Error Device Input")
             }
             
