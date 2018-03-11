@@ -14,6 +14,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         navigationItem.backBarButtonItem?.isEnabled = true
         navigationItem.backBarButtonItem?.title = "חזור"
         
+        
+        navigationItem.leftBarButtonItem?.isEnabled = true
+        navigationItem.leftBarButtonItem?.title = "check"
+        navigationItem.leftBarButtonItem?.target = back() as AnyObject
+        
         view.backgroundColor = .white
         
         captureDevice = AVCaptureDevice.default(for: .video)
@@ -41,7 +46,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 captureSession.startRunning()
                 //edit the properties of the view - the user can see what the camera is shooting in it.
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                videoPreviewLayer?.videoGravity = .resizeAspectFill
+                videoPreviewLayer?.videoGravity = .resizeAspect
                 videoPreviewLayer?.frame = view.layer.bounds
                 
                 view.layer.addSublayer(videoPreviewLayer!)
@@ -63,6 +68,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     
+    func back(){
+        navigationController?.popViewController(animated: true)
+    }
     //customize code label
         let codeLabel:UILabel = {
         let codeLbl = UILabel()
@@ -120,6 +128,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //pass the codeNumber to the basketPage
         basketViewController.scannedCode = scannedCode
         
-        present(basketViewController, animated: true, completion: nil)
+        //present(basketViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(basketViewController, animated: true)
     }
 }

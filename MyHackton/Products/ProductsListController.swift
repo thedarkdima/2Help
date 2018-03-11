@@ -1,7 +1,9 @@
 import UIKit
 
 class ProductsListController: UIViewController , UITableViewDataSource {
+    
     var products = [""]
+    
     
     @IBOutlet weak var productsTable: UITableView!
     var pageTitle : String?
@@ -11,6 +13,23 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         navigationItem.title = pageTitle!
         getProducts()
     }
+    
+    @IBAction func addToBasket(_ sender: UIButton) {
+        
+        //let basketPage = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
+        
+        
+        //here need to be the method to add the chosen products to the server//
+        
+        navigationController?.popViewController(animated: false)
+        
+        
+        
+        //present(basketPage, animated: true, completion: nil)
+        
+        //show(basketPage, sender: self)
+    }
+    
     
     
     ///// server

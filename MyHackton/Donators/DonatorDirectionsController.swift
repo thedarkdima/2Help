@@ -14,7 +14,7 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
                 tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
                 tabBarController!.navigationItem.rightBarButtonItem!.title = ""
         
-                tabBarController!.navigationItem.backBarButtonItem!.title = "חזור"
+                tabBarController!.navigationItem.backBarButtonItem!.title = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {

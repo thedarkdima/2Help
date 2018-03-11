@@ -3,11 +3,20 @@ import UIKit
 class DonationsBasketController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var scannedCode = ""
+    var backButton : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "סל תרומות"
         print(scannedCode)
+        
+        backButton = UIBarButtonItem(title: "check", style: .plain, target: self, action: Selector(("setBackButton")))
+    }
+    
+    func setBackButton(){
+      navigationItem.leftBarButtonItem = backButton
+        
     }
     
     //move to scannerViewController to scan barcodes
