@@ -14,11 +14,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         navigationItem.backBarButtonItem?.isEnabled = true
         navigationItem.backBarButtonItem?.title = "חזור"
         
-        
-        navigationItem.leftBarButtonItem?.isEnabled = true
-        navigationItem.leftBarButtonItem?.title = "check"
-        navigationItem.leftBarButtonItem?.target = back() as AnyObject
-        
         view.backgroundColor = .white
         
         captureDevice = AVCaptureDevice.default(for: .video)
@@ -46,17 +41,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 captureSession.startRunning()
                 //edit the properties of the view - the user can see what the camera is shooting in it.
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                videoPreviewLayer?.videoGravity = .resizeAspect
+                videoPreviewLayer?.videoGravity = .resizeAspectFill
                 videoPreviewLayer?.frame = view.layer.bounds
                 
                 view.layer.addSublayer(videoPreviewLayer!)
                 
             } catch {
                 codeLabel.text = "אין מצלמה במכשיר זה"//not showing...
-                let alert = UIAlertController(title: "alerttt", message: "aaaa", preferredStyle: .alert)
-                let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
-                alert.addAction(cancel)
-                present(alert, animated: true, completion: nil)
                 print("Error Device Input")
             }
             
@@ -72,9 +63,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     
-    func back(){
-        navigationController?.popViewController(animated: true)
-    }
     //customize code label
         let codeLabel:UILabel = {
         let codeLbl = UILabel()
@@ -132,7 +120,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //pass the codeNumber to the basketPage
         basketViewController.scannedCode = scannedCode
         
-        //present(basketViewController, animated: true, completion: nil)
-        navigationController?.pushViewController(basketViewController, animated: true)
+        
+        present(basketViewController, animated: true, completion: nil)
     }
 }

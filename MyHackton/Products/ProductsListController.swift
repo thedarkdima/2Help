@@ -58,6 +58,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sectionsCounts[section]
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
