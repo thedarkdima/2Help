@@ -67,15 +67,15 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     }
     ////
     var text: UITextField!
-    func showAlert(){
+    func showAlert(flag: Bool){
         let alert = UIAlertController(title: "חריגה", message: "סיבה לשינוי הכמות", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler: nil)
         let accept = UIAlertAction(title: "אישור", style: .default, handler: { action in
-            if self.text.text!.count == 0{
+            if self.text.text!.count != 0{
                 self.addReason()
                 self.addItems()
             } else {
-                self.text.placeholder = "חייב לעכניס סיבה"
+                self.showAlert(flag: true)
             }
         })
         
@@ -83,6 +83,9 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             tf.textAlignment = .right
             tf.returnKeyType = .next
             self.text = tf
+            if flag{
+                tf.placeholder = "חייב לעכניס סיבה"
+            }
         }
         alert.addAction(cancel)
         alert.addAction(accept)
@@ -96,15 +99,13 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             let item = table.visibleCells[i] as! ProductsTableViewCell
             if(items[i][2] != item.counter.text!){
                 flag = true
-                changedItems += "\(items[i][1]):\(items[i][2]) "
+                changedItems += "\(items[i][1]):\(item.count - Int(items[i][2])!)&"
             }
-            
         }
         if flag{
-            showAlert()
+            showAlert(flag: false)
         } else {
             addItems()
-            
         }
     }
     
