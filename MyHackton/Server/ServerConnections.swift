@@ -42,6 +42,25 @@ class ServerConnections{
         }).resume()
     }
     
+    static func getDoubleArrayAsync(_ urlAddon: String, _ package: [[String]], handler: @escaping ([[String]]?)->()) {
+        let url = URL(string: "http://2help-server.eu-gb.mybluemix.net" + urlAddon)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try! JSONSerialization.data(withJSONObject: package, options: .sortedKeys)
+        //packageToString(package: package).data(using: .utf8)
+        URLSession.shared.dataTask(with: request, completionHandler: {(d,r,e) in
+            if let data = d {
+                //call handler with result (in main thread)
+                DispatchQueue.main.async {
+                    handler((try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [[String]])
+                }
+            }
+            else {
+                print("Nil Data.")
+            }
+        }).resume()
+    }
+    
     static func packageToString(package: [String]) -> String{
         var back = ""
         for pac in package{

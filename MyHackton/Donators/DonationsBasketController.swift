@@ -23,6 +23,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                 ServerConnections.getDoubleArrayAsync("/request_items", [token, request[0]], handler: {itemsArray in
                     if let array = itemsArray{
                         self.items = array
+                        self.table.reloadData()
                     }
                 })
             }
@@ -58,39 +59,66 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         if manager{
             cell.name.text = items[indexPath.row][1]
             cell.counter.text = items[indexPath.row][2]
+            cell.count = Int(items[indexPath.row][2])!
         } else {
             
         }
         return cell
     }
     ////
-
+    var text: UITextField!
     func showAlert(){
-    let alert = UIAlertController(title: "שקר כלשהו", message: "haha", preferredStyle: .alert)
-    let cancel = UIAlertAction(title: "haha", style: .cancel, handler: nil)
-    alert.addAction(cancel)
+        let alert = UIAlertController(title: "חריגה", message: "סיבה לשינוי הכמות", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler: nil)
+        let accept = UIAlertAction(title: "אישור", style: .default, handler: { action in
+            if self.text.text!.count == 0{
+                self.addReason()
+                self.addItems()
+            } else {
+                self.text.placeholder = "חייב לעכניס סיבה"
+            }
+        })
+        
+        alert.addTextField { (tf) in
+            tf.textAlignment = .right
+            tf.returnKeyType = .next
+            self.text = tf
+        }
+        alert.addAction(cancel)
+        alert.addAction(accept)
         present(alert, animated: true, completion: nil)
     }
     
+    var changedItems = ""
     @IBAction func addItemsManager(_ sender: Any) {
         var flag = false
         for i in 0...items.count - 1{
             let item = table.visibleCells[i] as! ProductsTableViewCell
-            if(items[i][1] != item.name.text!){
+            if(items[i][2] != item.counter.text!){
                 flag = true
-                if(items[i][2] != item.counter.text!){
-                    flag = true
-                }
+                changedItems += "\(items[i][1]):\(items[i][2]) "
             }
+            
         }
         if flag{
             showAlert()
         } else {
             addItems()
+            
         }
     }
     
+    
     func addItems(){
-        
+        items.insert([token, "חולון התחיה 10"], at: 0)
+        ServerConnections.getDoubleArrayAsync("/addItems", items, handler: {array in
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
+    func addReason(){
+        ServerConnections.getArrayAsync("/add_reason", [token, request[0], text.text!, changedItems], handler: { array in
+            
+        })
     }
 }
