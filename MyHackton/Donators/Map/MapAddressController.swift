@@ -118,6 +118,23 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         self.MyMap.setRegion(region, animated: true)
         self.MyMap.userLocation.title = "המיקום שלי"  
         self.MyMap.showsUserLocation = true
+      
+        //my locations coordinates
+       // print("\(myLocation.latitude) and \(myLocation.longitude)")
+        //print("the distance is : \((distance))")
+        
+        //My location
+        let l1 = CLLocation(latitude: 59.244696, longitude: 17.813868)
+        
+        //My buddy's location
+        let myBuddysLocation = CLLocation(latitude: 59.326354, longitude: 18.072310)
+        
+        //Measuring my distance to my buddy's (in km)
+        let distance = l1.distance(from: myBuddysLocation) / 1000
+        
+        //Display the result in km
+        print(String(format: "The distance to my buddy is %.01fkm", distance))
+       
     }
     
     
