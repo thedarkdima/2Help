@@ -43,13 +43,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         
         let i = navigationController?.viewControllers.index(of: self)
         let previousViewController = navigationController?.viewControllers[i!-1]
-        
+        print(previousViewController?.restorationIdentifier)
         if(previousViewController == scanPage){
-            print("s1")
             navigationController?.pushViewController(scanPage, animated: true)
             
         } else {
-            print("ssss")
        // navigationController?.popToViewController(scanPage, animated: true)
            self.dismiss(animated: true, completion: nil)
         }

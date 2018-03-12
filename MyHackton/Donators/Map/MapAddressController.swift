@@ -51,6 +51,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
 //        addPlaceToMap(place_name: "חולון אילת 43")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        mylocation()
+    }
     
     func addPlaceToMap(place_name : String, id: String){
         let addressTry = place_name
