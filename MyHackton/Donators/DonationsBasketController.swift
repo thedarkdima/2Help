@@ -24,6 +24,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                 ServerConnections.getDoubleArrayAsync("/request_items", [token, request[0]], handler: {itemsArray in
                     if let array = itemsArray{
                         self.items = array
+                        self.table.reloadData()
                     }
                 })
             }
@@ -59,6 +60,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         if manager{
             cell.name.text = items[indexPath.row][1]
             cell.counter.text = items[indexPath.row][2]
+            cell.count = Int(items[indexPath.row][2])!
         } else {
             
         }
@@ -67,15 +69,14 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     ////
 
     
+    var changedItems = ""
     @IBAction func addItemsManager(_ sender: Any) {
         var flag = false
         for i in 0...items.count - 1{
             let item = table.visibleCells[i] as! ProductsTableViewCell
-            if(items[i][1] != item.name.text!){
+            if(items[i][2] != item.counter.text!){
                 flag = true
-                if(items[i][2] != item.counter.text!){
-                    flag = true
-                }
+                changedItems += "\(items[i][1]):\(item.count - Int(items[i][2])!)&"
             }
         }
         if flag{
@@ -84,7 +85,17 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    
     func addItems(){
-        
+        items.insert([token, "חולון התחיה 10"], at: 0)
+        ServerConnections.getDoubleArrayAsync("/addItems", items, handler: {array in
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
+    func addReason(){
+        ServerConnections.getArrayAsync("/add_reason", [token, request[0], text.text!, changedItems], handler: { array in
+            
+        })
     }
 }

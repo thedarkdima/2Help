@@ -7,6 +7,9 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
             ServerConnections.getDoubleArrayAsync("/requests", [token, "נלקח"], handler: { requestsArray in
@@ -24,16 +27,9 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    @IBAction func toSuppliesPage(_ sender: UIButton) {
-        let suppliesPage = storyboard!.instantiateViewController(withIdentifier: "supplies") as! DonationsBasketController
-        suppliesPage.manager = true
-        present(suppliesPage, animated: true, completion: nil)
-    }
-    
-    
     //table functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(requests[0].count > 0){
+        if(requests.count > 0 && requests[0].count > 0){
             return requests.count
         } else {
             return 0
@@ -45,6 +41,8 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
         if(requests[0].count > 0){
             cell.address.text = requests[indexPath.row][2]
             cell.deliveryName.text = requests[indexPath.row][6]
+            cell.index = indexPath.row
+            cell.controller = self
         }
         return cell
     }
