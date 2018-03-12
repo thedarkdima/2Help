@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
+class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
 
     @IBOutlet weak var MyMap: MKMapView!
     var locationManager = CLLocationManager()
@@ -41,6 +41,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        MyMap.showsCompass = true
+        MyMap.showsScale = true
         
         MyMap.mapType = .standard // regular map
         //MyMap.showsUserLocation = true //maybe unnecessary
@@ -82,9 +85,11 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
         let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
         pin.canShowCallout = true
         pin.leftCalloutAccessoryView = UIButton(type: .contactAdd)
+        pin.animatesDrop = true
         
         return pin
     }
@@ -102,16 +107,16 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
         //navigationController?.pushViewController(displayPage, animated: true)
     }
     
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+    func mylocation(){
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.09, 0.09)
+        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        MyMap.setRegion(region, animated: true)
-        MyMap.userLocation.title = "המיקום שלי"
-        MyMap.showsUserLocation = true
+        
+        self.MyMap.setRegion(region, animated: true)
+        self.MyMap.userLocation.title = "המיקום שלי"  
+        self.MyMap.showsUserLocation = true
     }
+    
     
     //logout from the system
     @objc func backcheck(){
@@ -120,12 +125,12 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
         
         func okHandler(alert: UIAlertAction!){
             navigationController?.popToRootViewController(animated: true)
-            
         }
+     
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
         
         present(alert, animated: true, completion: nil)
-        
+  
     }
 }

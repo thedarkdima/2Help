@@ -15,6 +15,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if manager{
             let prefs = UserDefaults.standard
             if let tok = prefs.string(forKey: "token"){
@@ -38,7 +39,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func scanBarcode(_ sender: UIButton) {
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
         
-        present(scanPage, animated: true, completion: nil)
+        navigationController?.pushViewController(scanPage, animated: true)
     }
     
     //table view functions//
@@ -66,31 +67,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     ////
-    var text: UITextField!
-    func showAlert(flag: Bool){
-        let alert = UIAlertController(title: "חריגה", message: "סיבה לשינוי הכמות", preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler: nil)
-        let accept = UIAlertAction(title: "אישור", style: .default, handler: { action in
-            if self.text.text!.count != 0{
-                self.addReason()
-                self.addItems()
-            } else {
-                self.showAlert(flag: true)
-            }
-        })
-        
-        alert.addTextField { (tf) in
-            tf.textAlignment = .right
-            tf.returnKeyType = .next
-            self.text = tf
-            if flag{
-                tf.placeholder = "חייב לעכניס סיבה"
-            }
-        }
-        alert.addAction(cancel)
-        alert.addAction(accept)
-        present(alert, animated: true, completion: nil)
-    }
+
     
     var changedItems = ""
     @IBAction func addItemsManager(_ sender: Any) {
@@ -103,7 +80,6 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         if flag{
-            showAlert(flag: false)
         } else {
             addItems()
         }
