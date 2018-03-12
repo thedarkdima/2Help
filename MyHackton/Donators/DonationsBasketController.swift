@@ -37,9 +37,24 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     //move to scannerViewController to scan barcodes
     @IBAction func scanBarcode(_ sender: UIButton) {
+        print("in")
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
+        let fromDonatorMenu = storyboard?.instantiateViewController(withIdentifier: "collection")
         
-        navigationController?.pushViewController(scanPage, animated: true)
+        let i = navigationController?.viewControllers.index(of: self)
+        let previousViewController = navigationController?.viewControllers[i!-1]
+        
+        if(previousViewController == scanPage){
+            print("s1")
+            navigationController?.pushViewController(scanPage, animated: true)
+            
+        } else {
+            print("ssss")
+       // navigationController?.popToViewController(scanPage, animated: true)
+           self.dismiss(animated: true, completion: nil)
+        }
+        
+        
     }
     
     //table view functions//
@@ -67,7 +82,31 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     ////
-
+    var text: UITextField!
+    func showAlert(flag: Bool){
+        let alert = UIAlertController(title: "חריגה", message: "סיבה לשינוי הכמות", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler: nil)
+        let accept = UIAlertAction(title: "אישור", style: .default, handler: { action in
+            if self.text.text!.count != 0{
+                self.addReason()
+                self.addItems()
+            } else {
+                self.showAlert(flag: true)
+            }
+        })
+        
+        alert.addTextField { (tf) in
+            tf.textAlignment = .right
+            tf.returnKeyType = .next
+            self.text = tf
+            if flag{
+                tf.placeholder = "חייב להכניס סיבה"
+            }
+        }
+        alert.addAction(cancel)
+        alert.addAction(accept)
+        present(alert, animated: true, completion: nil)
+    }
     
     var changedItems = ""
     @IBAction func addItemsManager(_ sender: Any) {
@@ -80,6 +119,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         if flag{
+            showAlert(flag: false)
         } else {
             addItems()
         }
