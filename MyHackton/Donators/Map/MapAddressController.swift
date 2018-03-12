@@ -51,6 +51,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
 //        addPlaceToMap(place_name: "חולון אילת 43")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        mylocation()
+    }
     
     func addPlaceToMap(place_name : String, id: String){
         let addressTry = place_name
@@ -73,13 +76,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         pin1.title = "\(name)"
         pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
-        
-        //let pin2 = MKPointAnnotation()
-        //pin2.title = "pini"
-        //pin2.coordinate = CLLocationCoordinate2D(latitude: 32.4, longitude: 34.9)
-        
-        MyMap.addAnnotation(pin1) // add pin1 to map
-        //MyMap.addAnnotation(pin2) // add pin2 to map
+        MyMap.addAnnotation(pin) // add pin1 to map
+   
     }
     
     
