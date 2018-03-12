@@ -1,6 +1,5 @@
 import UIKit
 import AVFoundation
-import AudioToolbox
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
@@ -15,6 +14,73 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         
         view.backgroundColor = .white
+        
+//        captureDevice = AVCaptureDevice.default(for: .video)
+//
+//        // Check if captureDevice returns a value and unwrap it - check if there is a camera
+//        if let captureDevice = captureDevice {
+//
+//            do {
+//                //unrwap the input - the machine check if there is an input device(now input = video input(camera))
+//                let input = try AVCaptureDeviceInput(device: captureDevice)
+//
+//                //an object that holds the input(camera) and the output of it (like - start the input(ex: camera) and gets its output(ex: barcode)
+//                captureSession = AVCaptureSession()
+//                guard let captureSession = captureSession else { return }
+//                //captureSession get the input
+//                captureSession.addInput(input)
+//                //
+//                let captureMetadataOutput = AVCaptureMetadataOutput()
+//                captureSession.addOutput(captureMetadataOutput)
+//
+//                captureMetadataOutput.setMetadataObjectsDelegate(self, queue: .main)
+//                captureMetadataOutput.metadataObjectTypes = [.code128, .qr, .ean13,  .ean8, .code39] //AVMetadataObject.ObjectType
+//
+//                //start capturing data - the camera start to shoot
+//                captureSession.startRunning()
+//                //edit the properties of the view - the user can see what the camera is shooting in it.
+//                videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//                videoPreviewLayer?.videoGravity = .resizeAspectFill
+//                videoPreviewLayer?.frame = view.layer.bounds
+//
+//                view.layer.addSublayer(videoPreviewLayer!)
+//
+//            } catch {
+//                failed = true
+//                print("alert for setting")
+//            }
+//
+//        }
+   
+    }    
+    
+
+    func settingAlert(){
+        //// setting  alert
+        let alert = UIAlertController(title: "הרשאה", message: "תן הרשאה למצלמה בכדי להשתמש בברקוד", preferredStyle: .alert)
+        let settingAction = UIAlertAction(title: "הגדרות", style: .default) { (success) in
+            if let settingUrl = URL(string: UIApplicationOpenSettingsURLString)  {
+                if UIApplication.shared.canOpenURL(settingUrl){
+                    UIApplication.shared.open(settingUrl , completionHandler: nil)
+                }
+            }
+        }
+        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler:{_ in
+           self.navigationController?.popViewController(animated: true)
+            
+            
+        })
+        alert.addAction(cancel)
+        alert.addAction(settingAction)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if failed{
+        settingAlert()
+    
+        }
         
         captureDevice = AVCaptureDevice.default(for: .video)
         
@@ -50,36 +116,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 failed = true
                 print("alert for setting")
             }
-      
-        }
-   
-    }    
-    
-    func settingAlert(){
-        //// setting  alert
-        let alert = UIAlertController(title: "הרשאה", message: "תן הרשאה למצלמה בכדי להשתמש בברקוד", preferredStyle: .alert)
-        let settingAction = UIAlertAction(title: "הגדרות", style: .default) { (success) in
-            if let settingUrl = URL(string: UIApplicationOpenSettingsURLString)  {
-                if UIApplication.shared.canOpenURL(settingUrl){
-                    UIApplication.shared.open(settingUrl , completionHandler: nil)
-                }
-            }
-        }
-        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler:{_ in
-           self.navigationController?.popViewController(animated: true)
             
-            
-        })
-        alert.addAction(cancel)
-        alert.addAction(settingAction)
-        present(alert, animated: true, completion: nil)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if failed{
-        settingAlert()
-    
         }
     }
     
@@ -137,9 +174,14 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //pass the codeNumber to the basketPage 
         basketViewController.scannedCode = scannedCode
         
-        self.navigationController?.pushViewController(basketViewController, animated: true)
         
-     
+//        if(self.navigationController?.isMovingFromParentViewController)!{
+            self.navigationController?.pushViewController(basketViewController, animated: true)
+//        } else {
+//            let toDonatorController = storyboard?.instantiateViewController(withIdentifier: "collection")
+//            self.navigationController?.popToViewController(toDonatorController!, animated: true)
+//
+//        }
     }
     
     
