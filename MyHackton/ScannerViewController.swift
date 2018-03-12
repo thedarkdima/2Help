@@ -7,12 +7,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureDevice:AVCaptureDevice?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
+    var failed = false
+    var isbacktoPreviousScreen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //create back button
-        navigationItem.backBarButtonItem?.isEnabled = true
-        navigationItem.backBarButtonItem?.title = "חזור"
+        
         
         view.backgroundColor = .white
         
@@ -47,29 +47,41 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 view.layer.addSublayer(videoPreviewLayer!)
                 
             } catch {
-                codeLabel.text = "אין מצלמה במכשיר זה"//not showing...
-                print("Error Device Input")
+                failed = true
+                print("alert for setting")
             }
-            
+      
         }
-        
-        //add label that will appear in case there is no outputs - barcodes
-        view.addSubview(codeLabel)
-        //set the location of the code label
-        codeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        codeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        codeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        codeLabel.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+   
+    }    
+    
+    func settingAlert(){
+        //// setting  alert
+        let alert = UIAlertController(title: "הרשאה", message: "תן הרשאה למצלמה בכדי להשתמש בברקוד", preferredStyle: .alert)
+        let settingAction = UIAlertAction(title: "הגדרות", style: .default) { (success) in
+            if let settingUrl = URL(string: UIApplicationOpenSettingsURLString)  {
+                if UIApplication.shared.canOpenURL(settingUrl){
+                    UIApplication.shared.open(settingUrl , completionHandler: nil)
+                }
+            }
+        }
+        let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler:{_ in
+         //   self.navigationController?.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+        })
+        alert.addAction(cancel)
+        alert.addAction(settingAction)
+        present(alert, animated: true, completion: nil)
         
     }
     
-    //customize code label
-        let codeLabel:UILabel = {
-        let codeLbl = UILabel()
-        codeLbl.backgroundColor = .white
-        codeLbl.translatesAutoresizingMaskIntoConstraints = false
-        return codeLbl
-    }()
+    override func viewDidAppear(_ animated: Bool) {
+        if failed{
+        settingAlert()
+    
+        }
+    }
+    
     
 //    let codeFrame:UIView = {
 //        let codeFrame = UIView()
@@ -86,7 +98,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             //print("No Input Detected")
             //codeFrame.frame = CGRect.zero
             //if there was no barcode found - show label that infroms it
-            codeLabel.text = "לא נמצא ברקוד"
+            
+            
+            
             return
         }
         //gets the barcode as the camera output
@@ -97,7 +111,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
        // view.addSubview(codeFrame)
         
-       // guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
+     // guard let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) else { return }
         //codeFrame.frame = barcodeObject.bounds
         //codeLabel.text = stringCodeValue
         
@@ -110,17 +124,22 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         // show the donationsBasketController and pass the barcode string value we just detected
         moveToDonationBasketController(scannedCode: stringCodeValue)
+       // print(stringCodeValue)
         
     }
     ////
     
     // show basket page with the barcode's related product
     func moveToDonationBasketController(scannedCode: String) {
-        let basketViewController = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
-        //pass the codeNumber to the basketPage
+        let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
+        print(scannedCode)
+        //pass the codeNumber to the basketPage 
         basketViewController.scannedCode = scannedCode
         
+        self.navigationController?.pushViewController(basketViewController, animated: true)
         
-        present(basketViewController, animated: true, completion: nil)
+     
     }
+    
+    
 }

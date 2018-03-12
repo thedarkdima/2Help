@@ -56,8 +56,8 @@ override func viewDidLoad(){
     @IBAction func scanBarcode(_ sender: UIButton) {
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
         
-        present(scanPage, animated: true, completion: nil)
-        
+        //present(scanPage, animated: true, completion: nil)
+        navigationController?.pushViewController(scanPage, animated: true)
     }
     
     
