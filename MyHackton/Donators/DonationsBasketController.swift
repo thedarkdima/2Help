@@ -15,6 +15,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if manager{
             let prefs = UserDefaults.standard
             if let tok = prefs.string(forKey: "token"){
@@ -37,7 +38,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func scanBarcode(_ sender: UIButton) {
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
         
-        present(scanPage, animated: true, completion: nil)
+        navigationController?.pushViewController(scanPage, animated: true)
     }
     
     //table view functions//
@@ -65,12 +66,6 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     }
     ////
 
-    func showAlert(){
-    let alert = UIAlertController(title: "שקר כלשהו", message: "haha", preferredStyle: .alert)
-    let cancel = UIAlertAction(title: "haha", style: .cancel, handler: nil)
-    alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
-    }
     
     @IBAction func addItemsManager(_ sender: Any) {
         var flag = false
@@ -84,7 +79,6 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         if flag{
-            showAlert()
         } else {
             addItems()
         }

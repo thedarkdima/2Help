@@ -66,8 +66,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             }
         }
         let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler:{_ in
-         //   self.navigationController?.dismiss(animated: true, completion: nil)
-            self.dismiss(animated: true, completion: nil)
+           self.navigationController?.popViewController(animated: true)
+            
+            
         })
         alert.addAction(cancel)
         alert.addAction(settingAction)
