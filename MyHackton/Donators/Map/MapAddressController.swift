@@ -6,6 +6,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
 
     @IBOutlet weak var MyMap: MKMapView!
     var locationManager = CLLocationManager()
+    let prefs = UserDefaults.standard
+    var token = ""
     
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = "בחר את המשלוחים שברצונך לקחת"
@@ -15,6 +17,19 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
         tabBarController?.navigationItem.leftBarButtonItem = b
         self.navigationItem.hidesBackButton = true
     
+        if let tok = prefs.string(forKey: "token"){
+            token = tok
+            ServerConnections.getDoubleArrayAsync("/requests", [token, "מחכה"], handler: { requestsArray in
+                if let array = requestsArray{
+                    for arr in array{
+                        self.addPlaceToMap(place_name: arr[2], id: arr[0])
+                    }
+                }
+            })
+        } else {
+            //Move back to the main page
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     
@@ -29,11 +44,12 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
         
         MyMap.mapType = .standard // regular map
         //MyMap.showsUserLocation = true //maybe unnecessary
-        addPlaceToMap(place_name: "התחיה 10 חולון")
-        
+//        addPlaceToMap(place_name: "התחיה 10 חולון")
+//        addPlaceToMap(place_name: "חולון אילת 43")
     }
     
-    func addPlaceToMap(place_name : String){
+    
+    func addPlaceToMap(place_name : String, id: String){
         let addressTry = place_name
         let geoCoder = CLGeocoder()
         
@@ -43,23 +59,24 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
       
             UIApplication.shared.isIdleTimerDisabled = true
             
-            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!)
+            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
             
         })
     }
     
-    func addMyMarkers(name:String, PinLatitude:Double, PinLongitude:Double ){
+    func addMyMarkers(name: String, PinLatitude: Double, PinLongitude:Double, id: String){
         let pin1 = MKPointAnnotation()
+        pin1.subtitle = id
         pin1.title = "\(name)"
         pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
         
-        let pin2 = MKPointAnnotation()
-        pin2.title = "pini"
-        pin2.coordinate = CLLocationCoordinate2D(latitude: 32.4, longitude: 34.9)
+        //let pin2 = MKPointAnnotation()
+        //pin2.title = "pini"
+        //pin2.coordinate = CLLocationCoordinate2D(latitude: 32.4, longitude: 34.9)
         
         MyMap.addAnnotation(pin1) // add pin1 to map
-        MyMap.addAnnotation(pin2) // add pin2 to map
+        //MyMap.addAnnotation(pin2) // add pin2 to map
     }
     
     
@@ -74,9 +91,14 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate, MKMapV
     
     // button on annotation is pressed
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let currentAnnotation = view.annotation
+        if let currentAnnotation = view.annotation{
+            if let id = currentAnnotation.subtitle{
+                ServerConnections.getArrayAsync("/add_my_request", [token, id!], handler: {array in
+                    self.MyMap.removeAnnotation(currentAnnotation)
+                })
+            }
+        }
         
-        MyMap.removeAnnotation(currentAnnotation!)
         //navigationController?.pushViewController(displayPage, animated: true)
     }
     
