@@ -76,7 +76,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         pin1.title = "\(name)"
         pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
-        MyMap.addAnnotation(pin) // add pin1 to map
+        MyMap.addAnnotation(pin1) // add pin1 to map
    
     }
     
