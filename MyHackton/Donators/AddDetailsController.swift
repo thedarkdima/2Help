@@ -28,7 +28,6 @@ class AddDetailsController: UIViewController {
         //self.address.returnKeyType = .next
         self.phone.returnKeyType = .done
         self.notes.returnKeyType = .done
-        
         if let prefsInfo = prefs.stringArray(forKey: "info"){
             name.text = prefsInfo[0]
             city.text = prefsInfo[1]
