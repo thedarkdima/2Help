@@ -20,7 +20,26 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     @IBAction func addToBasket(_ sender: UIButton) {
         
         //let basketPage = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
-        
+        let prefs = UserDefaults.standard
+        var basket: [String: [String]] = [:]
+        if let prefsBasket = prefs.dictionary(forKey: "basket"){
+            basket = prefsBasket as! [String: [String]]
+        }
+        var index = 0
+        for cell in productsTable.visibleCells as! [ProductsTableViewCell] {
+            let name = cell.name.text!
+            let count = cell.count
+            if count > 0{
+                if let keyExists = basket[name]{
+                    basket.updateValue([String(Int(keyExists[0])! + count), keyExists[1]], forKey: name)
+                } else {
+                    basket.updateValue([String(count), productsArray[index][4]], forKey: name)
+                }
+            }
+            index += 1
+        }
+        prefs.set(basket, forKey: "basket")
+        print(basket)
         navigationController?.popViewController(animated: false)
         
         //present(basketPage, animated: true, completion: nil)

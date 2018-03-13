@@ -4,6 +4,9 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let prefs = UserDefaults.standard
+        prefs.set([:], forKey: "basket")
+        prefs.set([:], forKey: "basketUrls")
     }
 
     @IBAction func login() {
@@ -15,6 +18,7 @@ class MainController: UIViewController {
             tf.placeholder = "שם משתמש"
             tf.textAlignment = .right
             tf.returnKeyType = .next
+            
         }
         
         alert.addTextField { (tf) in    // textfield of the password

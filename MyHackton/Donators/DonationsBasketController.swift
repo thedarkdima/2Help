@@ -23,9 +23,8 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let prefs = UserDefaults.standard
         if manager{
-            let prefs = UserDefaults.standard
             if let tok = prefs.string(forKey: "token"){
                 token = tok
                 navigationItem.title = "הוסף למלאי"
@@ -39,7 +38,16 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         } else {
             navigationItem.title = "סל תרומות"
             print(scannedCode)
-            
+            if let prefsBasket = prefs.dictionary(forKey: "basket"){
+                basket = prefsBasket as! [String: [String]]
+                for key in basket.keys{
+                    if Int(basket[key]![0])! < 1{
+                        basket.removeValue(forKey: key)
+                    }
+                }
+                prefs.set(basket, forKey: "basket")
+                print(basket)
+            }
         }
     }
     
@@ -73,22 +81,35 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                     return 0
                 }
             } else {
-                return 5
+                return 0
             }
         } else {
-            return 5
+            return basket.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "products_cell")! as! ProductsTableViewCell
+        cell.manager = manager
         if manager{
             cell.name.text = items[indexPath.row][1]
             cell.counter.text = items[indexPath.row][2]
             cell.count = Int(items[indexPath.row][2])!
-            
         } else {
-            
+            let key = Array(basket.keys)[indexPath.row]
+            cell.name.text = key
+            cell.counter.text = basket[key]![0]
+            cell.count = Int(basket[key]![0])!
+            do {
+                if let url = URL(string: basket[key]![1]){
+                    let data = try Data(contentsOf: url)
+                    if let uiImage = UIImage(data: data){
+                        cell.product_image.image = uiImage
+                    }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
         }
         return cell
     }
@@ -119,6 +140,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         present(alert, animated: true, completion: nil)
     }
     
+    ///Warehouse Manager
     var changedItems = ""
     @IBAction func addItemsManager(_ sender: Any) {
         var flag = false
@@ -149,4 +171,5 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             
         })
     }
+    ///
 }

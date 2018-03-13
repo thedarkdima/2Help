@@ -1,17 +1,25 @@
 import UIKit
+import MapKit
+import CoreLocation
 
 class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITableViewDelegate {
     
     var RequestsList : [Request] = []
     var donator : Request!
     
+    var myUserLocation : CLLocation!
+    var addressName : String!
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        //myUserLocation = CLLocationManager.location
         tabBarController?.navigationItem.title = tabBarItem.title
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
         
-            self.navigationItem.hidesBackButton = true
-            tabBarController?.navigationItem.leftBarButtonItem = b
+        self.navigationItem.hidesBackButton = true
+        tabBarController?.navigationItem.leftBarButtonItem = b
         
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
@@ -43,15 +51,14 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         let alert =  UIAlertController(title:"יציאה מהמערכת", message: "האם אתה בטוח שברצונך להתנתק מהמערכת?", preferredStyle: .alert)
         
         func okHandler(alert: UIAlertAction!){
-              navigationController?.popToRootViewController(animated: true)
-           
+            navigationController?.popToRootViewController(animated: true)
         }
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
         
         present(alert, animated: true, completion: nil)
         
-       
+        
     }
     //table view methods//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,23 +68,61 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
         cell.address.text = RequestsList[indexPath.row].getAddress()
+        addressName = cell.address.text
+        findDistanceBetweenPins(cell: cell)
+        
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
+        //        let cell = tableView.cellForRow(at: indexPath) as! DeliveryRequestCell
         let next = storyboard?.instantiateViewController(withIdentifier: "statusPage") as! DonatorsStatusController
+        
+        if RequestsList.count > 0 {
             donator = RequestsList[indexPath.row]
-        next.set(donator: donator,index: indexPath.row)
-        show(next, sender: self)
-        self.navigationItem.backBarButtonItem?.title = "חזור"
+            next.set(donator: donator,index: indexPath.row)
+            show(next, sender: self)
+            self.navigationItem.backBarButtonItem?.title = "חזור"
+        }
     }
     ////
     
     func setDonatorObj(donator : Request){
         self.donator = donator
     }
-
     
-   
+    func setUserlocation(longitude : Double , latitude : Double){
+        myUserLocation = CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
+    // find distance between to places
+    
+    var pinLocation : CLLocation!
+    
+    func findDistanceBetweenPins(cell: DeliveryRequestCell){
+        let geoCoder = CLGeocoder()
+        
+        //let addressTry = "רוטשילד 117 פתח תקווה"
+        
+        geoCoder.geocodeAddressString(addressName, completionHandler: { (placemarks, error) in
+            let pinLongitude = placemarks?.first?.location?.coordinate.longitude
+            let pinLatitude = placemarks?.first?.location?.coordinate.latitude
+            
+            //My buddy's location
+            self.pinLocation = CLLocation(latitude: pinLatitude!, longitude: pinLongitude! )
+            print(self.pinLocation)
+            
+            let distance = self.myUserLocation.distance(from: self.pinLocation) / 100
+            cell.km_label.text = String(distance)
+        })
+        
+        //Measuring my distance to my buddy's (in km)
+        
+        //Display the result in km
+        //      print(String(format: "The distance to my buddy is %.01fkm", distance))
+    }
+    
+    
+    
 }

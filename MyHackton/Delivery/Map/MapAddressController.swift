@@ -9,6 +9,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     let prefs = UserDefaults.standard
     var token = ""
     
+    var deliveryRequest : DeliveryRequestController!
+    
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = "בחר את המשלוחים שברצונך לקחת"
         
@@ -97,6 +99,10 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
             
         }
         
+        if MyMap.userLocation.coordinate.latitude == annotation.coordinate.latitude && MyMap.userLocation.coordinate.longitude == annotation.coordinate.longitude {
+           pin.canShowCallout = false
+        }
+        
         return pin
     }
     
@@ -105,7 +111,10 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         if let currentAnnotation = view.annotation{
             if let id = currentAnnotation.subtitle{
                 ServerConnections.getArrayAsync("/add_my_request", [token, id!], handler: {array in
+                    self.deliveryRequest = DeliveryRequestController()
+                    self.deliveryRequest.setUserlocation(longitude: self.MyMap.userLocation.coordinate.longitude, latitude: self.MyMap.userLocation.coordinate.latitude)
                     self.MyMap.removeAnnotation(currentAnnotation)
+                    
                 })
             }
         }
@@ -130,11 +139,6 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
        // print("\(myLocation.latitude) and \(myLocation.longitude)")
         //print("the distance is : \((distance))")
         
-        //My location
-        let l1 = CLLocation(latitude: 59.244696, longitude: 17.813868)
-        
-        //My buddy's location
-        let myBuddysLocation = CLLocation(latitude: 59.326354, longitude: 18.072310)
         
         //Measuring my distance to my buddy's (in km)
         let distance = l1.distance(from: myBuddysLocation) / 1000
@@ -144,6 +148,23 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         print(String(format: "The distance to my buddy is %.01fkm", distance))
        
     }
+    
+//    // find distance between to places
+//    func findDistanceBetweenPins() -> Double {
+//        //My location
+//        let l1 = CLLocation(latitude: MyMap.userLocation.coordinate.latitude, longitude: MyMap.userLocation.coordinate.longitude)
+//        //My buddy's location
+//        let myBuddysLocation = CLLocation(latitude: 59.326354, longitude: 18.072310)
+//
+//        //Measuring my distance to my buddy's (in km)
+//        let distance = l1.distance(from: myBuddysLocation) / 1000
+//
+//        return distance
+//
+//        //Display the result in km
+//  //      print(String(format: "The distance to my buddy is %.01fkm", distance))
+//    }
+    
     
     
     //logout from the system
