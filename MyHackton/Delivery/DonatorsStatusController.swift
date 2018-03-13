@@ -13,10 +13,6 @@ class DonatorsStatusController: UIViewController {
 
     private var index : Int!
     
-    override func viewWillAppear(_ animated: Bool) {
-       
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

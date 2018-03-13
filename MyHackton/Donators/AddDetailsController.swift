@@ -2,9 +2,10 @@ import UIKit
 import MapKit
 
 class AddDetailsController: UIViewController {
-    @IBOutlet var address: UITextField!
+    @IBOutlet var city: UITextField!
     @IBOutlet var street: UITextField!
     
+    var address: String!
     @IBOutlet var name: UITextField!
     @IBOutlet var phone: UITextField!
     @IBOutlet var notes:UITextView!

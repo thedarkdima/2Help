@@ -46,6 +46,44 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                     }
                 }
                 prefs.set(basket, forKey: "basket")
+                getImages()
+            }
+        }
+    }
+    
+    func getImages(){
+        for product in basket{
+            if let url = URL(string: product.value[1]){
+                URLSession.shared.dataTask(with:url){ (data, response, error) in
+                    //if there is any error
+                    if let e = error{
+                        //displaying the message
+                        print("Error Occurred: \(e)")
+                    } else {
+                        //in case of now error, checking wheather the response is nil or not
+                        if (response as? HTTPURLResponse) != nil{
+                            //checking if the response contains an image
+                            if let imageData = data{
+                                //displaying the image
+                                DispatchQueue.main.async{
+                                    if let prefImageData = UserDefaults.standard.object(forKey: url.absoluteString){
+                                        if prefImageData as! Data != imageData{
+                                    UserDefaults.standard.set(imageData, forKey: url.absoluteString)
+                                            self.table.reloadData()
+                                        }
+                                    } else {
+                                        UserDefaults.standard.set(imageData, forKey: url.absoluteString)
+                                        self.table.reloadData()
+                                    }
+                                }
+                            } else {
+                                print("Image file is currupted")
+                            }
+                        } else {
+                            print("No response from server")
+                        }
+                    }
+                    }.resume()
             }
         }
     }
@@ -99,15 +137,9 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             cell.name.text = key
             cell.counter.text = basket[key]![0]
             cell.count = Int(basket[key]![0])!
-            do {
-                if let url = URL(string: basket[key]![1]){
-                    let data = try Data(contentsOf: url)
-                    if let uiImage = UIImage(data: data){
-                        cell.product_image.image = uiImage
-                    }
-                }
-            } catch {
-                print(error.localizedDescription)
+            //Getting images from UserDefaults if they exist
+            if let prefImageData = UserDefaults.standard.object(forKey: basket[key]![1]){
+                cell.product_image.image = UIImage(data: prefImageData as! Data)
             }
         }
         return cell
