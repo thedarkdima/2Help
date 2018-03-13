@@ -46,7 +46,6 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         MyMap.showsScale = true
         
         MyMap.mapType = .standard // regular map
-        //MyMap.showsUserLocation = true //maybe unnecessary
 //        addPlaceToMap(place_name: "התחיה 10 חולון")
 //        addPlaceToMap(place_name: "חולון אילת 43")
     }
@@ -76,12 +75,13 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         pin1.title = "\(name)"
         pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
+        MyMap.addAnnotation(pin1)
         
         //let pin2 = MKPointAnnotation()
         //pin2.title = "pini"
         //pin2.coordinate = CLLocationCoordinate2D(latitude: 32.4, longitude: 34.9)
         
-        MyMap.addAnnotation(pin1) // add pin1 to map
+         // add pin1 to map
         //MyMap.addAnnotation(pin2) // add pin2 to map
     }
     
@@ -119,6 +119,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         self.MyMap.userLocation.title = "המיקום שלי"  
         self.MyMap.showsUserLocation = true
       
+        
+        ////  Measuring distance  ////
         //my locations coordinates
        // print("\(myLocation.latitude) and \(myLocation.longitude)")
         //print("the distance is : \((distance))")

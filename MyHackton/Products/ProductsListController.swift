@@ -2,8 +2,7 @@ import UIKit
 
 class ProductsListController: UIViewController , UITableViewDataSource {
     
-    var products = [""]
-    
+    //var products = [""]
     
     @IBOutlet weak var productsTable: UITableView!
     var pageTitle : String?
@@ -18,22 +17,14 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         
         //let basketPage = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
         
-        
-        //here need to be the method to add the chosen products to the server//
-        
         navigationController?.popViewController(animated: false)
-        
-        
         
         //present(basketPage, animated: true, completion: nil)
         
         //show(basketPage, sender: self)
     }
     
-    
-    
-    ///// server
-    
+    //// server////
     func getProducts(){
         ServerConnections.getDoubleArrayAsync("/items", [pageTitle!], handler: {products in
             //self.productsArray = []
@@ -49,10 +40,14 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     /////
 
     
-    
     //copy the title of the page from last page collection view label.
     func setTitle(title : String){
         pageTitle = title
+    }
+    
+    //copy the current product image from last page collection view image.
+    func setImage(image : UIImage){
+        //just need to store pics
     }
     
     //table view functions//
@@ -75,11 +70,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         return cell
     }
     
-    //sections
-    
-    
-    
-    
+    //sections//
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return sections[section]
@@ -101,10 +92,6 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         }
         return sections.count
     }
-    
-    
     ////
-    
-    
     
 }

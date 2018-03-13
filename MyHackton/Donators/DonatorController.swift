@@ -4,23 +4,31 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     
     @IBOutlet var productsCollectionView: UICollectionView!
   
-    
-    
-    var totalCount: Int = 0
-    var products: [String] = []
-    var productName : String?
+   
     
     //collection view variables//
-    var imageUrl :[String] = []
     
-    var text : String = ""
-    var productsArray: [String] = []
-    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
-                                     UIImage(named:"biscate")!,
-                                     UIImage(named:"canes")!,
-                                     UIImage(named:"special")!,
-                                     UIImage(named:"pasta")!,
-                                     UIImage(named:"tamal")!]
+    
+    //var to store later each product name
+    var productName : String?
+    //var to store later array of products names
+    var productsNamesArray : [String] = []
+    
+    //stored images url's in strings to use later to open products images
+    var images_URLs : [String] = []
+    
+     //var to store later each product image
+    var productImage: UIImage?
+     //var to store later array of products images
+    var productsImagesArray: [UIImage] = []
+    
+    //    var productsImage: [UIImage] = [ UIImage(named:"daisa")!,
+    //                                     UIImage(named:"biscate")!,
+    //                                     UIImage(named:"canes")!,
+    //                                     UIImage(named:"special")!,
+    //                                     UIImage(named:"pasta")!,
+    //                                     UIImage(named:"tamal")!]
+    
     ////
     
 override func viewWillAppear(_ animated: Bool) {
@@ -43,9 +51,43 @@ override func viewDidLoad(){
         
 }
     
+    //// dont delete!!!! ////
+//    func downloadImage(url : URL){
+//
+//        //create cell instance to change its imageView.image
+//        collectionCell = ProductsCollectionViewCell()
+//
+//
+//        //creating a dataTask
+//        URLSession.shared.dataTask(with:url) { (data, response, error) in
+//
+//            //if there is any error
+//            if let e = error {
+//                //displaying the message
+//                print("Error Occurred: \(e)")
+//            } else {
+//                //in case of now error, checking wheather the response is nil or not
+//                if (response as? HTTPURLResponse) != nil {
+//
+//                    //checking if the response contains an image
+//                    if let imageData = data {
+//
+//                        //displaying the image
+//                        DispatchQueue.main.async {
+//                            self.productsImage = UIImage(data: imageData)
+//                        }
+//                    } else {
+//                        print("Image file is currupted")
+//                    }
+//                } else {
+//                    print("No response from server")
+//                }
+//            }
+//            }.resume()
+//    }
+    ////
     
     @IBAction func phoneNumber(_ number: UIButton) {
-        
         let numberToCall = (number.titleLabel?.text)!
         if let phoneURL = URL(string :"tel://" + numberToCall){
             UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
@@ -64,29 +106,39 @@ override func viewDidLoad(){
     //server//
     func getProductsTypes(){
         ServerConnections.getDoubleArrayAsync("/itemstypes", [""], handler: {types in
-            self.productsArray = []
+            self.productsNamesArray = []
+            var index = 0
+            //unwrap - make sure ther is data in the array
             if let typs = types{
+                //get data from server
                 for type in typs{
-                    self.productsArray.append(type[0])
-                    self.imageUrl.append(type[1])
+                    //each loop add one product name
+                    self.productsNamesArray.append(type[0])
+                    //each loop add one product url to get image from it
+                    self.images_URLs.append(type[1])
+                    //each loop add one product image
                     
+                    self.productsImagesArray.append(UIImage(data: try! Data(contentsOf: URL(string: self.images_URLs[index])!))!)
+                
+                    index += 1
                 }
                 self.productsCollectionView.reloadData()
             }
-            print(self.productsArray)
+//            print(self.productsArray)
+//            print(self.imageUrl)
         })
     }
-    ///
+    ////
     
     //Products Collection View//
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productsArray.count
+        return productsNamesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
-        cell.productLabel.text = productsArray[indexPath.item]
-        cell.ProductImageView.image = productsImage[indexPath.item]
+        cell.productLabel.text = productsNamesArray[indexPath.item]
+        cell.ProductImageView.image = productsImagesArray[indexPath.item]
         
         return  cell
     }
@@ -95,13 +147,17 @@ override func viewDidLoad(){
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
         let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList") as! ProductsListController
         
-        productName = productsArray[indexPath.row]
-        productsList.setTitle(title: productName!)
+        //save the title of the product
+        productName = productsNamesArray[indexPath.row]
+        //save the image of the product
+        productImage = productsImagesArray[indexPath.row]
+
         
-    
+        //move the title to the next page so it can be used as page title
+        productsList.setTitle(title: productName!)
+        productsList.setImage(image: productImage!)
         show(productsList, sender: self)
     }
-    
     ////
 
 }

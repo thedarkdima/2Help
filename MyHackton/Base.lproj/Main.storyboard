@@ -109,9 +109,31 @@
                     <view key="view" contentMode="scaleToFill" id="xRh-VY-Sr2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-Gf-e66">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zaq-QZ-HAH">
+                                <rect key="frame" x="147" y="162" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bTG-Gf-e66" firstAttribute="top" secondItem="0Dv-Sg-S7e" secondAttribute="top" constant="284" id="8wl-4a-qEB"/>
+                            <constraint firstItem="0Dv-Sg-S7e" firstAttribute="trailing" secondItem="bTG-Gf-e66" secondAttribute="trailing" constant="87" id="pOI-qg-ZUE"/>
+                            <constraint firstItem="bTG-Gf-e66" firstAttribute="leading" secondItem="0Dv-Sg-S7e" secondAttribute="leading" constant="87" id="vkR-au-7yx"/>
+                            <constraint firstItem="0Dv-Sg-S7e" firstAttribute="bottom" secondItem="bTG-Gf-e66" secondAttribute="bottom" constant="304" id="wc3-UL-0r7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Dv-Sg-S7e"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="bTG-Gf-e66" id="oiE-p8-Bkv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsr-RN-R75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1280,7 +1302,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="product_cell" id="gJ8-Pk-AJO" customClass="ProductsCollectionViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="product_cell" reuseIdentifier="product_cell" id="gJ8-Pk-AJO" customClass="ProductsCollectionViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="179" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
