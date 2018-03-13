@@ -73,12 +73,12 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     }
     
     func addMyMarkers(name: String, PinLatitude: Double, PinLongitude:Double, id: String){
-        let pin1 = MKPointAnnotation()
-        pin1.subtitle = id
-        pin1.title = "\(name)"
-        pin1.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
+        let pin = MKPointAnnotation()
+        pin.subtitle = id
+        pin.title = "\(name)"
+        pin.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
-        MyMap.addAnnotation(pin1) // add pin1 to map
+        MyMap.addAnnotation(pin) // add pin to map
    
     }
     
@@ -90,6 +90,14 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         pin.canShowCallout = true
         pin.leftCalloutAccessoryView = UIButton(type: .contactAdd)
         pin.animatesDrop = true
+        let anno = pin.annotation
+        if anno?.coordinate.latitude == MyMap.userLocation.coordinate.latitude && anno?.coordinate.longitude == MyMap.userLocation.coordinate.longitude {
+            print("user location ano")
+            pin.leftCalloutAccessoryView?.isHidden = true
+            pin.pinTintColor = UIColor.blue
+            pin.image = UIImage(named: "user_location")
+            
+        }
         
         if MyMap.userLocation.coordinate.latitude == annotation.coordinate.latitude && MyMap.userLocation.coordinate.longitude == annotation.coordinate.longitude {
            pin.canShowCallout = false
@@ -121,7 +129,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         self.MyMap.setRegion(region, animated: false)
-        self.MyMap.userLocation.title = "המיקום שלי"  
+        self.MyMap.userLocation.title = "        המיקום שלי"
+        //self.MyMap.userLocation.title.style??
         self.MyMap.showsUserLocation = true
       
         
@@ -131,6 +140,13 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         //print("the distance is : \((distance))")
         
         
+        //Measuring my distance to my buddy's (in km)
+        let distance = l1.distance(from: myBuddysLocation) / 1000
+        
+        
+        //Display the result in km
+        print(String(format: "The distance to my buddy is %.01fkm", distance))
+       
     }
     
 //    // find distance between to places

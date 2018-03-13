@@ -7,6 +7,7 @@ class DeliveryRequestCell: UITableViewCell {
     @IBOutlet var icon_adress: UIImageView!
 
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
