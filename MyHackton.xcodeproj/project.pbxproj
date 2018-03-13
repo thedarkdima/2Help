@@ -177,7 +177,6 @@
 		90E1757020230C430062453D /* Donators */ = {
 			isa = PBXGroup;
 			children = (
-				907BF121203C74AE0095F60D /* Map */,
 				45A9648B2019D91000D173BC /* DonatorController.swift */,
 				45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */,
 				90E1757320230EF30062453D /* DonatorAddressCell.swift */,
@@ -192,6 +191,7 @@
 		90E1757120230C610062453D /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				907BF121203C74AE0095F60D /* Map */,
 				902707C22029D851005AF37B /* DeliveryRequestCell.swift */,
 				90E17575202360FF0062453D /* DeliveryRequestController.swift */,
 				45743268202851C000CB39BB /* DonatorsStatusController.swift */,
