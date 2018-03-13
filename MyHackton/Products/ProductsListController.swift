@@ -49,12 +49,12 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         pageTitle = title
     }
     
-    //copy the current product image from last page collection view image.
-    func setImage(image : UIImage){
-        //just need to store pics
-        productImage = image
-        
-    }
+//    //copy the current product image from last page collection view image.
+//    func setImage(image : UIImage){
+//        //just need to store pics
+//        productImage = image
+//
+//    }
     
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,6 +77,18 @@ class ProductsListController: UIViewController , UITableViewDataSource {
             count += sectionsCounts[i]
         }
         cell.setName(name: productsArray[count + indexPath.row][0])
+        do {
+            if let url = URL(string: productsArray[count + indexPath.row][4]){
+                let data = try Data(contentsOf: url)
+                if let uiImage = UIImage(data: data){
+                    cell.product_image.image = uiImage
+                }
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        //cell.product_image.image = productsArray[count + indexPath.row][4]
+
         return cell
     }
     

@@ -163,7 +163,7 @@ override func viewDidLoad(){
         
         //move the title to the next page so it can be used as page title
         productsList.setTitle(title: productName!)
-        productsList.setImage(image: productImage!)
+        //productsList.setImage(image: productImage!)
         show(productsList, sender: self)
     }
     ////
