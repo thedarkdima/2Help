@@ -32,10 +32,26 @@ class AddDetailsController: UIViewController {
     @IBAction func sendBtn(_ sender: UIButton) {
         
         if (!(address.text?.isEmpty)! &&  (address.text?.count != 0) && !(name.text?.isEmpty)! && !(phone.text?.isEmpty)!){
-            
             notice.isHidden = true
             checkAddress(address: address.text!)
-            
+            var basket:[String:[String]] = [:]
+            let prefs = UserDefaults.standard
+            if let prefsBasket = prefs.dictionary(forKey: "basket"){
+                basket = prefsBasket as! [String: [String]]
+                for key in basket.keys{
+                    if Int(basket[key]![0])! < 1{
+                        basket.removeValue(forKey: key)
+                    }
+                }
+                prefs.set(basket, forKey: "basket")
+            }
+            if(basket.count > 0){
+                var package = [[name.text!, address.text!, phone.text!, notice.text!]]
+                for array in basket{
+                    package.append(array.value)
+                }
+                ServerConnections.getDoubleArrayAsync("/add_request", package, handler: {back in})
+            }
         } else {
             notice.isHidden = false
             notice.text = "שגיאה ! אנא בדוק שלא הפרטים שהזנת תקינים !"

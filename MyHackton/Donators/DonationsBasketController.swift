@@ -41,7 +41,6 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                     }
                 }
                 prefs.set(basket, forKey: "basket")
-                print(basket)
             }
         }
     }
