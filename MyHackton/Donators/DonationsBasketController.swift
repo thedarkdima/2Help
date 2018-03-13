@@ -9,8 +9,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     var token = ""
     var request: [String] = []
     var items: [[String]] = [[]]
-    @IBOutlet var table: UITableView!
     //
+
+    var productImage : UIImage!
+
+    @IBOutlet var table: UITableView!
     
     
     override func viewDidLoad() {
@@ -74,6 +77,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             cell.name.text = items[indexPath.row][1]
             cell.counter.text = items[indexPath.row][2]
             cell.count = Int(items[indexPath.row][2])!
+            
         } else {
             
         }

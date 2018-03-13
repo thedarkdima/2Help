@@ -2,10 +2,10 @@ import UIKit
 
 class ProductsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var product_image: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var counter: UITextField!
-    @IBOutlet weak var minus_Label: UIButton!
+    @IBOutlet var product_image: UIImageView!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var counter: UITextField!
+    @IBOutlet var minus_Label: UIButton!
     var count : Int = 0
     
     override func awakeFromNib() {

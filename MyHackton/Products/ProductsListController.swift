@@ -2,12 +2,15 @@ import UIKit
 
 class ProductsListController: UIViewController , UITableViewDataSource {
     
-    var products = [""]
+    //var products = [""]
     
-    
-    @IBOutlet weak var productsTable: UITableView!
+    @IBOutlet var productsTable: UITableView!
+    //var to store later the page title
     var pageTitle : String?
+    //var to store later the products
     var productsArray: [[String]] = [[]]
+    //var to store later product image
+    var productImage : UIImage!
   
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = pageTitle!
@@ -18,22 +21,14 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         
         //let basketPage = storyboard!.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
         
-        
-        //here need to be the method to add the chosen products to the server//
-        
         navigationController?.popViewController(animated: false)
-        
-        
         
         //present(basketPage, animated: true, completion: nil)
         
         //show(basketPage, sender: self)
     }
     
-    
-    
-    ///// server
-    
+    //// server////
     func getProducts(){
         ServerConnections.getDoubleArrayAsync("/items", [pageTitle!], handler: {products in
             //self.productsArray = []
@@ -42,17 +37,23 @@ class ProductsListController: UIViewController , UITableViewDataSource {
                 
                 self.productsTable.reloadData()
             }
-            print(self.productsArray)
+            //print(self.productsArray)
         })
     }
     
     /////
 
     
-    
     //copy the title of the page from last page collection view label.
     func setTitle(title : String){
         pageTitle = title
+    }
+    
+    //copy the current product image from last page collection view image.
+    func setImage(image : UIImage){
+        //just need to store pics
+        productImage = image
+        
     }
     
     //table view functions//
@@ -63,6 +64,10 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell")! as! ProductsTableViewCell
+        
+        //change the product image to the apropiate one
+        cell.product_image.image = self.productImage
+        
         var count = 0
         print(indexPath.section)
         for i in 0...sectionsCounts.count{
@@ -75,11 +80,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         return cell
     }
     
-    //sections
-    
-    
-    
-    
+    //sections//
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return sections[section]
@@ -101,10 +102,6 @@ class ProductsListController: UIViewController , UITableViewDataSource {
         }
         return sections.count
     }
-    
-    
     ////
-    
-    
     
 }
