@@ -40,7 +40,7 @@ class DonatorsStatusController: UIViewController {
     func sendBackRequest(){
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
-            ServerConnections.getDoubleArrayAsync("/request_status_change1", [token, "מחכה", donator.getId() + ""], handler: {requests in
+            ServerConnections.getDoubleArrayAsync("/return_request", [token, donator.getId() + ""], handler: {requests in
                 self.navigationController?.popViewController(animated: true)
             })
         } else {

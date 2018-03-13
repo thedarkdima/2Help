@@ -1057,15 +1057,25 @@
                                     <action selector="toWaze:" destination="OYm-3s-5KJ" eventType="touchUpInside" id="1TM-ZQ-FYp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1J-XJ-IQO">
+                                <rect key="frame" x="138" y="598" width="139" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="החזר משלוח למפה"/>
+                                <connections>
+                                    <action selector="returnDeliveryBack:" destination="OYm-3s-5KJ" eventType="touchUpInside" id="3ns-AL-dif"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="trailing" secondItem="1zj-V1-5np" secondAttribute="trailing" constant="50" id="23A-vT-Obp"/>
+                            <constraint firstItem="T1J-XJ-IQO" firstAttribute="centerX" secondItem="IB7-8r-r0x" secondAttribute="centerX" id="26e-qx-oWF"/>
                             <constraint firstItem="IB7-8r-r0x" firstAttribute="bottom" secondItem="1zj-V1-5np" secondAttribute="bottom" constant="20" id="4Ay-dJ-mu9"/>
                             <constraint firstItem="fcD-Ep-EDi" firstAttribute="top" secondItem="W6m-Wz-QUF" secondAttribute="bottom" constant="60" id="50b-TC-fjG"/>
                             <constraint firstItem="CVx-J0-7mP" firstAttribute="top" secondItem="fcD-Ep-EDi" secondAttribute="bottom" constant="60" id="5Eh-NI-XTu"/>
                             <constraint firstItem="mEX-ao-H3f" firstAttribute="top" secondItem="1FA-jV-vSf" secondAttribute="bottom" constant="46.5" id="69X-ia-Zg1"/>
                             <constraint firstItem="Y3g-by-U2J" firstAttribute="top" secondItem="CVx-J0-7mP" secondAttribute="top" constant="-7" id="90k-Dv-h0p"/>
+                            <constraint firstItem="Cux-7n-1R5" firstAttribute="top" secondItem="T1J-XJ-IQO" secondAttribute="bottom" constant="36" id="93E-bQ-gFa"/>
                             <constraint firstItem="c0J-c0-Owh" firstAttribute="top" secondItem="fcD-Ep-EDi" secondAttribute="top" id="BT1-Qo-MSM"/>
                             <constraint firstItem="Y3g-by-U2J" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="16" id="CeF-qO-Ufj"/>
                             <constraint firstItem="IvJ-ZJ-wNh" firstAttribute="leading" secondItem="IB7-8r-r0x" secondAttribute="leading" constant="16" id="JM6-jt-s0d"/>
@@ -1617,12 +1627,13 @@
                     <navigationItem key="navigationItem" id="m3G-K7-Adn"/>
                     <connections>
                         <outlet property="address" destination="qDi-HY-jwc" id="GKN-Zs-mLI"/>
+                        <outlet property="city" destination="qDi-HY-jwc" id="V7l-50-tWi"/>
                         <outlet property="name" destination="Ug4-uf-l3A" id="SKV-9m-LG5"/>
                         <outlet property="notes" destination="C95-eF-xhs" id="11N-ZT-cfs"/>
                         <outlet property="notice" destination="tkv-aj-F9m" id="ogd-z3-geO"/>
                         <outlet property="phone" destination="ksD-Tt-Dql" id="Ogc-Dg-DOl"/>
                         <outlet property="sendLabel" destination="WnU-cP-91U" id="Lut-sH-yOQ"/>
-                        <outlet property="street" destination="Dla-sy-s9n" id="YVK-2c-m22"/>
+                        <outlet property="street" destination="Dla-sy-s9n" id="tLu-0q-hgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbJ-zz-wRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
