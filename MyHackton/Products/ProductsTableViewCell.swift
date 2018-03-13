@@ -7,6 +7,7 @@ class ProductsTableViewCell: UITableViewCell {
     @IBOutlet var counter: UITextField!
     @IBOutlet var minus_Label: UIButton!
     var count : Int = 0
+    var manager = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class ProductsTableViewCell: UITableViewCell {
         count += 1
         counter.text = ("\(count)")
         minus_Label.isEnabled = true
+        updateBasket()
     }
     
     @IBAction func minusBtn(_ sender: UIButton) {
@@ -31,6 +33,20 @@ class ProductsTableViewCell: UITableViewCell {
         } else if counter.text == "0" {
             minus_Label.isEnabled = false
         }
+        updateBasket()
     }
     
+    func updateBasket(){
+        if !manager{
+            let prefs = UserDefaults.standard
+            var basket:[String: [String]] = [:]
+            if let prefsBasket = prefs.dictionary(forKey: "basket"){
+                basket = prefsBasket as! [String: [String]]
+                if let keyExists = basket[name.text!]{
+                    basket.updateValue([String(count), keyExists[1]], forKey: name.text!)
+                }
+            }
+            prefs.set(basket, forKey: "basket")
+        }
+    }
 }

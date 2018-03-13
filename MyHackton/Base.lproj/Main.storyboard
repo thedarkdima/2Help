@@ -727,7 +727,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-fX-di1">
                                                     <rect key="frame" x="283.66666666666669" y="6" width="90.333333333333314" height="68"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="o7h-fX-di1" secondAttribute="height" multiplier="4:3" id="X5Z-cd-yhl"/>
+                                                        <constraint firstAttribute="width" constant="90.333333333333314" id="ie6-fv-wbx"/>
+                                                        <constraint firstAttribute="height" constant="68" id="yFf-bS-drZ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-CR-uEE">
@@ -763,18 +764,18 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="o7h-fX-di1" firstAttribute="top" secondItem="SzO-kO-Ep1" secondAttribute="top" constant="6" id="0Mx-UF-0bt"/>
                                                 <constraint firstItem="0sW-HK-Zw4" firstAttribute="leading" secondItem="Ddk-LM-K8W" secondAttribute="trailing" constant="8" id="3gu-g7-dEj"/>
+                                                <constraint firstAttribute="trailing" secondItem="o7h-fX-di1" secondAttribute="trailing" constant="8" id="8UO-vk-r4Q"/>
                                                 <constraint firstItem="Ddk-LM-K8W" firstAttribute="leading" secondItem="Dh0-XA-KPx" secondAttribute="trailing" constant="7" id="Abc-FK-wA7"/>
+                                                <constraint firstItem="o7h-fX-di1" firstAttribute="leading" secondItem="THJ-CR-uEE" secondAttribute="trailing" constant="8.0000000000001137" id="GQk-xT-rlb"/>
                                                 <constraint firstItem="THJ-CR-uEE" firstAttribute="leading" secondItem="0sW-HK-Zw4" secondAttribute="trailing" constant="55.666666666666657" id="HqI-51-Mef"/>
                                                 <constraint firstItem="Dh0-XA-KPx" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="I0N-OR-ius"/>
                                                 <constraint firstItem="Ddk-LM-K8W" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Nc0-JW-YdK"/>
                                                 <constraint firstItem="THJ-CR-uEE" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Oug-e3-QXs"/>
-                                                <constraint firstAttribute="trailing" secondItem="o7h-fX-di1" secondAttribute="trailing" constant="8" id="QnU-Nz-pXm"/>
                                                 <constraint firstItem="Dh0-XA-KPx" firstAttribute="leading" secondItem="SzO-kO-Ep1" secondAttribute="leading" id="Vlz-ya-HcP"/>
                                                 <constraint firstItem="0sW-HK-Zw4" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="Xlu-SG-Vhd"/>
-                                                <constraint firstItem="o7h-fX-di1" firstAttribute="top" secondItem="SzO-kO-Ep1" secondAttribute="top" constant="6" id="tLJ-nz-Fme"/>
-                                                <constraint firstItem="o7h-fX-di1" firstAttribute="leading" secondItem="THJ-CR-uEE" secondAttribute="trailing" constant="8" id="uaX-HS-OVP"/>
-                                                <constraint firstAttribute="bottom" secondItem="o7h-fX-di1" secondAttribute="bottom" constant="10.5" id="vwu-U1-bYM"/>
+                                                <constraint firstAttribute="bottom" secondItem="o7h-fX-di1" secondAttribute="bottom" constant="10.666666666666671" id="g73-7z-4mn"/>
                                                 <constraint firstItem="THJ-CR-uEE" firstAttribute="centerY" secondItem="SzO-kO-Ep1" secondAttribute="centerY" id="zwc-ri-imR"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1420,9 +1421,9 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBH-0D-dXl">
-                                                    <rect key="frame" x="104.66666666666669" y="29" width="170" height="20.333333333333329"/>
+                                                    <rect key="frame" x="114.66666666666669" y="29" width="160" height="20.333333333333329"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="170" id="goH-7V-HIf"/>
+                                                        <constraint firstAttribute="width" constant="160" id="goH-7V-HIf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
