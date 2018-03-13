@@ -67,7 +67,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
       
             UIApplication.shared.isIdleTimerDisabled = true
             
-            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
+            //self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
             
         })
     }
