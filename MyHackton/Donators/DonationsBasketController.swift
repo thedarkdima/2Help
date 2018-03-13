@@ -15,6 +15,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet var table: UITableView!
     
+    @IBAction func toAddDetailsController(_ sender: UIBarButtonItem) {
+        let nextPage = storyboard!.instantiateViewController(withIdentifier: "donator_details")
+        navigationController?.pushViewController(nextPage, animated: true)
+        //show(nextPage, sender: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +47,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func scanBarcode(_ sender: UIButton) {
         print("in")
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
-        let fromDonatorMenu = storyboard?.instantiateViewController(withIdentifier: "collection")
+        //let fromDonatorMenu = storyboard?.instantiateViewController(withIdentifier: "collection")
         
         let i = navigationController?.viewControllers.index(of: self)
         let previousViewController = navigationController?.viewControllers[i!-1]
-        print(previousViewController?.restorationIdentifier)
+        print((previousViewController?.restorationIdentifier)!)
         if(previousViewController == scanPage){
             navigationController?.pushViewController(scanPage, animated: true)
             

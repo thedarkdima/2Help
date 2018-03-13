@@ -26,6 +26,29 @@ class DonatorsStatusController: UIViewController {
         donatorNoticesLbl.text = donator.getNotices()
     }
     
+    @IBAction func returnDeliveryBack(_ sender: UIButton) {
+        //by clicking the button - and pressing confirm in the alert, the request will be send back to the map
+        let alert = UIAlertController(title: "אשר החזרת משלוח", message: "האם אתה בטוח שברצונך להחזיר את המשלוח לרשימת המשלוחים במפה?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: { ok in
+            self.sendBackRequest()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func sendBackRequest(){
+        let prefs = UserDefaults.standard
+        if let token = prefs.string(forKey: "token"){
+            ServerConnections.getDoubleArrayAsync("/request_status_change1", [token, "מחכה", donator.getId() + ""], handler: {requests in
+                self.navigationController?.popViewController(animated: true)
+            })
+        } else {
+            //Move back to the main page
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
     
   //method to change address
     public func set(donator : Request, index : Int){
@@ -51,13 +74,7 @@ class DonatorsStatusController: UIViewController {
     private func removeRequest(){
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
-            var package = token + "&"
-            package += "נלקח"
-            package += "&" + donator.getId()
             ServerConnections.getDoubleArrayAsync("/request_status_change", [token, "נלקח", donator.getId() + ""], handler: {requests in
-                    //self.RequestsList.remove(at:Int(self.donator.getId())!)
-//                let lastPage = self.storyboard!.instantiateViewController(withIdentifier: "addresses") as! DeliveryRequestController
-//                lastPage.RequestsList.remove(at: self.index)
                 self.navigationController?.popViewController(animated: true)
             })
         } else {
