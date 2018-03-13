@@ -18,6 +18,7 @@ class MainController: UIViewController {
             tf.placeholder = "שם משתמש"
             tf.textAlignment = .right
             tf.returnKeyType = .next
+            
         }
         
         alert.addTextField { (tf) in    // textfield of the password

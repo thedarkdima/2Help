@@ -934,6 +934,7 @@
                                         <connections>
                                             <outlet property="address" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
                                             <outlet property="icon_adress" destination="ETv-ZI-e6f" id="32a-tT-QsB"/>
+                                            <outlet property="km_label" destination="ls4-Se-GKD" id="r9U-ln-xlY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1520,29 +1521,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-cP-91U">
-                                <rect key="frame" x="164" y="530" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="שלח"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-uf-l3A">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="כתוב את שמך המלא" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-uf-l3A">
                                 <rect key="frame" x="31.999999999999986" y="154" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-HY-jwc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="כתוב כתוב מדוייק שלך" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-HY-jwc">
                                 <rect key="frame" x="31.999999999999986" y="202" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksD-Tt-Dql">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="הקש מספר טלפון!" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksD-Tt-Dql">
                                 <rect key="frame" x="31.999999999999986" y="257" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="הערות יהיו כאן..." textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="C95-eF-xhs">
                                 <rect key="frame" x="32" y="315" width="217" height="149"/>
@@ -1554,6 +1549,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkv-aj-F9m">
+                                <rect key="frame" x="16" y="480" width="382" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-cP-91U">
+                                <rect key="frame" x="184" y="622" width="46" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="שלח"/>
+                                <connections>
+                                    <action selector="sendBtn:" destination="8kI-bp-idF" eventType="touchUpInside" id="dNM-Se-T3j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1564,29 +1573,43 @@
                             <constraint firstItem="bSN-yR-73o" firstAttribute="trailing" secondItem="wZc-y0-BDn" secondAttribute="trailing" id="HxA-5F-xVe"/>
                             <constraint firstItem="a38-uf-NnS" firstAttribute="trailing" secondItem="ESE-Jr-GMF" secondAttribute="trailing" id="ILC-b4-rt0"/>
                             <constraint firstItem="bSN-yR-73o" firstAttribute="top" secondItem="wZc-y0-BDn" secondAttribute="bottom" constant="27" id="Nzv-dv-4v1"/>
+                            <constraint firstItem="tkv-aj-F9m" firstAttribute="top" secondItem="C95-eF-xhs" secondAttribute="bottom" constant="16" id="OQK-Ad-vCO"/>
+                            <constraint firstItem="tkv-aj-F9m" firstAttribute="leading" secondItem="3V9-zj-jlD" secondAttribute="leading" constant="16" id="SHP-JW-nUI"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="top" secondItem="bSN-yR-73o" secondAttribute="bottom" constant="34" id="W49-zg-6US"/>
                             <constraint firstItem="bSN-yR-73o" firstAttribute="leading" secondItem="wZc-y0-BDn" secondAttribute="leading" id="WDj-xj-8JA"/>
                             <constraint firstItem="a38-uf-NnS" firstAttribute="leading" secondItem="ESE-Jr-GMF" secondAttribute="leading" id="ZHA-dv-kgK"/>
                             <constraint firstItem="qDi-HY-jwc" firstAttribute="top" secondItem="bSN-yR-73o" secondAttribute="top" id="ZHh-wW-pQ0"/>
+                            <constraint firstItem="3V9-zj-jlD" firstAttribute="trailing" secondItem="tkv-aj-F9m" secondAttribute="trailing" constant="16" id="ZJv-pC-x5H"/>
                             <constraint firstItem="C95-eF-xhs" firstAttribute="top" secondItem="a38-uf-NnS" secondAttribute="top" id="Zc5-3Q-lFZ"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="leading" secondItem="bSN-yR-73o" secondAttribute="leading" id="apq-9f-6cL"/>
                             <constraint firstItem="a38-uf-NnS" firstAttribute="top" secondItem="ESE-Jr-GMF" secondAttribute="bottom" constant="37" id="bJ6-yK-oit"/>
                             <constraint firstItem="Ug4-uf-l3A" firstAttribute="top" secondItem="wZc-y0-BDn" secondAttribute="top" id="d4o-Hi-DSL"/>
+                            <constraint firstItem="3V9-zj-jlD" firstAttribute="trailing" secondItem="WnU-cP-91U" secondAttribute="trailing" constant="184" id="eGW-mM-sTL"/>
                             <constraint firstItem="ksD-Tt-Dql" firstAttribute="top" secondItem="ESE-Jr-GMF" secondAttribute="top" id="jTC-JF-7q6"/>
+                            <constraint firstItem="WnU-cP-91U" firstAttribute="leading" secondItem="3V9-zj-jlD" secondAttribute="leading" constant="184" id="jvK-ii-AEl"/>
                             <constraint firstItem="Ug4-uf-l3A" firstAttribute="leading" secondItem="3V9-zj-jlD" secondAttribute="leading" constant="32" id="me4-H4-ApE"/>
                             <constraint firstItem="C95-eF-xhs" firstAttribute="trailing" secondItem="ksD-Tt-Dql" secondAttribute="trailing" id="mr0-X4-2gU"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="trailing" secondItem="bSN-yR-73o" secondAttribute="trailing" id="oFz-VM-1YL"/>
                             <constraint firstItem="3V9-zj-jlD" firstAttribute="trailing" secondItem="wZc-y0-BDn" secondAttribute="trailing" constant="32" id="qPD-n1-Hrh"/>
                             <constraint firstItem="ksD-Tt-Dql" firstAttribute="trailing" secondItem="qDi-HY-jwc" secondAttribute="trailing" id="v4v-hQ-zg5"/>
                             <constraint firstItem="qDi-HY-jwc" firstAttribute="trailing" secondItem="Ug4-uf-l3A" secondAttribute="trailing" id="w9I-tG-2Ve"/>
+                            <constraint firstItem="3V9-zj-jlD" firstAttribute="bottom" secondItem="WnU-cP-91U" secondAttribute="bottom" constant="80" id="ys9-jK-q0g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3V9-zj-jlD"/>
                     </view>
                     <navigationItem key="navigationItem" id="m3G-K7-Adn"/>
+                    <connections>
+                        <outlet property="address" destination="qDi-HY-jwc" id="GKN-Zs-mLI"/>
+                        <outlet property="name" destination="Ug4-uf-l3A" id="SKV-9m-LG5"/>
+                        <outlet property="notes" destination="C95-eF-xhs" id="11N-ZT-cfs"/>
+                        <outlet property="notice" destination="tkv-aj-F9m" id="ogd-z3-geO"/>
+                        <outlet property="phone" destination="ksD-Tt-Dql" id="Ogc-Dg-DOl"/>
+                        <outlet property="sendLabel" destination="WnU-cP-91U" id="Lut-sH-yOQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbJ-zz-wRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5070" y="-1268"/>
+            <point key="canvasLocation" x="5069.5652173913049" y="-1268.4782608695652"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9w2-nI-sMU">
