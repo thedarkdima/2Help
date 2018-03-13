@@ -10,7 +10,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     var request: [String] = []
     var items: [[String]] = [[]]
     //
-
+    var basket: [String: [String]] = [:]
     var productImage : UIImage!
 
     @IBOutlet var table: UITableView!

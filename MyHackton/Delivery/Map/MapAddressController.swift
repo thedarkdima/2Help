@@ -141,11 +141,11 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         
         
         //Measuring my distance to my buddy's (in km)
-        let distance = l1.distance(from: myBuddysLocation) / 1000
+        //let distance = l1.distance(from: myBuddysLocation) / 1000
         
         
         //Display the result in km
-        print(String(format: "The distance to my buddy is %.01fkm", distance))
+        //print(String(format: "The distance to my buddy is %.01fkm", distance))
        
     }
     

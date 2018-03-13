@@ -113,8 +113,8 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
             self.pinLocation = CLLocation(latitude: pinLatitude!, longitude: pinLongitude! )
             print(self.pinLocation)
             
-            let distance = self.myUserLocation.distance(from: self.pinLocation) / 100
-            cell.km_label.text = String(distance)
+            //let distance = self.myUserLocation.distance(from: self.pinLocation) / 100
+            //cell.km_label.text = String(distance)
         })
         
         //Measuring my distance to my buddy's (in km)
