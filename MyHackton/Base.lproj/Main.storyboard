@@ -418,36 +418,56 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם של השליח" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-lT-NM5">
-                                                    <rect key="frame" x="266" y="45" width="100.33333333333331" height="21.666666666666671"/>
+                                                    <rect key="frame" x="266" y="32" width="100.33333333333331" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-UM-ojB">
-                                                    <rect key="frame" x="16" y="82.666666666666671" width="350" height="21"/>
+                                                    <rect key="frame" x="16" y="66.666666666666671" width="350" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-Dc-fU0">
-                                                    <rect key="frame" x="15" y="42" width="101" height="36"/>
+                                                    <rect key="frame" x="16" y="24" width="101" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Du4-MA-0VU"/>
+                                                        <constraint firstAttribute="width" constant="101" id="pbI-K9-dOJ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <state key="normal" title="בדוק מוצרים"/>
                                                     <connections>
                                                         <action selector="toBasket:" destination="xb6-Vq-6Zk" eventType="touchUpInside" id="7Po-a0-yTT"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlN-po-DvI">
+                                                    <rect key="frame" x="16" y="59.333333333333343" width="101" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="y3j-fG-5sp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <state key="normal" title="בטל משלוח">
+                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="abortDealivery:" destination="xb6-Vq-6Zk" eventType="touchUpInside" id="jdV-cA-9z2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gSK-lT-NM5" firstAttribute="top" secondItem="cOx-GI-Dxb" secondAttribute="top" constant="16.333333333333329" id="02s-Yw-wWW"/>
-                                                <constraint firstAttribute="bottom" secondItem="iBK-UM-ojB" secondAttribute="bottom" constant="16" id="6sX-cm-ys8"/>
-                                                <constraint firstItem="gSK-lT-NM5" firstAttribute="top" secondItem="cOx-GI-Dxb" secondAttribute="top" constant="45" id="XPg-yG-Wtr"/>
+                                                <constraint firstAttribute="bottom" secondItem="iBK-UM-ojB" secondAttribute="bottom" constant="32" id="6sX-cm-ys8"/>
+                                                <constraint firstItem="LlN-po-DvI" firstAttribute="centerY" secondItem="iBK-UM-ojB" secondAttribute="centerY" id="BF8-7h-rQc"/>
+                                                <constraint firstItem="ppm-Dc-fU0" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="16" id="PT4-ft-n8C"/>
+                                                <constraint firstItem="ppm-Dc-fU0" firstAttribute="top" secondItem="cOx-GI-Dxb" secondAttribute="top" constant="24" id="W09-YC-tgU"/>
+                                                <constraint firstItem="LlN-po-DvI" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="16" id="Wrd-yk-8zv"/>
+                                                <constraint firstAttribute="bottom" secondItem="LlN-po-DvI" secondAttribute="bottom" constant="24.333333333333329" id="aBZ-e3-jBw"/>
+                                                <constraint firstItem="gSK-lT-NM5" firstAttribute="top" secondItem="cOx-GI-Dxb" secondAttribute="top" constant="32" id="aXL-5l-GOs"/>
                                                 <constraint firstAttribute="trailing" secondItem="gSK-lT-NM5" secondAttribute="trailing" constant="16" id="ef0-sO-8rO"/>
                                                 <constraint firstItem="iBK-UM-ojB" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="16" id="gos-ZQ-ImX"/>
-                                                <constraint firstItem="ppm-Dc-fU0" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="15" id="hQa-a4-AnG"/>
-                                                <constraint firstItem="iBK-UM-ojB" firstAttribute="top" secondItem="gSK-lT-NM5" secondAttribute="bottom" constant="16" id="mbn-G2-xlB"/>
-                                                <constraint firstItem="ppm-Dc-fU0" firstAttribute="centerY" secondItem="cOx-GI-Dxb" secondAttribute="centerY" id="sbN-lK-4gE"/>
+                                                <constraint firstItem="LlN-po-DvI" firstAttribute="top" secondItem="ppm-Dc-fU0" secondAttribute="bottom" constant="-0.66666666666665719" id="pqa-YY-fDD"/>
                                                 <constraint firstAttribute="trailing" secondItem="iBK-UM-ojB" secondAttribute="trailing" constant="16" id="xna-x3-Xry"/>
+                                                <constraint firstItem="ppm-Dc-fU0" firstAttribute="centerY" secondItem="gSK-lT-NM5" secondAttribute="centerY" id="yn0-0C-dWE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
