@@ -7,8 +7,9 @@ class AddDetailsController: UIViewController {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var sendLabel: UIButton!
     @IBOutlet weak var notes:UITextView!
-    
     @IBOutlet weak var notice: UILabel!
+    
+    let prefs = UserDefaults.standard
     
     override func viewWillAppear(_ animated: Bool) {
         notice.isHidden = true
@@ -24,6 +25,12 @@ class AddDetailsController: UIViewController {
         self.phone.returnKeyType = .done
         self.notes.returnKeyType = .done
         
+        if let prefsInfo = prefs.stringArray(forKey: "info"){
+            name.text = prefsInfo[0]
+            address.text = prefsInfo[1]
+            phone.text = prefsInfo[2]
+            notes.text = prefsInfo[3]
+        }
     }
     
     
@@ -33,9 +40,8 @@ class AddDetailsController: UIViewController {
         
         if (!(address.text?.isEmpty)! &&  (address.text?.count != 0) && !(name.text?.isEmpty)! && !(phone.text?.isEmpty)!){
             notice.isHidden = true
-            checkAddress(address: address.text!)
+            //checkAddress(address: address.text!)
             var basket:[String:[String]] = [:]
-            let prefs = UserDefaults.standard
             if let prefsBasket = prefs.dictionary(forKey: "basket"){
                 basket = prefsBasket as! [String: [String]]
                 for key in basket.keys{
@@ -45,12 +51,16 @@ class AddDetailsController: UIViewController {
                 }
                 prefs.set(basket, forKey: "basket")
             }
+            prefs.set([name.text!, address.text!, phone.text!, notes.text!], forKey: "info")
             if(basket.count > 0){
-                var package = [[name.text!, address.text!, phone.text!, notice.text!]]
+                var package = [[name.text!, address.text!, phone.text!, notes.text!]]
                 for array in basket{
-                    package.append(array.value)
+                    package.append([array.key, array.value[0]])
                 }
-                ServerConnections.getDoubleArrayAsync("/add_request", package, handler: {back in})
+                ServerConnections.getDoubleArrayAsync("/add_request", package, handler: {back in
+                    self.notice.isHidden = false
+                    self.notice.text = "בקשתכם איתקבלה בהצלחה"
+                })
             }
         } else {
             notice.isHidden = false
