@@ -5,9 +5,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     @IBOutlet var productsCollectionView: UICollectionView!
   
    
-    
     //collection view variables//
-    
     
     //var to store later each product name
     var productName : String?

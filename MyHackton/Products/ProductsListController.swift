@@ -4,9 +4,13 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     
     //var products = [""]
     
-    @IBOutlet weak var productsTable: UITableView!
+    @IBOutlet var productsTable: UITableView!
+    //var to store later the page title
     var pageTitle : String?
+    //var to store later the products
     var productsArray: [[String]] = [[]]
+    //var to store later product image
+    var productImage : UIImage!
   
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = pageTitle!
@@ -33,7 +37,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
                 
                 self.productsTable.reloadData()
             }
-            print(self.productsArray)
+            //print(self.productsArray)
         })
     }
     
@@ -48,6 +52,8 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     //copy the current product image from last page collection view image.
     func setImage(image : UIImage){
         //just need to store pics
+        productImage = image
+        
     }
     
     //table view functions//
@@ -58,6 +64,10 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell")! as! ProductsTableViewCell
+        
+        //change the product image to the apropiate one
+        cell.product_image.image = self.productImage
+        
         var count = 0
         print(indexPath.section)
         for i in 0...sectionsCounts.count{

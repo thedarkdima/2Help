@@ -1390,7 +1390,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mHK-s0-LX7">
                                                     <rect key="frame" x="290.66666666666669" y="7.9999999999999964" width="83.333333333333314" height="62.666666666666657"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="mHK-s0-LX7" secondAttribute="height" multiplier="4:3" id="l83-Ga-hKe"/>
+                                                        <constraint firstAttribute="width" constant="83.333333333333314" id="9Se-XA-z3y"/>
+                                                        <constraint firstAttribute="height" constant="62.666666666666657" id="xr8-kY-Gpp"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG1-vJ-bpa">
