@@ -127,7 +127,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     func addItems(){
         items.insert([token, "חולון התחיה 10"], at: 0)
         ServerConnections.getDoubleArrayAsync("/addItems", items, handler: {array in
-            self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
         })
     }
     
