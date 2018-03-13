@@ -54,7 +54,7 @@ class DonatorsStatusController: UIViewController {
             var package = token + "&"
             package += "נלקח"
             package += "&" + donator.getId()
-            ServerConnections.getDoubleArrayAsync("/request_status_change", [package], handler: {requests in
+            ServerConnections.getDoubleArrayAsync("/request_status_change", [token, "נלקח", donator.getId() + ""], handler: {requests in
                     //self.RequestsList.remove(at:Int(self.donator.getId())!)
 //                let lastPage = self.storyboard!.instantiateViewController(withIdentifier: "addresses") as! DeliveryRequestController
 //                lastPage.RequestsList.remove(at: self.index)

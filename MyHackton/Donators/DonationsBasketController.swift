@@ -61,10 +61,14 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(manager){
-            if items[0].count > 0{
-                return items.count
+            if items.count > 0{
+                if items[0].count > 0{
+                    return items.count
+                } else {
+                    return 0
+                }
             } else {
-                return 0
+                return 5
             }
         } else {
             return 5
