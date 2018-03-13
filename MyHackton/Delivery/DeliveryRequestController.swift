@@ -13,16 +13,9 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
             self.navigationItem.hidesBackButton = true
             tabBarController?.navigationItem.leftBarButtonItem = b
         
-    }
-    
-    @IBOutlet weak var table: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
-        
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
+            RequestsList.removeAll()
             ServerConnections.getDoubleArrayAsync("/myrequests", [token], handler: {requests in
                 if let reqs = requests{
                     for request in reqs{
@@ -36,6 +29,14 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
             navigationController?.popToRootViewController(animated: true)
         }
     }
+    
+    @IBOutlet weak var table: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
+    }
+    
     
     @objc func backcheck(){
         //let main = storyboard!.instantiateViewController(withIdentifier: "main")
