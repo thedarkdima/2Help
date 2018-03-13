@@ -2,11 +2,15 @@ import UIKit
 import MapKit
 
 class AddDetailsController: UIViewController {
-    @IBOutlet weak var address: UITextField!
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var phone: UITextField!
-    @IBOutlet weak var sendLabel: UIButton!
-    @IBOutlet weak var notes:UITextView!
+    @IBOutlet var address: UITextField!
+    @IBOutlet var street: UITextField!
+    
+    @IBOutlet var name: UITextField!
+    @IBOutlet var phone: UITextField!
+    @IBOutlet var notes:UITextView!
+    
+    @IBOutlet var sendLabel: UIButton!
+
     @IBOutlet weak var notice: UILabel!
     
     let prefs = UserDefaults.standard
