@@ -13,7 +13,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     var productsNamesArray : [String] = []
     
     //stored images url's in strings to use later to open products images
-    var images_URLs : [String] = []
+    //var images_URLs : [String] = []
     
      //var to store later each product image
     var productImage: UIImage?
@@ -113,10 +113,20 @@ override func viewDidLoad(){
                     //each loop add one product name
                     self.productsNamesArray.append(type[0])
                     //each loop add one product url to get image from it
-                    self.images_URLs.append(type[1])
-                    //each loop add one product image
+                    //self.images_URLs.append(type[1])
                     
-                    self.productsImagesArray.append(UIImage(data: try! Data(contentsOf: URL(string: self.images_URLs[index])!))!)
+                    //each loop add one product image
+                    do {
+                        if let url = URL(string: type[1]){
+                            let data = try Data(contentsOf: url)
+                            if let uiImage = UIImage(data: data){
+                                self.productsImagesArray.append(uiImage)
+                            }
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    
                 
                     index += 1
                 }
