@@ -11,7 +11,6 @@ class AddDetailsController: UIViewController {
     @IBOutlet var notes:UITextView!
     
     @IBOutlet var sendLabel: UIButton!
-
     @IBOutlet weak var notice: UILabel!
     
     let prefs = UserDefaults.standard
@@ -32,9 +31,10 @@ class AddDetailsController: UIViewController {
         
         if let prefsInfo = prefs.stringArray(forKey: "info"){
             name.text = prefsInfo[0]
-            //address.text = prefsInfo[1]
-            phone.text = prefsInfo[2]
-            notes.text = prefsInfo[3]
+            city.text = prefsInfo[1]
+            street.text = prefsInfo[2]
+            phone.text = prefsInfo[3]
+            notes.text = prefsInfo[4]
         }
     }
     
@@ -53,7 +53,7 @@ class AddDetailsController: UIViewController {
                 }
                 prefs.set(basket, forKey: "basket")
             }
-            prefs.set([name.text!, address!, phone.text!, notes.text!], forKey: "info")
+            prefs.set([name.text!, city.text!, street.text!, phone.text!, notes.text!], forKey: "info")
             if(basket.count > 0){
                 var package = [[name.text!, address!, phone.text!, notes.text!]]
                 for array in basket{

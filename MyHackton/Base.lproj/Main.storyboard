@@ -1557,7 +1557,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="כתוב כתוב מדוייק שלך" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-HY-jwc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="עיר מגורים" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-HY-jwc">
                                 <rect key="frame" x="31.999999999999986" y="202" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1599,7 +1599,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-sy-s9n">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="רחוב מגורים" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-sy-s9n">
                                 <rect key="frame" x="31.999999999999986" y="250" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1646,7 +1646,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="m3G-K7-Adn"/>
                     <connections>
-                        <outlet property="address" destination="qDi-HY-jwc" id="GKN-Zs-mLI"/>
                         <outlet property="city" destination="qDi-HY-jwc" id="V7l-50-tWi"/>
                         <outlet property="name" destination="Ug4-uf-l3A" id="SKV-9m-LG5"/>
                         <outlet property="notes" destination="C95-eF-xhs" id="11N-ZT-cfs"/>
