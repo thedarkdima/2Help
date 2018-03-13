@@ -25,21 +25,21 @@ class AddDetailsController: UIViewController {
         super.viewDidLoad()
         
         self.name.returnKeyType = .next
-        self.address.returnKeyType = .next
+        //self.address.returnKeyType = .next
         self.phone.returnKeyType = .done
         self.notes.returnKeyType = .done
         
         if let prefsInfo = prefs.stringArray(forKey: "info"){
             name.text = prefsInfo[0]
-            address.text = prefsInfo[1]
+            //address.text = prefsInfo[1]
             phone.text = prefsInfo[2]
             notes.text = prefsInfo[3]
         }
     }
     
     @IBAction func sendBtn(_ sender: UIButton) {
-        
-        if (!(address.text?.isEmpty)! &&  (address.text?.count != 0) && !(name.text?.isEmpty)! && !(phone.text?.isEmpty)!){
+        address = city.text! + " " + street.text!
+        if (!(address.isEmpty) &&  (address.count != 0) && !(name.text?.isEmpty)! && !(phone.text?.isEmpty)!){
             notice.isHidden = true
             //checkAddress(address: address.text!)
             var basket:[String:[String]] = [:]
@@ -52,9 +52,9 @@ class AddDetailsController: UIViewController {
                 }
                 prefs.set(basket, forKey: "basket")
             }
-            prefs.set([name.text!, address.text!, phone.text!, notes.text!], forKey: "info")
+            prefs.set([name.text!, address!, phone.text!, notes.text!], forKey: "info")
             if(basket.count > 0){
-                var package = [[name.text!, address.text!, phone.text!, notes.text!]]
+                var package = [[name.text!, address!, phone.text!, notes.text!]]
                 for array in basket{
                     package.append([array.key, array.value[0]])
                 }

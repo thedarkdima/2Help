@@ -53,7 +53,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
             //self.productsArray = []
             if let temp = products{
                 self.productsArray = temp
-                
+                self.getImages()
                 self.productsTable.reloadData()
             }
             //print(self.productsArray)
@@ -67,13 +67,6 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     func setTitle(title : String){
         pageTitle = title
     }
-    
-//    //copy the current product image from last page collection view image.
-//    func setImage(image : UIImage){
-//        //just need to store pics
-//        productImage = image
-//
-//    }
     
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,19 +89,50 @@ class ProductsListController: UIViewController , UITableViewDataSource {
             count += sectionsCounts[i]
         }
         cell.setName(name: productsArray[count + indexPath.row][0])
-        do {
-            if let url = URL(string: productsArray[count + indexPath.row][4]){
-                let data = try Data(contentsOf: url)
-                if let uiImage = UIImage(data: data){
-                    cell.product_image.image = uiImage
-                }
-            }
-        } catch {
-            print(error.localizedDescription)
+        //Getting images from UserDefaults if they exist
+        if let prefImageData = UserDefaults.standard.object(forKey: productsArray[count + indexPath.row][4]){
+            cell.product_image.image = UIImage(data: prefImageData as! Data)
         }
-        //cell.product_image.image = productsArray[count + indexPath.row][4]
-
+        
+        
         return cell
+    }
+    
+    func getImages(){
+        for product in productsArray{
+            if let url = URL(string: product[4]){
+                URLSession.shared.dataTask(with:url){ (data, response, error) in
+                    //if there is any error
+                    if let e = error{
+                        //displaying the message
+                        print("Error Occurred: \(e)")
+                    } else {
+                        //in case of now error, checking wheather the response is nil or not
+                        if (response as? HTTPURLResponse) != nil{
+                            //checking if the response contains an image
+                            if let imageData = data{
+                                //displaying the image
+                                DispatchQueue.main.async{
+                                    if let prefImageData = UserDefaults.standard.object(forKey: url.absoluteString){
+                                        if prefImageData as! Data != imageData{
+                                            UserDefaults.standard.set(imageData, forKey: url.absoluteString)
+                                            self.productsTable.reloadData()
+                                        }
+                                    } else {
+                                        UserDefaults.standard.set(imageData, forKey: url.absoluteString)
+                                        self.productsTable.reloadData()
+                                    }
+                                }
+                            } else {
+                                print("Image file is currupted")
+                            }
+                        } else {
+                            print("No response from server")
+                        }
+                    }
+                    }.resume()
+            }
+        }
     }
     
     //sections//
