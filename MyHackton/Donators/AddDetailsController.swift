@@ -33,9 +33,6 @@ class AddDetailsController: UIViewController {
         }
     }
     
-    
-    
-    
     @IBAction func sendBtn(_ sender: UIButton) {
         
         if (!(address.text?.isEmpty)! &&  (address.text?.count != 0) && !(name.text?.isEmpty)! && !(phone.text?.isEmpty)!){
@@ -83,7 +80,7 @@ class AddDetailsController: UIViewController {
                 {(placemarks, error) in
                     if (error != nil)
                     {
-                        print("reverse geodcode error)")
+                        print("reverse geodcode error. \(error.debugDescription)")
                     }
                     
                     let pm = placemarks! as [CLPlacemark]
@@ -110,9 +107,7 @@ class AddDetailsController: UIViewController {
                     }
             })
             
-            
         })
     }
     
 }
-
