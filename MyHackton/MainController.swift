@@ -17,9 +17,9 @@ class MainController: UIViewController {
         webView.load(urlRequest)
         
         
-        let url2 = URL(string: "https://www.youtube.com/embed/ky6BaKVVNFY")
-        let urlRequest2 = URLRequest(url: url2!)
-        webView.load(urlRequest2)
+        //let url2 = URL(string: "https://www.youtube.com/embed/ky6BaKVVNFY")
+        //let urlRequest2 = URLRequest(url: url2!)
+        //  webView.load(urlRequest2)
         
     }
     
