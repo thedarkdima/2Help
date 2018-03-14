@@ -11,11 +11,17 @@ class DailyReportController: UIViewController, UITableViewDataSource,UITableView
         return cell
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    
+ 
   
 }

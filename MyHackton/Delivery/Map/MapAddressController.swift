@@ -15,7 +15,6 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         tabBarController?.navigationItem.title = "בחר את המשלוחים שברצונך לקחת"
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
-        
         tabBarController?.navigationItem.leftBarButtonItem = b
         self.navigationItem.hidesBackButton = true
     

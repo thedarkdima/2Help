@@ -178,13 +178,15 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 let prefs = UserDefaults.standard
                 var basket = prefs.dictionary(forKey: "basket") as! [String: [String]]
                 if let item = basket[pr[0][0]]{
-                    basket.updateValue([String(Int(pr[0][0])! + Int(item[0])!), pr[0][4]], forKey: pr[0][0])
+                    basket.updateValue([String(1 + Int(item[0])!), pr[0][4]], forKey: pr[0][0])
                 } else {
-                    basket.updateValue([pr[0][0], pr[0][4]], forKey: pr[0][0])
+                    basket.updateValue(["1", pr[0][4]], forKey: pr[0][0])
                 }
+                prefs.set(basket, forKey: "basket")
                 prefs.set(scannedCode, forKey: "barcode")
             }
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: false)
         })
 //        if(self.navigationController?.isMovingFromParentViewController)!{
         //let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController

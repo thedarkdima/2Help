@@ -21,9 +21,9 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         //show(nextPage, sender: true)
     }
     
+    let prefs = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
-        let prefs = UserDefaults.standard
         if manager{
             if let tok = prefs.string(forKey: "token"){
                 token = tok
@@ -50,6 +50,10 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             }
         }
     }
+    
+    
+    
+    
     
     func getImages(){
         for product in basket{
@@ -94,16 +98,16 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         let scanPage = storyboard!.instantiateViewController(withIdentifier: "scanner") as! ScannerViewController
         //let fromDonatorMenu = storyboard?.instantiateViewController(withIdentifier: "collection")
         
-        let i = navigationController?.viewControllers.index(of: self)
-        let previousViewController = navigationController?.viewControllers[i!-1]
-        print((previousViewController?.restorationIdentifier)!)
-        if(previousViewController == scanPage){
+     //   let i = navigationController?.viewControllers.index(of: self)
+        //let previousViewController = navigationController?.viewControllers[i!-1]
+        //print((previousViewController?.restorationIdentifier)!)
+//        if(previousViewController == scanPage){
             navigationController?.pushViewController(scanPage, animated: true)
-            
-        } else {
-       // navigationController?.popToViewController(scanPage, animated: true)
-           self.dismiss(animated: true, completion: nil)
-        }
+//
+//        } else {
+//       // navigationController?.popToViewController(scanPage, animated: true)
+//           self.dismiss(animated: true, completion: nil)
+//        }
         
         
     }
@@ -122,6 +126,12 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             }
         } else {
             return basket.count
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = prefs.string(forKey: "barcode"){
+            self.navigationController?.popViewController(animated: false)
         }
     }
     

@@ -25,7 +25,7 @@ override func viewWillAppear(_ animated: Bool) {
     if let _ = prefs.string(forKey: "barcode"){
         prefs.removeObject(forKey: "barcode")
         let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
-        self.navigationController?.pushViewController(basketViewController, animated: true)
+        self.navigationController?.pushViewController(basketViewController, animated: false)
     }
 }
     override func viewDidAppear(_ animated: Bool) {
