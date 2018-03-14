@@ -126,7 +126,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
                     if self.currentLocation != nil{
                         let myLoc = CLLocation(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude )
                         let distance = myLoc.distance(from: pinLocation) / 1000
-                        cell.km_label.text = String((round(1000 * distanceDouble)/1000)) + "KM"
+                        cell.km_label.text = String((round(100 * distance)/100)) + "KM"
                         return
                     }
                 }
