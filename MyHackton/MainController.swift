@@ -1,16 +1,26 @@
 import UIKit
+import WebKit
+import SafariServices
 
 class MainController: UIViewController {
     
+    @IBOutlet var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
     }
+    
 
+    @IBAction func toSafari(_ sender: UIButton) {
+        let url = URL(string: "https://www.2help.org.il/food")!
+        let svc = SFSafariViewController(url: url)
+        show(svc, sender: self)
+    }
+    
     @IBAction func login() {
         //alert when pressing the login button
-        
         let alert =  UIAlertController(title: "התחברות", message: "הכנס שם משתמש וסיסמא", preferredStyle: .alert)
         
         alert.addTextField { (tf) in      // textfiled of the username
@@ -65,9 +75,7 @@ class MainController: UIViewController {
                      else {
                         self.login()
                     }
-                
             })
-            
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))

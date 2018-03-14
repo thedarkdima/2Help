@@ -29,6 +29,7 @@
 		45A964942019D91000D173BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A964932019D91000D173BC /* Assets.xcassets */; };
 		45A964972019D91000D173BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A964952019D91000D173BC /* LaunchScreen.storyboard */; };
 		45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F9D25520501FFC00649C52 /* CheckProductsController.swift */; };
+		901F33472059853900A73605 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F33462059853900A73605 /* WallpaperWindow.swift */; };
 		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
 		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
@@ -72,6 +73,7 @@
 		45A964962019D91000D173BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45A964982019D91000D173BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F9D25520501FFC00649C52 /* CheckProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckProductsController.swift; sourceTree = "<group>"; };
+		901F33462059853900A73605 /* WallpaperWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperWindow.swift; sourceTree = "<group>"; };
 		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		45A964882019D91000D173BC /* MyHackton */ = {
 			isa = PBXGroup;
 			children = (
+				901F3345205984E900A73605 /* Design */,
 				45A964892019D91000D173BC /* AppDelegate.swift */,
 				455B1809201F5CB90002E7D0 /* MainController.swift */,
 				455B1807201F564E0002E7D0 /* AsyncTask.swift */,
@@ -155,6 +158,14 @@
 				45A964902019D91000D173BC /* MyHackton.xcdatamodeld */,
 			);
 			path = MyHackton;
+			sourceTree = "<group>";
+		};
+		901F3345205984E900A73605 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				901F33462059853900A73605 /* WallpaperWindow.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		907BF121203C74AE0095F60D /* Map */ = {
@@ -307,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
+				901F33472059853900A73605 /* WallpaperWindow.swift in Sources */,
 				4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */,
 				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
 				4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */,
