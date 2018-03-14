@@ -32,8 +32,6 @@ class MessengerListCell: UITableViewCell {
                 })
             }
         }))
-        
         controller.present(alert, animated: true, completion: nil)
-        
     }
 }
