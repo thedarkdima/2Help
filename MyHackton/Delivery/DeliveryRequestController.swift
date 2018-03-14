@@ -8,6 +8,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     var donator : Request!
     //var addressName : String!
     
+    
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.navigationItem.title = tabBarItem.title
         
@@ -40,10 +41,10 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
         
-        // Ask for Authorisation from the User.
+        //Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
         
-        // For use in foreground
+        //For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
@@ -90,8 +91,10 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
-        cell.address.text = RequestsList[indexPath.row].getAddress()
-        findDistanceBetweenPins(cell: cell)
+        if(RequestsList.count > 0){
+            cell.address.text = RequestsList[indexPath.row].getAddress()
+            findDistanceBetweenPins(cell: cell)
+        }
         
         return cell
     }
@@ -126,12 +129,11 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
                     if self.currentLocation != nil{
                         let myLoc = CLLocation(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude )
                         let distance = myLoc.distance(from: pinLocation) / 1000
-                        cell.km_label.text = String((round(100 * distance)/100)) + "KM"
+                        cell.km_label.text = String((round(100 * distance)/100)) + " ק״מ"
                         return
                     }
                 }
             }
-            cell.km_label.text = String("UN")
         })
     }
 
