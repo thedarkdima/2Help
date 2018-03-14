@@ -6,7 +6,6 @@ class MainController: UIViewController {
         super.viewDidLoad()
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
-        prefs.set([:], forKey: "basketUrls")
     }
 
     @IBAction func login() {

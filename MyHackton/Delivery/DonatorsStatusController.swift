@@ -5,8 +5,9 @@ class DonatorsStatusController: UIViewController {
     
     @IBOutlet var donatorNameLbl: UILabel!
     @IBOutlet var donatorsAddressLbl: UILabel!
-    @IBOutlet var donatorNumberLbl: UILabel!
+    @IBOutlet var donatorNumberBtn: UIButton!
     @IBOutlet var donatorNoticesLbl: UITextView!
+    @IBOutlet var donatorDateLbl: UILabel!
     
     private var donator : Request!
     private var RequestsList : [Request] = []
@@ -18,8 +19,9 @@ class DonatorsStatusController: UIViewController {
         
         donatorNameLbl.text = donator.getFullName()
         donatorsAddressLbl.text = donator.getAddress()
-        donatorNumberLbl.text = donator.getPhoneNumber()
+        donatorNumberBtn.setTitle(donator.getPhoneNumber(), for: .normal) 
         donatorNoticesLbl.text = donator.getNotices()
+        donatorDateLbl.text = String(donator.getDate().prefix(donator.getDate().count - 5))
     }
     
     @IBAction func returnDeliveryBack(_ sender: UIButton) {
@@ -51,6 +53,16 @@ class DonatorsStatusController: UIViewController {
         self.donator = donator
         self.index = index
 
+    }
+    
+    @IBAction func call(_ sender: Any) {
+        //call the organization
+        let numberToCall = (donatorNumberBtn.titleLabel?.text)!
+        if let phoneURL = URL(string :"tel://" + numberToCall) {
+            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+        }else{
+            print("number is not good")
+        }
     }
     
     //confirm the messanger took the products from the donator
