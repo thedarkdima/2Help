@@ -22,6 +22,7 @@ class MainController: UIViewController {
         webView.load(urlRequest2)
         
     }
+    
 
     @IBAction func toSafari(_ sender: UIButton) {
         let url = URL(string: "https://www.2help.org.il/food")!
