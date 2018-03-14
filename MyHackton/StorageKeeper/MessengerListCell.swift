@@ -20,11 +20,20 @@ class MessengerListCell: UITableViewCell {
     }
     
     @IBAction func abortDealivery(_ sender: UIButton) {
-        let prefs = UserDefaults.standard
-        if let token = prefs.string(forKey: "token"){
-            ServerConnections.getDoubleArrayAsync("/request_status_change", [token, "בוטל", controller.requests[index!][0] + ""], handler: {requests in
-                self.controller.requestsList.reloadData()
-            })
-        }
+        //by clicking the button - and pressing confirm in the alert, the product and address will be removed from the messsanger list(in the server), and the deliveries page will open
+        let alert = UIAlertController(title: "ביטול בקשה", message: "האם אתה בטוח בביטול הבקשה?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: { ok in
+            let prefs = UserDefaults.standard
+            if let token = prefs.string(forKey: "token"){
+                ServerConnections.getDoubleArrayAsync("/request_status_change", [token, "בוטל", self.controller.requests[self.index!][0] + ""], handler: {requests in
+                    self.controller.viewDidAppear(false)
+                })
+            }
+        }))
+        
+        controller.present(alert, animated: true, completion: nil)
+        
     }
 }
