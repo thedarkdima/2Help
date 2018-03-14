@@ -918,11 +918,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="15" y="12" width="62" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
+                                                    <rect key="frame" x="15" y="12" width="70" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="54" id="dql-fh-uCV"/>
+                                                        <constraint firstAttribute="width" constant="70" id="dql-fh-uCV"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
+                                                    <rect key="frame" x="85" y="12" width="232" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -934,17 +940,11 @@
                                                         <constraint firstAttribute="width" constant="47" id="W1Y-vf-oNi"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
-                                                    <rect key="frame" x="85" y="12" width="232" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ETv-ZI-e6f" secondAttribute="trailing" constant="10" id="4UB-19-8tq"/>
                                                 <constraint firstItem="ls4-Se-GKD" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="Ig8-7l-0NK"/>
-                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" constant="16" id="Izc-RU-wWU"/>
+                                                <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" id="Izc-RU-wWU"/>
                                                 <constraint firstItem="ETv-ZI-e6f" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="4" id="TdJ-MB-Z94"/>
                                                 <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="QWf-I2-FyW" secondAttribute="leading" constant="15" id="YTm-KE-osq"/>
                                                 <constraint firstItem="Qnc-gx-dNS" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="cai-lW-9Sk"/>
