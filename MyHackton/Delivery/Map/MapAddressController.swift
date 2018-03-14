@@ -67,7 +67,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
       
             UIApplication.shared.isIdleTimerDisabled = true
             
-            //self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
+            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
             
         })
     }
@@ -112,9 +112,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
             if let id = currentAnnotation.subtitle{
                 ServerConnections.getArrayAsync("/add_my_request", [token, id!], handler: {array in
                     self.deliveryRequest = DeliveryRequestController()
-                    self.deliveryRequest.setUserlocation(longitude: self.MyMap.userLocation.coordinate.longitude, latitude: self.MyMap.userLocation.coordinate.latitude)
                     self.MyMap.removeAnnotation(currentAnnotation)
-                    
                 })
             }
         }
@@ -124,8 +122,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     
     func mylocation(){
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
-       // let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        //let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
+        let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         self.MyMap.setRegion(region, animated: false)
