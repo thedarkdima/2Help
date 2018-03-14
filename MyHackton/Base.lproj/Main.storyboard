@@ -11,6 +11,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialHB.ttc">
+            <string>ArialHebrew</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -73,6 +78,17 @@
                                             <constraint firstItem="4d8-vn-PTW" firstAttribute="top" secondItem="bki-DT-UoF" secondAttribute="top" id="jzf-gL-sSb"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
+                                        <rect key="frame" x="32" y="108" width="350" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="26"/>
+                                        <state key="normal" title="בקשה לתרומה" backgroundImage="2help_Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhg-IJ-xny"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bki-DT-UoF" firstAttribute="leading" secondItem="S0L-cZ-JYv" secondAttribute="leading" id="DlA-ke-Fub"/>
@@ -106,7 +122,6 @@
                             <constraint firstItem="Usr-C0-maa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ide-G3-0Ai"/>
                             <constraint firstItem="S0L-cZ-JYv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jiN-3x-EEp"/>
                             <constraint firstItem="ANG-LM-4ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vN6-Qf-dLU"/>
-                            <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w1a-ll-FXn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2OX-7I-c21" secondAttribute="trailing" constant="16" id="x8q-Al-bRP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -2008,6 +2023,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2help_Button" width="640" height="243"/>
         <image name="call_icon" width="720" height="720"/>
         <image name="delivery_icon" width="25" height="25"/>
         <image name="delivery_past" width="40" height="40"/>
