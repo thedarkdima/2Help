@@ -46,17 +46,66 @@
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="ar9-vj-BWV"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-cZ-JYv">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bki-DT-UoF">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="244"/>
+                                        <subviews>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4d8-vn-PTW">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="244"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4d8-vn-PTW" secondAttribute="bottom" id="2EO-qI-uSO"/>
+                                            <constraint firstItem="4d8-vn-PTW" firstAttribute="centerY" secondItem="bki-DT-UoF" secondAttribute="centerY" id="JYg-oa-uVk"/>
+                                            <constraint firstItem="4d8-vn-PTW" firstAttribute="centerX" secondItem="bki-DT-UoF" secondAttribute="centerX" id="OEY-Ut-8Qw"/>
+                                            <constraint firstItem="4d8-vn-PTW" firstAttribute="leading" secondItem="bki-DT-UoF" secondAttribute="leading" constant="16" id="RSR-El-dhC"/>
+                                            <constraint firstAttribute="height" constant="244" id="UAR-52-5iE"/>
+                                            <constraint firstAttribute="trailing" secondItem="4d8-vn-PTW" secondAttribute="trailing" constant="16" id="VEX-i4-za7"/>
+                                            <constraint firstAttribute="width" constant="414" id="XUy-nw-GYi"/>
+                                            <constraint firstItem="4d8-vn-PTW" firstAttribute="top" secondItem="bki-DT-UoF" secondAttribute="top" id="jzf-gL-sSb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bki-DT-UoF" firstAttribute="leading" secondItem="S0L-cZ-JYv" secondAttribute="leading" id="DlA-ke-Fub"/>
+                                    <constraint firstItem="bki-DT-UoF" firstAttribute="top" secondItem="S0L-cZ-JYv" secondAttribute="top" constant="200" id="TBI-vG-1PZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bki-DT-UoF" secondAttribute="trailing" id="WeB-HH-i5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="bki-DT-UoF" secondAttribute="bottom" constant="121" id="igy-JG-cBb"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
+                                <rect key="frame" x="153.66666666666666" y="161" width="106.99999999999997" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="בקשה לתרומה"/>
+                                <connections>
+                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhg-IJ-xny"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2OX-7I-c21" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="top" id="6OS-Vc-mVv"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6sT-v4-u64"/>
                             <constraint firstItem="ANG-LM-4ms" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="top" id="7xe-cP-IND"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9do-6p-iXx"/>
+                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="bottom" constant="39" id="C6f-3F-nww"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="GBH-db-1hl"/>
                             <constraint firstItem="2OX-7I-c21" firstAttribute="leading" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="62" id="Kuc-o6-Ogl"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P2e-i4-Pbg"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="ANG-LM-4ms" secondAttribute="trailing" constant="62" id="TIp-Hu-47P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="149" id="b7Z-kv-6K3"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ide-G3-0Ai"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jiN-3x-EEp"/>
                             <constraint firstItem="ANG-LM-4ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vN6-Qf-dLU"/>
+                            <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w1a-ll-FXn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2OX-7I-c21" secondAttribute="trailing" constant="16" id="x8q-Al-bRP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,10 +113,13 @@
                     <navigationItem key="navigationItem" id="0su-Je-0uU">
                         <barButtonItem key="backBarButtonItem" title="מסך ראשי" id="Bfv-x3-HeW"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="4d8-vn-PTW" id="4yv-l8-IMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="118"/>
+            <point key="canvasLocation" x="-149.27536231884059" y="117.39130434782609"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="GlG-HV-llJ">
@@ -1967,4 +2019,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Gbx-nb-xUN"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.75664600838462803" blue="0.20832893716919676" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
