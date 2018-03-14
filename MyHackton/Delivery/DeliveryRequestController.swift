@@ -2,18 +2,13 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITableViewDelegate {
+class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITableViewDelegate, CLLocationManagerDelegate {
     
     var RequestsList : [Request] = []
     var donator : Request!
-    
-    var myUserLocation : CLLocation!
-    var addressName : String!
-    
-    
+    //var addressName : String!
     
     override func viewWillAppear(_ animated: Bool) {
-        //myUserLocation = CLLocationManager.location
         tabBarController?.navigationItem.title = tabBarItem.title
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )
@@ -40,11 +35,40 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     
     @IBOutlet weak var table: UITableView!
     
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "חזור", style: .plain, target: nil, action: nil)
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
     
+    var currentLocation: CLLocationCoordinate2D!
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {
+            return
+        }
+        if let curLoc = currentLocation{
+            if curLoc.latitude != locValue.latitude && curLoc.longitude != locValue.longitude {
+                currentLocation = locValue
+                table.reloadData()
+            }
+        } else {
+            currentLocation = locValue
+            table.reloadData()
+        }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
     
     @objc func backcheck(){
         //let main = storyboard!.instantiateViewController(withIdentifier: "main")
@@ -57,9 +81,8 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
         
         present(alert, animated: true, completion: nil)
-        
-        
     }
+    
     //table view methods//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return RequestsList.count
@@ -68,9 +91,7 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "requests_list_ofDelivery") as! DeliveryRequestCell
         cell.address.text = RequestsList[indexPath.row].getAddress()
-        addressName = cell.address.text
         findDistanceBetweenPins(cell: cell)
-        
         
         return cell
     }
@@ -92,37 +113,26 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         self.donator = donator
     }
     
-    func setUserlocation(longitude : Double , latitude : Double){
-        myUserLocation = CLLocation(latitude: latitude, longitude: longitude)
-    }
-    
     // find distance between to places
-    
-    var pinLocation : CLLocation!
-    
     func findDistanceBetweenPins(cell: DeliveryRequestCell){
         let geoCoder = CLGeocoder()
-        
-        //let addressTry = "רוטשילד 117 פתח תקווה"
-        
-        geoCoder.geocodeAddressString(addressName, completionHandler: { (placemarks, error) in
-            let pinLongitude = placemarks?.first?.location?.coordinate.longitude
-            let pinLatitude = placemarks?.first?.location?.coordinate.latitude
-            
-            //My buddy's location
-            self.pinLocation = CLLocation(latitude: pinLatitude!, longitude: pinLongitude! )
-            print(self.pinLocation)
-            
-            //let distance = self.myUserLocation.distance(from: self.pinLocation) / 100
-            //cell.km_label.text = String(distance)
+        geoCoder.geocodeAddressString(cell.address.text!, completionHandler: { (placemarks, error) in
+            if let pinLongitude = placemarks?.first?.location?.coordinate.longitude
+            {
+                if let pinLatitude = placemarks?.first?.location?.coordinate.latitude{
+                    //My buddy's location
+                    let pinLocation = CLLocation(latitude: pinLatitude, longitude: pinLongitude)
+                    print(pinLocation)
+                    if self.currentLocation != nil{
+                        let myLoc = CLLocation(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude )
+                        let distance = myLoc.distance(from: pinLocation) / 1000
+                        cell.km_label.text = String((round(100 * distance)/100)) + "KM"
+                        return
+                    }
+                }
+            }
+            cell.km_label.text = String("UN")
         })
-        
-        //Measuring my distance to my buddy's (in km)
-        
-        //Display the result in km
-        //      print(String(format: "The distance to my buddy is %.01fkm", distance))
     }
-    
-    
-    
+
 }
