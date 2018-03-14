@@ -14,7 +14,8 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
         
-       
+        collectionView.showsHorizontalScrollIndicator = false
+
        
         
         setCollectionViewProperties()
