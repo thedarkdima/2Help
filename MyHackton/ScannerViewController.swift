@@ -169,14 +169,27 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     // show basket page with the barcode's related product
     func moveToDonationBasketController(scannedCode: String) {
-        let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
-        print(scannedCode)
+        
+        //print(scannedCode)
         //pass the codeNumber to the basketPage 
-        basketViewController.scannedCode = scannedCode
-        
-        
+        //basketViewController.scannedCode = scannedCode
+        ServerConnections.getDoubleArrayAsync("/barcode", [scannedCode], handler: { product in
+            if let pr = product{
+                let prefs = UserDefaults.standard
+                var basket = prefs.dictionary(forKey: "basket") as! [String: [String]]
+                if let item = basket[pr[0][0]]{
+                    basket.updateValue([String(Int(pr[0][0])! + Int(item[0])!), pr[0][4]], forKey: pr[0][0])
+                } else {
+                    basket.updateValue([pr[0][0], pr[0][4]], forKey: pr[0][0])
+                }
+                prefs.set(scannedCode, forKey: "barcode")
+            }
+            self.dismiss(animated: true, completion: nil)
+        })
 //        if(self.navigationController?.isMovingFromParentViewController)!{
-            self.navigationController?.pushViewController(basketViewController, animated: true)
+        //let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
+            //self.navigationController?.pushViewController(basketViewController, animated: true)
+        
 //        } else {
 //            let toDonatorController = storyboard?.instantiateViewController(withIdentifier: "collection")
 //            self.navigationController?.popToViewController(toDonatorController!, animated: true)

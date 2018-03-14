@@ -19,8 +19,14 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
 override func viewWillAppear(_ animated: Bool) {
     tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
     tabBarController!.navigationItem.rightBarButtonItem!.title = "לסל תרומות"
+    tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
     
-        tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
+    let prefs = UserDefaults.standard
+    if let _ = prefs.string(forKey: "barcode"){
+        prefs.removeObject(forKey: "barcode")
+        let basketViewController = storyboard?.instantiateViewController(withIdentifier: "basket") as! DonationsBasketController
+        self.navigationController?.pushViewController(basketViewController, animated: true)
+    }
 }
     override func viewDidAppear(_ animated: Bool) {
         tabBarController!.title = tabBarItem!.title
