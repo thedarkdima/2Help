@@ -3,7 +3,7 @@ import UIKit
 class MessengersListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var requests: [[String]] = [[]]
-    @IBOutlet weak var requestsList: UITableView!
+    @IBOutlet var requestsList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
