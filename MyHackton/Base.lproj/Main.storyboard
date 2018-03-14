@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-cZ-JYv">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="532"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bki-DT-UoF">
                                         <rect key="frame" x="0.0" y="200" width="414" height="244"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
-                                <rect key="frame" x="153.66666666666666" y="161" width="106.99999999999997" height="34"/>
+                                <rect key="frame" x="153.66666666666666" y="154" width="106.99999999999997" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="בקשה לתרומה"/>
                                 <connections>
@@ -96,12 +96,13 @@
                             <constraint firstItem="S0L-cZ-JYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6sT-v4-u64"/>
                             <constraint firstItem="ANG-LM-4ms" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="top" id="7xe-cP-IND"/>
                             <constraint firstItem="S0L-cZ-JYv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9do-6p-iXx"/>
-                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="bottom" constant="39" id="C6f-3F-nww"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="GBH-db-1hl"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="top" secondItem="QuY-JS-gNA" secondAttribute="bottom" constant="16" id="Hb9-wk-L7n"/>
                             <constraint firstItem="2OX-7I-c21" firstAttribute="leading" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="62" id="Kuc-o6-Ogl"/>
-                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P2e-i4-Pbg"/>
+                            <constraint firstItem="S0L-cZ-JYv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="P2e-i4-Pbg"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="ANG-LM-4ms" secondAttribute="trailing" constant="62" id="TIp-Hu-47P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="149" id="b7Z-kv-6K3"/>
+                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="bottom" constant="32" id="cLR-LQ-UFB"/>
                             <constraint firstItem="Usr-C0-maa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ide-G3-0Ai"/>
                             <constraint firstItem="S0L-cZ-JYv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jiN-3x-EEp"/>
                             <constraint firstItem="ANG-LM-4ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vN6-Qf-dLU"/>
