@@ -9,8 +9,10 @@ class ContactUsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
     }
     
     
