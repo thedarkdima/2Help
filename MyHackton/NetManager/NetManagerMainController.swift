@@ -1,6 +1,6 @@
 import UIKit
 
-class NetManagerMain: UIViewController {
+class NetManagerMainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
