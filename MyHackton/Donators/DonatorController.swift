@@ -17,6 +17,9 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     ////
     
 override func viewWillAppear(_ animated: Bool) {
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+    self.productsCollectionView.backgroundColor = UIColor.clear
+    
     tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
     tabBarController!.navigationItem.rightBarButtonItem!.title = "לסל תרומות"
     tabBarController!.navigationItem.backBarButtonItem?.title = "חזור"
@@ -31,6 +34,7 @@ override func viewWillAppear(_ animated: Bool) {
     override func viewDidAppear(_ animated: Bool) {
         tabBarController!.title = tabBarItem!.title
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
+
 
     }
     
@@ -117,11 +121,13 @@ override func viewDidLoad(){
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
+        
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{
             //Get image from user defaults
             if let prefImageData = UserDefaults.standard.object(forKey: productsImagesArray[indexPath.item]){
                 cell.ProductImageView.image = UIImage(data: prefImageData as! Data)
+                cell.backgroundColor = UIColor.clear
             }
         }
         return  cell
@@ -133,6 +139,7 @@ override func viewDidLoad(){
         
         //save the title of the product
         productName = productsNamesArray[indexPath.row]
+        
     
         //move the title to the next page so it can be used as page title
         productsList.setTitle(title: productName!)

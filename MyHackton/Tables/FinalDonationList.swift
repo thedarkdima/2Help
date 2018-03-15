@@ -5,6 +5,7 @@ class FinalDonationList: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

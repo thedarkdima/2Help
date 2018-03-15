@@ -10,6 +10,9 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
     
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        self.table.backgroundColor = UIColor.clear
+        
         tabBarController?.navigationItem.title = tabBarItem.title
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck) )

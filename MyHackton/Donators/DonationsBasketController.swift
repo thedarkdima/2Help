@@ -20,11 +20,20 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         let nextPage = storyboard!.instantiateViewController(withIdentifier: "donator_details")
         navigationController?.pushViewController(nextPage, animated: true)
         //show(nextPage, sender: true)
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        
+    }
+    
     
     let prefs = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if manager{
             if let tok = prefs.string(forKey: "token"){
                 token = tok
@@ -115,6 +124,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.backgroundColor = UIColor.clear
         if(manager){
             if items.count > 0{
                 if items[0].count > 0{
@@ -134,6 +144,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         if let _ = prefs.string(forKey: "barcode"){
             self.navigationController?.popViewController(animated: false)
         }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -151,6 +162,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             //Getting images from UserDefaults if they exist
             if let prefImageData = UserDefaults.standard.object(forKey: basket[key]![1]){
                 cell.product_image.image = UIImage(data: prefImageData as! Data)
+                cell.backgroundColor = UIColor.clear
             }
         }
         return cell

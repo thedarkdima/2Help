@@ -9,6 +9,7 @@ class MessengerListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
 
     @IBAction func toBasket(_ sender: Any) {

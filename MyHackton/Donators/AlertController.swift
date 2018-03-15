@@ -31,6 +31,10 @@ class AlertController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+    }
+    
     //get the lables values from the previous viewController
     func set(name : String, phone : String, address : String, openHours : String){
         self.name = name

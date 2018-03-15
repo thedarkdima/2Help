@@ -11,6 +11,10 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     var locations : [[String]]!
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        self.table.backgroundColor = UIColor.clear
+
+        
                 tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = false
                 tabBarController!.navigationItem.rightBarButtonItem!.title = ""
         
@@ -47,10 +51,12 @@ class DonatorDirectionsController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
             let adressesCell = tableView.dequeueReusableCell(withIdentifier: "address_cell") as! DonatorAddressCell
+        
             
             adressesCell.address_name.text = directionsList[indexPath.row]
             adressesCell.index = indexPath.row
             adressesCell.setController(donatordirectController: self)
+            
             return adressesCell
         
     }

@@ -38,6 +38,7 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
     
     //table functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.backgroundColor = UIColor.clear
         if(requests.count > 0 && requests[0].count > 0){
             return requests.count
         } else {
