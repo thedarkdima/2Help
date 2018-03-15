@@ -115,6 +115,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let flowLayout = UPCarouselFlowLayout()
         
         flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-30, height: collectionView.frame.size.height-50)
+        
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
