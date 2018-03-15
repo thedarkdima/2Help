@@ -21,6 +21,11 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         setCollectionViewProperties()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        collectionView.backgroundColor = UIColor.clear
+        
+    }
 
     @IBAction func toSafari(_ sender: UIButton) {
         let url = URL(string: "https://www.2help.org.il/food")!

@@ -12,7 +12,7 @@ class DailyReportController: UIViewController, UITableViewDataSource,UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
     }
     
   

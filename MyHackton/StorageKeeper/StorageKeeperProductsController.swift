@@ -12,6 +12,7 @@ class StorageKeeperProductsController: UIViewController, UITableViewDataSource, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
         tabBarController?.navigationItem.leftBarButtonItem = b

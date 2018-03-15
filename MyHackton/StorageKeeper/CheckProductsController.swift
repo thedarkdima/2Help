@@ -8,6 +8,10 @@ class CheckProductsController: UIViewController,UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+    }
 
     
     //table view functions//
