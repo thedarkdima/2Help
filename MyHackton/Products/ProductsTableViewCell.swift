@@ -13,6 +13,7 @@ class ProductsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         count = 0
         counter.text = "\(count)"
+        backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
     
      func setName(name: String){

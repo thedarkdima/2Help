@@ -17,10 +17,14 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     override func viewWillAppear(_ animated: Bool) {
         notice.isHidden = true
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

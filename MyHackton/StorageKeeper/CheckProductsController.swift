@@ -18,7 +18,7 @@ class CheckProductsController: UIViewController,UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
-    
+    //calibri','cf_1',Arial,Helvetica,sans-serif
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "check_products") as! ProductsTableViewCell
         

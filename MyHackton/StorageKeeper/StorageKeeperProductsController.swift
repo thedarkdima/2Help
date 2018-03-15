@@ -13,6 +13,8 @@ class StorageKeeperProductsController: UIViewController, UITableViewDataSource, 
     
     var cellItems: [String: Int] = [:]
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        tableView.backgroundColor = UIColor.clear
         let cell = tableView.dequeueReusableCell(withIdentifier: "products_cell")! as! ProductsTableViewCell
         if items[0].count > 0{
             if cell.name.text! != "מוצרים"{

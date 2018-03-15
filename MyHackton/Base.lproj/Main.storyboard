@@ -13,8 +13,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArialHB.ttc">
-            <string>ArialHebrew</string>
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -26,32 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-C0-maa">
-                                <rect key="frame" x="149" y="86" width="116" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="תרום">
-                                    <color key="titleColor" red="0.27331248966566846" green="1" blue="0.41417384108310684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LLR-Cc-Vqb" kind="show" id="4vb-Hd-qGj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-7I-c21">
-                                <rect key="frame" x="327" y="86" width="71" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="צור קשר"/>
-                                <connections>
-                                    <segue destination="fCY-QA-bCF" kind="show" id="19U-TV-2eL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-LM-4ms">
-                                <rect key="frame" x="16" y="86" width="71" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="התחבר"/>
-                                <connections>
-                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="ar9-vj-BWV"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8l-9X-ApP">
                                 <rect key="frame" x="0.0" y="388" width="414" height="328"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,7 +39,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="hOJ-On-CB2" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionCell" id="hOJ-On-CB2" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="348" height="252"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -79,37 +53,83 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="oAv-af-1FS"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
-                                <rect key="frame" x="32" y="184" width="350" height="84"/>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
+                                <rect key="frame" x="97" y="264" width="220" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="LAu-Aq-F5d"/>
-                                    <constraint firstAttribute="height" constant="84" id="NyS-oT-YQw"/>
+                                    <constraint firstAttribute="width" constant="220" id="LAu-Aq-F5d"/>
+                                    <constraint firstAttribute="height" constant="70" id="NyS-oT-YQw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                 <state key="normal" title="בקשה לתרומה" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lhg-IJ-xny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-OB-Hc6">
+                                <rect key="frame" x="97" y="164" width="220" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="cnc-VI-aqt"/>
+                                    <constraint firstAttribute="height" constant="70" id="xUZ-Zv-h7U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="אני רוצה לתרום" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mj-Yr-XVg"/>
+                                    <segue destination="LLR-Cc-Vqb" kind="show" id="h1G-5C-kN4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-bT-4kA">
+                                <rect key="frame" x="298" y="80" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GVb-lC-qUv"/>
+                                    <constraint firstAttribute="height" constant="40" id="PC5-0c-O5D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="צור קשר" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9h-pt-fgI"/>
+                                    <segue destination="fCY-QA-bCF" kind="show" id="q9N-08-gnV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-5G-bKq">
+                                <rect key="frame" x="20" y="80" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CAY-pC-emn"/>
+                                    <constraint firstAttribute="height" constant="40" id="joS-Ic-fOJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="כניסה למערכת" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x2-jn-4HL"/>
+                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVV-ga-1zV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q8l-9X-ApP" secondAttribute="bottom" constant="20" id="2FK-nl-Gc3"/>
-                            <constraint firstItem="2OX-7I-c21" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="top" id="6OS-Vc-mVv"/>
-                            <constraint firstItem="ANG-LM-4ms" firstAttribute="top" secondItem="Usr-C0-maa" secondAttribute="top" id="7xe-cP-IND"/>
-                            <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="GBH-db-1hl"/>
-                            <constraint firstItem="2OX-7I-c21" firstAttribute="leading" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="62" id="Kuc-o6-Ogl"/>
-                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Roa-mV-6E4"/>
-                            <constraint firstItem="Usr-C0-maa" firstAttribute="leading" secondItem="ANG-LM-4ms" secondAttribute="trailing" constant="62" id="TIp-Hu-47P"/>
+                            <constraint firstItem="r0C-OB-Hc6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="JDh-dj-Lek"/>
+                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Roa-mV-6E4"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YLg-Nu-60c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Usr-C0-maa" secondAttribute="trailing" constant="149" id="b7Z-kv-6K3"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZI-uo-Tas"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRm-3X-1pG"/>
-                            <constraint firstItem="Usr-C0-maa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ide-G3-0Ai"/>
-                            <constraint firstItem="ANG-LM-4ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vN6-Qf-dLU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2OX-7I-c21" secondAttribute="trailing" constant="16" id="x8q-Al-bRP"/>
+                            <constraint firstItem="aGk-bT-4kA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ikx-TK-ULs"/>
+                            <constraint firstItem="W8r-5G-bKq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="kNa-AG-20t"/>
+                            <constraint firstItem="r0C-OB-Hc6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oKW-T5-XbE"/>
+                            <constraint firstItem="W8r-5G-bKq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xxp-fK-GVp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGk-bT-4kA" secondAttribute="trailing" constant="16" id="yOd-Xn-kPg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
