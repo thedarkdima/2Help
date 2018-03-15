@@ -80,7 +80,6 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mj-Yr-XVg"/>
                                     <segue destination="LLR-Cc-Vqb" kind="show" id="h1G-5C-kN4"/>
                                 </connections>
                             </button>
@@ -96,7 +95,6 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9h-pt-fgI"/>
                                     <segue destination="fCY-QA-bCF" kind="show" id="q9N-08-gnV"/>
                                 </connections>
                             </button>
@@ -113,7 +111,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x2-jn-4HL"/>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVV-ga-1zV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1309,8 +1306,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-pw-AWk">
-                                <rect key="frame" x="14" y="74" width="180.66666666666666" height="38"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <rect key="frame" x="14" y="74" width="180.66666666666666" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="0507888094">
                                     <color key="titleColor" name="textColor"/>
                                 </state>
@@ -1319,41 +1316,46 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
-                                <rect key="frame" x="16" y="119.00000000000001" width="382" height="25.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="16" y="107" width="382" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-qZ-HKZ">
-                                <rect key="frame" x="164.66666666666666" y="637" width="85" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="סרוק ברקוד"/>
+                                <rect key="frame" x="115" y="629" width="184" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="mhH-yD-cHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="סרוק ברקוד" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="scanBarcode:" destination="r1q-tO-wfY" eventType="touchUpInside" id="Qny-5K-ELN"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-pM-0Lw">
-                                <rect key="frame" x="8" y="152" width="398" height="469"/>
+                                <rect key="frame" x="8" y="140.66666666666666" width="398" height="480.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QmG-cT-7ge">
-                                    <size key="itemSize" width="179" height="166"/>
+                                    <size key="itemSize" width="174" height="154"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="product_cell" reuseIdentifier="product_cell" id="gJ8-Pk-AJO" customClass="ProductsCollectionViewCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="166"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="179" height="166"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H10-wr-kdY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="125"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-87-h17">
-                                                    <rect key="frame" x="67" y="141" width="44.666666666666657" height="21"/>
+                                                    <rect key="frame" x="64.666666666666671" y="129" width="44.666666666666671" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1382,7 +1384,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="top" secondItem="Sdh-pM-0Lw" secondAttribute="bottom" constant="16" id="1kb-EM-gHI"/>
+                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="top" secondItem="Sdh-pM-0Lw" secondAttribute="bottom" constant="8" id="1kb-EM-gHI"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="mXF-pw-AWk" secondAttribute="trailing" constant="4" id="A2X-wG-yfl"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="14" id="Ax3-Jw-YVu"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="16" id="DrO-T6-rtT"/>
@@ -1390,8 +1392,9 @@
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="fws-br-Ga3" secondAttribute="trailing" constant="16" id="JXh-ZI-zqJ"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="8" id="OBZ-IM-lca"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="7.5" id="Qzx-UX-jO9"/>
+                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="width" secondItem="S55-Lc-Siz" secondAttribute="height" multiplier="1:4" id="dl9-7k-OgT"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
-                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="16" id="iDv-8R-hHz"/>
+                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="4" id="iDv-8R-hHz"/>
                             <constraint firstItem="fws-br-Ga3" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="jpj-NB-aeU"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="Sdh-pM-0Lw" secondAttribute="trailing" constant="8" id="pHO-oL-qOi"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="Hmt-qZ-HKZ" secondAttribute="bottom" constant="16" id="pSy-KS-9CH"/>
@@ -1406,7 +1409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjw-jy-7vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="-1528"/>
+            <point key="canvasLocation" x="2860.8695652173915" y="-1528.5326086956522"/>
         </scene>
         <!--מוצרים-->
         <scene sceneID="u2r-Ml-ZPL">

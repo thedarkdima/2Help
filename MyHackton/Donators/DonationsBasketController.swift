@@ -26,6 +26,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     override func viewWillAppear(_ animated: Bool) {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
+        
     }
     
     
@@ -145,9 +146,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             self.navigationController?.popViewController(animated: false)
         }
         
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.reloadData()
         let cell = tableView.dequeueReusableCell(withIdentifier: "products_cell")! as! ProductsTableViewCell
         cell.manager = manager
         if manager{
