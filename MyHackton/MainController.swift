@@ -67,14 +67,14 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         switch(job){
                         case "שליח":
                             print("שליח")
-                            self.ConnectAsDeliveryGuy()
+                            self.ConnectAsDeliveryGuy(true)
                             break
                         case "מחסנאי":
                             print("מחסנאי")
-                            self.ConnectAsStorageKeeper()
+                            self.ConnectAsStorageKeeper(true)
                             break
                         case "מנהל רשת":
-                            print("good job")
+                            self.ConnectAsNetManager(true)
                             break
                         default:
                             print("not found")
@@ -93,14 +93,21 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         present(alert , animated: true, completion: nil)
         }
     
-    private func ConnectAsDeliveryGuy(){
+    private func ConnectAsDeliveryGuy(_ animation: Bool){
         let next = storyboard!.instantiateViewController(withIdentifier: "mapAddress")
-        show(next, sender: self)
+        navigationController?.pushViewController(next, animated: animation)
     }
     
-    private func ConnectAsStorageKeeper(){
+    private func ConnectAsStorageKeeper(_ animation: Bool){
         let next = storyboard!.instantiateViewController(withIdentifier: "storage_main")
-        show(next, sender: self)
+        navigationController?.pushViewController(next, animated: animation)
+    }
+    
+    private func ConnectAsNetManager(_ animation: Bool){
+        let next = storyboard!.instantiateViewController(withIdentifier: "net_manager")
+        //navigationController?.pushViewController(next, animated: animation)
+        //present(next , animated: animation, completion: nil)
+        navigationController?.pushViewController(next, animated: animation)
     }
     
     
