@@ -34,7 +34,6 @@
 		901F33472059853900A73605 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F33462059853900A73605 /* WallpaperWindow.swift */; };
 		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
-		905122A2205A9C4A00AF6E92 /* StorageKeeperMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */; };
 		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
 		909349EB20430CC7003AFE09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909349EA20430CC7003AFE09 /* CoreLocation.framework */; };
 		90C9473A204EAA8700B21ACD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C94739204EAA8700B21ACD /* MapKit.framework */; };
@@ -46,7 +45,10 @@
 		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
 		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
 		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
-		D2536E95205A8D5200D1B5E8 /* NetManagerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */; };
+		D2536E95205A8D5200D1B5E8 /* NetManagerMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E94205A8D5200D1B5E8 /* NetManagerMainController.swift */; };
+		D2536E97205AABFB00D1B5E8 /* NetManagerInfoContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */; };
+		D2536E99205AAEDA00D1B5E8 /* NetManagerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */; };
+		D2536E9C205AB19200D1B5E8 /* NetManagerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */; };
 		D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
@@ -82,7 +84,6 @@
 		901F33462059853900A73605 /* WallpaperWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperWindow.swift; sourceTree = "<group>"; };
 		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageKeeperMainController.swift; path = "../../../../FinalProjectIBM 2/2Help/MyHackton/StorageKeeper/StorageKeeperMainController.swift"; sourceTree = "<group>"; };
 		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
 		909349EA20430CC7003AFE09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		90C94739204EAA8700B21ACD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -94,7 +95,10 @@
 		90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationListCell.swift; sourceTree = "<group>"; };
 		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
 		90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
-		D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerMain.swift; sourceTree = "<group>"; };
+		D2536E94205A8D5200D1B5E8 /* NetManagerMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerMainController.swift; sourceTree = "<group>"; };
+		D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerInfoContorller.swift; sourceTree = "<group>"; };
+		D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerTableController.swift; sourceTree = "<group>"; };
+		D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerTableCell.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +125,6 @@
 				4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */,
 				4598EF7A20430EBA0069B351 /* DailyReportCell.swift */,
 				45F9D25520501FFC00649C52 /* CheckProductsController.swift */,
-				905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */,
 			);
 			path = StorageKeeper;
 			sourceTree = "<group>";
@@ -260,7 +263,10 @@
 		D2536E8D205A85CF00D1B5E8 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
-				D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */,
+				D2536E94205A8D5200D1B5E8 /* NetManagerMainController.swift */,
+				D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */,
+				D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */,
+				D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -341,13 +347,14 @@
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
 				901F33472059853900A73605 /* WallpaperWindow.swift in Sources */,
 				4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */,
-				905122A2205A9C4A00AF6E92 /* StorageKeeperMainController.swift in Sources */,
 				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
 				4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
 				90EA35CE2039ACE8006718D6 /* ProductsListController.swift in Sources */,
+				D2536E99205AAEDA00D1B5E8 /* NetManagerTableController.swift in Sources */,
 				456CA825204EF095002D8076 /* DonationsBasketController.swift in Sources */,
 				902707C52029EC00005AF37B /* Request.swift in Sources */,
+				D2536E97205AABFB00D1B5E8 /* NetManagerInfoContorller.swift in Sources */,
 				458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */,
 				902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */,
 				45A964922019D91000D173BC /* MyHackton.xcdatamodeld in Sources */,
@@ -356,7 +363,7 @@
 				45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */,
-				D2536E95205A8D5200D1B5E8 /* NetManagerMain.swift in Sources */,
+				D2536E95205A8D5200D1B5E8 /* NetManagerMainController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
 				4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
@@ -371,6 +378,7 @@
 				458A030B205AA42C008F48BC /* MainController.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
 				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
+				D2536E9C205AB19200D1B5E8 /* NetManagerTableCell.swift in Sources */,
 				4598EF7B20430EBA0069B351 /* DailyReportCell.swift in Sources */,
 				90E17576202360FF0062453D /* DeliveryRequestController.swift in Sources */,
 				454A75972059A1D30096A550 /* UPCarouselFlowLayout.swift in Sources */,
