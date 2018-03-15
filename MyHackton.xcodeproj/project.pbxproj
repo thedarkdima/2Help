@@ -49,6 +49,7 @@
 		D2536E97205AABFB00D1B5E8 /* NetManagerInfoContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */; };
 		D2536E99205AAEDA00D1B5E8 /* NetManagerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */; };
 		D2536E9C205AB19200D1B5E8 /* NetManagerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */; };
+		D2536E9E205ADE6600D1B5E8 /* NetManagerUsersContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E9D205ADE6600D1B5E8 /* NetManagerUsersContorller.swift */; };
 		D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerInfoContorller.swift; sourceTree = "<group>"; };
 		D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerTableController.swift; sourceTree = "<group>"; };
 		D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerTableCell.swift; sourceTree = "<group>"; };
+		D2536E9D205ADE6600D1B5E8 /* NetManagerUsersContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerUsersContorller.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +269,7 @@
 				D2536E96205AABFB00D1B5E8 /* NetManagerInfoContorller.swift */,
 				D2536E98205AAEDA00D1B5E8 /* NetManagerTableController.swift */,
 				D2536E9B205AB19200D1B5E8 /* NetManagerTableCell.swift */,
+				D2536E9D205ADE6600D1B5E8 /* NetManagerUsersContorller.swift */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				4598EF7520430B890069B351 /* MessengersListController.swift in Sources */,
 				45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
+				D2536E9E205ADE6600D1B5E8 /* NetManagerUsersContorller.swift in Sources */,
 				D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */,
 				D2536E95205A8D5200D1B5E8 /* NetManagerMainController.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
