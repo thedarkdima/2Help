@@ -37,7 +37,7 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
         if type != nil && type != " "{
             let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_table") as! NetManagerTableController
             next.type = type
-            next.toDo = "change"
+            next.toDo = "update"
             navigationController?.pushViewController(next, animated: true)
         }
     }
