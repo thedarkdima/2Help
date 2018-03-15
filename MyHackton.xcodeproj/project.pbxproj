@@ -34,6 +34,7 @@
 		901F33472059853900A73605 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F33462059853900A73605 /* WallpaperWindow.swift */; };
 		902707C32029D851005AF37B /* DeliveryRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C22029D851005AF37B /* DeliveryRequestCell.swift */; };
 		902707C52029EC00005AF37B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902707C42029EC00005AF37B /* Request.swift */; };
+		905122A2205A9C4A00AF6E92 /* StorageKeeperMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */; };
 		907BF123203C75330095F60D /* MapAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907BF122203C75330095F60D /* MapAddressController.swift */; };
 		909349EB20430CC7003AFE09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909349EA20430CC7003AFE09 /* CoreLocation.framework */; };
 		90C9473A204EAA8700B21ACD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C94739204EAA8700B21ACD /* MapKit.framework */; };
@@ -80,6 +81,7 @@
 		901F33462059853900A73605 /* WallpaperWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperWindow.swift; sourceTree = "<group>"; };
 		902707C22029D851005AF37B /* DeliveryRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryRequestCell.swift; sourceTree = "<group>"; };
 		902707C42029EC00005AF37B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageKeeperMainController.swift; path = "../../../../FinalProjectIBM 2/2Help/MyHackton/StorageKeeper/StorageKeeperMainController.swift"; sourceTree = "<group>"; };
 		907BF122203C75330095F60D /* MapAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressController.swift; sourceTree = "<group>"; };
 		909349EA20430CC7003AFE09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		90C94739204EAA8700B21ACD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */,
 				4598EF7A20430EBA0069B351 /* DailyReportCell.swift */,
 				45F9D25520501FFC00649C52 /* CheckProductsController.swift */,
+				905122A1205A9C4A00AF6E92 /* StorageKeeperMainController.swift */,
 			);
 			path = StorageKeeper;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */,
 				901F33472059853900A73605 /* WallpaperWindow.swift in Sources */,
 				4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */,
+				905122A2205A9C4A00AF6E92 /* StorageKeeperMainController.swift in Sources */,
 				90EA35CC2039AC99006718D6 /* ProductsTableViewCell.swift in Sources */,
 				4598EF7920430D680069B351 /* StorageKeeperProductsController.swift in Sources */,
 				45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */,
