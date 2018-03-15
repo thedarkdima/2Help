@@ -24,6 +24,10 @@ class DonatorsStatusController: UIViewController {
         donatorDateLbl.text = String(donator.getDate().prefix(donator.getDate().count - 5))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+    }
+    
     @IBAction func returnDeliveryBack(_ sender: UIButton) {
         //by clicking the button - and pressing confirm in the alert, the request will be send back to the map
         let alert = UIAlertController(title: "אשר החזרת משלוח", message: "האם אתה בטוח שברצונך להחזיר את המשלוח לרשימת המשלוחים במפה?", preferredStyle: .alert)

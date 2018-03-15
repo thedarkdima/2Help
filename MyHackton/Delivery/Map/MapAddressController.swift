@@ -121,8 +121,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     
     func mylocation(){
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        //let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
-        let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
+        //let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         self.MyMap.setRegion(region, animated: false)

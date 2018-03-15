@@ -6,6 +6,7 @@ class DailyReportController: UIViewController, UITableViewDataSource,UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.backgroundColor = UIColor.clear
         let cell = tableView.dequeueReusableCell(withIdentifier: "daily_report_cell")!
         
         return cell
