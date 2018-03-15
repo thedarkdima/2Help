@@ -14,7 +14,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         setCollectionViewProperties()
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.alwaysBounceHorizontal = false
+        
         if let token = prefs.string(forKey: "token"){
             ServerConnections.getDoubleArrayAsync("/token_login", [token], handler: {array in
                 if let arr = array{
@@ -144,16 +144,18 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func setCollectionViewProperties(){
         
         collectionView.register(UINib.init(nibName: "collecViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
+        collectionView.backgroundColor = UIColor.clear
         
         let flowLayout = UPCarouselFlowLayout()
         
-        flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-30, height: collectionView.frame.size.height-50)
+        flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-40, height: collectionView.frame.size.height)
         
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
         flowLayout.spacingMode = .fixed(spacing: 5.0)
         collectionView.collectionViewLayout = flowLayout
+        
         
     }
     
@@ -166,9 +168,22 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let urlsRequests = URLRequest(url: cell.urls[indexPath.item])
         cell.webView.load(urlsRequests)
+       
+        
+        cell.webView.scrollView.isScrollEnabled = false
         
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let c = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! collecViewCell
+//        if c.urls[1] == URL(string: "https://www.youtube.com/embed/ucts039wCPo"){
+//            print("asdasdasd")
+//            c.opacityView.removeFromSuperview()
+//        }
+//    }
+//
+    
     
     ////
         

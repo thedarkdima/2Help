@@ -15,6 +15,7 @@
     <customFonts key="customFonts">
         <array key="Helvetica.ttc">
             <string>Helvetica-Bold</string>
+            <string>Helvetica-BoldOblique</string>
         </array>
     </customFonts>
     <scenes>
@@ -27,23 +28,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8l-9X-ApP">
-                                <rect key="frame" x="0.0" y="388" width="414" height="328"/>
+                                <rect key="frame" x="0.0" y="390" width="414" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="328" id="WhK-cR-CJb"/>
+                                    <constraint firstAttribute="height" constant="250" id="WhK-cR-CJb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bUk-Gr-Ycu">
-                                    <size key="itemSize" width="348" height="252"/>
+                                    <size key="itemSize" width="412" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionCell" id="hOJ-On-CB2" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="38" width="348" height="252"/>
+                                        <rect key="frame" x="0.0" y="-32.666666666666664" width="412" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="252"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="315"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
@@ -54,12 +55,12 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuY-JS-gNA">
-                                <rect key="frame" x="97" y="264" width="220" height="70"/>
+                                <rect key="frame" x="137" y="660" width="140" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="LAu-Aq-F5d"/>
-                                    <constraint firstAttribute="height" constant="70" id="NyS-oT-YQw"/>
+                                    <constraint firstAttribute="width" constant="140" id="LAu-Aq-F5d"/>
+                                    <constraint firstAttribute="height" constant="60" id="NyS-oT-YQw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
                                 <state key="normal" title="בקשה לתרומה" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-OB-Hc6">
-                                <rect key="frame" x="97" y="164" width="220" height="70"/>
+                                <rect key="frame" x="97" y="288" width="220" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="cnc-VI-aqt"/>
                                     <constraint firstAttribute="height" constant="70" id="xUZ-Zv-h7U"/>
@@ -84,24 +85,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-bT-4kA">
-                                <rect key="frame" x="298" y="80" width="100" height="40"/>
+                                <rect key="frame" x="288" y="80" width="110" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="GVb-lC-qUv"/>
+                                    <constraint firstAttribute="width" constant="110" id="GVb-lC-qUv"/>
                                     <constraint firstAttribute="height" constant="40" id="PC5-0c-O5D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="צור קשר" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="fCY-QA-bCF" kind="show" id="q9N-08-gnV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-5G-bKq">
-                                <rect key="frame" x="20" y="80" width="100" height="40"/>
+                                <rect key="frame" x="20" y="80" width="110" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="CAY-pC-emn"/>
+                                    <constraint firstAttribute="width" constant="110" id="CAY-pC-emn"/>
                                     <constraint firstAttribute="height" constant="40" id="joS-Ic-fOJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -116,9 +116,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q8l-9X-ApP" secondAttribute="bottom" constant="20" id="2FK-nl-Gc3"/>
-                            <constraint firstItem="r0C-OB-Hc6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="JDh-dj-Lek"/>
-                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Roa-mV-6E4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QuY-JS-gNA" secondAttribute="bottom" constant="16" id="8Ys-Rd-WqS"/>
+                            <constraint firstItem="q8l-9X-ApP" firstAttribute="top" secondItem="r0C-OB-Hc6" secondAttribute="bottom" constant="32" id="IgG-GW-bp9"/>
+                            <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="q8l-9X-ApP" secondAttribute="bottom" constant="20" id="NM5-Ix-cBe"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YLg-Nu-60c"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZI-uo-Tas"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRm-3X-1pG"/>
