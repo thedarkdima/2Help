@@ -65,7 +65,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="hOJ-On-CB2">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="hOJ-On-CB2" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="348" height="252"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1676,7 +1676,6 @@
         <!--סל תרומות-->
         <scene sceneID="0uI-yE-BXi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hih-4e-5ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="check_products" id="wwL-Lw-V3r" customClass="DonationsBasketController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8y0-BF-ELZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -1789,6 +1788,7 @@
                         <outlet property="table" destination="7tM-4y-h2G" id="DiI-tr-O9B"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hih-4e-5ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="330" y="1762"/>
         </scene>

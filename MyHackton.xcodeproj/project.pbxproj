@@ -12,12 +12,12 @@
 		454A759320599BF60096A550 /* collecViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454A759120599BF60096A550 /* collecViewCell.xib */; };
 		454A75972059A1D30096A550 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A75962059A1D30096A550 /* UPCarouselFlowLayout.swift */; };
 		455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1807201F564E0002E7D0 /* AsyncTask.swift */; };
-		455B180A201F5CB90002E7D0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B180D201F69AA0002E7D0 /* AddDetailsController.swift */; };
 		4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560D1BB202A0BAB002DF7F4 /* DailyReportController.swift */; };
 		456CA825204EF095002D8076 /* DonationsBasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA824204EF095002D8076 /* DonationsBasketController.swift */; };
 		45743269202851C000CB39BB /* DonatorsStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45743268202851C000CB39BB /* DonatorsStatusController.swift */; };
 		45745BBC2020CA65003C6901 /* DonatorDirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45745BBB2020CA65003C6901 /* DonatorDirectionsController.swift */; };
+		458A030B205AA42C008F48BC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B1809201F5CB90002E7D0 /* MainController.swift */; };
 		458C203E2039AFFF00AA1CF4 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C203D2039AFFF00AA1CF4 /* AlertController.swift */; };
 		4598EF7520430B890069B351 /* MessengersListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7420430B890069B351 /* MessengersListController.swift */; };
 		4598EF7720430C640069B351 /* MessengerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598EF7620430C640069B351 /* MessengerListCell.swift */; };
@@ -360,11 +360,11 @@
 				D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */,
 				45A9648A2019D91000D173BC /* AppDelegate.swift in Sources */,
 				454A759220599BF60096A550 /* collecViewCell.swift in Sources */,
-				455B180A201F5CB90002E7D0 /* MainController.swift in Sources */,
 				45A41195202368BB003536A1 /* ContactUsController.swift in Sources */,
 				90EBD74E2035D78100A60FCF /* FinalDonationList.swift in Sources */,
 				90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */,
 				452550652044082F0058D80B /* StorageKeeperProductsCell.swift in Sources */,
+				458A030B205AA42C008F48BC /* MainController.swift in Sources */,
 				90E1757420230EF30062453D /* DonatorAddressCell.swift in Sources */,
 				90EBD7532035E01200A60FCF /* blank.swift in Sources */,
 				4598EF7B20430EBA0069B351 /* DailyReportCell.swift in Sources */,

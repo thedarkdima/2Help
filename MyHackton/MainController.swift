@@ -4,21 +4,42 @@ import SafariServices
 
 class MainController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
-    
-
     @IBOutlet var collectionView: UICollectionView!
-    var collectionVideos : [UIImage] = []
+    //var collectionVideos : [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
         
-        collectionView.showsHorizontalScrollIndicator = false
-        
-       
         setCollectionViewProperties()
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.alwaysBounceHorizontal = false
+        if let token = prefs.string(forKey: "token"){
+            ServerConnections.getDoubleArrayAsync("/token_login", [token], handler: {array in
+                if let arr = array{
+                    if(arr.count > 0){
+                        //Job
+                        let job = arr[0][0]
+                        switch(job){
+                        case "שליח":
+                            print("שליח")
+                            self.ConnectAsDeliveryGuy(false)
+                            break
+                        case "מחסנאי":
+                            print("מחסנאי")
+                            self.ConnectAsStorageKeeper(false)
+                            break
+                        case "מנהל רשת":
+                            print("מנהל רשת")
+                            self.ConnectAsNetManager(false)
+                            break
+                        default:
+                            print("Old token")
+                        }
+                    }}
+            })
+        }
     }
     
 
