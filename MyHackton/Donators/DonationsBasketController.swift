@@ -27,6 +27,8 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
         
+        
+        
     }
     
     
@@ -55,6 +57,11 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
                     if Int(basket[key]![0])! < 1{
                         basket.removeValue(forKey: key)
                     }
+                }
+                if (basket.count == 0){
+                    let alert = UIAlertController(title: "סל ריק", message: "אין מוצרים בסל התרומות", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 prefs.set(basket, forKey: "basket")
                 getImages()
@@ -125,6 +132,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
     
     //table view functions//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         tableView.backgroundColor = UIColor.clear
         if(manager){
             if items.count > 0{
@@ -147,10 +155,12 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
         }
         
         
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.reloadData()
+        
+      
         let cell = tableView.dequeueReusableCell(withIdentifier: "products_cell")! as! ProductsTableViewCell
         cell.manager = manager
         if manager{
