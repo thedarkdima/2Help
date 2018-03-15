@@ -119,6 +119,7 @@ override func viewDidLoad(){
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        collectionView.isScrollEnabled = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
         
@@ -136,6 +137,7 @@ override func viewDidLoad(){
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
         let productsList = storyboard!.instantiateViewController(withIdentifier: "productsList") as! ProductsListController
+        
         
         //save the title of the product
         productName = productsNamesArray[indexPath.row]

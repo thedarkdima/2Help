@@ -80,7 +80,6 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mj-Yr-XVg"/>
                                     <segue destination="LLR-Cc-Vqb" kind="show" id="h1G-5C-kN4"/>
                                 </connections>
                             </button>
@@ -96,7 +95,6 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9h-pt-fgI"/>
                                     <segue destination="fCY-QA-bCF" kind="show" id="q9N-08-gnV"/>
                                 </connections>
                             </button>
@@ -113,7 +111,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x2-jn-4HL"/>
-                                    <action selector="toSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVV-ga-1zV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -414,31 +411,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-UM-ojB">
-                                                    <rect key="frame" x="16" y="66.666666666666671" width="350" height="21"/>
+                                                    <rect key="frame" x="16" y="75.333333333333329" width="350" height="12.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-Dc-fU0">
-                                                    <rect key="frame" x="16" y="24" width="101" height="36"/>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-Dc-fU0">
+                                                    <rect key="frame" x="16" y="24" width="120" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="Du4-MA-0VU"/>
-                                                        <constraint firstAttribute="width" constant="101" id="pbI-K9-dOJ"/>
+                                                        <constraint firstAttribute="width" constant="120" id="pbI-K9-dOJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <state key="normal" title="בדוק מוצרים"/>
+                                                    <state key="normal" title="בדוק מוצרים" backgroundImage="2help_Button">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="toBasket:" destination="xb6-Vq-6Zk" eventType="touchUpInside" id="7Po-a0-yTT"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlN-po-DvI">
-                                                    <rect key="frame" x="16" y="59.333333333333343" width="101" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="y3j-fG-5sp"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="16" y="68" width="120" height="27.333333333333329"/>
+                                                    <color key="backgroundColor" red="1" green="0.20015282130000001" blue="0.1410402617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <state key="normal" title="בטל משלוח">
-                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="abortDealivery:" destination="xb6-Vq-6Zk" eventType="touchUpInside" id="jdV-cA-9z2"/>
@@ -453,9 +450,10 @@
                                                 <constraint firstItem="LlN-po-DvI" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="16" id="Wrd-yk-8zv"/>
                                                 <constraint firstAttribute="bottom" secondItem="LlN-po-DvI" secondAttribute="bottom" constant="24.333333333333329" id="aBZ-e3-jBw"/>
                                                 <constraint firstItem="gSK-lT-NM5" firstAttribute="top" secondItem="cOx-GI-Dxb" secondAttribute="top" constant="32" id="aXL-5l-GOs"/>
+                                                <constraint firstItem="LlN-po-DvI" firstAttribute="width" secondItem="ppm-Dc-fU0" secondAttribute="width" id="ckg-OH-vpo"/>
                                                 <constraint firstAttribute="trailing" secondItem="gSK-lT-NM5" secondAttribute="trailing" constant="16" id="ef0-sO-8rO"/>
                                                 <constraint firstItem="iBK-UM-ojB" firstAttribute="leading" secondItem="cOx-GI-Dxb" secondAttribute="leading" constant="16" id="gos-ZQ-ImX"/>
-                                                <constraint firstItem="LlN-po-DvI" firstAttribute="top" secondItem="ppm-Dc-fU0" secondAttribute="bottom" constant="-0.66666666666665719" id="pqa-YY-fDD"/>
+                                                <constraint firstItem="LlN-po-DvI" firstAttribute="top" secondItem="ppm-Dc-fU0" secondAttribute="bottom" constant="8" id="pqa-YY-fDD"/>
                                                 <constraint firstAttribute="trailing" secondItem="iBK-UM-ojB" secondAttribute="trailing" constant="16" id="xna-x3-Xry"/>
                                                 <constraint firstItem="ppm-Dc-fU0" firstAttribute="centerY" secondItem="gSK-lT-NM5" secondAttribute="centerY" id="yn0-0C-dWE"/>
                                             </constraints>
@@ -872,9 +870,15 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0K-8q-zlF">
-                                <rect key="frame" x="165" y="692" width="85" height="28"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="סרוק ברקוד"/>
+                                <rect key="frame" x="115.66666666666669" y="680" width="184" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="LEA-Qa-BI8"/>
+                                    <constraint firstAttribute="width" constant="184" id="R7l-vZ-9Fs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="סרוק ברקוד" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="scanBarcode:" destination="0Sv-Na-Y6n" eventType="touchUpInside" id="BKp-23-maH"/>
                                 </connections>
@@ -882,13 +886,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="o0K-8q-zlF" firstAttribute="centerX" secondItem="bHI-tY-aSQ" secondAttribute="centerX" id="0ju-RQ-hm8"/>
                             <constraint firstItem="bHI-tY-aSQ" firstAttribute="trailing" secondItem="t6s-qM-LOp" secondAttribute="trailing" constant="16" id="6Fs-fR-hSs"/>
                             <constraint firstItem="t6s-qM-LOp" firstAttribute="top" secondItem="bHI-tY-aSQ" secondAttribute="top" constant="32" id="7nd-Ch-3Yx"/>
                             <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="t6s-qM-LOp" secondAttribute="bottom" constant="60" id="Eju-Ut-FzW"/>
-                            <constraint firstItem="o0K-8q-zlF" firstAttribute="centerX" secondItem="bHI-tY-aSQ" secondAttribute="centerX" id="Olb-1Y-BhI"/>
                             <constraint firstItem="t6s-qM-LOp" firstAttribute="leading" secondItem="bHI-tY-aSQ" secondAttribute="leading" constant="16" id="ZSi-ip-bWf"/>
-                            <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="o0K-8q-zlF" secondAttribute="bottom" constant="16" id="b9j-Wj-AAH"/>
-                            <constraint firstItem="o0K-8q-zlF" firstAttribute="top" secondItem="t6s-qM-LOp" secondAttribute="bottom" constant="16" id="mxZ-nf-vlo"/>
+                            <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="o0K-8q-zlF" secondAttribute="bottom" constant="8" id="add-cI-PlF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHI-tY-aSQ"/>
                     </view>
@@ -1378,8 +1381,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-pw-AWk">
-                                <rect key="frame" x="14" y="74" width="180.66666666666666" height="38"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <rect key="frame" x="14" y="74" width="180.66666666666666" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="0507888094">
                                     <color key="titleColor" name="textColor"/>
                                 </state>
@@ -1388,41 +1391,46 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
-                                <rect key="frame" x="16" y="119.00000000000001" width="382" height="25.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="16" y="107" width="382" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-qZ-HKZ">
-                                <rect key="frame" x="164.66666666666666" y="637" width="85" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="סרוק ברקוד"/>
+                                <rect key="frame" x="115" y="629" width="184" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="mhH-yD-cHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="סרוק ברקוד" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="scanBarcode:" destination="r1q-tO-wfY" eventType="touchUpInside" id="Qny-5K-ELN"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-pM-0Lw">
-                                <rect key="frame" x="8" y="152" width="398" height="469"/>
+                                <rect key="frame" x="8" y="140.66666666666666" width="398" height="480.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QmG-cT-7ge">
-                                    <size key="itemSize" width="179" height="166"/>
+                                    <size key="itemSize" width="174" height="154"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="product_cell" reuseIdentifier="product_cell" id="gJ8-Pk-AJO" customClass="ProductsCollectionViewCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="166"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="179" height="166"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H10-wr-kdY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="125"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-87-h17">
-                                                    <rect key="frame" x="67" y="141" width="44.666666666666657" height="21"/>
+                                                    <rect key="frame" x="64.666666666666671" y="129" width="44.666666666666671" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1451,7 +1459,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="top" secondItem="Sdh-pM-0Lw" secondAttribute="bottom" constant="16" id="1kb-EM-gHI"/>
+                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="top" secondItem="Sdh-pM-0Lw" secondAttribute="bottom" constant="8" id="1kb-EM-gHI"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="mXF-pw-AWk" secondAttribute="trailing" constant="4" id="A2X-wG-yfl"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="14" id="Ax3-Jw-YVu"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="16" id="DrO-T6-rtT"/>
@@ -1459,8 +1467,9 @@
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="fws-br-Ga3" secondAttribute="trailing" constant="16" id="JXh-ZI-zqJ"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="8" id="OBZ-IM-lca"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="7.5" id="Qzx-UX-jO9"/>
+                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="width" secondItem="S55-Lc-Siz" secondAttribute="height" multiplier="1:4" id="dl9-7k-OgT"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
-                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="16" id="iDv-8R-hHz"/>
+                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="4" id="iDv-8R-hHz"/>
                             <constraint firstItem="fws-br-Ga3" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="jpj-NB-aeU"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="Sdh-pM-0Lw" secondAttribute="trailing" constant="8" id="pHO-oL-qOi"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="Hmt-qZ-HKZ" secondAttribute="bottom" constant="16" id="pSy-KS-9CH"/>
@@ -1475,7 +1484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjw-jy-7vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="-1528"/>
+            <point key="canvasLocation" x="2860.8695652173915" y="-1528.5326086956522"/>
         </scene>
         <!--מוצרים-->
         <scene sceneID="u2r-Ml-ZPL">
@@ -1567,9 +1576,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO1-H3-NUt">
-                                <rect key="frame" x="172.33333333333334" y="692" width="71" height="28"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="הוסף לסל"/>
+                                <rect key="frame" x="115.33333333333331" y="688" width="184" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Vhf-Pe-WSV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="הוסף לסל" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addToBasket:" destination="fNf-gT-4go" eventType="touchUpInside" id="Ux7-84-v5V"/>
                                 </connections>
@@ -1578,11 +1592,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AgZ-oB-JCH" firstAttribute="leading" secondItem="sYt-LF-6hP" secondAttribute="leading" constant="16" id="7qI-p5-J7r"/>
-                            <constraint firstItem="VO1-H3-NUt" firstAttribute="top" secondItem="AgZ-oB-JCH" secondAttribute="bottom" constant="16" id="GBp-3Y-6Mt"/>
                             <constraint firstItem="AgZ-oB-JCH" firstAttribute="top" secondItem="sYt-LF-6hP" secondAttribute="top" constant="32" id="P52-id-Obt"/>
                             <constraint firstItem="sYt-LF-6hP" firstAttribute="trailing" secondItem="AgZ-oB-JCH" secondAttribute="trailing" constant="16" id="PFJ-2U-ihj"/>
-                            <constraint firstItem="VO1-H3-NUt" firstAttribute="centerX" secondItem="sYt-LF-6hP" secondAttribute="centerX" id="YiA-yw-owT"/>
-                            <constraint firstItem="sYt-LF-6hP" firstAttribute="bottom" secondItem="VO1-H3-NUt" secondAttribute="bottom" constant="16" id="nIp-Nl-FJo"/>
+                            <constraint firstItem="VO1-H3-NUt" firstAttribute="width" secondItem="LwL-M9-hjg" secondAttribute="height" multiplier="1:4" id="X7X-x7-MPI"/>
+                            <constraint firstItem="VO1-H3-NUt" firstAttribute="centerX" secondItem="sYt-LF-6hP" secondAttribute="centerX" id="iPd-r6-Z7a"/>
+                            <constraint firstItem="sYt-LF-6hP" firstAttribute="bottom" secondItem="VO1-H3-NUt" secondAttribute="bottom" constant="16" id="sG5-jq-hzR"/>
                             <constraint firstItem="sYt-LF-6hP" firstAttribute="bottom" secondItem="AgZ-oB-JCH" secondAttribute="bottom" constant="60" id="tI6-RJ-FDS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sYt-LF-6hP"/>
@@ -1662,14 +1676,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-cP-91U">
-                                <rect key="frame" x="184" y="622" width="46" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="שלח"/>
-                                <connections>
-                                    <action selector="sendBtn:" destination="8kI-bp-idF" eventType="touchUpInside" id="dNM-Se-T3j"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="רחוב:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-sc-KN1">
                                 <rect key="frame" x="345" y="250.00000000000003" width="37" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1682,10 +1688,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-cP-91U">
+                                <rect key="frame" x="143.66666666666666" y="613" width="126.99999999999997" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="I4f-zz-wbg"/>
+                                    <constraint firstAttribute="width" constant="127" id="xdq-u2-cBY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="שלח" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBtn:" destination="8kI-bp-idF" eventType="touchUpInside" id="dNM-Se-T3j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C95-eF-xhs" firstAttribute="leading" secondItem="ksD-Tt-Dql" secondAttribute="leading" id="1Of-Mc-OxN"/>
+                            <constraint firstItem="3V9-zj-jlD" firstAttribute="bottom" secondItem="WnU-cP-91U" secondAttribute="bottom" constant="81" id="3NY-0V-Phm"/>
                             <constraint firstItem="Dla-sy-s9n" firstAttribute="top" secondItem="4dw-sc-KN1" secondAttribute="top" id="4zi-yc-U6Y"/>
                             <constraint firstItem="Dla-sy-s9n" firstAttribute="leading" secondItem="qDi-HY-jwc" secondAttribute="leading" id="BN0-d2-vIK"/>
                             <constraint firstItem="qDi-HY-jwc" firstAttribute="leading" secondItem="Ug4-uf-l3A" secondAttribute="leading" id="EDp-4C-xXq"/>
@@ -1707,17 +1728,15 @@
                             <constraint firstItem="4dw-sc-KN1" firstAttribute="top" secondItem="bSN-yR-73o" secondAttribute="bottom" constant="27" id="bwG-It-VKC"/>
                             <constraint firstItem="Ug4-uf-l3A" firstAttribute="top" secondItem="wZc-y0-BDn" secondAttribute="top" id="d4o-Hi-DSL"/>
                             <constraint firstItem="Dla-sy-s9n" firstAttribute="trailing" secondItem="qDi-HY-jwc" secondAttribute="trailing" id="djy-Bn-ffW"/>
-                            <constraint firstItem="3V9-zj-jlD" firstAttribute="trailing" secondItem="WnU-cP-91U" secondAttribute="trailing" constant="184" id="eGW-mM-sTL"/>
                             <constraint firstItem="ksD-Tt-Dql" firstAttribute="top" secondItem="ESE-Jr-GMF" secondAttribute="top" id="jTC-JF-7q6"/>
-                            <constraint firstItem="WnU-cP-91U" firstAttribute="leading" secondItem="3V9-zj-jlD" secondAttribute="leading" constant="184" id="jvK-ii-AEl"/>
                             <constraint firstItem="Ug4-uf-l3A" firstAttribute="leading" secondItem="3V9-zj-jlD" secondAttribute="leading" constant="32" id="me4-H4-ApE"/>
+                            <constraint firstItem="WnU-cP-91U" firstAttribute="centerX" secondItem="3V9-zj-jlD" secondAttribute="centerX" id="meG-jH-YUg"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="top" secondItem="4dw-sc-KN1" secondAttribute="bottom" constant="27" id="mph-br-VLz"/>
                             <constraint firstItem="C95-eF-xhs" firstAttribute="trailing" secondItem="ksD-Tt-Dql" secondAttribute="trailing" id="mr0-X4-2gU"/>
                             <constraint firstItem="ESE-Jr-GMF" firstAttribute="trailing" secondItem="bSN-yR-73o" secondAttribute="trailing" id="oFz-VM-1YL"/>
                             <constraint firstItem="3V9-zj-jlD" firstAttribute="trailing" secondItem="wZc-y0-BDn" secondAttribute="trailing" constant="32" id="qPD-n1-Hrh"/>
                             <constraint firstItem="ksD-Tt-Dql" firstAttribute="trailing" secondItem="qDi-HY-jwc" secondAttribute="trailing" id="v4v-hQ-zg5"/>
                             <constraint firstItem="qDi-HY-jwc" firstAttribute="trailing" secondItem="Ug4-uf-l3A" secondAttribute="trailing" id="w9I-tG-2Ve"/>
-                            <constraint firstItem="3V9-zj-jlD" firstAttribute="bottom" secondItem="WnU-cP-91U" secondAttribute="bottom" constant="80" id="ys9-jK-q0g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3V9-zj-jlD"/>
                     </view>
@@ -1849,9 +1868,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-eS-8Hg">
-                                <rect key="frame" x="190.66666666666666" y="682" width="33" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="אשר"/>
+                                <rect key="frame" x="117.66666666666669" y="682" width="179" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="אשר" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addItemsManager:" destination="wwL-Lw-V3r" eventType="touchUpInside" id="mWJ-ZB-8mn"/>
                                 </connections>
@@ -1864,6 +1885,7 @@
                             <constraint firstItem="7tM-4y-h2G" firstAttribute="leading" secondItem="dNi-3O-AC2" secondAttribute="leading" constant="16" id="AHm-Kr-Eib"/>
                             <constraint firstItem="8r4-eS-8Hg" firstAttribute="centerX" secondItem="dNi-3O-AC2" secondAttribute="centerX" id="aC2-Bj-GyE"/>
                             <constraint firstItem="dNi-3O-AC2" firstAttribute="trailing" secondItem="7tM-4y-h2G" secondAttribute="trailing" constant="16" id="fc5-od-dXJ"/>
+                            <constraint firstItem="8r4-eS-8Hg" firstAttribute="width" secondItem="dNi-3O-AC2" secondAttribute="height" multiplier="1:4" id="l20-LE-DQE"/>
                             <constraint firstItem="8r4-eS-8Hg" firstAttribute="top" secondItem="7tM-4y-h2G" secondAttribute="bottom" constant="6" id="tjL-pK-ZO1"/>
                             <constraint firstItem="dNi-3O-AC2" firstAttribute="bottom" secondItem="7tM-4y-h2G" secondAttribute="bottom" constant="60" id="wzd-Pe-Oz3"/>
                         </constraints>
@@ -1968,9 +1990,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-xf-stR">
-                                <rect key="frame" x="190.33333333333334" y="633" width="34" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="עדכן"/>
+                                <rect key="frame" x="123.99999999999999" y="633" width="166.66666666666663" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="עדכן" backgroundImage="2help_Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addItemsManager:" destination="AtA-Jz-a9N" eventType="touchUpInside" id="iuc-sa-22d"/>
                                 </connections>
@@ -1979,6 +2003,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EQA-ry-LRU" firstAttribute="trailing" secondItem="PAw-xl-hY4" secondAttribute="trailing" constant="16" id="6ma-4g-Gki"/>
+                            <constraint firstItem="oO1-xf-stR" firstAttribute="width" secondItem="EQA-ry-LRU" secondAttribute="height" multiplier="1:4" id="CLq-CX-4n1"/>
                             <constraint firstItem="oO1-xf-stR" firstAttribute="centerX" secondItem="EQA-ry-LRU" secondAttribute="centerX" id="PUR-hu-tEO"/>
                             <constraint firstItem="oO1-xf-stR" firstAttribute="top" secondItem="PAw-xl-hY4" secondAttribute="bottom" constant="6" id="Qf3-fG-zho"/>
                             <constraint firstItem="PAw-xl-hY4" firstAttribute="top" secondItem="EQA-ry-LRU" secondAttribute="top" constant="16" id="SZF-tG-dxR"/>
