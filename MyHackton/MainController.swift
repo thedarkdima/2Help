@@ -8,6 +8,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 
     @IBOutlet var collectionView: UICollectionView!
+    var collectionVideos : [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,9 +16,8 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         prefs.set([:], forKey: "basket")
         
         collectionView.showsHorizontalScrollIndicator = false
-
-       
         
+       
         setCollectionViewProperties()
     }
     
@@ -130,6 +130,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! collecViewCell
+        
+        let urlsRequests = URLRequest(url: cell.urls[indexPath.item])
+        cell.webView.load(urlsRequests)
+        
         return cell
     }
     
