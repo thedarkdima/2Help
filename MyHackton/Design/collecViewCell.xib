@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="455"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="455"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yso-KK-yzj">
+                        <rect key="frame" x="0.0" y="0.0" width="385" height="455"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l23-KN-27j">
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="l23-KN-27j" secondAttribute="bottom" id="F1z-Qb-Ynx"/>
+                            <constraint firstAttribute="trailing" secondItem="l23-KN-27j" secondAttribute="trailing" id="Pee-fz-vem"/>
+                            <constraint firstItem="l23-KN-27j" firstAttribute="top" secondItem="Yso-KK-yzj" secondAttribute="top" id="f9E-ww-L1E"/>
+                            <constraint firstItem="l23-KN-27j" firstAttribute="leading" secondItem="Yso-KK-yzj" secondAttribute="leading" id="kEI-B0-8Ex"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Yso-KK-yzj" secondAttribute="trailing" id="7gc-vN-EJF"/>
+                <constraint firstItem="Yso-KK-yzj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KFA-fN-czo"/>
+                <constraint firstAttribute="bottom" secondItem="Yso-KK-yzj" secondAttribute="bottom" id="eb8-Sf-1aA"/>
+                <constraint firstItem="Yso-KK-yzj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nD6-Q5-zGR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="385" height="455"/>
+            <connections>
+                <outlet property="container1" destination="Yso-KK-yzj" id="pBQ-Ua-BFd"/>
+                <outlet property="webView" destination="l23-KN-27j" id="gWu-Ir-nhv"/>
+            </connections>
+            <point key="canvasLocation" x="-16.5" y="21.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

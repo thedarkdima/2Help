@@ -2,10 +2,13 @@ import UIKit
 import WebKit
 import SafariServices
 
-class MainController: UIViewController {
+class MainController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet var webView: WKWebView!
+    
+    
 
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let prefs = UserDefaults.standard
@@ -125,5 +128,36 @@ class MainController: UIViewController {
         //present(next , animated: animation, completion: nil)
         navigationController?.pushViewController(next, animated: animation)
     }
+    
+    
+    
+    ////collection view////
+   
+    
+    func setCollectionViewProperties(){
+        
+        collectionView.register(UINib.init(nibName: "collecViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
+        
+        let flowLayout = UPCarouselFlowLayout()
+        
+        flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-30, height: collectionView.frame.size.height-50)
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sideItemScale = 0.8
+        flowLayout.sideItemAlpha = 1.0
+        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        collectionView.collectionViewLayout = flowLayout
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! collecViewCell
+        return cell
+    }
+    
+    ////
         
 }
