@@ -16,6 +16,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     func settingAlert(){
         //// setting  alert
+        
         let alert = UIAlertController(title: "הרשאה", message: "תן הרשאה למצלמה בכדי להשתמש בברקוד", preferredStyle: .alert)
         let settingAction = UIAlertAction(title: "הגדרות", style: .default) { (success) in
             if let settingUrl = URL(string: UIApplicationOpenSettingsURLString)  {
