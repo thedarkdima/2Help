@@ -46,6 +46,7 @@
 		90EBD7512035D99500A60FCF /* FinalDonationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */; };
 		90EBD7532035E01200A60FCF /* blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7522035E01200A60FCF /* blank.swift */; };
 		90EBD7562035E4B700A60FCF /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */; };
+		D2536E95205A8D5200D1B5E8 /* NetManagerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */; };
 		D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA7FD204EA66A002D8076 /* ScannerViewController.swift */; };
 		D2D79AD4202317C800C504E3 /* ServerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D79AD3202317C800C504E3 /* ServerConnections.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		90EBD7502035D99500A60FCF /* FinalDonationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDonationListCell.swift; sourceTree = "<group>"; };
 		90EBD7522035E01200A60FCF /* blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blank.swift; sourceTree = "<group>"; };
 		90EBD7552035E4B700A60FCF /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManagerMain.swift; sourceTree = "<group>"; };
 		D2D79AD3202317C800C504E3 /* ServerConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				4560D1BA202A0B30002DF7F4 /* StorageKeeper */,
 				90E1757020230C430062453D /* Donators */,
 				90E1757120230C610062453D /* Delivery */,
+				D2536E8D205A85CF00D1B5E8 /* NetManager */,
 				90EBD74F2035D8B900A60FCF /* Tables */,
 				90EBD7542035E42900A60FCF /* CollectionView */,
 				90EA35C62039994C006718D6 /* Products */,
@@ -254,6 +257,14 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		D2536E8D205A85CF00D1B5E8 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				D2536E94205A8D5200D1B5E8 /* NetManagerMain.swift */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +356,7 @@
 				45F9D25620501FFC00649C52 /* CheckProductsController.swift in Sources */,
 				45A9648C2019D91000D173BC /* DonatorController.swift in Sources */,
 				D2867CB320500274003589D8 /* ScannerViewController.swift in Sources */,
+				D2536E95205A8D5200D1B5E8 /* NetManagerMain.swift in Sources */,
 				455B180E201F69AA0002E7D0 /* AddDetailsController.swift in Sources */,
 				4560D1BC202A0BAB002DF7F4 /* DailyReportController.swift in Sources */,
 				455B1808201F564E0002E7D0 /* AsyncTask.swift in Sources */,
