@@ -40,6 +40,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             settingAlert()
         }
         
+        
         captureDevice = AVCaptureDevice.default(for: .video)
         
         // Check if captureDevice returns a value and unwrap it - check if there is a camera
