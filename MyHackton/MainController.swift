@@ -10,6 +10,31 @@ class MainController: UIViewController {
         super.viewDidLoad()
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
+        if let token = prefs.string(forKey: "token"){
+            ServerConnections.getDoubleArrayAsync("/token_login", [token], handler: {array in
+                if let arr = array{
+                    if(arr.count > 0){
+                        //Job
+                        let job = arr[0][0]
+                        switch(job){
+                        case "שליח":
+                            print("שליח")
+                            self.ConnectAsDeliveryGuy(false)
+                            break
+                        case "מחסנאי":
+                            print("מחסנאי")
+                            self.ConnectAsStorageKeeper(false)
+                            break
+                        case "מנהל רשת":
+                            print("מנהל רשת")
+                            self.ConnectAsNetManager(false)
+                            break
+                        default:
+                            print("Old token")
+                        }
+                    }}
+            })
+        }
     }
     
 
@@ -58,14 +83,14 @@ class MainController: UIViewController {
                         switch(job){
                         case "שליח":
                             print("שליח")
-                            self.ConnectAsDeliveryGuy()
+                            self.ConnectAsDeliveryGuy(true)
                             break
                         case "מחסנאי":
                             print("מחסנאי")
-                            self.ConnectAsStorageKeeper()
+                            self.ConnectAsStorageKeeper(true)
                             break
                         case "מנהל רשת":
-                            print("good job")
+                            self.ConnectAsNetManager(true)
                             break
                         default:
                             print("not found")
@@ -84,14 +109,21 @@ class MainController: UIViewController {
         present(alert , animated: true, completion: nil)
         }
     
-    private func ConnectAsDeliveryGuy(){
+    private func ConnectAsDeliveryGuy(_ animation: Bool){
         let next = storyboard!.instantiateViewController(withIdentifier: "mapAddress")
-        show(next, sender: self)
+        navigationController?.pushViewController(next, animated: animation)
     }
     
-    private func ConnectAsStorageKeeper(){
+    private func ConnectAsStorageKeeper(_ animation: Bool){
         let next = storyboard!.instantiateViewController(withIdentifier: "storage_main")
-        show(next, sender: self)
+        navigationController?.pushViewController(next, animated: animation)
+    }
+    
+    private func ConnectAsNetManager(_ animation: Bool){
+        let next = storyboard!.instantiateViewController(withIdentifier: "net_manager")
+        //navigationController?.pushViewController(next, animated: animation)
+        //present(next , animated: animation, completion: nil)
+        navigationController?.pushViewController(next, animated: animation)
     }
         
 }
