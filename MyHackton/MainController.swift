@@ -88,7 +88,6 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         //Tokken from the server
                         let prefs = UserDefaults.standard
                         prefs.set(arr[0], forKey: "token")
-                        //Job
                         let job = arr[1]
                         switch(job){
                         case "שליח":
@@ -131,8 +130,6 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     private func ConnectAsNetManager(_ animation: Bool){
         let next = storyboard!.instantiateViewController(withIdentifier: "net_manager")
-        //navigationController?.pushViewController(next, animated: animation)
-        //present(next , animated: animation, completion: nil)
         navigationController?.pushViewController(next, animated: animation)
     }
     
@@ -144,11 +141,11 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func setCollectionViewProperties(){
         
         collectionView.register(UINib.init(nibName: "collecViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
-        collectionView.backgroundColor = UIColor.clear
+        //collectionView.backgroundColor = UIColor.clear
         
         let flowLayout = UPCarouselFlowLayout()
         
-        flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-40, height: collectionView.frame.size.height)
+        flowLayout.itemSize = CGSize(width: collectionView.frame.size.width-40, height: collectionView.frame.size.height-5)
         
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
@@ -168,22 +165,12 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let urlsRequests = URLRequest(url: cell.urls[indexPath.item])
         cell.webView.load(urlsRequests)
-       
+        
         
         cell.webView.scrollView.isScrollEnabled = false
         
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let c = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! collecViewCell
-//        if c.urls[1] == URL(string: "https://www.youtube.com/embed/ucts039wCPo"){
-//            print("asdasdasd")
-//            c.opacityView.removeFromSuperview()
-//        }
-//    }
-//
-    
     
     ////
         

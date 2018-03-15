@@ -113,13 +113,22 @@
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x2-jn-4HL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-u7-tXM">
+                                <rect key="frame" x="157" y="64" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="618-yn-QUt"/>
+                                    <constraint firstAttribute="width" constant="100" id="Yhx-gv-RGJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QuY-JS-gNA" secondAttribute="bottom" constant="16" id="8Ys-Rd-WqS"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="top" secondItem="r0C-OB-Hc6" secondAttribute="bottom" constant="32" id="IgG-GW-bp9"/>
+                            <constraint firstItem="3V6-u7-tXM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jok-y5-6W8"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="q8l-9X-ApP" secondAttribute="bottom" constant="20" id="NM5-Ix-cBe"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YLg-Nu-60c"/>
+                            <constraint firstItem="3V6-u7-tXM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cPd-uo-mjC"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZI-uo-Tas"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRm-3X-1pG"/>
                             <constraint firstItem="aGk-bT-4kA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ikx-TK-ULs"/>
@@ -2107,6 +2116,7 @@
         <image name="directions_icon" width="25" height="25"/>
         <image name="facebook_icon" width="606" height="606"/>
         <image name="home_icon" width="32" height="32"/>
+        <image name="logo" width="66" height="66"/>
         <image name="waze_icon" width="32" height="32"/>
         <image name="web_icon" width="512" height="512"/>
         <namedColor name="textColor">
