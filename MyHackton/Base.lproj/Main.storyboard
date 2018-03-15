@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="-452" y="1762"/>
         </scene>
-        <!--Net Manager Main-->
+        <!--Net Manager Main Controller-->
         <scene sceneID="vO3-1t-P2R">
             <objects>
-                <viewController storyboardIdentifier="net_manager" id="Dri-8r-i8Q" customClass="NetManagerMain" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="net_manager" id="Dri-8r-i8Q" customClass="NetManagerMainController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xMR-sX-xcn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -534,61 +534,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbK-zj-C2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3996" y="3430"/>
+            <point key="canvasLocation" x="4154" y="2595"/>
         </scene>
-        <!--View Controller-->
+        <!--Net Manager Info Controller-->
         <scene sceneID="Evf-3b-342">
             <objects>
-                <viewController id="nmx-SM-Rk5" sceneMemberID="viewController">
+                <viewController id="nmx-SM-Rk5" customClass="NetManagerInfoController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQY-IR-8ZE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="8gc-xs-7eH">
-                                <rect key="frame" x="16" y="73" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title=" כתובות"/>
-                                    <segment title="מוצרים"/>
-                                    <segment title="משתמשים"/>
-                                </segments>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-cb-zIg">
-                                <rect key="frame" x="0.0" y="207" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="270.66666666666669" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="הוסף"/>
+                                <connections>
+                                    <action selector="addBtn:" destination="nmx-SM-Rk5" eventType="touchUpInside" id="yUD-qf-Ni3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhQ-xM-W2W">
-                                <rect key="frame" x="0.0" y="318" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="372.66666666666669" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="עדכן"/>
                                 <connections>
-                                    <segue destination="K2f-mP-XEi" kind="show" identifier="update" id="Gbx-nb-xUN"/>
+                                    <action selector="changeBtn:" destination="nmx-SM-Rk5" eventType="touchUpInside" id="Li3-X9-aYm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM1-i3-OMv">
-                                <rect key="frame" x="0.0" y="436" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="474.66666666666669" width="414" height="42.000000000000057"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="מחק"/>
                                 <connections>
-                                    <segue destination="K2f-mP-XEi" kind="show" identifier="delete" id="aeo-RU-BhJ"/>
+                                    <action selector="delBtn:" destination="nmx-SM-Rk5" eventType="touchUpInside" id="FdS-7p-7fM"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-uL-NWo">
+                                <rect key="frame" x="0.0" y="20" width="414" height="221"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nmx-SM-Rk5" id="swX-IL-lkV"/>
+                                    <outlet property="delegate" destination="nmx-SM-Rk5" id="dbN-uh-I25"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nM1-i3-OMv" firstAttribute="top" secondItem="dhQ-xM-W2W" secondAttribute="bottom" constant="76" id="0Gn-PG-RuX"/>
+                            <constraint firstItem="nM1-i3-OMv" firstAttribute="top" secondItem="dhQ-xM-W2W" secondAttribute="bottom" constant="60" id="0Gn-PG-RuX"/>
                             <constraint firstItem="Ap3-cb-zIg" firstAttribute="width" secondItem="JQY-IR-8ZE" secondAttribute="width" id="379-lS-Cmx"/>
                             <constraint firstItem="nM1-i3-OMv" firstAttribute="leading" secondItem="dhQ-xM-W2W" secondAttribute="leading" id="5sz-gz-7wl"/>
                             <constraint firstItem="nM1-i3-OMv" firstAttribute="width" secondItem="JQY-IR-8ZE" secondAttribute="width" id="KWV-Ze-VRm"/>
+                            <constraint firstItem="gYs-uL-NWo" firstAttribute="centerX" secondItem="J2E-qf-GQ1" secondAttribute="centerX" id="OEv-An-rgY"/>
+                            <constraint firstItem="gYs-uL-NWo" firstAttribute="height" secondItem="JQY-IR-8ZE" secondAttribute="height" multiplier="0.3" id="Ovo-iL-vAU"/>
                             <constraint firstItem="dhQ-xM-W2W" firstAttribute="width" secondItem="JQY-IR-8ZE" secondAttribute="width" id="Sya-nk-yqu"/>
                             <constraint firstItem="Ap3-cb-zIg" firstAttribute="centerX" secondItem="J2E-qf-GQ1" secondAttribute="centerX" id="a65-pd-T6Z"/>
-                            <constraint firstItem="Ap3-cb-zIg" firstAttribute="top" secondItem="J2E-qf-GQ1" secondAttribute="top" constant="187" id="fOr-cC-gha"/>
                             <constraint firstItem="dhQ-xM-W2W" firstAttribute="leading" secondItem="Ap3-cb-zIg" secondAttribute="leading" id="hxA-Fa-9AA"/>
-                            <constraint firstItem="dhQ-xM-W2W" firstAttribute="top" secondItem="Ap3-cb-zIg" secondAttribute="bottom" constant="69" id="tU5-s5-klo"/>
+                            <constraint firstItem="gYs-uL-NWo" firstAttribute="top" secondItem="J2E-qf-GQ1" secondAttribute="top" id="jOh-Oq-stS"/>
+                            <constraint firstItem="gYs-uL-NWo" firstAttribute="width" secondItem="JQY-IR-8ZE" secondAttribute="width" id="rXo-ar-MKS"/>
+                            <constraint firstItem="dhQ-xM-W2W" firstAttribute="top" secondItem="Ap3-cb-zIg" secondAttribute="bottom" constant="60" id="tU5-s5-klo"/>
+                            <constraint firstItem="Ap3-cb-zIg" firstAttribute="top" secondItem="gYs-uL-NWo" secondAttribute="bottom" constant="30" id="vc8-vz-S5W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J2E-qf-GQ1"/>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="gYs-uL-NWo" id="IT5-Gs-a3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phe-IM-daz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,21 +704,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aU0-q7-dV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7350" y="2596"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nD3-WZ-y7w">
-            <objects>
-                <viewController id="K2f-mP-XEi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cRb-hx-oKE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kGn-9f-Reg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oag-EK-yQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5070" y="3350"/>
         </scene>
         <!--סל תרומות-->
         <scene sceneID="IfD-Cn-gbo">
@@ -1934,6 +1927,68 @@
             </objects>
             <point key="canvasLocation" x="-384" y="2643"/>
         </scene>
+        <!--משלוחים שלי-->
+        <scene sceneID="7z4-cm-XEl">
+            <objects>
+                <viewController storyboardIdentifier="net_manager_table" id="K9z-yt-rae" customClass="NetManagerTableController" customModule="MyHackton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSO-fL-n7X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-pF-oe9">
+                                <rect key="frame" x="16" y="16" width="382" height="655"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="netmanager_cell" rowHeight="82" id="jwn-T5-t0A" customClass="NetManagerTableCell" customModule="MyHackton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwn-T5-t0A" id="F0d-AP-JAS">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="81.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-sT-aMs">
+                                                    <rect key="frame" x="318.33333333333331" y="30.333333333333329" width="47.666666666666686" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="GTo-sT-aMs" secondAttribute="trailing" constant="16" id="CP8-dy-26s"/>
+                                                <constraint firstItem="GTo-sT-aMs" firstAttribute="centerY" secondItem="F0d-AP-JAS" secondAttribute="centerY" id="cV6-lZ-kJ4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lable" destination="GTo-sT-aMs" id="ThZ-jr-OjP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K9z-yt-rae" id="10E-Fe-R9g"/>
+                                    <outlet property="delegate" destination="K9z-yt-rae" id="0u4-Pi-LwF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UYf-78-WEe" firstAttribute="bottom" secondItem="vvE-pF-oe9" secondAttribute="bottom" constant="16" id="Hrc-AI-L6i"/>
+                            <constraint firstItem="UYf-78-WEe" firstAttribute="trailing" secondItem="vvE-pF-oe9" secondAttribute="trailing" constant="16" id="LlE-C1-WPG"/>
+                            <constraint firstItem="vvE-pF-oe9" firstAttribute="top" secondItem="bSO-fL-n7X" secondAttribute="top" constant="16" id="S8W-p4-2JJ"/>
+                            <constraint firstItem="vvE-pF-oe9" firstAttribute="leading" secondItem="UYf-78-WEe" secondAttribute="leading" constant="16" id="rfI-Dq-Z8y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UYf-78-WEe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="משלוחים שלי" id="oh3-ea-Ke7"/>
+                    <navigationItem key="navigationItem" id="9fC-Yi-chg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="vvE-pF-oe9" id="duC-ue-6On"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyf-O6-rpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5069.5652173913049" y="3305.7065217391305"/>
+        </scene>
     </scenes>
     <resources>
         <image name="2help_Button" width="640" height="243"/>
@@ -1949,8 +2004,5 @@
             <color red="0.0078431372549019607" green="0.54117647058823526" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Gbx-nb-xUN"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" name="textColor"/>
 </document>
