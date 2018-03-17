@@ -2,20 +2,25 @@ import UIKit
 
 class NetManagerTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //var array = [" ", "משתמשים", "מוצרים", "סוגי מוצרים", "כתובות", "תמונות וידיו"]
+    var user:[String]!
+    var token:String!
+    
     @IBOutlet var table: UITableView!
     var tableArray: [[String]] = []
     @IBOutlet var searchTextField: UITextField!
     var searchArray: [[String]] = []
+    
     override func viewWillAppear(_ animated: Bool) {
         let prefs = UserDefaults.standard
-        if let token = prefs.string(forKey: "token"){
+        if let tok = prefs.string(forKey: "token"){
+            token = tok
             switch type {
             case "משתמשים":
-                ServerConnections.getDoubleArrayAsync("/all_users", [token], handler: { array in
+                ServerConnections.getDoubleArrayAsync("/all_users", [tok], handler: { array in
                     self.setTableArray(array: array)
                 })
             case "מוצרים":
-                ServerConnections.getDoubleArrayAsync("/all_items", [token], handler: { array in
+                ServerConnections.getDoubleArrayAsync("/all_items", [tok], handler: { array in
                     self.setTableArray(array: array)
                 })
             case "סוגי מוצרים":
@@ -23,7 +28,7 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
                     self.setTableArray(array: array)
                 })
             case "כתובות":
-                ServerConnections.getDoubleArrayAsync("/all_locations", [token], handler: { array in
+                ServerConnections.getDoubleArrayAsync("/all_locations", [tok], handler: { array in
                     self.setTableArray(array: array)
                 })
             case "תמונות וידיו":
@@ -74,7 +79,7 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         
         switch type {
         case "משתמשים":
-             cell.lable.text = searchArray[indexPath.row][4]
+            cell.lable.text = searchArray[indexPath.row][1] + " :" + searchArray[indexPath.row][3]
         case "מוצרים":
              cell.lable.text = searchArray[indexPath.row][0]
         case "סוגי מוצרים":
@@ -102,6 +107,7 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
 //        }
         switch toDo {
         case "delete":
+            user = searchArray[indexPath.row]
             deleteAlert(index: indexPath)
         case "update":
             
@@ -120,7 +126,12 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         let alert =  UIAlertController(title: "מחיקה", message: "אתה בטוח שאתה רוצה למחוק את \((table.cellForRow(at: index) as! NetManagerTableCell).lable.text!)?", preferredStyle: .alert)
         
         func deleteFromDB(alert:UIAlertAction){
-            
+            ServerConnections.getDoubleArrayAsync("/delete_user", [[self.token], self.user], handler: {array in
+                self.viewWillAppear(false)
+                let alert = UIAlertController(title: "התרעה", message: "המשתמש נמחק בהצלחה", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            })
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
