@@ -123,8 +123,7 @@ override func viewDidLoad(){
         collectionView.isScrollEnabled = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
-        cell.productLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        cell.productLabel.backgroundColor = UIColor.gray.withAlphaComponent(0.1)
+        cell.productLabel.backgroundColor = UIColor.clear
         
         
         //Prevents out of bounds exception
@@ -132,7 +131,7 @@ override func viewDidLoad(){
             //Get image from user defaults
             if let prefImageData = UserDefaults.standard.object(forKey: productsImagesArray[indexPath.item]){
                 cell.ProductImageView.image = UIImage(data: prefImageData as! Data)
-                cell.backgroundColor = UIColor.clear
+                cell.productLabel.backgroundColor = UIColor.white.withAlphaComponent(0.2)
             }
         }
         return  cell
