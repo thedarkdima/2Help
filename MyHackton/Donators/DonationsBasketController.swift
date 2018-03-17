@@ -199,7 +199,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             tf.returnKeyType = .next
             self.text = tf
             if flag{
-                tf.placeholder = "חייב להכניס סיבה"
+                tf.placeholder = "הכנס סיבה לשינוי"
             }
         }
         alert.addAction(cancel)

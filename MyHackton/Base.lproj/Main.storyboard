@@ -14,8 +14,8 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Helvetica.ttc">
+            <string>Helvetica</string>
             <string>Helvetica-Bold</string>
-            <string>Helvetica-BoldOblique</string>
         </array>
     </customFonts>
     <scenes>
@@ -60,8 +60,8 @@
                                     <constraint firstAttribute="width" constant="140" id="LAu-Aq-F5d"/>
                                     <constraint firstAttribute="height" constant="60" id="NyS-oT-YQw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
-                                <state key="normal" title="בקשה לתרומה" backgroundImage="2help_Button">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <state key="normal" title="לבקשת תרומה" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -77,7 +77,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                 <state key="normal" title="אני רוצה לתרום" backgroundImage="2help_Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -90,7 +90,7 @@
                                     <constraint firstAttribute="width" constant="110" id="GVb-lC-qUv"/>
                                     <constraint firstAttribute="height" constant="40" id="PC5-0c-O5D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="צור קשר" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-ZH-ucm">
-                                <rect key="frame" x="157.66666666666666" y="44" width="99.999999999999972" height="120"/>
+                                <rect key="frame" x="157" y="44" width="100" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="gh5-uP-LBg"/>
                                 </constraints>
@@ -218,18 +218,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-7p-hI2">
-                                                    <rect key="frame" x="75" y="32" width="292" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="94" y="32.666666666666664" width="273" height="19.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-Dw-wUT">
-                                                    <rect key="frame" x="16" y="25.666666666666671" width="51" height="33"/>
+                                                    <rect key="frame" x="16" y="25.666666666666671" width="70" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="51" id="vQr-J8-qhz"/>
+                                                        <constraint firstAttribute="width" constant="70" id="FcM-N3-GLb"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="לפרטים"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                                    <state key="normal" title="לפרטים">
+                                                        <color key="titleColor" name="textColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="toAlert" destination="vcY-a9-AVE" eventType="touchUpInside" id="URP-yR-HL6"/>
                                                     </connections>
@@ -284,38 +286,40 @@
                                 <rect key="frame" x="57" y="258" width="300" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18t-Cj-cvf">
-                                        <rect key="frame" x="16" y="194" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="194" width="50" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="GEc-t7-bSj"/>
+                                            <constraint firstAttribute="width" constant="50" id="GEc-t7-bSj"/>
                                             <constraint firstAttribute="height" constant="30" id="jfj-sj-1EY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <state key="normal" title="חזור"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                        <state key="normal" title="חזור">
+                                            <color key="titleColor" name="textColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="backBtn" destination="kt4-hS-9Oi" eventType="touchUpInside" id="OJp-7a-MoJ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUX-Ij-hrI">
-                                        <rect key="frame" x="8" y="22" width="276" height="20.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="25.666666666666686" width="276" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0R-VO-agP">
-                                        <rect key="frame" x="243.66666666666671" y="58.666666666666686" width="40.333333333333343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="240" y="61.333333333333307" width="44" height="19.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שעות פעילות:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy9-7P-5sy">
-                                        <rect key="frame" x="54" y="133" width="230" height="20.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="74" y="133" width="210" height="20.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-Xa-67a">
-                                        <rect key="frame" x="8" y="95.666666666666686" width="277" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="97" width="277" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -338,16 +342,16 @@
                                     <constraint firstAttribute="trailing" secondItem="fy9-7P-5sy" secondAttribute="trailing" constant="16" id="0Ru-AM-iw8"/>
                                     <constraint firstAttribute="trailing" secondItem="WUX-Ij-hrI" secondAttribute="trailing" constant="16" id="9n7-aH-dnP"/>
                                     <constraint firstAttribute="bottom" secondItem="dwv-b9-zcq" secondAttribute="bottom" constant="16" id="AUz-Nb-1ea"/>
-                                    <constraint firstItem="fy9-7P-5sy" firstAttribute="top" secondItem="fps-Xa-67a" secondAttribute="bottom" constant="16.5" id="L0w-9B-88V"/>
+                                    <constraint firstItem="WUX-Ij-hrI" firstAttribute="top" secondItem="ni7-v4-cYd" secondAttribute="top" constant="25.666666666666686" id="GhE-aK-dXK"/>
+                                    <constraint firstItem="fy9-7P-5sy" firstAttribute="top" secondItem="fps-Xa-67a" secondAttribute="bottom" constant="16" id="L0w-9B-88V"/>
                                     <constraint firstItem="WUX-Ij-hrI" firstAttribute="leading" secondItem="ni7-v4-cYd" secondAttribute="leading" constant="8" id="Nxk-RL-6oh"/>
                                     <constraint firstAttribute="trailing" secondItem="fps-Xa-67a" secondAttribute="trailing" constant="15" id="Obv-TF-t8a"/>
                                     <constraint firstAttribute="trailing" secondItem="dwv-b9-zcq" secondAttribute="trailing" constant="16" id="cCO-rd-5eR"/>
                                     <constraint firstItem="fps-Xa-67a" firstAttribute="leading" secondItem="ni7-v4-cYd" secondAttribute="leading" constant="8" id="l79-y6-Pas"/>
                                     <constraint firstItem="fps-Xa-67a" firstAttribute="top" secondItem="z0R-VO-agP" secondAttribute="bottom" constant="16" id="lhF-OO-KRT"/>
+                                    <constraint firstItem="z0R-VO-agP" firstAttribute="top" secondItem="WUX-Ij-hrI" secondAttribute="bottom" constant="16" id="ly3-w8-6NI"/>
                                     <constraint firstAttribute="trailing" secondItem="z0R-VO-agP" secondAttribute="trailing" constant="16" id="ouy-Tb-0YA"/>
-                                    <constraint firstItem="z0R-VO-agP" firstAttribute="top" secondItem="WUX-Ij-hrI" secondAttribute="bottom" constant="16" id="p5R-dD-sag"/>
                                     <constraint firstItem="dwv-b9-zcq" firstAttribute="top" secondItem="fy9-7P-5sy" secondAttribute="bottom" constant="10" id="qlr-JY-D7x"/>
-                                    <constraint firstItem="WUX-Ij-hrI" firstAttribute="top" secondItem="ni7-v4-cYd" secondAttribute="top" constant="22" id="rBf-1V-nFd"/>
                                     <constraint firstAttribute="bottom" secondItem="18t-Cj-cvf" secondAttribute="bottom" constant="16" id="sE3-Yr-Njm"/>
                                     <constraint firstItem="18t-Cj-cvf" firstAttribute="leading" secondItem="ni7-v4-cYd" secondAttribute="leading" constant="16" id="tzv-ti-Rau"/>
                                     <constraint firstAttribute="width" constant="300" id="vli-3i-6SZ"/>
@@ -405,7 +409,7 @@
                                 <rect key="frame" x="16" y="52" width="382" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messanger" rowHeight="120" id="xb6-Vq-6Zk" customClass="MessengerListCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messanger" rowHeight="120" id="xb6-Vq-6Zk" customClass="MessengerListCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xb6-Vq-6Zk" id="cOx-GI-Dxb">
@@ -413,13 +417,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם של השליח" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-lT-NM5">
-                                                    <rect key="frame" x="266" y="32" width="100.33333333333331" height="21.666666666666671"/>
+                                                    <rect key="frame" x="266" y="32" width="100.66666666666669" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-UM-ojB">
-                                                    <rect key="frame" x="16" y="75.333333333333329" width="350" height="12.333333333333329"/>
+                                                    <rect key="frame" x="16" y="75.666666666666671" width="350" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -439,7 +443,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlN-po-DvI">
-                                                    <rect key="frame" x="16" y="68" width="120" height="27.333333333333329"/>
+                                                    <rect key="frame" x="16" y="68" width="120" height="27.666666666666671"/>
                                                     <color key="backgroundColor" red="1" green="0.20015282130000001" blue="0.1410402617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <state key="normal" title="בטל משלוח">
@@ -578,7 +582,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-uL-NWo">
-                                <rect key="frame" x="0.0" y="20" width="414" height="221"/>
+                                <rect key="frame" x="0.0" y="19.999999999999986" width="414" height="220.66666666666663"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nmx-SM-Rk5" id="swX-IL-lkV"/>
                                     <outlet property="delegate" destination="nmx-SM-Rk5" id="dbN-uh-I25"/>
@@ -800,7 +804,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-qM-LOp">
-                                <rect key="frame" x="16" y="96" width="382" height="580"/>
+                                <rect key="frame" x="16" y="96" width="382" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="DUY-E3-J38" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
@@ -818,11 +822,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-CR-uEE">
-                                                    <rect key="frame" x="175.66666666666666" y="32" width="99.999999999999972" height="20.666666666666671"/>
+                                                    <rect key="frame" x="175.66666666666666" y="32.333333333333336" width="99.999999999999972" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="q5C-Mb-WgX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -879,12 +883,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0K-8q-zlF">
-                                <rect key="frame" x="115.66666666666669" y="680" width="184" height="48"/>
+                                <rect key="frame" x="137" y="680" width="140" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="LEA-Qa-BI8"/>
-                                    <constraint firstAttribute="width" constant="184" id="R7l-vZ-9Fs"/>
+                                    <constraint firstAttribute="height" constant="40" id="LEA-Qa-BI8"/>
+                                    <constraint firstAttribute="width" constant="140" id="R7l-vZ-9Fs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                 <state key="normal" title="סרוק ברקוד" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -898,9 +902,9 @@
                             <constraint firstItem="o0K-8q-zlF" firstAttribute="centerX" secondItem="bHI-tY-aSQ" secondAttribute="centerX" id="0ju-RQ-hm8"/>
                             <constraint firstItem="bHI-tY-aSQ" firstAttribute="trailing" secondItem="t6s-qM-LOp" secondAttribute="trailing" constant="16" id="6Fs-fR-hSs"/>
                             <constraint firstItem="t6s-qM-LOp" firstAttribute="top" secondItem="bHI-tY-aSQ" secondAttribute="top" constant="32" id="7nd-Ch-3Yx"/>
-                            <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="t6s-qM-LOp" secondAttribute="bottom" constant="60" id="Eju-Ut-FzW"/>
                             <constraint firstItem="t6s-qM-LOp" firstAttribute="leading" secondItem="bHI-tY-aSQ" secondAttribute="leading" constant="16" id="ZSi-ip-bWf"/>
-                            <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="o0K-8q-zlF" secondAttribute="bottom" constant="8" id="add-cI-PlF"/>
+                            <constraint firstItem="bHI-tY-aSQ" firstAttribute="bottom" secondItem="o0K-8q-zlF" secondAttribute="bottom" constant="16" id="add-cI-PlF"/>
+                            <constraint firstItem="o0K-8q-zlF" firstAttribute="top" secondItem="t6s-qM-LOp" secondAttribute="bottom" constant="16" id="les-Ve-TGh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHI-tY-aSQ"/>
                     </view>
@@ -926,8 +930,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ESw-ol-moe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ESw-ol-moe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
                                 <connections>
                                     <outlet property="delegate" destination="JH3-3N-jsO" id="u0i-7y-Kda"/>
                                 </connections>
@@ -982,7 +986,7 @@
                                 <rect key="frame" x="16" y="16" width="382" height="655"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" rowHeight="83" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" rowHeight="83" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcV-7e-Y8V" id="QWf-I2-FyW">
@@ -1096,7 +1100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הערות:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVx-J0-7mP">
-                                <rect key="frame" x="347.33333333333331" y="429" width="50.666666666666686" height="21"/>
+                                <rect key="frame" x="347.66666666666669" y="429" width="50.333333333333314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1133,7 +1137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1J-XJ-IQO">
-                                <rect key="frame" x="138" y="598" width="139" height="34"/>
+                                <rect key="frame" x="137.66666666666666" y="598" width="138.99999999999997" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="החזר משלוח למפה"/>
                                 <connections>
@@ -1147,7 +1151,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תאריך" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1F-RD-x7G">
-                                <rect key="frame" x="215.33333333333334" y="348" width="42.333333333333343" height="21"/>
+                                <rect key="frame" x="215.66666666666666" y="348" width="41.999999999999972" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1222,56 +1226,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4d-2e-Foc">
-                                <rect key="frame" x="346" y="114" width="52" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="340.66666666666669" y="114" width="57.333333333333314" height="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N43-4a-y4A">
-                                <rect key="frame" x="337" y="188" width="61" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="331.66666666666669" y="217" width="66.333333333333314" height="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אודותינו :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMW-QY-YXT">
-                                <rect key="frame" x="280" y="262" width="118" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="280" y="290" width="118" height="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWF-nu-7qT">
-                                <rect key="frame" x="150" y="108" width="180" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="0507888094"/>
+                                <rect key="frame" x="150" y="108.33333333333333" width="174.66666666666663" height="34.999999999999986"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="tintColor" name="textColor"/>
+                                <state key="normal" title="0507888094">
+                                    <color key="titleColor" name="textColor"/>
+                                </state>
                                 <connections>
                                     <action selector="call" destination="fCY-QA-bCF" eventType="touchUpInside" id="ZbW-mr-OyH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBR-nG-tnB">
-                                <rect key="frame" x="140" y="182" width="181" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="התחיה 10, חולון"/>
+                                <rect key="frame" x="140" y="211.66666666666666" width="175.66666666666663" height="35"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="tintColor" name="textColor"/>
+                                <state key="normal" title="התחיה 10, חולון">
+                                    <color key="titleColor" name="textColor"/>
+                                </state>
                                 <connections>
                                     <action selector="toWaze" destination="fCY-QA-bCF" eventType="touchUpInside" id="fH1-AF-Zgf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לאתר העמותה : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G78-pH-Bvg">
-                                <rect key="frame" x="271" y="504.66666666666674" width="127" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="262" y="526" width="136" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לעמוד הפייסבוק :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiL-n7-lvi">
-                                <rect key="frame" x="265.33333333333331" y="588.66666666666663" width="132.66666666666669" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="254.66666666666663" y="629" width="143.33333333333337" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-Z3-bH0">
-                                <rect key="frame" x="40" y="477.33333333333326" width="80" height="80"/>
+                                <rect key="frame" x="40" y="495.33333333333326" width="85" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="XPd-A4-uWq"/>
-                                    <constraint firstAttribute="width" secondItem="IiJ-Z3-bH0" secondAttribute="height" multiplier="1:1" id="mRq-kD-t1c"/>
+                                    <constraint firstAttribute="height" constant="85" id="asu-c6-zbV"/>
+                                    <constraint firstAttribute="width" constant="85" id="tSY-5z-sYu"/>
                                 </constraints>
                                 <state key="normal" image="web_icon"/>
                                 <connections>
@@ -1279,18 +1291,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efo-FU-xiT">
-                                <rect key="frame" x="16" y="294" width="382" height="150.66666666666663"/>
-                                <string key="text">הבנק החברתי למזון תינוקות הוא מיזם חברתי שמטרתו לעזור לתינוקות רעבים!   עוצמתה המיוחדת של העמותה היא במתנדביה היקרים שבזכותם הפעילות הולכת וגדלה.
-ארגון אחריות חברתית פועל על ידי מתנדבים בלבד!!! כל עזרה תתקבל בברכה! בין אם זה התנדבות בעמותה, תרומה כספית או תרומה של מוצרים לתינוקות. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="16" y="321" width="382" height="145"/>
+                                <color key="tintColor" name="textColor"/>
+                                <string key="text">הבנק החברתי למזון תינוקות הוא מיזם חברתי שמטרתו לעזור לתינוקות רעבים!   עוצמתה המיוחדת של העמותה היא במתנדביה היקרים שבזכותם הפעילות הולכת וגדלה. כל עזרה תתקבל בברכה! בין אם זה התנדבות בעמותה, תרומה כספית או תרומה של מוצרים לתינוקות. </string>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obo-vI-Zkc">
-                                <rect key="frame" x="40" y="86.333333333333329" width="80" height="79.999999999999986"/>
+                                <rect key="frame" x="40" y="83" width="85" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="obo-vI-Zkc" secondAttribute="height" multiplier="1:1" id="Pfq-zr-DCE"/>
-                                    <constraint firstAttribute="width" constant="80" id="lRD-c3-xQh"/>
+                                    <constraint firstAttribute="width" constant="85" id="g63-8R-Jor"/>
+                                    <constraint firstAttribute="height" constant="85" id="rWC-xT-8LC"/>
                                 </constraints>
                                 <state key="normal" image="call_icon"/>
                                 <connections>
@@ -1298,10 +1310,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcQ-wG-hME">
-                                <rect key="frame" x="40" y="160.66666666666666" width="80" height="80"/>
+                                <rect key="frame" x="40" y="188" width="85" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gcQ-wG-hME" secondAttribute="height" multiplier="1:1" id="dR2-OQ-HNd"/>
-                                    <constraint firstAttribute="width" constant="80" id="l1X-jA-Cbf"/>
+                                    <constraint firstAttribute="width" constant="85" id="cxf-JD-sdZ"/>
+                                    <constraint firstAttribute="height" constant="85" id="iRY-Gc-Z7G"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="waze_icon"/>
                                 <connections>
@@ -1309,10 +1321,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxO-2K-w0P">
-                                <rect key="frame" x="45" y="561" width="80" height="80"/>
+                                <rect key="frame" x="40" y="600.33333333333337" width="85" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uxO-2K-w0P" secondAttribute="height" multiplier="1:1" id="K13-ZQ-GmT"/>
-                                    <constraint firstAttribute="width" constant="80" id="y2Q-Q3-xVD"/>
+                                    <constraint firstAttribute="height" constant="85" id="Obr-ag-KnG"/>
+                                    <constraint firstAttribute="width" constant="85" id="y2Q-Q3-xVD"/>
                                 </constraints>
                                 <state key="normal" image="facebook_icon"/>
                                 <connections>
@@ -1325,32 +1337,32 @@
                             <constraint firstItem="obo-vI-Zkc" firstAttribute="centerY" secondItem="qWF-nu-7qT" secondAttribute="centerY" id="0ZK-DS-AWO"/>
                             <constraint firstItem="D1g-1r-rV5" firstAttribute="trailing" secondItem="efo-FU-xiT" secondAttribute="trailing" constant="16" id="1oO-0a-Sbg"/>
                             <constraint firstItem="N43-4a-y4A" firstAttribute="leading" secondItem="KBR-nG-tnB" secondAttribute="trailing" constant="16" id="1vB-Xx-lpZ"/>
-                            <constraint firstItem="HiL-n7-lvi" firstAttribute="top" secondItem="G78-pH-Bvg" secondAttribute="bottom" constant="60" id="27i-p1-YDW"/>
+                            <constraint firstItem="HiL-n7-lvi" firstAttribute="top" secondItem="G78-pH-Bvg" secondAttribute="bottom" constant="80" id="27i-p1-YDW"/>
                             <constraint firstItem="fMW-QY-YXT" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="280" id="2O6-97-VMj"/>
                             <constraint firstItem="M4d-2e-Foc" firstAttribute="leading" secondItem="qWF-nu-7qT" secondAttribute="trailing" constant="16" id="2bT-c2-z9Z"/>
                             <constraint firstItem="D1g-1r-rV5" firstAttribute="trailing" secondItem="fMW-QY-YXT" secondAttribute="trailing" constant="16" id="8Bt-qI-IGk"/>
-                            <constraint firstItem="gcQ-wG-hME" firstAttribute="centerY" secondItem="KBR-nG-tnB" secondAttribute="centerY" id="BW6-Jv-0ed"/>
                             <constraint firstItem="D1g-1r-rV5" firstAttribute="trailing" secondItem="G78-pH-Bvg" secondAttribute="trailing" constant="16" id="Bld-aA-MSo"/>
                             <constraint firstItem="D1g-1r-rV5" firstAttribute="trailing" secondItem="HiL-n7-lvi" secondAttribute="trailing" constant="16" id="IeJ-0u-DI7"/>
                             <constraint firstItem="fMW-QY-YXT" firstAttribute="trailing" secondItem="N43-4a-y4A" secondAttribute="trailing" id="J9v-eG-DJf"/>
                             <constraint firstItem="qWF-nu-7qT" firstAttribute="centerY" secondItem="M4d-2e-Foc" secondAttribute="centerY" id="RXA-oK-I5S"/>
                             <constraint firstItem="D1g-1r-rV5" firstAttribute="trailing" secondItem="M4d-2e-Foc" secondAttribute="trailing" constant="16" id="RlQ-Wt-lJn"/>
+                            <constraint firstItem="uxO-2K-w0P" firstAttribute="top" secondItem="IiJ-Z3-bH0" secondAttribute="bottom" constant="20" id="Vyb-gO-t3d"/>
                             <constraint firstItem="G78-pH-Bvg" firstAttribute="top" secondItem="efo-FU-xiT" secondAttribute="bottom" constant="60" id="XjL-Pm-F0x"/>
+                            <constraint firstItem="gcQ-wG-hME" firstAttribute="top" secondItem="obo-vI-Zkc" secondAttribute="bottom" constant="20" id="ZoO-sY-cMc"/>
                             <constraint firstItem="efo-FU-xiT" firstAttribute="top" secondItem="fMW-QY-YXT" secondAttribute="bottom" constant="8" id="aF2-1I-qfh"/>
                             <constraint firstItem="efo-FU-xiT" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="16" id="cDO-pu-5dh"/>
                             <constraint firstItem="obo-vI-Zkc" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="40" id="dL8-w2-0gV"/>
                             <constraint firstItem="M4d-2e-Foc" firstAttribute="top" secondItem="D1g-1r-rV5" secondAttribute="top" constant="50" id="eLc-q6-Fjf"/>
                             <constraint firstItem="qWF-nu-7qT" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="150" id="f0K-Lb-FI2"/>
                             <constraint firstItem="gcQ-wG-hME" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="40" id="flu-ot-9oV"/>
-                            <constraint firstItem="uxO-2K-w0P" firstAttribute="top" secondItem="IiJ-Z3-bH0" secondAttribute="bottom" constant="3.6666666666667425" id="jjS-n5-bkK"/>
                             <constraint firstItem="N43-4a-y4A" firstAttribute="trailing" secondItem="M4d-2e-Foc" secondAttribute="trailing" id="lxA-Z8-2Zl"/>
                             <constraint firstItem="KBR-nG-tnB" firstAttribute="centerY" secondItem="N43-4a-y4A" secondAttribute="centerY" id="n8e-yd-2Nx"/>
                             <constraint firstItem="KBR-nG-tnB" firstAttribute="leading" secondItem="D1g-1r-rV5" secondAttribute="leading" constant="140" id="rSY-gb-FSB"/>
-                            <constraint firstItem="N43-4a-y4A" firstAttribute="top" secondItem="M4d-2e-Foc" secondAttribute="bottom" constant="50" id="tjl-LU-LvJ"/>
+                            <constraint firstItem="N43-4a-y4A" firstAttribute="top" secondItem="M4d-2e-Foc" secondAttribute="bottom" constant="80" id="tjl-LU-LvJ"/>
                             <constraint firstItem="fMW-QY-YXT" firstAttribute="top" secondItem="N43-4a-y4A" secondAttribute="bottom" constant="50" id="u9F-cz-kox"/>
                             <constraint firstItem="IiJ-Z3-bH0" firstAttribute="leading" secondItem="gcQ-wG-hME" secondAttribute="leading" id="va9-Tb-ueG"/>
                             <constraint firstItem="IiJ-Z3-bH0" firstAttribute="centerY" secondItem="G78-pH-Bvg" secondAttribute="centerY" id="xPO-GV-1Pm"/>
-                            <constraint firstItem="uxO-2K-w0P" firstAttribute="leading" secondItem="IiJ-Z3-bH0" secondAttribute="leading" constant="5" id="xxq-9q-Pqz"/>
+                            <constraint firstItem="uxO-2K-w0P" firstAttribute="leading" secondItem="IiJ-Z3-bH0" secondAttribute="leading" id="xxq-9q-Pqz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1g-1r-rV5"/>
                     </view>
@@ -1361,7 +1373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTY-0M-Sxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="-1149"/>
+            <point key="canvasLocation" x="431.8840579710145" y="-1149.4565217391305"/>
         </scene>
         <!--תרומה באמצעות שליח-->
         <scene sceneID="KbF-Mz-jIS">
@@ -1372,14 +1384,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומה כספית התקשר ל:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-Ya-aQs">
-                                <rect key="frame" x="198.66666666666663" y="80" width="199.33333333333337" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <rect key="frame" x="185.33333333333337" y="80" width="212.66666666666663" height="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-pw-AWk">
-                                <rect key="frame" x="14" y="74" width="180.66666666666666" height="40"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <rect key="frame" x="14" y="72" width="167.33333333333334" height="39"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
                                 <state key="normal" title="0507888094">
                                     <color key="titleColor" name="textColor"/>
                                 </state>
@@ -1387,18 +1399,22 @@
                                     <action selector="phoneNumber:" destination="r1q-tO-wfY" eventType="touchUpInside" id="reK-eH-JtR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
-                                <rect key="frame" x="16" y="107" width="382" height="26.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומת מוצרים - " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
+                                <rect key="frame" x="252.66666666666663" y="119" width="145.33333333333337" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145.33333333333337" id="8QT-cS-rOi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmt-qZ-HKZ">
-                                <rect key="frame" x="115" y="629" width="184" height="42"/>
+                                <rect key="frame" x="137" y="631" width="140" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="mhH-yD-cHF"/>
+                                    <constraint firstAttribute="width" constant="140" id="Obf-P6-55u"/>
+                                    <constraint firstAttribute="height" constant="40" id="mhH-yD-cHF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                 <state key="normal" title="סרוק ברקוד" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1407,7 +1423,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-pM-0Lw">
-                                <rect key="frame" x="8" y="140.66666666666666" width="398" height="480.33333333333337"/>
+                                <rect key="frame" x="8" y="148" width="398" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QmG-cT-7ge">
                                     <size key="itemSize" width="174" height="154"/>
@@ -1427,8 +1443,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="174" height="125"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-87-h17">
-                                                    <rect key="frame" x="64.666666666666671" y="129" width="44.666666666666671" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="63.666666666666657" y="129" width="47.333333333333343" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1453,24 +1469,34 @@
                                     <outlet property="delegate" destination="r1q-tO-wfY" id="ih0-RG-TvY"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dur-5K-hNd">
+                                <rect key="frame" x="9.6666666666666572" y="120.33333333333331" width="240" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="UX3-Cy-nKT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="top" secondItem="Sdh-pM-0Lw" secondAttribute="bottom" constant="8" id="1kb-EM-gHI"/>
+                            <constraint firstItem="fws-br-Ga3" firstAttribute="leading" secondItem="Dur-5K-hNd" secondAttribute="trailing" constant="3" id="8Cq-IQ-nMb"/>
+                            <constraint firstItem="Dur-5K-hNd" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="9.6666666666666572" id="958-E8-QPb"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="leading" secondItem="mXF-pw-AWk" secondAttribute="trailing" constant="4" id="A2X-wG-yfl"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="14" id="Ax3-Jw-YVu"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="HUj-Ya-aQs" secondAttribute="trailing" constant="16" id="DrO-T6-rtT"/>
                             <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="centerX" secondItem="pkf-QM-FMp" secondAttribute="centerX" id="Gm8-2Y-NoJ"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="fws-br-Ga3" secondAttribute="trailing" constant="16" id="JXh-ZI-zqJ"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="8" id="OBZ-IM-lca"/>
-                            <constraint firstItem="Sdh-pM-0Lw" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="7.5" id="Qzx-UX-jO9"/>
-                            <constraint firstItem="Hmt-qZ-HKZ" firstAttribute="width" secondItem="S55-Lc-Siz" secondAttribute="height" multiplier="1:4" id="dl9-7k-OgT"/>
+                            <constraint firstItem="Dur-5K-hNd" firstAttribute="centerY" secondItem="fws-br-Ga3" secondAttribute="centerY" id="P6s-IG-rtu"/>
+                            <constraint firstItem="Sdh-pM-0Lw" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="6" id="Qzx-UX-jO9"/>
+                            <constraint firstItem="mXF-pw-AWk" firstAttribute="centerY" secondItem="HUj-Ya-aQs" secondAttribute="centerY" id="h4r-LS-82W"/>
                             <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
-                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="4" id="iDv-8R-hHz"/>
-                            <constraint firstItem="fws-br-Ga3" firstAttribute="leading" secondItem="pkf-QM-FMp" secondAttribute="leading" constant="16" id="jpj-NB-aeU"/>
+                            <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="16" id="iDv-8R-hHz"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="Sdh-pM-0Lw" secondAttribute="trailing" constant="8" id="pHO-oL-qOi"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="Hmt-qZ-HKZ" secondAttribute="bottom" constant="16" id="pSy-KS-9CH"/>
-                            <constraint firstItem="mXF-pw-AWk" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="10" id="rV0-C0-kKV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pkf-QM-FMp"/>
                     </view>
@@ -1495,7 +1521,7 @@
                                 <rect key="frame" x="16" y="52" width="382" height="624"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productsCell" rowHeight="79" id="dqp-0H-6Mr" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productsCell" rowHeight="79" id="dqp-0H-6Mr" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dqp-0H-6Mr" id="jFL-42-hDl">
@@ -1527,7 +1553,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0y-ZB-20N">
-                                                    <rect key="frame" x="92.333333333333329" y="21" width="30" height="36"/>
+                                                    <rect key="frame" x="92.666666666666671" y="21" width="30" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="+"/>
                                                     <connections>
@@ -1535,7 +1561,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBH-0D-dXl">
-                                                    <rect key="frame" x="114.66666666666669" y="29" width="160" height="20.333333333333329"/>
+                                                    <rect key="frame" x="114.66666666666669" y="29" width="160" height="20.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="goH-7V-HIf"/>
                                                     </constraints>
@@ -1573,7 +1599,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO1-H3-NUt">
-                                <rect key="frame" x="115.33333333333331" y="688" width="184" height="32"/>
+                                <rect key="frame" x="115" y="688" width="184" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Vhf-Pe-WSV"/>
                                 </constraints>
@@ -1616,26 +1642,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שם מלא:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZc-y0-BDn">
-                                <rect key="frame" x="319.66666666666669" y="154" width="62.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="320" y="154" width="62" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="עיר :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-yR-73o">
-                                <rect key="frame" x="319.66666666666669" y="202" width="62.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="320" y="201" width="62" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="טלפון:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESE-Jr-GMF">
-                                <rect key="frame" x="319.66666666666669" y="297.33333333333331" width="62.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="320" y="295" width="62" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הערות:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a38-uf-NnS">
-                                <rect key="frame" x="319.66666666666669" y="355.33333333333331" width="62.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="320" y="352" width="62" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1646,52 +1672,52 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="כתוב את שם העיר" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-HY-jwc">
-                                <rect key="frame" x="31.999999999999986" y="202" width="216.66666666666663" height="30"/>
+                                <rect key="frame" x="31.999999999999986" y="201" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="הקש מספר טלפון" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksD-Tt-Dql">
-                                <rect key="frame" x="31.999999999999986" y="297.33333333333331" width="216.66666666666663" height="30"/>
+                                <rect key="frame" x="31.999999999999986" y="295" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="הערות?" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="C95-eF-xhs">
-                                <rect key="frame" x="32" y="355.33333333333331" width="217" height="149"/>
+                                <rect key="frame" x="32" y="352" width="217" height="149"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216.5" id="Cj9-P9-l25"/>
                                     <constraint firstAttribute="height" constant="149" id="gSV-Pv-BzG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אם תהיה שגיאה היא תהיה כאן..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkv-aj-F9m">
-                                <rect key="frame" x="16" y="520.33333333333337" width="382" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="517" width="382" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="רחוב:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-sc-KN1">
-                                <rect key="frame" x="345" y="250.00000000000003" width="37" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="342.33333333333331" y="248" width="39.666666666666686" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="כתוב את  שם הרחוב" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-sy-s9n">
-                                <rect key="frame" x="31.999999999999986" y="250" width="216.66666666666663" height="30"/>
+                                <rect key="frame" x="31.999999999999986" y="248" width="216.66666666666663" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-cP-91U">
-                                <rect key="frame" x="143.66666666666666" y="613" width="126.99999999999997" height="42"/>
+                                <rect key="frame" x="147.33333333333334" y="615" width="120.00000000000003" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="I4f-zz-wbg"/>
-                                    <constraint firstAttribute="width" constant="127" id="xdq-u2-cBY"/>
+                                    <constraint firstAttribute="height" constant="40" id="I4f-zz-wbg"/>
+                                    <constraint firstAttribute="width" constant="120" id="xdq-u2-cBY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" title="שלח" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1768,6 +1794,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="textColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="r1q-tO-wfY" kind="relationship" relationship="viewControllers" id="bKh-Zs-11T"/>
@@ -1790,7 +1817,7 @@
                                 <rect key="frame" x="16" y="36" width="382" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="1cg-ip-U3L" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="1cg-ip-U3L" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1cg-ip-U3L" id="eTW-oH-9Ju">
@@ -1912,7 +1939,7 @@
                                 <rect key="frame" x="16" y="36" width="382" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="OCz-wj-NHg" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="products_cell" rowHeight="85" id="OCz-wj-NHg" customClass="ProductsTableViewCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OCz-wj-NHg" id="7Ab-JU-9cY">
@@ -1987,7 +2014,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-xf-stR">
-                                <rect key="frame" x="123.99999999999999" y="633" width="166.66666666666663" height="34"/>
+                                <rect key="frame" x="123.66666666666667" y="633" width="166.66666666666663" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="עדכן" backgroundImage="2help_Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2034,7 +2061,7 @@
                                 <rect key="frame" x="16" y="128" width="382" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="netmanager_cell" rowHeight="82" id="jwn-T5-t0A" customClass="NetManagerTableCell" customModule="MyHackton" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="netmanager_cell" rowHeight="82" id="jwn-T5-t0A" customClass="NetManagerTableCell" customModule="MyHackton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwn-T5-t0A" id="F0d-AP-JAS">
@@ -2042,7 +2069,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-sT-aMs">
-                                                    <rect key="frame" x="318.33333333333331" y="30.333333333333329" width="47.666666666666686" height="21"/>
+                                                    <rect key="frame" x="318" y="30.666666666666671" width="48" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2064,7 +2091,7 @@
                                 </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="חיפוש" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXE-Ig-vPL">
-                                <rect key="frame" x="62.666666666666657" y="36" width="289.66666666666674" height="30"/>
+                                <rect key="frame" x="62" y="36" width="290" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2108,8 +2135,11 @@
         <image name="facebook_icon" width="606" height="606"/>
         <image name="logo" width="100" height="100"/>
         <image name="map_icon" width="24" height="24"/>
-        <image name="waze_icon" width="32" height="32"/>
+        <image name="waze_icon" width="300" height="300"/>
         <image name="web_icon" width="512" height="512"/>
+        <namedColor name="textColor">
+            <color red="0.0078431372549019607" green="0.54117647058823526" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="textColor">
             <color red="0.0078431372549019607" green="0.54117647058823526" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
