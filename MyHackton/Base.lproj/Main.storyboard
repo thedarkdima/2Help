@@ -996,7 +996,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="15" y="31" width="70" height="20.333333333333336"/>
+                                                    <rect key="frame" x="15" y="31" width="70" height="20.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="dql-fh-uCV"/>
                                                     </constraints>

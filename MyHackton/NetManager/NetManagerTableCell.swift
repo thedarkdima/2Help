@@ -8,6 +8,8 @@ class NetManagerTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        
     }
     
     

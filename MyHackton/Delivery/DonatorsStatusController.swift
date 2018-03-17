@@ -77,6 +77,7 @@ class DonatorsStatusController: UIViewController {
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: { ok in
             self.removeRequest()
+            
         }))
         
         present(alert, animated: true, completion: nil)

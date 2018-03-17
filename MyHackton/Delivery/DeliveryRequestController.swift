@@ -80,6 +80,8 @@ class DeliveryRequestController: UIViewController, UITableViewDataSource ,UITabl
         
         func okHandler(alert: UIAlertAction!){
             navigationController?.popToRootViewController(animated: true)
+            let prefs = UserDefaults.standard
+            prefs.removeObject(forKey: "token")
         }
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))

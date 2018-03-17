@@ -11,6 +11,9 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
     var searchArray: [[String]] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        table.backgroundColor = UIColor.clear
+        
         let prefs = UserDefaults.standard
         if let tok = prefs.string(forKey: "token"){
             token = tok

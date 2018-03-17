@@ -11,9 +11,13 @@ class NetManagerUsersController: UIViewController{
     @IBOutlet var phone: UITextField!
     @IBOutlet var address: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+    }
+    
     override func viewDidLoad() {
         if (toDo == "update"){
-            toDoBtn.setTitle("הדכן", for: .normal)
+            toDoBtn.setTitle("עדכן", for: .normal)
         } else {
             toDoBtn.setTitle("הרשם", for: .normal)
         }
@@ -49,7 +53,7 @@ class NetManagerUsersController: UIViewController{
                 user.append(address.text!)
                 
                 ServerConnections.getDoubleArrayAsync("/add_user", [[token], user], handler: {array in
-                    let alert = UIAlertController(title: "התרעה", message: "משתמש נוסף למארכת בהצלחה", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "התראה", message: "משתמש נוסף למערכת בהצלחה", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     
@@ -63,7 +67,7 @@ class NetManagerUsersController: UIViewController{
                 user[5] = phone.text!
                 user[6] = address.text!
                 ServerConnections.getDoubleArrayAsync("/update_user", [[token], user], handler: {array in
-                    let alert = UIAlertController(title: "התרעה", message: "פרטי המשתמש עודכנו בהצלחה", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "התראה", message: "פרטי המשתמש עודכנו בהצלחה", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 })
