@@ -10,9 +10,19 @@ class NetManagerUsersController: UIViewController{
     @IBOutlet var fullname: UITextField!
     @IBOutlet var phone: UITextField!
     @IBOutlet var address: UITextField!
+    @IBOutlet var toDoBtn: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
          self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        toDoBtn.titleLabel?.textColor = UIColor.white
+        
+        let font = UIFont.boldSystemFont(ofSize: 16)
+        segment.setTitleTextAttributes([NSAttributedStringKey.font : font], for: .normal)
+        segment.backgroundColor = UIColor.white.withAlphaComponent(0.7)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
@@ -20,6 +30,7 @@ class NetManagerUsersController: UIViewController{
             toDoBtn.setTitle("עדכן", for: .normal)
         } else {
             toDoBtn.setTitle("הרשם", for: .normal)
+            
         }
         if user.count > 0{
             username.text = user[1]
@@ -37,7 +48,7 @@ class NetManagerUsersController: UIViewController{
         }
     }
     
-    @IBOutlet var toDoBtn: UIButton!
+    
     @IBAction func btnPress(_ sender: Any) {
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){

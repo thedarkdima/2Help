@@ -18,6 +18,7 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
     override func viewWillAppear(_ animated: Bool) {
         notice.isHidden = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        
 
     }
     
@@ -60,6 +61,8 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
         }
     }
     
+    
+    
     @IBAction func sendBtn(_ sender: UIButton) {
         if name.text!.count != 0 {
             if city.text!.count != 0 {
@@ -95,8 +98,13 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
                                         }
                                         ServerConnections.getDoubleArrayAsync("/add_request", package, handler: {back in
                                             self.notice.isHidden = false
-                                            self.notice.text = "בקשתכם איתקבלה בהצלחה"
+                                            self.notice.text = "בקשתכם התקבלה בהצלחה"
                                             self.prefs.set([:], forKey: "basket")
+                                            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+                                                sleep(2)
+                                                self.thanksAlert()
+                                            })
+                                            
                                         })
                                     } else {
                                         self.notice.isHidden = false
@@ -149,6 +157,14 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
         UIView.animate(withDuration: 0.1, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             textField.center.x += 10
         }, completion: nil)
+    }
+    
+    func thanksAlert(){
+        let alert = UIAlertController(title: "!תודה", message: "תודה רבה על תרומתך👏🏼", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: { (alert) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func checkAddress(address : String){

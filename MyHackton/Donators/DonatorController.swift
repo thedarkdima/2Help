@@ -17,6 +17,7 @@ class DonatorController: UIViewController ,UICollectionViewDelegate , UICollecti
     ////
     
 override func viewWillAppear(_ animated: Bool) {
+    self.navigationController?.isNavigationBarHidden = false
     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
     self.productsCollectionView.backgroundColor = UIColor.clear
     
@@ -122,6 +123,9 @@ override func viewDidLoad(){
         collectionView.isScrollEnabled = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
+        let label = cell.viewWithTag(100) as! UILabel
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.tintColor = UIColor(red: 2, green: 138, blue: 225, alpha: 1)
         
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{

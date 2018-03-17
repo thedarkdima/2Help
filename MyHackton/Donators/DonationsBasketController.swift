@@ -176,6 +176,7 @@ class DonationsBasketController: UIViewController, UITableViewDataSource, UITabl
             if let prefImageData = UserDefaults.standard.object(forKey: basket[key]![1]){
                 cell.product_image.image = UIImage(data: prefImageData as! Data)
                 cell.backgroundColor = UIColor.clear
+                cell.backgroundColor = UIColor.white.withAlphaComponent(0.5)
             }
         }
         return cell

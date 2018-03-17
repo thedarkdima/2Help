@@ -12,6 +12,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     var deliveryRequest : DeliveryRequestController!
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         tabBarController?.navigationItem.title = "בחר את המשלוחים שברצונך לקחת"
         
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))

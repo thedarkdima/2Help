@@ -9,6 +9,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         let prefs = UserDefaults.standard
         prefs.set([:], forKey: "basket")
         
@@ -43,6 +44,9 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         collectionView.backgroundColor = UIColor.clear
         

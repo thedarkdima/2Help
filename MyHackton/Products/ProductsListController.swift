@@ -13,6 +13,7 @@ class ProductsListController: UIViewController , UITableViewDataSource {
     var productImage : UIImage!
   
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         self.productsTable.backgroundColor = UIColor.clear
         navigationItem.title = pageTitle!

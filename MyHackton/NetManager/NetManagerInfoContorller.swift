@@ -4,8 +4,9 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+      
 
     }
     
@@ -21,6 +22,8 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+         picker.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        pickerView.tintColor = UIColor.red
         picker.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         return array[row]
     }

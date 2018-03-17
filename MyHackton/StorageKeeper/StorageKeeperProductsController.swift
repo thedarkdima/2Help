@@ -89,6 +89,7 @@ class StorageKeeperProductsController: UIViewController, UITableViewDataSource, 
     }
     
     func showAlert(flag: Bool){
+        self.navigationController?.isNavigationBarHidden = false
         let alert = UIAlertController(title: "שינוי כמות", message: "אתה בטוח שאתה רוצה לעדכן את הכמות?", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "ביטול", style: .cancel, handler: nil)
         let accept = UIAlertAction(title: "אישור", style: .default, handler: { action in

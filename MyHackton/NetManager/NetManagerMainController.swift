@@ -7,6 +7,7 @@ class NetManagerMainController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
         
@@ -27,6 +28,8 @@ class NetManagerMainController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
+        let prefs = UserDefaults.standard
+        prefs.removeObject(forKey: "token")
         
         present(alert, animated: true, completion: nil)
         
