@@ -1403,13 +1403,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומה כספית התקשר ל:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-Ya-aQs">
-                                <rect key="frame" x="185.33333333333337" y="80" width="212.66666666666663" height="23"/>
+                                <rect key="frame" x="185.33333333333337" y="72" width="212.66666666666663" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-pw-AWk">
-                                <rect key="frame" x="14" y="72" width="167.33333333333334" height="39"/>
+                                <rect key="frame" x="14" y="64" width="167.33333333333334" height="39"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
                                 <state key="normal" title="0507888094">
                                     <color key="titleColor" name="textColor"/>
@@ -1419,7 +1419,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="לתרומת מוצרים - " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-br-Ga3">
-                                <rect key="frame" x="252.66666666666663" y="107" width="145.33333333333337" height="23"/>
+                                <rect key="frame" x="252.66666666666663" y="99" width="145.33333333333337" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145.33333333333337" id="8QT-cS-rOi"/>
                                 </constraints>
@@ -1442,7 +1442,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-pM-0Lw">
-                                <rect key="frame" x="8" y="136" width="398" height="487"/>
+                                <rect key="frame" x="8" y="128" width="398" height="495"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QmG-cT-7ge">
                                     <size key="itemSize" width="174" height="154"/>
@@ -1489,7 +1489,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר את המזון שברצונך לתרום" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dur-5K-hNd">
-                                <rect key="frame" x="9.6666666666666572" y="108.33333333333333" width="240" height="21.999999999999986"/>
+                                <rect key="frame" x="9.6666666666666572" y="100.33333333333333" width="240" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="UX3-Cy-nKT"/>
                                 </constraints>
@@ -1512,7 +1512,7 @@
                             <constraint firstItem="Dur-5K-hNd" firstAttribute="centerY" secondItem="fws-br-Ga3" secondAttribute="centerY" id="P6s-IG-rtu"/>
                             <constraint firstItem="Sdh-pM-0Lw" firstAttribute="top" secondItem="fws-br-Ga3" secondAttribute="bottom" constant="6" id="Qzx-UX-jO9"/>
                             <constraint firstItem="mXF-pw-AWk" firstAttribute="centerY" secondItem="HUj-Ya-aQs" secondAttribute="centerY" id="h4r-LS-82W"/>
-                            <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="16" id="hED-R3-WSr"/>
+                            <constraint firstItem="HUj-Ya-aQs" firstAttribute="top" secondItem="pkf-QM-FMp" secondAttribute="top" constant="8" id="hED-R3-WSr"/>
                             <constraint firstItem="fws-br-Ga3" firstAttribute="top" secondItem="HUj-Ya-aQs" secondAttribute="bottom" constant="4" id="iDv-8R-hHz"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="trailing" secondItem="Sdh-pM-0Lw" secondAttribute="trailing" constant="8" id="pHO-oL-qOi"/>
                             <constraint firstItem="pkf-QM-FMp" firstAttribute="bottom" secondItem="Hmt-qZ-HKZ" secondAttribute="bottom" constant="16" id="pSy-KS-9CH"/>
