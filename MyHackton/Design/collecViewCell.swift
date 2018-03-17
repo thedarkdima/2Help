@@ -21,12 +21,12 @@ class collecViewCell: UICollectionViewCell {
        
         
         DispatchQueue.main.async {
-            self.container1.layer.cornerRadius = 15.0
-            self.container1.layer.shadowColor = UIColor.lightGray.cgColor
-            self.container1.layer.shadowOpacity = 0.2
-            self.container1.layer.shadowOpacity = 0.2
-            self.container1.layer.shadowOffset = .zero
-            self.container1.layer.shadowPath = UIBezierPath(rect: self.container1.bounds).cgPath
+//            self.container1.layer.cornerRadius = 15.0
+//            self.container1.layer.shadowColor = UIColor.lightGray.cgColor
+//            self.container1.layer.shadowOpacity = 0.2
+//            self.container1.layer.shadowOpacity = 0.2
+//            self.container1.layer.shadowOffset = .zero
+//            self.container1.layer.shadowPath = UIBezierPath(rect: self.container1.bounds).cgPath
             self.container1.layer.shouldRasterize = true
             
             

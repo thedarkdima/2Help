@@ -88,24 +88,22 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
         pin.canShowCallout = true
         pin.leftCalloutAccessoryView = UIButton(type: .contactAdd)
+        pin.leftCalloutAccessoryView?.tintColor = UIColor(named: "textColor")
         pin.animatesDrop = true
-        let anno = pin.annotation
-        if anno?.coordinate.latitude == MyMap.userLocation.coordinate.latitude && anno?.coordinate.longitude == MyMap.userLocation.coordinate.longitude {
-            print("user location ano")
+        
+        if pin.annotation?.coordinate.latitude == MyMap.userLocation.coordinate.latitude && pin.annotation?.coordinate.longitude == MyMap.userLocation.coordinate.longitude {
             pin.leftCalloutAccessoryView?.isHidden = true
-            pin.pinTintColor = UIColor.blue
-            pin.image = UIImage(named: "user_location")
-            
+            pin.pinTintColor = UIColor(named: "textColor")
         }
         
-        if MyMap.userLocation.coordinate.latitude == annotation.coordinate.latitude && MyMap.userLocation.coordinate.longitude == annotation.coordinate.longitude {
-           pin.canShowCallout = false
-        }
+//        if MyMap.userLocation.coordinate.latitude == annotation.coordinate.latitude && MyMap.userLocation.coordinate.longitude == annotation.coordinate.longitude {
+//           pin.canShowCallout = false
+//        }
         
         return pin
     }
     
-    // button on annotation is pressed
+    // the function start when the button on annotation is pressed
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let currentAnnotation = view.annotation{
             if let id = currentAnnotation.subtitle{
@@ -116,54 +114,20 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
             }
         }
         
-        //navigationController?.pushViewController(displayPage, animated: true)
     }
     
     func mylocation(){
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
-        //let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        //let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
+        let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         self.MyMap.setRegion(region, animated: false)
         self.MyMap.userLocation.title = "        המיקום שלי"
-        //self.MyMap.userLocation.title.style??
         self.MyMap.showsUserLocation = true
       
-        
-        ////  Measuring distance  ////
-        //my locations coordinates
-       // print("\(myLocation.latitude) and \(myLocation.longitude)")
-        //print("the distance is : \((distance))")
-        
-        
-        //Measuring my distance to my buddy's (in km)
-        //let distance = l1.distance(from: myBuddysLocation) / 1000
-        
-        
-        //Display the result in km
-        //print(String(format: "The distance to my buddy is %.01fkm", distance))
-       
     }
-    
-//    // find distance between to places
-//    func findDistanceBetweenPins() -> Double {
-//        //My location
-//        let l1 = CLLocation(latitude: MyMap.userLocation.coordinate.latitude, longitude: MyMap.userLocation.coordinate.longitude)
-//        //My buddy's location
-//        let myBuddysLocation = CLLocation(latitude: 59.326354, longitude: 18.072310)
-//
-//        //Measuring my distance to my buddy's (in km)
-//        let distance = l1.distance(from: myBuddysLocation) / 1000
-//
-//        return distance
-//
-//        //Display the result in km
-//  //      print(String(format: "The distance to my buddy is %.01fkm", distance))
-//    }
-    
-    
     
     //logout from the system
     @objc func backcheck(){

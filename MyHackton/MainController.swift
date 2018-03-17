@@ -13,7 +13,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         prefs.set([:], forKey: "basket")
         
         setCollectionViewProperties()
-        collectionView.showsHorizontalScrollIndicator = false
+        
         
         if let token = prefs.string(forKey: "token"){
             ServerConnections.getDoubleArrayAsync("/token_login", [token], handler: {array in
@@ -139,6 +139,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     
     func setCollectionViewProperties(){
+        collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(UINib.init(nibName: "collecViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
         //collectionView.backgroundColor = UIColor.clear
@@ -168,8 +169,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         cell.webView.scrollView.isScrollEnabled = false
-        
+         print(collectionView.visibleCells.count)
         return cell
+        
+       
     }
     
     ////

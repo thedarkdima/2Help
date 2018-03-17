@@ -113,11 +113,10 @@
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x2-jn-4HL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-u7-tXM">
-                                <rect key="frame" x="157" y="64" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-ZH-ucm">
+                                <rect key="frame" x="157.66666666666666" y="44" width="99.999999999999972" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="618-yn-QUt"/>
-                                    <constraint firstAttribute="width" constant="100" id="Yhx-gv-RGJ"/>
+                                    <constraint firstAttribute="height" constant="120" id="gh5-uP-LBg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -125,10 +124,10 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QuY-JS-gNA" secondAttribute="bottom" constant="16" id="8Ys-Rd-WqS"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="top" secondItem="r0C-OB-Hc6" secondAttribute="bottom" constant="32" id="IgG-GW-bp9"/>
-                            <constraint firstItem="3V6-u7-tXM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jok-y5-6W8"/>
+                            <constraint firstItem="Auu-ZH-ucm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="N1d-WV-8wB"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="top" secondItem="q8l-9X-ApP" secondAttribute="bottom" constant="20" id="NM5-Ix-cBe"/>
+                            <constraint firstItem="Auu-ZH-ucm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nsd-KD-5XK"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YLg-Nu-60c"/>
-                            <constraint firstItem="3V6-u7-tXM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cPd-uo-mjC"/>
                             <constraint firstItem="QuY-JS-gNA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZI-uo-Tas"/>
                             <constraint firstItem="q8l-9X-ApP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRm-3X-1pG"/>
                             <constraint firstItem="aGk-bT-4kA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ikx-TK-ULs"/>
@@ -488,7 +487,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zKm-IR-Sng"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="רשימת השליחים" image="delivery_icon" id="egC-nZ-JJ9"/>
+                    <tabBarItem key="tabBarItem" title="רשימת השליחים" image="delivery_list_icon" id="egC-nZ-JJ9"/>
                     <navigationItem key="navigationItem" title="רשימת השליחים" id="iZE-aP-QzN">
                         <barButtonItem key="backBarButtonItem" title="לרשימת השליחים" id="mOW-Ic-VmO"/>
                     </navigationItem>
@@ -942,7 +941,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2cg-Wc-PoF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="כתובות המשלוחים" id="7q4-gA-TRg"/>
+                    <tabBarItem key="tabBarItem" title="כתובות המשלוחים" image="map_icon" id="7q4-gA-TRg"/>
                     <connections>
                         <outlet property="MyMap" destination="ESw-ol-moe" id="DNL-N1-gI1"/>
                         <outlet property="myMap" destination="ESw-ol-moe" id="miH-PO-sSV"/>
@@ -982,15 +981,21 @@
                                 <rect key="frame" x="16" y="16" width="382" height="655"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requests_list_ofDelivery" rowHeight="83" id="wcV-7e-Y8V" customClass="DeliveryRequestCell" customModule="MyHackton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcV-7e-Y8V" id="QWf-I2-FyW">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="82.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
+                                                    <rect key="frame" x="85" y="31" width="281" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="15" y="12" width="70" height="20"/>
+                                                    <rect key="frame" x="15" y="31" width="70" height="20.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="dql-fh-uCV"/>
                                                     </constraints>
@@ -998,33 +1003,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
-                                                    <rect key="frame" x="85" y="12" width="232" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-ZI-e6f">
-                                                    <rect key="frame" x="325" y="4" width="47" height="34"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="34" id="7ec-bB-NXe"/>
-                                                        <constraint firstAttribute="width" constant="47" id="W1Y-vf-oNi"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ETv-ZI-e6f" secondAttribute="trailing" constant="10" id="4UB-19-8tq"/>
                                                 <constraint firstItem="ls4-Se-GKD" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="Ig8-7l-0NK"/>
                                                 <constraint firstItem="Qnc-gx-dNS" firstAttribute="leading" secondItem="ls4-Se-GKD" secondAttribute="trailing" id="Izc-RU-wWU"/>
-                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="top" secondItem="QWf-I2-FyW" secondAttribute="top" constant="4" id="TdJ-MB-Z94"/>
                                                 <constraint firstItem="ls4-Se-GKD" firstAttribute="leading" secondItem="QWf-I2-FyW" secondAttribute="leading" constant="15" id="YTm-KE-osq"/>
                                                 <constraint firstItem="Qnc-gx-dNS" firstAttribute="centerY" secondItem="QWf-I2-FyW" secondAttribute="centerY" id="cai-lW-9Sk"/>
-                                                <constraint firstItem="ETv-ZI-e6f" firstAttribute="leading" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="8" id="qjC-t5-zgh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qnc-gx-dNS" secondAttribute="trailing" constant="16" id="k1s-cz-eip"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="address" destination="Qnc-gx-dNS" id="vlF-or-aHq"/>
-                                            <outlet property="icon_adress" destination="ETv-ZI-e6f" id="32a-tT-QsB"/>
                                             <outlet property="km_label" destination="ls4-Se-GKD" id="r9U-ln-xlY"/>
                                         </connections>
                                     </tableViewCell>
@@ -1044,7 +1033,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vl9-jY-5vb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="משלוחים שלי" id="jSh-lY-con"/>
+                    <tabBarItem key="tabBarItem" title="משלוחים שלי" image="delivery_list_icon" id="jSh-lY-con"/>
                     <navigationItem key="navigationItem" id="phw-Ah-dOx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -2112,11 +2101,12 @@
         <image name="2help_Button" width="640" height="243"/>
         <image name="call_icon" width="720" height="720"/>
         <image name="delivery_icon" width="25" height="25"/>
-        <image name="delivery_past" width="40" height="40"/>
+        <image name="delivery_list_icon" width="25" height="25"/>
+        <image name="delivery_past" width="25" height="25"/>
         <image name="directions_icon" width="25" height="25"/>
         <image name="facebook_icon" width="606" height="606"/>
-        <image name="home_icon" width="32" height="32"/>
-        <image name="logo" width="66" height="66"/>
+        <image name="logo" width="100" height="100"/>
+        <image name="map_icon" width="24" height="24"/>
         <image name="waze_icon" width="32" height="32"/>
         <image name="web_icon" width="512" height="512"/>
         <namedColor name="textColor">
