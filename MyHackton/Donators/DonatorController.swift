@@ -124,6 +124,8 @@ override func viewDidLoad(){
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
         cell.productLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.productLabel.backgroundColor = UIColor.gray.withAlphaComponent(0.1)
+        
         
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{
