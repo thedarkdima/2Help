@@ -29,7 +29,14 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func addBtn(_ sender: Any) {
         if type != nil && type != " "{
-            
+            switch type {
+            case "משתמשים":
+                let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_users") as! NetManagerUsersController
+                next.toDo = "add"
+                navigationController?.pushViewController(next, animated: true)
+            default:
+                break
+            }
         }
     }
     

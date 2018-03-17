@@ -5,6 +5,7 @@ class NetManagerUsersController: UIViewController{
     var toDo: String!
     
     @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
     @IBOutlet var segment: UISegmentedControl!
     @IBOutlet var fullname: UITextField!
     @IBOutlet var phone: UITextField!
@@ -14,27 +15,57 @@ class NetManagerUsersController: UIViewController{
         if (toDo == "update"){
             toDoBtn.setTitle("הדכן", for: .normal)
         } else {
-            toDoBtn.setTitle(toDo, for: .normal)
+            toDoBtn.setTitle("הרשם", for: .normal)
         }
-        
-        username.text = user[1]
-        fullname.text = user[4]
-        //phone.text = user[4]
-        //address.text = user[5]
+        if user.count > 0{
+            username.text = user[1]
+            switch user[2] {
+            case "מנהל רשת":
+                segment.selectedSegmentIndex = 0
+            case "מחסנאי":
+                segment.selectedSegmentIndex = 1
+            default:
+                segment.selectedSegmentIndex = 2
+            }
+            fullname.text = user[3]
+            phone.text = user[4]
+            address.text = user[5]
+        }
     }
     
     @IBOutlet var toDoBtn: UIButton!
     @IBAction func btnPress(_ sender: Any) {
         let prefs = UserDefaults.standard
         if let token = prefs.string(forKey: "token"){
+            
             switch toDo {
             case "add":
+                //Addes user info to array
+                user.append(username.text!)
+                user.append(password.text!)
+                user.append(segment.titleForSegment(at: segment.selectedSegmentIndex)!)
+                user.append(fullname.text!)
+                user.append(phone.text!)
+                user.append(address.text!)
+                
                 ServerConnections.getDoubleArrayAsync("/add_user", [[token], user], handler: {array in
+                    let alert = UIAlertController(title: "התרעה", message: "משתמש נוסף למארכת בהצלחה", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                     
                 })
             case "update":
+                //updates user info in array
+                user[1] = username.text!
+                user.insert(password.text!, at: 2)
+                user[3] = segment.titleForSegment(at: segment.selectedSegmentIndex)!
+                user[4] = fullname.text!
+                user[5] = phone.text!
+                user[6] = address.text!
                 ServerConnections.getDoubleArrayAsync("/update_user", [[token], user], handler: {array in
-                    
+                    let alert = UIAlertController(title: "התרעה", message: "פרטי המשתמש עודכנו בהצלחה", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 })
             default:
                 break

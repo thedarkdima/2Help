@@ -750,6 +750,7 @@
                     <connections>
                         <outlet property="address" destination="ZVa-gm-OVy" id="Aws-o4-Njo"/>
                         <outlet property="fullname" destination="Ncp-mp-tpe" id="UO7-oZ-q93"/>
+                        <outlet property="password" destination="pAi-gW-Bwa" id="evK-3i-o3x"/>
                         <outlet property="phone" destination="24K-Jd-5mv" id="Eeb-x0-ZXH"/>
                         <outlet property="segment" destination="uCm-6X-MiB" id="BU5-cN-23n"/>
                         <outlet property="toDoBtn" destination="IdP-7L-dzA" id="tRn-WW-xIM"/>
