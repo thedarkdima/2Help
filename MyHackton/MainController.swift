@@ -169,10 +169,20 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.webView.scrollView.isScrollEnabled = false
         
         cell.textLbl.text? = cell.screens[indexPath.row]
+        
+        if cell.textLbl.text == ""{
+        cell.black_screen.isHidden = true
+        }
+        
         return cell
         
         
        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
     }
     
     

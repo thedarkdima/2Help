@@ -8,6 +8,7 @@ class collecViewCell: UICollectionViewCell {
 
     @IBOutlet var textLbl: UILabel!
     
+    @IBOutlet var black_screen: UIView!
     
     let urls : [URL] = [
                         URL(string: "https://d.ibtimes.co.uk/en/full/1464094/baby-hand.jpg?w=700")!,
