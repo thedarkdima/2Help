@@ -35,8 +35,6 @@ override func viewWillAppear(_ animated: Bool) {
     override func viewDidAppear(_ animated: Bool) {
         tabBarController!.title = tabBarItem!.title
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
-
-
     }
     
 override func viewDidLoad(){
@@ -123,15 +121,15 @@ override func viewDidLoad(){
         collectionView.isScrollEnabled = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
-        cell.productLabel.backgroundColor = UIColor.clear
-        
+        //cell.productLabel.backgroundColor = UIColor.clear
+        cell.productLabel.backgroundColor = UIColor.lightText.withAlphaComponent(0.1)
         
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{
             //Get image from user defaults
             if let prefImageData = UserDefaults.standard.object(forKey: productsImagesArray[indexPath.item]){
                 cell.ProductImageView.image = UIImage(data: prefImageData as! Data)
-                cell.productLabel.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+
             }
         }
         return  cell
