@@ -36,7 +36,7 @@ class AlertController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
         self.container.layer.cornerRadius = 30
-        //self.container.layer.shadowColor = 
+        //self.container.layer.shadowColor =
         
     }
     
