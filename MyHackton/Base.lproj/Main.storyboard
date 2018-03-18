@@ -1045,15 +1045,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="כתובת " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-gx-dNS">
-                                                    <rect key="frame" x="85" y="31.666666666666671" width="281" height="20"/>
+                                                    <rect key="frame" x="115" y="31.666666666666671" width="251" height="20"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
-                                                    <rect key="frame" x="15" y="31" width="70" height="20.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1000KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-Se-GKD">
+                                                    <rect key="frame" x="15" y="31" width="100" height="20.666666666666671"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="dql-fh-uCV"/>
+                                                        <constraint firstAttribute="width" constant="100" id="dql-fh-uCV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -2201,9 +2201,6 @@
         <image name="map_icon" width="24" height="24"/>
         <image name="waze_icon" width="300" height="300"/>
         <image name="web_icon" width="512" height="512"/>
-        <namedColor name="textColor">
-            <color red="0.0078431372549019607" green="0.54117647058823526" blue="0.88235294117647056" alpha="0.99000000953674316" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="textColor">
             <color red="0.0078431372549019607" green="0.54117647058823526" blue="0.88235294117647056" alpha="0.99000000953674316" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

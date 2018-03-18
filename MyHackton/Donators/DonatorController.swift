@@ -124,13 +124,12 @@ override func viewDidLoad(){
        // cell.productLabel.backgroundColor = UIColor.clear
         cell.productLabel.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         
-        
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{
             //Get image from user defaults
             if let prefImageData = UserDefaults.standard.object(forKey: productsImagesArray[indexPath.item]){
                 cell.ProductImageView.image = UIImage(data: prefImageData as! Data)
-                
+
             }
         }
         return  cell
