@@ -62,13 +62,12 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         let geoCoder = CLGeocoder()
         
         geoCoder.geocodeAddressString(addressTry, completionHandler: { (placemarks, error) in
-            let longitude = placemarks?.first?.location?.coordinate.longitude
-            let latitude = placemarks?.first?.location?.coordinate.latitude
-      
-            UIApplication.shared.isIdleTimerDisabled = true
-            
-            self.addMyMarkers(name: place_name, PinLatitude: latitude!, PinLongitude: longitude!, id: id)
-            
+            if let longitude = placemarks?.first?.location?.coordinate.longitude{
+                if let latitude = placemarks?.first?.location?.coordinate.latitude{
+                    UIApplication.shared.isIdleTimerDisabled = true
+                    self.addMyMarkers(name: place_name, PinLatitude: latitude, PinLongitude: longitude, id: id)
+                }
+            }  
         })
     }
     
