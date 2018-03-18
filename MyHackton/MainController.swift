@@ -5,7 +5,6 @@ import SafariServices
 class MainController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var collectionView: UICollectionView!
-    //var collectionVideos : [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +43,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        collectionView.backgroundColor = UIColor.clear
         
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
-        collectionView.backgroundColor = UIColor.clear
         
     }
 
@@ -141,13 +139,10 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     ////collection view////
-   
-    
     func setCollectionViewProperties(){
         collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(UINib.init(nibName: "collecViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
-        //collectionView.backgroundColor = UIColor.clear
         
         let flowLayout = UPCarouselFlowLayout()
         
@@ -158,7 +153,6 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         flowLayout.sideItemAlpha = 1.0
         flowLayout.spacingMode = .fixed(spacing: 5.0)
         collectionView.collectionViewLayout = flowLayout
-        
         
     }
     
@@ -172,13 +166,17 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let urlsRequests = URLRequest(url: cell.urls[indexPath.item])
         cell.webView.load(urlsRequests)
         
-        
         cell.webView.scrollView.isScrollEnabled = false
-         print(collectionView.visibleCells.count)
+        
+        cell.textLbl.text? = cell.screens[indexPath.row]
         return cell
+        
         
        
     }
+    
+    
+    
     
     ////
         

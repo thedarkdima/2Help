@@ -1922,13 +1922,14 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKu-i4-U8x">
                                                     <rect key="frame" x="283.66666666666669" y="6" width="90.333333333333314" height="68"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="mKu-i4-U8x" secondAttribute="height" multiplier="4:3" id="NSK-Om-uOP"/>
+                                                        <constraint firstAttribute="width" constant="90.333333333333314" id="0Ko-4m-mFn"/>
+                                                        <constraint firstAttribute="height" constant="68" id="9tC-DM-p8D"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מוצרים" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcm-d5-WKq">
                                                     <rect key="frame" x="125.66666666666669" y="32.333333333333336" width="150" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="py6-E2-7PW"/>
+                                                        <constraint firstAttribute="width" constant="150" id="cuG-bq-m1r"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1962,16 +1963,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="eOC-Gf-ILZ" firstAttribute="centerY" secondItem="eTW-oH-9Ju" secondAttribute="centerY" id="9ks-7Q-Ubu"/>
-                                                <constraint firstAttribute="bottom" secondItem="mKu-i4-U8x" secondAttribute="bottom" constant="10.5" id="IEL-eC-a9o"/>
-                                                <constraint firstItem="mKu-i4-U8x" firstAttribute="top" secondItem="eTW-oH-9Ju" secondAttribute="top" constant="6" id="PnP-sJ-2R4"/>
+                                                <constraint firstItem="mKu-i4-U8x" firstAttribute="top" secondItem="eTW-oH-9Ju" secondAttribute="top" constant="6" id="FKN-xH-r5k"/>
                                                 <constraint firstItem="z62-GQ-P6E" firstAttribute="leading" secondItem="Th5-bt-abO" secondAttribute="trailing" constant="8" id="Tqg-XP-850"/>
                                                 <constraint firstItem="Th5-bt-abO" firstAttribute="leading" secondItem="eOC-Gf-ILZ" secondAttribute="trailing" constant="7" id="Vqp-IJ-xe4"/>
+                                                <constraint firstItem="Bcm-d5-WKq" firstAttribute="top" secondItem="eTW-oH-9Ju" secondAttribute="top" constant="32.333333333333336" id="W2Z-cW-8eT"/>
                                                 <constraint firstItem="Th5-bt-abO" firstAttribute="centerY" secondItem="eTW-oH-9Ju" secondAttribute="centerY" id="YCH-Uj-rZX"/>
+                                                <constraint firstAttribute="trailing" secondItem="mKu-i4-U8x" secondAttribute="trailing" constant="8" id="alA-Ie-TR2"/>
                                                 <constraint firstItem="eOC-Gf-ILZ" firstAttribute="leading" secondItem="eTW-oH-9Ju" secondAttribute="leading" id="d11-Tn-buE"/>
-                                                <constraint firstAttribute="trailing" secondItem="mKu-i4-U8x" secondAttribute="trailing" constant="8" id="mVg-Ow-5YJ"/>
+                                                <constraint firstItem="mKu-i4-U8x" firstAttribute="leading" secondItem="Bcm-d5-WKq" secondAttribute="trailing" constant="8" id="hx6-p4-9GE"/>
                                                 <constraint firstItem="Bcm-d5-WKq" firstAttribute="centerY" secondItem="eTW-oH-9Ju" secondAttribute="centerY" id="nKw-Ad-c6d"/>
-                                                <constraint firstItem="Bcm-d5-WKq" firstAttribute="centerY" secondItem="eTW-oH-9Ju" secondAttribute="centerY" id="pHw-Xa-TMf"/>
-                                                <constraint firstItem="mKu-i4-U8x" firstAttribute="leading" secondItem="Bcm-d5-WKq" secondAttribute="trailing" constant="8" id="vRK-TK-drS"/>
                                                 <constraint firstItem="z62-GQ-P6E" firstAttribute="centerY" secondItem="eTW-oH-9Ju" secondAttribute="centerY" id="vwa-uc-a5w"/>
                                             </constraints>
                                         </tableViewCellContentView>
