@@ -35,8 +35,6 @@ override func viewWillAppear(_ animated: Bool) {
     override func viewDidAppear(_ animated: Bool) {
         tabBarController!.title = tabBarItem!.title
         tabBarController!.navigationItem.rightBarButtonItem!.isEnabled = true
-
-
     }
     
 override func viewDidLoad(){
