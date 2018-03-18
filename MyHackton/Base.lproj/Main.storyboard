@@ -44,7 +44,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionCell" id="hOJ-On-CB2" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-31.666666666666668" width="412" height="315"/>
+                                        <rect key="frame" x="0.0" y="-32.666666666666664" width="412" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="315"/>
@@ -755,11 +755,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24K-Jd-5mv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24K-Jd-5mv">
                                 <rect key="frame" x="89" y="286.66666666666669" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-gm-OVy">
                                 <rect key="frame" x="89" y="341.66666666666669" width="200" height="30"/>
@@ -794,6 +794,7 @@
                             <constraint firstItem="nUb-63-lLw" firstAttribute="leading" secondItem="cQq-ck-cnu" secondAttribute="trailing" constant="8" id="6QX-H0-tts"/>
                             <constraint firstItem="pAi-gW-Bwa" firstAttribute="centerY" secondItem="vmc-va-fDD" secondAttribute="centerY" id="6ju-CV-1yv"/>
                             <constraint firstItem="fMU-2s-LZA" firstAttribute="leading" secondItem="vmc-va-fDD" secondAttribute="leading" id="9EV-Wn-Qwi"/>
+                            <constraint firstItem="24K-Jd-5mv" firstAttribute="top" secondItem="Ncp-mp-tpe" secondAttribute="bottom" constant="23.000000000000057" id="AFr-up-cE1"/>
                             <constraint firstItem="Ncp-mp-tpe" firstAttribute="leading" secondItem="pAi-gW-Bwa" secondAttribute="leading" id="BpI-x7-BaY"/>
                             <constraint firstItem="ZVa-gm-OVy" firstAttribute="centerY" secondItem="mpV-Dr-g8f" secondAttribute="centerY" id="Eu5-7s-JpY"/>
                             <constraint firstItem="1hj-Ar-lQN" firstAttribute="top" secondItem="fMU-2s-LZA" secondAttribute="bottom" constant="32" id="EvQ-Jw-YPF"/>
