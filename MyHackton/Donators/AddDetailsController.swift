@@ -101,7 +101,7 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
                                             self.notice.text = "בקשתכם התקבלה בהצלחה"
                                             self.prefs.set([:], forKey: "basket")
                                             DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-                                                sleep(2)
+                                                sleep(1)
                                                 self.thanksAlert()
                                             })
                                             
@@ -160,7 +160,7 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
     
     func thanksAlert(){
-        let alert = UIAlertController(title: "!תודה", message: "תודה רבה על תרומתך👏🏼", preferredStyle: .alert)
+        let alert = UIAlertController(title: "תודה!", message: "תודה רבה על תרומתך!👏🏼", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: { (alert) in
             self.navigationController?.popToRootViewController(animated: true)
         }))
