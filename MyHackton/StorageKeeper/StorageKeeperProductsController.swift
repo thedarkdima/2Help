@@ -150,6 +150,8 @@ class StorageKeeperProductsController: UIViewController, UITableViewDataSource, 
         
         func okHandler(alert: UIAlertAction!){
             navigationController?.popToRootViewController(animated: true)
+            let prefs = UserDefaults.standard
+            prefs.removeObject(forKey: "token")
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))

@@ -72,6 +72,8 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
         
         func okHandler(alert: UIAlertAction!){
             navigationController?.popToRootViewController(animated: true)
+            let prefs = UserDefaults.standard
+            prefs.removeObject(forKey: "token")
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
