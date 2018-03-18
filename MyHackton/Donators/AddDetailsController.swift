@@ -133,18 +133,6 @@ class AddDetailsController: UIViewController, UITextFieldDelegate, UITextViewDel
         }
     }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if(notes.text! == "הערות?"){
-            notes.text = ""
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if(notes.text! == ""){
-            notes.text = "הערות?"
-        }
-    }
-    
     func TextAnimation(textField: UITextField){
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             textField.center.x += 10
