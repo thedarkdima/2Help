@@ -56,6 +56,7 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let url = URL(string: "https://www.2help.org.il/food")!
         let svc = SFSafariViewController(url: url)
         show(svc, sender: self)
+        
     }
     
     @IBAction func login() {
