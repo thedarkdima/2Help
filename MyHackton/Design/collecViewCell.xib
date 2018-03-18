@@ -9,32 +9,62 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="collecViewCell" customModule="MyHackton" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="385" height="493"/>
+            <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="385" height="493"/>
+                <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yso-KK-yzj">
-                        <rect key="frame" x="0.0" y="0.0" width="385" height="493"/>
+                        <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
                         <subviews>
                             <wkWebView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="l23-KN-27j">
-                                <rect key="frame" x="0.0" y="0.0" width="385" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsN-iH-VdJ" userLabel="black_screen">
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="דוגמא" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxj-19-dPF" userLabel="text">
+                                <rect key="frame" x="16" y="16" width="353" height="215"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="HsN-iH-VdJ" firstAttribute="top" secondItem="Yso-KK-yzj" secondAttribute="top" id="9iF-ll-EAr"/>
                             <constraint firstAttribute="bottom" secondItem="l23-KN-27j" secondAttribute="bottom" id="F1z-Qb-Ynx"/>
+                            <constraint firstItem="rxj-19-dPF" firstAttribute="centerX" secondItem="Yso-KK-yzj" secondAttribute="centerX" id="Frk-qt-OaP"/>
+                            <constraint firstAttribute="trailing" secondItem="rxj-19-dPF" secondAttribute="trailing" constant="16" id="GJ0-pv-SGp"/>
+                            <constraint firstAttribute="bottom" secondItem="HsN-iH-VdJ" secondAttribute="bottom" id="HFn-ug-LdH"/>
+                            <constraint firstItem="HsN-iH-VdJ" firstAttribute="centerX" secondItem="Yso-KK-yzj" secondAttribute="centerX" id="NVF-Te-M6z"/>
                             <constraint firstAttribute="trailing" secondItem="l23-KN-27j" secondAttribute="trailing" id="Pee-fz-vem"/>
+                            <constraint firstItem="rxj-19-dPF" firstAttribute="top" secondItem="Yso-KK-yzj" secondAttribute="top" constant="16" id="PjY-dB-pDn"/>
+                            <constraint firstItem="rxj-19-dPF" firstAttribute="leading" secondItem="Yso-KK-yzj" secondAttribute="leading" constant="16" id="S2h-rS-jgz"/>
+                            <constraint firstAttribute="bottom" secondItem="rxj-19-dPF" secondAttribute="bottom" constant="16" id="Tkg-u2-I0D"/>
+                            <constraint firstAttribute="trailing" secondItem="HsN-iH-VdJ" secondAttribute="trailing" id="ccS-lk-7nJ"/>
                             <constraint firstItem="l23-KN-27j" firstAttribute="top" secondItem="Yso-KK-yzj" secondAttribute="top" id="f9E-ww-L1E"/>
                             <constraint firstItem="l23-KN-27j" firstAttribute="leading" secondItem="Yso-KK-yzj" secondAttribute="leading" id="kEI-B0-8Ex"/>
+                            <constraint firstItem="HsN-iH-VdJ" firstAttribute="centerY" secondItem="Yso-KK-yzj" secondAttribute="centerY" id="qVY-vH-0y4"/>
+                            <constraint firstItem="rxj-19-dPF" firstAttribute="centerY" secondItem="Yso-KK-yzj" secondAttribute="centerY" id="qz4-gZ-TcH"/>
+                            <constraint firstItem="HsN-iH-VdJ" firstAttribute="leading" secondItem="Yso-KK-yzj" secondAttribute="leading" id="xQ4-WR-jw7"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -46,12 +76,13 @@
                 <constraint firstItem="Yso-KK-yzj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nD6-Q5-zGR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="385" height="493"/>
+            <size key="customSize" width="385" height="247"/>
             <connections>
                 <outlet property="container1" destination="Yso-KK-yzj" id="pBQ-Ua-BFd"/>
+                <outlet property="textLbl" destination="rxj-19-dPF" id="wOZ-dr-CAY"/>
                 <outlet property="webView" destination="l23-KN-27j" id="gWu-Ir-nhv"/>
             </connections>
-            <point key="canvasLocation" x="-16.5" y="40.5"/>
+            <point key="canvasLocation" x="-16.5" y="163.5"/>
         </collectionViewCell>
     </objects>
 </document>
