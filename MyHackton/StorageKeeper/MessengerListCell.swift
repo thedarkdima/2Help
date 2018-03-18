@@ -4,6 +4,8 @@ class MessengerListCell: UITableViewCell {
 
     @IBOutlet var deliveryName: UILabel!
     @IBOutlet var address: UILabel!
+    @IBOutlet var abortDeliveryButton: UIButton!
+    
     var index: Int!
     var controller: MessengersListController!
     
