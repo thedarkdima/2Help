@@ -7,6 +7,7 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +55,8 @@ class MessengersListController: UIViewController, UITableViewDataSource, UITable
             cell.deliveryName.text = requests[indexPath.row][6]
             cell.index = indexPath.row
             cell.controller = self
+            
+            cell.abortDeliveryButton.layer.cornerRadius = 19
         }
         return cell
     }
