@@ -121,8 +121,8 @@ override func viewDidLoad(){
         collectionView.isScrollEnabled = false
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product_cell", for: indexPath) as! ProductsCollectionViewCell
         cell.productLabel.text = productsNamesArray[indexPath.item]
-        //cell.productLabel.backgroundColor = UIColor.clear
-        cell.productLabel.backgroundColor = UIColor.lightText.withAlphaComponent(0.1)
+       // cell.productLabel.backgroundColor = UIColor.clear
+        cell.productLabel.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         
         //Prevents out of bounds exception
         if productsImagesArray.count > indexPath.item{
