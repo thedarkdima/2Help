@@ -173,21 +173,12 @@ class MainController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if cell.textLbl.text == ""{
         cell.black_screen.isHidden = true
         }
+        else{
+            cell.black_screen.isHidden = false
+        }
         
         return cell
-        
-        
-       
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.clear
-    }
-    
-    
-    
-    
     ////
         
 }
