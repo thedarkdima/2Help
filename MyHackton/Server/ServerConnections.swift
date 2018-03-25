@@ -1,6 +1,5 @@
 import Foundation
 
-
 class ServerConnections{
     //Connection to the server with url addon and if needed with package of string, returning an array or a dobule array of
     //String from the server.
@@ -71,16 +70,16 @@ class ServerConnections{
         }
         return back
     }
-//    static func getDonators() -> [Donator]{
-//        getDictonaryAsync("/donators", "", handler: { donators in
-//            var back: [Donator]
-//            if let d = donators{
-//                for donator in d {
-//
-//                }
-//            }
-//
-//        })
-//        return back
-//    }
+    //    static func getDonators() -> [Donator]{
+    //        getDictonaryAsync("/donators", "", handler: { donators in
+    //            var back: [Donator]
+    //            if let d = donators{
+    //                for donator in d {
+    //
+    //                }
+    //            }
+    //
+    //        })
+    //        return back
+    //    }
 }

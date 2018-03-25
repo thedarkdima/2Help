@@ -1,11 +1,3 @@
-//
-//  WallpaperWindow.swift
-//  MyHackton
-//
-//  Created by מתןפור on 14.3.2018.
-//  Copyright © 2018 nati. All rights reserved.
-//
-
 import UIKit
 
 class WallpaperWindow: UIWindow {

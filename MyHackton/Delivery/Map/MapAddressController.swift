@@ -3,7 +3,7 @@ import MapKit
 import CoreLocation
 
 class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
-
+    
     @IBOutlet weak var MyMap: MKMapView!
     var locationManager = CLLocationManager()
     let prefs = UserDefaults.standard
@@ -18,7 +18,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
         tabBarController?.navigationItem.leftBarButtonItem = b
         self.navigationItem.hidesBackButton = true
-    
+        
         MyMap.removeAnnotations(MyMap.annotations)
         if let tok = prefs.string(forKey: "token"){
             token = tok
@@ -38,7 +38,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -49,8 +49,9 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         MyMap.showsScale = true
         
         MyMap.mapType = .standard // regular map
-//        addPlaceToMap(place_name: "התחיה 10 חולון")
-//        addPlaceToMap(place_name: "חולון אילת 43")
+        
+        //  addPlaceToMap(place_name: "התחיה 10 חולון") - if i want to add places manually
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,10 +79,8 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
         pin.coordinate = CLLocationCoordinate2D(latitude: PinLatitude, longitude: PinLongitude)
         
         MyMap.addAnnotation(pin) // add pin to map
-   
+        
     }
-    
-    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -96,10 +95,6 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
             pin.pinTintColor = UIColor(named: "textColor")
         }
         
-//        if MyMap.userLocation.coordinate.latitude == annotation.coordinate.latitude && MyMap.userLocation.coordinate.longitude == annotation.coordinate.longitude {
-//           pin.canShowCallout = false
-//        }
-        
         return pin
     }
     
@@ -111,6 +106,7 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
                     self.deliveryRequest = DeliveryRequestController()
                     self.MyMap.removeAnnotation(currentAnnotation)
                 })
+                
             }
         }
         
@@ -118,15 +114,17 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     
     func mylocation(){
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        //let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
-        let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
+        
+        // in case i open the app in the emulator - set region(focus map) on holon israel- instead of san francisco
+        //let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         self.MyMap.setRegion(region, animated: false)
         self.MyMap.userLocation.title = "        המיקום שלי"
         self.MyMap.showsUserLocation = true
-      
+        
     }
     
     //logout from the system
@@ -139,12 +137,11 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
             let prefs = UserDefaults.standard
             prefs.removeObject(forKey: "token")
         }
-     
+        
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
         
-        
         present(alert, animated: true, completion: nil)
-  
     }
+    
 }

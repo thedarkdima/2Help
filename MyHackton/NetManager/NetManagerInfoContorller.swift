@@ -2,17 +2,24 @@ import UIKit
 
 class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
+    @IBOutlet var picker: UIPickerView!
+    var array = [" ", "משתמשים", "מוצרים", "סוגי מוצרים", "כתובות", "תמונות/וידאו"]
+    
+    var type: String! // var to check which type to add to the system
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
-      
-
+        
     }
     
-    @IBOutlet var picker: UIPickerView!
-    var array = [" ", "משתמשים", "מוצרים", "סוגי מוצרים", "כתובות", "תמונות וידיו"]
-    var type:String!
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        navigationItem.backBarButtonItem?.title = "חזור"
+    }
+    
+    //// picker view functions////
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -22,18 +29,17 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-         picker.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        pickerView.tintColor = UIColor.red
+        picker.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         picker.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         return array[row]
     }
     
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         type = array[row]
     }
+    ////
     
+    // add function
     @IBAction func addBtn(_ sender: Any) {
         if type != nil && type != " "{
             switch type {
@@ -47,6 +53,7 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    // update function
     @IBAction func changeBtn(_ sender: Any) {
         if type != nil && type != " "{
             let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_table") as! NetManagerTableController
@@ -56,6 +63,7 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    //delete function
     @IBAction func delBtn(_ sender: Any) {
         if type != nil && type != " "{
             let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_table") as! NetManagerTableController
@@ -64,6 +72,5 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
             navigationController?.pushViewController(next, animated: true)
         }
     }
+    
 }
-
-

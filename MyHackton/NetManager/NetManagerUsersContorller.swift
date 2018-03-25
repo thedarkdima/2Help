@@ -13,12 +13,15 @@ class NetManagerUsersController: UIViewController{
     @IBOutlet var toDoBtn: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         toDoBtn.titleLabel?.textColor = UIColor.white
         
         let font = UIFont.boldSystemFont(ofSize: 16)
         segment.setTitleTextAttributes([NSAttributedStringKey.font : font], for: .normal)
         segment.backgroundColor = UIColor.white.withAlphaComponent(0.7)
+        
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.backBarButtonItem?.title = "חזור"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,7 +32,7 @@ class NetManagerUsersController: UIViewController{
         if (toDo == "update"){
             toDoBtn.setTitle("עדכן", for: .normal)
         } else {
-            toDoBtn.setTitle("הרשם", for: .normal)
+            toDoBtn.setTitle("הוסף", for: .normal)
             
         }
         if user.count > 0{
@@ -47,7 +50,6 @@ class NetManagerUsersController: UIViewController{
             address.text = user[5]
         }
     }
-    
     
     @IBAction func btnPress(_ sender: Any) {
         let prefs = UserDefaults.standard
@@ -67,8 +69,8 @@ class NetManagerUsersController: UIViewController{
                     let alert = UIAlertController(title: "התראה", message: "משתמש נוסף למערכת בהצלחה", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
                     self.present(alert, animated: true, completion: nil)
-                    
                 })
+                
             case "update":
                 //updates user info in array
                 user[1] = username.text!
@@ -82,9 +84,11 @@ class NetManagerUsersController: UIViewController{
                     alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 })
+                
             default:
                 break
             }
         }
     }
+    
 }

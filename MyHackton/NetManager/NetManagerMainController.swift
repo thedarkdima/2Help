@@ -7,14 +7,15 @@ class NetManagerMainController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
-        
-        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
-        //presentationController?.navigationItem.leftBarButtonItem = b
-        navigationItem.leftBarButtonItem = b
+        //hide the back button and put a new button instead that will enable log out from the system
         self.navigationItem.hidesBackButton = true
+        let b = UIBarButtonItem(title: "התנתק", style: .plain, target: self, action: #selector(backcheck))
+        navigationItem.leftBarButtonItem = b
+        
+        self.navigationController?.isNavigationBarHidden = false
+        navigationItem.backBarButtonItem?.title = "חזור"
     }
     
     //logout from the system
@@ -24,15 +25,15 @@ class NetManagerMainController: UIViewController {
         
         func okHandler(alert: UIAlertAction!){
             navigationController?.popToRootViewController(animated: true)
+            let prefs = UserDefaults.standard
+            prefs.removeObject(forKey: "token")
         }
         
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "אישור", style: .default, handler: okHandler))
-        let prefs = UserDefaults.standard
-        prefs.removeObject(forKey: "token")
+        
         
         present(alert, animated: true, completion: nil)
-        
     }
+    
 }
-
