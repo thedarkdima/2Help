@@ -2,8 +2,6 @@ import UIKit
 
 class ProductsListController: UIViewController , UITableViewDataSource {
     
-    //var products = [""]
-    
     @IBOutlet var productsTable: UITableView!
     //var to store later the page title
     var pageTitle : String?

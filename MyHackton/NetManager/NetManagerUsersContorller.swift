@@ -20,6 +20,7 @@ class NetManagerUsersController: UIViewController{
         segment.setTitleTextAttributes([NSAttributedStringKey.font : font], for: .normal)
         segment.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         
+        self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.backBarButtonItem?.title = "חזור"
     }

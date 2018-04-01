@@ -12,11 +12,13 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
         self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        navigationItem.backBarButtonItem?.title = "חזור"
+        navigationItem.title = "הנהלה"
     }
     
     //// picker view functions////
