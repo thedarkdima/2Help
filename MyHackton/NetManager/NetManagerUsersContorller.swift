@@ -62,7 +62,7 @@ class NetManagerUsersController: UIViewController{
             
             switch toDo {
             case "add":
-                //Addes user info to array
+                //Adds user info to array
                 user.append(username.text!)
                 user.append(password.text!)
                 user.append(segment.titleForSegment(at: segment.selectedSegmentIndex)!)

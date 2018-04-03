@@ -21,23 +21,6 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         searching()
     }
     
-    func searching(){
-        if searchTextField.text! != ""{
-            searchArray.removeAll()
-            for array in tableArray{
-                for str in array{
-                    if str.lowercased().range(of: searchTextField.text!.lowercased()) != nil {
-                        searchArray.append(array)
-                        break
-                    }
-                }
-            }
-        } else {
-            searchArray = tableArray
-        }
-        table.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -77,6 +60,23 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    func searching(){
+        if searchTextField.text! != ""{
+            searchArray.removeAll()
+            for array in tableArray{
+                for str in array{
+                    if str.lowercased().range(of: searchTextField.text!.lowercased()) != nil {
+                        searchArray.append(array)
+                        break
+                    }
+                }
+            }
+        } else {
+            searchArray = tableArray
+        }
+        table.reloadData()
+    }
+    
     func setTableArray(array: [[String]]?){
         if array != nil{
             tableArray = array!
@@ -85,16 +85,13 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    ////table functions////
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "netmanager_cell") as! NetManagerTableCell
-//        if(RequestsList.count > 0){
-//            cell.address.text = RequestsList[indexPath.row].getAddress()
-//            findDistanceBetweenPins(cell: cell)
-        //        }
         
         switch type {
         case "משתמשים":
@@ -130,29 +127,31 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
             deleteAlert(index: indexPath)
         case "update":
             let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_users") as! NetManagerUsersController
-            next.toDo = toDo
-         //   next.pageTitle =
-            next.user = searchArray[indexPath.row]
+            next.toDo = toDo // copy this button's title to the next page button.
+            user = searchArray[indexPath.row] //get the user.
+            next.pageTitle = user[3] //get the user's name and show him on the next page title.
+            next.user = searchArray[indexPath.row] // move the user object to the next page.
             navigationController?.pushViewController(next, animated: true)
-            
         default:
             break
         }
     }
+    ////
     
+    //alert that will be shown when the user press the cancel button
     func deleteAlert(index: IndexPath) {
         //alert when pressing the login button
         let alert =  UIAlertController(title: "מחיקה", message: "אתה בטוח שאתה רוצה למחוק את \((table.cellForRow(at: index) as! NetManagerTableCell).lable.text!)?", preferredStyle: .alert)
-        
+      
         func deleteFromDB(alert:UIAlertAction){
             ServerConnections.getDoubleArrayAsync("/delete_user", [[self.token], self.user], handler: {array in
                 self.viewWillAppear(false)
-                let alert = UIAlertController(title: "התרעה", message: "המשתמש נמחק בהצלחה", preferredStyle: .alert)
+                let alert = UIAlertController(title: "התראה", message: "המשתמש נמחק בהצלחה", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "אישור", style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             })
         }
-        
+
         alert.addAction(UIAlertAction(title: "ביטול", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "מחק", style:.default , handler: deleteFromDB))
         

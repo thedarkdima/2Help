@@ -47,7 +47,6 @@ class NetManagerInfoController: UIViewController, UIPickerViewDelegate, UIPicker
                 next.toDo = "add"
                 //pass the users page the title that was selected in the picker view.
                 next.pageTitle = type
-                print("\(type) working????")
                 navigationController?.pushViewController(next, animated: true)
             default:
                 break
