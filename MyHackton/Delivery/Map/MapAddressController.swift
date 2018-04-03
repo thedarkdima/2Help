@@ -121,10 +121,12 @@ class MapAddressController: UIViewController , CLLocationManagerDelegate , MKMap
     
     func mylocation(){
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        //let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
+        
+        // real time loaction from a iphone device
+        let myLocation = CLLocationCoordinate2DMake((self.locationManager.location?.coordinate.latitude)!, (self.locationManager.location?.coordinate.longitude)!)
         
         // in case i open the app in the emulator - set region(focus map) on holon israel- instead of san francisco
-        let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
+        //let myLocation = CLLocationCoordinate2DMake(32.0158, 34.7874)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
