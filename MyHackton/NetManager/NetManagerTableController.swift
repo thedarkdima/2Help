@@ -2,17 +2,50 @@ import UIKit
 
 class NetManagerTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //var array = [" ", "משתמשים", "מוצרים", "סוגי מוצרים", "כתובות", "תמונות וידיו"]
+    
+    var pageTitle : String!
+    
     var user:[String]!
     var token:String!
     
+    var type: String!
+    var toDo: String!
+    
     @IBOutlet var table: UITableView!
     var tableArray: [[String]] = []
+    
     @IBOutlet var searchTextField: UITextField!
     var searchArray: [[String]] = []
+    
+    @IBAction func search(_ sender: Any) {
+        searching()
+    }
+    
+    func searching(){
+        if searchTextField.text! != ""{
+            searchArray.removeAll()
+            for array in tableArray{
+                for str in array{
+                    if str.lowercased().range(of: searchTextField.text!.lowercased()) != nil {
+                        searchArray.append(array)
+                        break
+                    }
+                }
+            }
+        } else {
+            searchArray = tableArray
+        }
+        table.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper.jpg")!)
         table.backgroundColor = UIColor.clear
+        navigationItem.title = pageTitle
         
         let prefs = UserDefaults.standard
         if let tok = prefs.string(forKey: "token"){
@@ -50,23 +83,6 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
             searchArray = tableArray
             table.reloadData()
         }
-    }
-    
-    func searching(){
-        if searchTextField.text! != ""{
-            searchArray.removeAll()
-            for array in tableArray{
-                for str in array{
-                    if str.lowercased().range(of: searchTextField.text!.lowercased()) != nil {
-                        searchArray.append(array)
-                        break
-                    }
-                }
-            }
-        } else {
-            searchArray = tableArray
-        }
-        table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,9 +129,9 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
             user = searchArray[indexPath.row]
             deleteAlert(index: indexPath)
         case "update":
-            
             let next = storyboard!.instantiateViewController(withIdentifier: "net_manager_users") as! NetManagerUsersController
             next.toDo = toDo
+         //   next.pageTitle =
             next.user = searchArray[indexPath.row]
             navigationController?.pushViewController(next, animated: true)
             
@@ -142,17 +158,7 @@ class NetManagerTableController: UIViewController, UITableViewDataSource, UITabl
         
         present(alert , animated: true, completion: nil)
     }
-    
-    var type: String!
-    var toDo: String!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    @IBAction func search(_ sender: Any) {
-        searching()
-    }
+
 }
 
 
